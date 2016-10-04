@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ControlePesagemDataSet" targetNamespace="http://tempuri.org/ControlePesagemDataSet.xsd" xmlns:mstns="http://tempuri.org/ControlePesagemDataSet.xsd" xmlns="http://tempuri.org/ControlePesagemDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ControlePesagemConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ControlePesagemConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Dados.Properties.Settings.GlobalReference.Default.ControlePesagemConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_TipoMaterial_GridTableAdapter" GeneratorDataComponentClassName="vw_TipoMaterial_GridTableAdapter" Name="vw_TipoMaterial_Grid" UserDataComponentName="vw_TipoMaterial_GridTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ControlePesagemConnectionString (Settings)" DbObjectName="ControlePesagem.dbo.vw_TipoMaterial_Grid" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT codigo, descricao, ativo, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao FROM dbo.vw_TipoMaterial_Grid</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codigo" DataSetColumn="codigo" />
+              <Mapping SourceColumn="descricao" DataSetColumn="descricao" />
+              <Mapping SourceColumn="ativo" DataSetColumn="ativo" />
+              <Mapping SourceColumn="dataInclusao" DataSetColumn="dataInclusao" />
+              <Mapping SourceColumn="dataAlteracao" DataSetColumn="dataAlteracao" />
+              <Mapping SourceColumn="usuarioInclusao" DataSetColumn="usuarioInclusao" />
+              <Mapping SourceColumn="usuarioAlteracao" DataSetColumn="usuarioAlteracao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ControlePesagemDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ControlePesagemDataSet" msprop:Generator_UserDSName="ControlePesagemDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_TipoMaterial_Grid" msprop:Generator_TableClassName="vw_TipoMaterial_GridDataTable" msprop:Generator_TableVarName="tablevw_TipoMaterial_Grid" msprop:Generator_TablePropName="vw_TipoMaterial_Grid" msprop:Generator_RowDeletingName="vw_TipoMaterial_GridRowDeleting" msprop:Generator_RowChangingName="vw_TipoMaterial_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_TipoMaterial_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_TipoMaterial_GridRowDeleted" msprop:Generator_UserTableName="vw_TipoMaterial_Grid" msprop:Generator_RowChangedName="vw_TipoMaterial_GridRowChanged" msprop:Generator_RowEvArgName="vw_TipoMaterial_GridRowChangeEvent" msprop:Generator_RowClassName="vw_TipoMaterial_GridRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:int" />
+              <xs:element name="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn" msprop:Generator_UserColumnName="descricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ativo" msprop:Generator_ColumnVarNameInTable="columnativo" msprop:Generator_ColumnPropNameInRow="ativo" msprop:Generator_ColumnPropNameInTable="ativoColumn" msprop:Generator_UserColumnName="ativo" type="xs:int" />
+              <xs:element name="dataInclusao" msprop:Generator_ColumnVarNameInTable="columndataInclusao" msprop:Generator_ColumnPropNameInRow="dataInclusao" msprop:Generator_ColumnPropNameInTable="dataInclusaoColumn" msprop:Generator_UserColumnName="dataInclusao" type="xs:dateTime" />
+              <xs:element name="dataAlteracao" msprop:Generator_ColumnVarNameInTable="columndataAlteracao" msprop:Generator_ColumnPropNameInRow="dataAlteracao" msprop:Generator_ColumnPropNameInTable="dataAlteracaoColumn" msprop:Generator_UserColumnName="dataAlteracao" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="usuarioInclusao" msprop:Generator_ColumnVarNameInTable="columnusuarioInclusao" msprop:Generator_ColumnPropNameInRow="usuarioInclusao" msprop:Generator_ColumnPropNameInTable="usuarioInclusaoColumn" msprop:Generator_UserColumnName="usuarioInclusao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usuarioAlteracao" msprop:Generator_ColumnVarNameInTable="columnusuarioAlteracao" msprop:Generator_ColumnPropNameInRow="usuarioAlteracao" msprop:Generator_ColumnPropNameInTable="usuarioAlteracaoColumn" msprop:Generator_UserColumnName="usuarioAlteracao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_TipoMaterial_Grid" />
+      <xs:field xpath="mstns:codigo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

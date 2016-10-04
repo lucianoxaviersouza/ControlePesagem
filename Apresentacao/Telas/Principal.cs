@@ -1,0 +1,41 @@
+﻿using Entidade;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Apresentacao.Telas
+{
+    public partial class Principal : Form
+    {
+        public static Usuario usuario;
+        public Principal()
+        {
+            InitializeComponent();
+        }
+        public Principal(Usuario usu)
+        {
+            Principal.usuario = usu;
+
+            InitializeComponent();
+        }
+        private void tipoMaterialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTipoMaterial tipoMaterial = new frmTipoMaterial();
+            // Set the Parent Form of the Child window.
+            tipoMaterial.MdiParent = this;
+            // Display the new form.
+            tipoMaterial.Show();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            
+        }
+    }
+}
