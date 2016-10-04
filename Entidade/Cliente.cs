@@ -18,6 +18,8 @@ namespace Entidade
         public int UsuarioInclusao { get; set; }
         public DateTime DataInclusao { get; set; }
         public int UsuarioAlteracao { get; set; }
+
+
         public DateTime DataAlteracao { get; set; }
     }
 }
