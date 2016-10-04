@@ -37,5 +37,14 @@ namespace Apresentacao.Telas
         {
             
         }
+
+        private void materialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMaterial material = new frmMaterial();
+            // Set the Parent Form of the Child window.
+            material.MdiParent = this;
+            // Display the new form.
+            material.Show();
+        }
     }
 }

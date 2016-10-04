@@ -65,7 +65,7 @@ namespace Dados
             param[1].Value = obj.Descricao;
             param[2].Value = obj.Ativo;
             param[3].Value = obj.DataAlteracao;
-            param[3].Value = obj.UsuarioAlteracao.Codigo;
+            param[4].Value = obj.UsuarioAlteracao.Codigo;
 
             string strQuery = "Update TipoMaterial set "
                 + "descricao = @descricao, "

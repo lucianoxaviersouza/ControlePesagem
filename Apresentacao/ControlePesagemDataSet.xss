@@ -7,7 +7,7 @@
 <DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="-10" ViewPortY="18" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:vw_TipoMaterial_Grid" ZOrder="6" X="4" Y="45" Height="229" Width="271" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="24" SplitterPosition="178" />
-    <Shape ID="DesignTable:vw_Material_Grid" ZOrder="5" X="312" Y="38" Height="229" Width="245" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
+    <Shape ID="DesignTable:vw_Material_Grid" ZOrder="5" X="312" Y="38" Height="267" Width="245" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
     <Shape ID="DesignTable:vw_Cliente_Grid" ZOrder="4" X="627" Y="38" Height="286" Width="236" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="235" />
     <Shape ID="DesignTable:vw_Motorista_Grid" ZOrder="3" X="338" Y="347" Height="305" Width="253" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:vw_Veiculo_Grid" ZOrder="2" X="25" Y="348" Height="286" Width="239" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="235" />

@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoMaterialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.materialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             // cadastrosToolStripMenuItem
             // 
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tipoMaterialToolStripMenuItem});
+            this.tipoMaterialToolStripMenuItem,
+            this.materialToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -55,9 +57,16 @@
             // tipoMaterialToolStripMenuItem
             // 
             this.tipoMaterialToolStripMenuItem.Name = "tipoMaterialToolStripMenuItem";
-            this.tipoMaterialToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.tipoMaterialToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.tipoMaterialToolStripMenuItem.Text = "Tipo Material";
             this.tipoMaterialToolStripMenuItem.Click += new System.EventHandler(this.tipoMaterialToolStripMenuItem_Click);
+            // 
+            // materialToolStripMenuItem
+            // 
+            this.materialToolStripMenuItem.Name = "materialToolStripMenuItem";
+            this.materialToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.materialToolStripMenuItem.Text = "Material";
+            this.materialToolStripMenuItem.Click += new System.EventHandler(this.materialToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -83,5 +92,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoMaterialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem materialToolStripMenuItem;
     }
 }

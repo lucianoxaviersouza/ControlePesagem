@@ -834,6 +834,10 @@ namespace Apresentacao {
             
             private global::System.Data.DataColumn columnusuarioAlteracao;
             
+            private global::System.Data.DataColumn columncodigoTipoMaterial;
+            
+            private global::System.Data.DataColumn columnativo_string;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public vw_Material_GridDataTable() {
@@ -933,6 +937,22 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn codigoTipoMaterialColumn {
+                get {
+                    return this.columncodigoTipoMaterial;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ativo_stringColumn {
+                get {
+                    return this.columnativo_string;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -968,7 +988,7 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Material_GridRow Addvw_Material_GridRow(int codigo, string descricao, int ativo, string descricaoTipoMaterial, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao) {
+            public vw_Material_GridRow Addvw_Material_GridRow(int codigo, string descricao, int ativo, string descricaoTipoMaterial, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao, int codigoTipoMaterial, string ativo_string) {
                 vw_Material_GridRow rowvw_Material_GridRow = ((vw_Material_GridRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         codigo,
@@ -978,7 +998,9 @@ namespace Apresentacao {
                         dataInclusao,
                         dataAlteracao,
                         usuarioInclusao,
-                        usuarioAlteracao};
+                        usuarioAlteracao,
+                        codigoTipoMaterial,
+                        ativo_string};
                 rowvw_Material_GridRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowvw_Material_GridRow);
                 return rowvw_Material_GridRow;
@@ -1016,6 +1038,8 @@ namespace Apresentacao {
                 this.columndataAlteracao = base.Columns["dataAlteracao"];
                 this.columnusuarioInclusao = base.Columns["usuarioInclusao"];
                 this.columnusuarioAlteracao = base.Columns["usuarioAlteracao"];
+                this.columncodigoTipoMaterial = base.Columns["codigoTipoMaterial"];
+                this.columnativo_string = base.Columns["ativo_string"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1037,6 +1061,10 @@ namespace Apresentacao {
                 base.Columns.Add(this.columnusuarioInclusao);
                 this.columnusuarioAlteracao = new global::System.Data.DataColumn("usuarioAlteracao", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuarioAlteracao);
+                this.columncodigoTipoMaterial = new global::System.Data.DataColumn("codigoTipoMaterial", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodigoTipoMaterial);
+                this.columnativo_string = new global::System.Data.DataColumn("ativo_string", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnativo_string);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncodigo}, true));
                 this.columncodigo.AllowDBNull = false;
@@ -1049,6 +1077,9 @@ namespace Apresentacao {
                 this.columndataInclusao.AllowDBNull = false;
                 this.columnusuarioInclusao.MaxLength = 100;
                 this.columnusuarioAlteracao.MaxLength = 100;
+                this.columncodigoTipoMaterial.AllowDBNull = false;
+                this.columnativo_string.ReadOnly = true;
+                this.columnativo_string.MaxLength = 3;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3061,6 +3092,33 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int codigoTipoMaterial {
+                get {
+                    return ((int)(this[this.tablevw_Material_Grid.codigoTipoMaterialColumn]));
+                }
+                set {
+                    this[this.tablevw_Material_Grid.codigoTipoMaterialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ativo_string {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Material_Grid.ativo_stringColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ativo_string\' in table \'vw_Material_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Material_Grid.ativo_stringColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsdataAlteracaoNull() {
                 return this.IsNull(this.tablevw_Material_Grid.dataAlteracaoColumn);
             }
@@ -3093,6 +3151,18 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetusuarioAlteracaoNull() {
                 this[this.tablevw_Material_Grid.usuarioAlteracaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isativo_stringNull() {
+                return this.IsNull(this.tablevw_Material_Grid.ativo_stringColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setativo_stringNull() {
+                this[this.tablevw_Material_Grid.ativo_stringColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4510,6 +4580,8 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("dataAlteracao", "dataAlteracao");
             tableMapping.ColumnMappings.Add("usuarioInclusao", "usuarioInclusao");
             tableMapping.ColumnMappings.Add("usuarioAlteracao", "usuarioAlteracao");
+            tableMapping.ColumnMappings.Add("codigoTipoMaterial", "codigoTipoMaterial");
+            tableMapping.ColumnMappings.Add("ativo_string", "ativo_string");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -4527,7 +4599,8 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT codigo, descricao, ativo, descricaoTipoMaterial, dataInclusao, dataAlterac" +
-                "ao, usuarioInclusao, usuarioAlteracao FROM dbo.vw_Material_Grid";
+                "ao, usuarioInclusao, usuarioAlteracao, ativo_string, codigoTipoMaterial FROM vw_" +
+                "Material_Grid";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

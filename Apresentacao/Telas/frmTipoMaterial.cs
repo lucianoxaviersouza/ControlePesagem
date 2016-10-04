@@ -100,7 +100,7 @@ namespace Apresentacao.Telas
 
         private void frmTipoMaterial_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'controlePesagemDataSet.vw_TipoMaterial_Grid' table. You can move, or remove it, as needed.
+            
             this.vw_TipoMaterial_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_TipoMaterial_Grid);
             dgvTipoMaterial.Sort(dgvTipoMaterial.Columns[0], ListSortDirection.Descending);
             gboxDados.Text = String.Concat("Registros: ", this.dgvTipoMaterial.RowCount);

@@ -38,7 +38,7 @@ namespace Apresentacao.Telas
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gboxInfoControle = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDataAlteracao = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,11 +53,9 @@ namespace Apresentacao.Telas
             this.stbtExcluir = new System.Windows.Forms.ToolStripButton();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.vwTipoMaterialGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
-            this.vw_TipoMaterial_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_TipoMaterial_GridTableAdapter();
             this.gboxDados = new System.Windows.Forms.GroupBox();
             this.dgvTipoMaterial = new System.Windows.Forms.DataGridView();
+            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ativo_string = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,14 +63,16 @@ namespace Apresentacao.Telas
             this.usuarioInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwTipoMaterialGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
+            this.vw_TipoMaterial_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_TipoMaterial_GridTableAdapter();
             this.gboxTipoMaterial.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gboxInfoControle.SuspendLayout();
             this.stAcoes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vwTipoMaterialGridBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
             this.gboxDados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoMaterial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwTipoMaterialGridBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // gboxTipoMaterial
@@ -137,23 +137,23 @@ namespace Apresentacao.Telas
             this.txtDescricao.Size = new System.Drawing.Size(349, 20);
             this.txtDescricao.TabIndex = 1;
             // 
-            // groupBox1
+            // gboxInfoControle
             // 
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtDataAlteracao);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtUsuarioAlteracao);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtDataInclusao);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtUsuarioInclusao);
-            this.groupBox1.Location = new System.Drawing.Point(671, 64);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(343, 118);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Info. Controle";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
+            this.gboxInfoControle.Controls.Add(this.label4);
+            this.gboxInfoControle.Controls.Add(this.txtDataAlteracao);
+            this.gboxInfoControle.Controls.Add(this.label5);
+            this.gboxInfoControle.Controls.Add(this.txtUsuarioAlteracao);
+            this.gboxInfoControle.Controls.Add(this.label3);
+            this.gboxInfoControle.Controls.Add(this.txtDataInclusao);
+            this.gboxInfoControle.Controls.Add(this.label2);
+            this.gboxInfoControle.Controls.Add(this.txtUsuarioInclusao);
+            this.gboxInfoControle.Location = new System.Drawing.Point(671, 64);
+            this.gboxInfoControle.Name = "gboxInfoControle";
+            this.gboxInfoControle.Size = new System.Drawing.Size(343, 118);
+            this.gboxInfoControle.TabIndex = 1;
+            this.gboxInfoControle.TabStop = false;
+            this.gboxInfoControle.Text = "Informações de Controle";
+            this.gboxInfoControle.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
             // label4
             // 
@@ -177,9 +177,9 @@ namespace Apresentacao.Telas
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(22, 68);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 13);
+            this.label5.Size = new System.Drawing.Size(91, 13);
             this.label5.TabIndex = 7;
-            this.label5.Text = "UsuárioAlteraçao";
+            this.label5.Text = "Usuário Alteração";
             // 
             // txtUsuarioAlteracao
             // 
@@ -296,20 +296,6 @@ namespace Apresentacao.Telas
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // vwTipoMaterialGridBindingSource
-            // 
-            this.vwTipoMaterialGridBindingSource.DataMember = "vw_TipoMaterial_Grid";
-            this.vwTipoMaterialGridBindingSource.DataSource = this.controlePesagemDataSet;
-            // 
-            // controlePesagemDataSet
-            // 
-            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
-            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vw_TipoMaterial_GridTableAdapter
-            // 
-            this.vw_TipoMaterial_GridTableAdapter.ClearBeforeFill = true;
-            // 
             // gboxDados
             // 
             this.gboxDados.Controls.Add(this.dgvTipoMaterial);
@@ -337,12 +323,21 @@ namespace Apresentacao.Telas
             this.ativo});
             this.dgvTipoMaterial.DataSource = this.vwTipoMaterialGridBindingSource;
             this.dgvTipoMaterial.Location = new System.Drawing.Point(16, 21);
+            this.dgvTipoMaterial.MultiSelect = false;
             this.dgvTipoMaterial.Name = "dgvTipoMaterial";
             this.dgvTipoMaterial.ReadOnly = true;
             this.dgvTipoMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTipoMaterial.Size = new System.Drawing.Size(1009, 206);
             this.dgvTipoMaterial.TabIndex = 6;
             this.dgvTipoMaterial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoMaterial_CellContentClick_1);
+            // 
+            // ativo
+            // 
+            this.ativo.DataPropertyName = "ativo";
+            this.ativo.HeaderText = "ativo";
+            this.ativo.Name = "ativo";
+            this.ativo.ReadOnly = true;
+            this.ativo.Visible = false;
             // 
             // codigo
             // 
@@ -400,15 +395,21 @@ namespace Apresentacao.Telas
             this.usuarioAlteracao.ReadOnly = true;
             this.usuarioAlteracao.Width = 150;
             // 
-            // ativo
+            // vwTipoMaterialGridBindingSource
             // 
-            this.ativo.DataPropertyName = "ativo";
-            this.ativo.HeaderText = "ativo";
-            this.ativo.Name = "ativo";
-            this.ativo.ReadOnly = true;
-            this.ativo.Visible = false;
+            this.vwTipoMaterialGridBindingSource.DataMember = "vw_TipoMaterial_Grid";
+            this.vwTipoMaterialGridBindingSource.DataSource = this.controlePesagemDataSet;
             // 
-            // frmMaterial
+            // controlePesagemDataSet
+            // 
+            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
+            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vw_TipoMaterial_GridTableAdapter
+            // 
+            this.vw_TipoMaterial_GridTableAdapter.ClearBeforeFill = true;
+            // 
+            // frmTipoMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -418,23 +419,23 @@ namespace Apresentacao.Telas
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.stAcoes);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gboxInfoControle);
             this.Controls.Add(this.gboxTipoMaterial);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmMaterial";
+            this.Name = "frmTipoMaterial";
             this.Text = "Tipo de Material";
             this.TransparencyKey = System.Drawing.Color.White;
             this.Load += new System.EventHandler(this.frmTipoMaterial_Load);
             this.gboxTipoMaterial.ResumeLayout(false);
             this.gboxTipoMaterial.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gboxInfoControle.ResumeLayout(false);
+            this.gboxInfoControle.PerformLayout();
             this.stAcoes.ResumeLayout(false);
             this.stAcoes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vwTipoMaterialGridBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             this.gboxDados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoMaterial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwTipoMaterialGridBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,7 +457,7 @@ namespace Apresentacao.Telas
         private System.Windows.Forms.GroupBox gboxTipoMaterial;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gboxInfoControle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUsuarioInclusao;
         private System.Windows.Forms.Label label4;

@@ -32,9 +32,15 @@ namespace Dados
                     objMaterial.TipoMaterial.Codigo = Convert.ToInt16(objReader["idTipoMaterial"]);
                     objMaterial.Ativo = Convert.ToInt16(objReader["ativo"]);
                     objMaterial.DataInclusao = Convert.ToDateTime(objReader["dataInclusao"]);
-                    objMaterial.UsuarioInclusao = Convert.ToInt16((objReader["usuarioInclusao"] == DBNull.Value) ? null : objReader["usuarioInclusao"]); ;
+
+                    UsuarioDao usuInc = new UsuarioDao();
+                    objMaterial.UsuarioInclusao = usuInc.buscarPorCodigo(Convert.ToInt16((objReader["usuarioInclusao"] == DBNull.Value) ? null : objReader["usuarioInclusao"])); 
+                    
+                    
                     objMaterial.DataAlteracao = Convert.ToDateTime(objReader["dataAlteracao"]);
-                    objMaterial.UsuarioAlteracao = Convert.ToInt16((objReader["usuarioalteracao"] == DBNull.Value) ? null : objReader["usuarioAlteracao"]); ;
+
+                    UsuarioDao usuAlt = new UsuarioDao();
+                    objMaterial.UsuarioAlteracao = usuAlt.buscarPorCodigo(Convert.ToInt16((objReader["usuarioalteracao"] == DBNull.Value) ? null : objReader["usuarioAlteracao"]));
 
                 }
                 objReader.Close();
@@ -49,13 +55,14 @@ namespace Dados
         public void alterar(Material obj)
         {
             SqlConnection objConexao = ConnectionFactory.getConexao();
-            SqlParameter[] param = new SqlParameter[5]
+            SqlParameter[] param = new SqlParameter[6]
             {
                 new SqlParameter("@codigo", SqlDbType.Int),
                 new SqlParameter("@descricao", SqlDbType.NVarChar),
                 new SqlParameter("@idTipoMaterial", SqlDbType.Int),
                 new SqlParameter("@ativo", SqlDbType.Int),
-                new SqlParameter("@dataAlteracao", SqlDbType.DateTime)
+                new SqlParameter("@dataAlteracao", SqlDbType.DateTime),
+                new SqlParameter("@usuarioAlteracao", SqlDbType.Int)
                 
             };
             param[0].Value = obj.Codigo;
@@ -63,12 +70,14 @@ namespace Dados
             param[2].Value = obj.TipoMaterial;
             param[3].Value = obj.Ativo;
             param[4].Value = obj.DataAlteracao;
+            param[5].Value = obj.UsuarioAlteracao.Codigo;
 
             string strQuery = "Update Material set "
                 + "descricao = @descricao, "
                 + "idTipoMaterial = @idTipoMaterial, "
                 + "ativo= @ativo, "
-                + "dataAlteracao= @dataAlteracao "
+                + "dataAlteracao= @dataAlteracao, "
+                + "usuarioAlteracao= @usuarioAlteracao "
                 + " where codigo=@codigo";
 
             SqlCommand objCommand = new SqlCommand(strQuery, objConexao);
@@ -116,7 +125,7 @@ namespace Dados
             param[0].Value = obj.Descricao;
             param[1].Value = obj.TipoMaterial.Codigo;
             param[2].Value = obj.Ativo;
-            param[3].Value = obj.UsuarioInclusao;
+            param[3].Value = obj.UsuarioInclusao.Codigo;
             param[4].Value = obj.DataInclusao;
 
 
@@ -154,11 +163,13 @@ namespace Dados
                     objMaterial.TipoMaterial.Codigo = Convert.ToInt16(objReader["idTipoMaterial"]);
                     objMaterial.Ativo = Convert.ToInt16(objReader["ativo"]);
                     objMaterial.DataInclusao = Convert.ToDateTime((objReader["dataInclusao"] == DBNull.Value) ? null : objReader["dataInclusao"]);
-                    objMaterial.UsuarioInclusao = Convert.ToInt16((objReader["usuarioInclusao"] == DBNull.Value) ? null : objReader["usuarioInclusao"]);
                     objMaterial.DataAlteracao = Convert.ToDateTime((objReader["dataAlteracao"] == DBNull.Value) ? null : objReader["dataAlteracao"]);
-                    objMaterial.UsuarioInclusao = Convert.ToInt16((objReader["usuarioalteracao"] == DBNull.Value) ? null : objReader["usuarioAlteracao"]);
+                    
 
-
+                    UsuarioDao usuInc = new UsuarioDao();
+                    objMaterial.UsuarioInclusao = usuInc.buscarPorCodigo(Convert.ToInt16((objReader["usuarioInclusao"] == DBNull.Value) ? null : objReader["usuarioInclusao"]));
+                    UsuarioDao usuAlt = new UsuarioDao();
+                    objMaterial.UsuarioAlteracao = usuAlt.buscarPorCodigo(Convert.ToInt16((objReader["usuarioalteracao"] == DBNull.Value) ? null : objReader["usuarioAlteracao"]));
 
                     materiais.Add(objMaterial);
                 }
