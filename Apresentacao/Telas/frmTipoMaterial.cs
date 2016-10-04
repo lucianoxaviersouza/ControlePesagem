@@ -177,7 +177,9 @@ namespace Apresentacao.Telas
             if (txtCodigo.Text.Equals(""))
             {
                 MessageBox.Show("Selecione um registro para alteração!");
+
             }
+            else { 
 
             TipoMaterial objTipoMaterial = new TipoMaterial();
             TipoMaterialBus tpMaterial = new TipoMaterialBus();
@@ -191,7 +193,7 @@ namespace Apresentacao.Telas
             dgvTipoMaterial.Refresh();
             dgvTipoMaterial.Update();
             gboxDados.Text = String.Concat("Registros: ", dgvTipoMaterial.RowCount);
-
+            }
             }
      }
 }

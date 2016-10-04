@@ -408,7 +408,7 @@ namespace Apresentacao.Telas
             this.ativo.ReadOnly = true;
             this.ativo.Visible = false;
             // 
-            // frmTipoMaterial
+            // frmMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -421,7 +421,7 @@ namespace Apresentacao.Telas
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gboxTipoMaterial);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmTipoMaterial";
+            this.Name = "frmMaterial";
             this.Text = "Tipo de Material";
             this.TransparencyKey = System.Drawing.Color.White;
             this.Load += new System.EventHandler(this.frmTipoMaterial_Load);
