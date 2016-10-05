@@ -33,6 +33,7 @@ namespace Dados
                     objUsuario.Ativo = Convert.ToInt16(objReader["ativo"]);
                     objUsuario.DataInclusao = Convert.ToDateTime(objReader["dataInclusao"]);
                     objUsuario.DataAlteracao = Convert.ToDateTime(objReader["dataAlteracao"]);
+                    //TESTE COMIT 2
                     
                 }
                 objReader.Close();
