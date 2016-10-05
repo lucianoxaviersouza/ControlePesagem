@@ -35,6 +35,15 @@
             this.stbtAlterar = new System.Windows.Forms.ToolStripButton();
             this.stbtExcluir = new System.Windows.Forms.ToolStripButton();
             this.gboxCampos = new System.Windows.Forms.GroupBox();
+            this.chkAtivo = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cboTipoMaterial = new System.Windows.Forms.ComboBox();
+            this.vwTipoMaterialGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
             this.gboxInfoControle = new System.Windows.Forms.GroupBox();
             this.txtUsuarioAlteracao = new System.Windows.Forms.TextBox();
             this.txtDataAlteracao = new System.Windows.Forms.TextBox();
@@ -46,9 +55,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gboxDados = new System.Windows.Forms.GroupBox();
             this.dgvMaterial = new System.Windows.Forms.DataGridView();
-            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
-            this.vwMaterialGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vw_Material_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_Material_GridTableAdapter();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ativo_string = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,25 +65,19 @@
             this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoTipoMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwMaterialGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vw_Material_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_Material_GridTableAdapter();
             this.vw_TipoMaterial_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_TipoMaterial_GridTableAdapter();
-            this.cboTipoMaterial = new System.Windows.Forms.ComboBox();
-            this.vwTipoMaterialGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.stAcoes.SuspendLayout();
             this.gboxCampos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vwTipoMaterialGridBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
             this.gboxInfoControle.SuspendLayout();
             this.gboxDados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwMaterialGridBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwTipoMaterialGridBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // stAcoes
@@ -124,6 +124,7 @@
             this.stbtExcluir.Name = "stbtExcluir";
             this.stbtExcluir.Size = new System.Drawing.Size(28, 28);
             this.stbtExcluir.Text = "toolStripButton3";
+            this.stbtExcluir.Click += new System.EventHandler(this.stbtExcluir_Click);
             // 
             // gboxCampos
             // 
@@ -140,6 +141,82 @@
             this.gboxCampos.TabIndex = 1;
             this.gboxCampos.TabStop = false;
             this.gboxCampos.Text = "Material";
+            // 
+            // chkAtivo
+            // 
+            this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Enabled = false;
+            this.chkAtivo.Location = new System.Drawing.Point(392, 43);
+            this.chkAtivo.Name = "chkAtivo";
+            this.chkAtivo.Size = new System.Drawing.Size(50, 17);
+            this.chkAtivo.TabIndex = 6;
+            this.chkAtivo.Text = "Ativo";
+            this.chkAtivo.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 73);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Descrição";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Código";
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Enabled = false;
+            this.txtDescricao.Location = new System.Drawing.Point(12, 89);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(430, 20);
+            this.txtDescricao.TabIndex = 3;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(12, 42);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(134, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Tipo Material";
+            // 
+            // cboTipoMaterial
+            // 
+            this.cboTipoMaterial.DataSource = this.vwTipoMaterialGridBindingSource;
+            this.cboTipoMaterial.DisplayMember = "descricao";
+            this.cboTipoMaterial.Enabled = false;
+            this.cboTipoMaterial.FormattingEnabled = true;
+            this.cboTipoMaterial.Location = new System.Drawing.Point(134, 42);
+            this.cboTipoMaterial.Name = "cboTipoMaterial";
+            this.cboTipoMaterial.Size = new System.Drawing.Size(243, 21);
+            this.cboTipoMaterial.TabIndex = 0;
+            this.cboTipoMaterial.ValueMember = "codigo";
+            // 
+            // vwTipoMaterialGridBindingSource
+            // 
+            this.vwTipoMaterialGridBindingSource.DataMember = "vw_TipoMaterial_Grid";
+            this.vwTipoMaterialGridBindingSource.DataSource = this.controlePesagemDataSet;
+            // 
+            // controlePesagemDataSet
+            // 
+            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
+            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gboxInfoControle
             // 
@@ -262,20 +339,7 @@
             this.dgvMaterial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMaterial.Size = new System.Drawing.Size(1172, 226);
             this.dgvMaterial.TabIndex = 0;
-            // 
-            // controlePesagemDataSet
-            // 
-            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
-            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vwMaterialGridBindingSource
-            // 
-            this.vwMaterialGridBindingSource.DataMember = "vw_Material_Grid";
-            this.vwMaterialGridBindingSource.DataSource = this.controlePesagemDataSet;
-            // 
-            // vw_Material_GridTableAdapter
-            // 
-            this.vw_Material_GridTableAdapter.ClearBeforeFill = true;
+            this.dgvMaterial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMaterial_CellContentClick);
             // 
             // codigo
             // 
@@ -357,80 +421,18 @@
             this.ativo.ReadOnly = true;
             this.ativo.Visible = false;
             // 
+            // vwMaterialGridBindingSource
+            // 
+            this.vwMaterialGridBindingSource.DataMember = "vw_Material_Grid";
+            this.vwMaterialGridBindingSource.DataSource = this.controlePesagemDataSet;
+            // 
+            // vw_Material_GridTableAdapter
+            // 
+            this.vw_Material_GridTableAdapter.ClearBeforeFill = true;
+            // 
             // vw_TipoMaterial_GridTableAdapter
             // 
             this.vw_TipoMaterial_GridTableAdapter.ClearBeforeFill = true;
-            // 
-            // cboTipoMaterial
-            // 
-            this.cboTipoMaterial.DataSource = this.vwTipoMaterialGridBindingSource;
-            this.cboTipoMaterial.DisplayMember = "descricao";
-            this.cboTipoMaterial.Enabled = false;
-            this.cboTipoMaterial.FormattingEnabled = true;
-            this.cboTipoMaterial.Location = new System.Drawing.Point(134, 42);
-            this.cboTipoMaterial.Name = "cboTipoMaterial";
-            this.cboTipoMaterial.Size = new System.Drawing.Size(243, 21);
-            this.cboTipoMaterial.TabIndex = 0;
-            this.cboTipoMaterial.ValueMember = "codigo";
-            // 
-            // vwTipoMaterialGridBindingSource
-            // 
-            this.vwTipoMaterialGridBindingSource.DataMember = "vw_TipoMaterial_Grid";
-            this.vwTipoMaterialGridBindingSource.DataSource = this.controlePesagemDataSet;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(134, 23);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Tipo Material";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(12, 42);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigo.TabIndex = 2;
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Enabled = false;
-            this.txtDescricao.Location = new System.Drawing.Point(12, 89);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(430, 20);
-            this.txtDescricao.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 23);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Código";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 73);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Descrição";
-            // 
-            // chkAtivo
-            // 
-            this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Enabled = false;
-            this.chkAtivo.Location = new System.Drawing.Point(392, 43);
-            this.chkAtivo.Name = "chkAtivo";
-            this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 6;
-            this.chkAtivo.Text = "Ativo";
-            this.chkAtivo.UseVisualStyleBackColor = true;
             // 
             // btnSalvar
             // 
@@ -478,13 +480,13 @@
             this.stAcoes.PerformLayout();
             this.gboxCampos.ResumeLayout(false);
             this.gboxCampos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vwTipoMaterialGridBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             this.gboxInfoControle.ResumeLayout(false);
             this.gboxInfoControle.PerformLayout();
             this.gboxDados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwMaterialGridBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwTipoMaterialGridBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

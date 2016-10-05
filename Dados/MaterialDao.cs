@@ -67,7 +67,7 @@ namespace Dados
             };
             param[0].Value = obj.Codigo;
             param[1].Value = obj.Descricao;
-            param[2].Value = obj.TipoMaterial;
+            param[2].Value = obj.TipoMaterial.Codigo;
             param[3].Value = obj.Ativo;
             param[4].Value = obj.DataAlteracao;
             param[5].Value = obj.UsuarioAlteracao.Codigo;

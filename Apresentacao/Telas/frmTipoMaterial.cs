@@ -173,10 +173,10 @@ namespace Apresentacao.Telas
 
         private void stbtExcluir_Click(object sender, EventArgs e)
         {
-            globalTipoAcao = enunTipoAcao.alteracao;
+            globalTipoAcao = enunTipoAcao.delecao;
             if (txtCodigo.Text.Equals(""))
             {
-                MessageBox.Show("Selecione um registro para alteração!");
+                MessageBox.Show("Selecione um registro para deleção!");
 
             }
             else { 

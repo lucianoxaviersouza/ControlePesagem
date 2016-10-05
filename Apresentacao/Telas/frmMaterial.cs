@@ -136,5 +136,44 @@ namespace Apresentacao.Telas
 
 
         }
+
+        private void stbtExcluir_Click(object sender, EventArgs e)
+        {
+            globalTipoAcao = enunTipoAcao.delecao;
+            if (txtCodigo.Text.Equals(""))
+            {
+                MessageBox.Show("Selecione um registro para deleção!");
+
+            }
+            else
+            {
+
+                Material objMaterial = new Material();
+                MaterialBus material = new MaterialBus();
+
+                objMaterial.Codigo = Convert.ToInt16(txtCodigo.Text);
+
+                material.excluir(objMaterial);
+                MessageBox.Show("Registro Excluído com sucesso!");
+                ControleTela.LimpaCampos(this);
+                this.vw_Material_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Material_Grid);
+                dgvMaterial.Refresh();
+                dgvMaterial.Update();
+                gboxDados.Text = String.Concat("Registros: ", dgvMaterial.RowCount);
+            }
+        }
+
+        private void dgvMaterial_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtDescricao.Text = dgvMaterial.CurrentRow.Cells["descricao"].Value.ToString();
+            txtCodigo.Text = dgvMaterial.CurrentRow.Cells["codigo"].Value.ToString();
+            txtDataAlteracao.Text = dgvMaterial.CurrentRow.Cells["dataAlteracao"].Value.ToString();
+            txtDataInclusao.Text = dgvMaterial.CurrentRow.Cells["dataInclusao"].Value.ToString();
+            txtUsuarioAlteracao.Text = dgvMaterial.CurrentRow.Cells["UsuarioAlteracao"].Value.ToString();
+            txtUsuarioInclusao.Text = dgvMaterial.CurrentRow.Cells["dataInclusao"].Value.ToString();
+            chkAtivo.Checked = Convert.ToBoolean(Convert.ToInt16(dgvMaterial.CurrentRow.Cells["ativo"].Value.ToString()));
+            cboTipoMaterial.Text = dgvMaterial.CurrentRow.Cells["descricaoTipoMaterial"].Value.ToString();
+            
+        }
     }
 }
