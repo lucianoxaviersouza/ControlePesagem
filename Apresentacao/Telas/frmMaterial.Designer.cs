@@ -254,7 +254,7 @@
             // txtDataInclusao
             // 
             this.txtDataInclusao.Enabled = false;
-            this.txtDataInclusao.Location = new System.Drawing.Point(185, 41);
+            this.txtDataInclusao.Location = new System.Drawing.Point(185, 42);
             this.txtDataInclusao.Name = "txtDataInclusao";
             this.txtDataInclusao.Size = new System.Drawing.Size(130, 20);
             this.txtDataInclusao.TabIndex = 5;
