@@ -55,7 +55,6 @@ namespace Apresentacao.Telas
             this.btnCancelar = new System.Windows.Forms.Button();
             this.gboxDados = new System.Windows.Forms.GroupBox();
             this.dgvTipoMaterial = new System.Windows.Forms.DataGridView();
-            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ativo_string = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +62,7 @@ namespace Apresentacao.Telas
             this.usuarioInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwTipoMaterialGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
             this.vw_TipoMaterial_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_TipoMaterial_GridTableAdapter();
@@ -245,7 +245,7 @@ namespace Apresentacao.Telas
             this.stbtIncluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.stbtIncluir.Name = "stbtIncluir";
             this.stbtIncluir.Size = new System.Drawing.Size(28, 28);
-            this.stbtIncluir.Text = "Incluir";
+            this.stbtIncluir.Text = "Inclui um Tipo de Material";
             this.stbtIncluir.Click += new System.EventHandler(this.stbtIncluir_Click);
             // 
             // stbtAlterar
@@ -256,7 +256,7 @@ namespace Apresentacao.Telas
             this.stbtAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.stbtAlterar.Name = "stbtAlterar";
             this.stbtAlterar.Size = new System.Drawing.Size(28, 28);
-            this.stbtAlterar.Text = "Alterar";
+            this.stbtAlterar.Text = "Altera um Tipo de Material";
             this.stbtAlterar.Click += new System.EventHandler(this.stbtAlterar_Click);
             // 
             // stbtExcluir
@@ -267,7 +267,7 @@ namespace Apresentacao.Telas
             this.stbtExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.stbtExcluir.Name = "stbtExcluir";
             this.stbtExcluir.Size = new System.Drawing.Size(28, 28);
-            this.stbtExcluir.Text = "toolStripButton1";
+            this.stbtExcluir.Text = "Exclui um Tipo de Material";
             this.stbtExcluir.Click += new System.EventHandler(this.stbtExcluir_Click);
             // 
             // btnSalvar
@@ -331,14 +331,6 @@ namespace Apresentacao.Telas
             this.dgvTipoMaterial.TabIndex = 6;
             this.dgvTipoMaterial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoMaterial_CellContentClick_1);
             // 
-            // ativo
-            // 
-            this.ativo.DataPropertyName = "ativo";
-            this.ativo.HeaderText = "ativo";
-            this.ativo.Name = "ativo";
-            this.ativo.ReadOnly = true;
-            this.ativo.Visible = false;
-            // 
             // codigo
             // 
             this.codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -394,6 +386,14 @@ namespace Apresentacao.Telas
             this.usuarioAlteracao.Name = "usuarioAlteracao";
             this.usuarioAlteracao.ReadOnly = true;
             this.usuarioAlteracao.Width = 150;
+            // 
+            // ativo
+            // 
+            this.ativo.DataPropertyName = "ativo";
+            this.ativo.HeaderText = "ativo";
+            this.ativo.Name = "ativo";
+            this.ativo.ReadOnly = true;
+            this.ativo.Visible = false;
             // 
             // vwTipoMaterialGridBindingSource
             // 

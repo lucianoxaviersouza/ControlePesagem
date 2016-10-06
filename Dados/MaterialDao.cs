@@ -144,6 +144,11 @@ namespace Dados
             }
         }
 
+        public void validar(Material obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Material> listar()
         {
             List<Material> materiais = new List<Material>();

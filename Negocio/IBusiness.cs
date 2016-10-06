@@ -17,5 +17,6 @@ namespace Negocio
         void inserir(T obj);
 
         List<T> listar();
+        
     }
 }

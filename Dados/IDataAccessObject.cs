@@ -17,5 +17,6 @@ namespace Dados
         void inserir(T obj);
 
         List<T> listar();
+
     }
 }

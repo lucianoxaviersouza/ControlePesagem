@@ -53,6 +53,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlePesagemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Telas\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Telas\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmMaterial.resx">
       <DependentUpon>frmMaterial.cs</DependentUpon>
     </EmbeddedResource>

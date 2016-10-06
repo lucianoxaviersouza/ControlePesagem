@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Apresentacao.Telas
 {
@@ -132,14 +133,17 @@ namespace Apresentacao.Telas
             {
                 MessageBox.Show("Selecione um registro para alteração!");
             }
+            else {
+                /* Manipula controles em tela */
+                dgvTipoMaterial.Enabled = false;
+                stAcoes.Enabled = false;
+                txtDescricao.Enabled = true;
+                chkAtivo.Enabled = true;
+                btnSalvar.Enabled = true;
+                btnCancelar.Enabled = true;
+            }
             
-            /* Manipula controles em tela */
-            dgvTipoMaterial.Enabled = false;
-            stAcoes.Enabled = false;
-            txtDescricao.Enabled = true;
-            chkAtivo.Enabled = true;
-            btnSalvar.Enabled = true;
-            btnCancelar.Enabled = true;
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -149,6 +153,8 @@ namespace Apresentacao.Telas
             btnCancelar.Enabled = false;
             btnSalvar.Enabled = false;
             dgvTipoMaterial.Enabled = true;
+            txtDataAlteracao.Enabled = false;
+            chkAtivo.Enabled = false;
 
         }
 
@@ -173,11 +179,12 @@ namespace Apresentacao.Telas
 
         private void stbtExcluir_Click(object sender, EventArgs e)
         {
+            try {
             globalTipoAcao = enunTipoAcao.delecao;
             if (txtCodigo.Text.Equals(""))
             {
                 MessageBox.Show("Selecione um registro para deleção!");
-
+                return;
             }
             else { 
 
@@ -185,14 +192,35 @@ namespace Apresentacao.Telas
             TipoMaterialBus tpMaterial = new TipoMaterialBus();
             
             objTipoMaterial.Codigo = Convert.ToInt16(txtCodigo.Text);
-            
-            tpMaterial.excluir(objTipoMaterial);
+
+             tpMaterial.excluir(objTipoMaterial); 
+                
             MessageBox.Show("Registro Excluído com sucesso!");
             ControleTela.LimpaCampos(this);
             this.vw_TipoMaterial_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_TipoMaterial_Grid);
             dgvTipoMaterial.Refresh();
             dgvTipoMaterial.Update();
             gboxDados.Text = String.Concat("Registros: ", dgvTipoMaterial.RowCount);
+            
+            
+            }
+        }
+            catch (Exception ex)
+            {
+
+                if (ex is System.Data.SqlClient.SqlException)
+                {
+                    System.Data.SqlClient.SqlException erro = (System.Data.SqlClient.SqlException)ex;
+                    if (erro.Number == 547)
+                    {
+                        MessageBox.Show("Exclusão não permitida.  " + erro.Message.ToString());
+                    }
+                }
+                else {
+                    MessageBox.Show("Exclusão não permitida 2 .  " + ex.Message.ToString());
+                }
+                
+
             }
             }
      }

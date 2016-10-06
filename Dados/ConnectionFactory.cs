@@ -13,8 +13,8 @@ namespace Dados
         private String strCon =
         //    "Data Source=localhost\\NOTE-LXS;Initial Catalog=ControlePesagem;Integrated Security=True";
         //    "Server=127.0.0.1:1433\NOTE-LXS;Database=ControlePesagem;User Id=sa;Password=mogi@012;
-        //"Data Source=127.0.0.1;Initial Catalog=ControlePesagem;Integrated Security=SSPI;User ID=NOTE-LXS\\sa;Password=mogi@012";
-        "Data Source=127.0.0.1;Initial Catalog=ControlePesagem;Integrated Security=SSPI;User ID=WIN-U5B82DOANL5\\sa;Password=mogi@012";
+        "Data Source=127.0.0.1;Initial Catalog=ControlePesagem;Integrated Security=SSPI;User ID=NOTE-LXS\\sa;Password=mogi@012";
+       // "Data Source=127.0.0.1;Initial Catalog=ControlePesagem;Integrated Security=SSPI;User ID=WIN-U5B82DOANL5\\sa;Password=mogi@012";
 
         //Objeto de conexão
         private static SqlConnection objConexao = null;

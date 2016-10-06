@@ -79,5 +79,10 @@ namespace Negocio
             }
 
         }
+
+        public void validar(Material obj)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

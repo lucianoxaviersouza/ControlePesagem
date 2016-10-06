@@ -99,7 +99,7 @@ namespace Dados
             {
                 objCommand.ExecuteNonQuery();
             }
-            catch (SqlException err)
+            catch (Exception err)
             {
                 throw err;
             }
@@ -173,6 +173,7 @@ namespace Dados
             {
                 throw err;
             }
+        
         }
     }
 }
