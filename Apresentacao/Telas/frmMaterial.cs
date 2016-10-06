@@ -139,6 +139,7 @@ namespace Apresentacao.Telas
 
         private void stbtExcluir_Click(object sender, EventArgs e)
         {
+            try{
             globalTipoAcao = enunTipoAcao.delecao;
             if (txtCodigo.Text.Equals(""))
             {
@@ -160,6 +161,24 @@ namespace Apresentacao.Telas
                 dgvMaterial.Refresh();
                 dgvMaterial.Update();
                 gboxDados.Text = String.Concat("Registros: ", dgvMaterial.RowCount);
+            }
+                    }
+            catch (Exception ex)
+            {
+
+                if (ex is System.Data.SqlClient.SqlException)
+                {
+                    System.Data.SqlClient.SqlException erro = (System.Data.SqlClient.SqlException)ex;
+                    if (erro.Number == 547)
+                    {
+                        MessageBox.Show("Exclusão não permitida. Registro em uso em outros cadastros. ","Ação não permitida",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    }
+                }
+                else {
+                    MessageBox.Show("Erro inesperado ao realizar a exclusão. \n Informe o erro abaixo ao administrador do sistema. \n Erro: " + ex.Message.ToString(),"Erro inesperado",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+                
+
             }
         }
 
