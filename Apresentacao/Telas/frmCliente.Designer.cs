@@ -31,11 +31,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.gboxCliente = new System.Windows.Forms.GroupBox();
-            this.txtCodigo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.gboxInfoControle = new System.Windows.Forms.GroupBox();
             this.gboxDados = new System.Windows.Forms.GroupBox();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razaoSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeFantasiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefone1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefone2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataInclusaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataAlteracaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioInclusaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioAlteracaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwClienteGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
             this.stAcoes = new System.Windows.Forms.ToolStrip();
@@ -45,20 +56,18 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.vw_Cliente_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_Cliente_GridTableAdapter();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.razaoSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeFantasia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtUsuarioInclusao = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtUsuarioAlteracao = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtDataInclusao = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDataAlteracao = new System.Windows.Forms.TextBox();
             this.gboxCliente.SuspendLayout();
+            this.gboxInfoControle.SuspendLayout();
             this.gboxDados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
             this.stAcoes.SuspendLayout();
@@ -66,7 +75,7 @@
             // 
             // gboxCliente
             // 
-            this.gboxCliente.Controls.Add(this.txtCodigo);
+            this.gboxCliente.Controls.Add(this.label1);
             this.gboxCliente.Controls.Add(this.textBox1);
             this.gboxCliente.Location = new System.Drawing.Point(12, 39);
             this.gboxCliente.Name = "gboxCliente";
@@ -75,14 +84,14 @@
             this.gboxCliente.TabStop = false;
             this.gboxCliente.Text = "Cliente";
             // 
-            // txtCodigo
+            // label1
             // 
-            this.txtCodigo.AutoSize = true;
-            this.txtCodigo.Location = new System.Drawing.Point(18, 20);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(40, 13);
-            this.txtCodigo.TabIndex = 1;
-            this.txtCodigo.Text = "Código";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
             // 
             // textBox1
             // 
@@ -93,6 +102,14 @@
             // 
             // gboxInfoControle
             // 
+            this.gboxInfoControle.Controls.Add(this.label5);
+            this.gboxInfoControle.Controls.Add(this.txtDataAlteracao);
+            this.gboxInfoControle.Controls.Add(this.label4);
+            this.gboxInfoControle.Controls.Add(this.txtDataInclusao);
+            this.gboxInfoControle.Controls.Add(this.label3);
+            this.gboxInfoControle.Controls.Add(this.txtUsuarioAlteracao);
+            this.gboxInfoControle.Controls.Add(this.label2);
+            this.gboxInfoControle.Controls.Add(this.txtUsuarioInclusao);
             this.gboxInfoControle.Location = new System.Drawing.Point(746, 39);
             this.gboxInfoControle.Name = "gboxInfoControle";
             this.gboxInfoControle.Size = new System.Drawing.Size(334, 119);
@@ -102,7 +119,7 @@
             // 
             // gboxDados
             // 
-            this.gboxDados.Controls.Add(this.dgvCliente);
+            this.gboxDados.Controls.Add(this.dataGridView1);
             this.gboxDados.Location = new System.Drawing.Point(12, 205);
             this.gboxDados.Name = "gboxDados";
             this.gboxDados.Size = new System.Drawing.Size(1223, 265);
@@ -110,27 +127,93 @@
             this.gboxDados.TabStop = false;
             this.gboxDados.Text = "Registros: ";
             // 
-            // dgvCliente
+            // dataGridView1
             // 
-            this.dgvCliente.AutoGenerateColumns = false;
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo,
-            this.razaoSocial,
-            this.nomeFantasia,
-            this.Cnpj,
-            this.telefone1,
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigoDataGridViewTextBoxColumn,
+            this.razaoSocialDataGridViewTextBoxColumn,
+            this.nomeFantasiaDataGridViewTextBoxColumn,
+            this.cnpjDataGridViewTextBoxColumn,
+            this.telefone1DataGridViewTextBoxColumn,
             this.telefone2DataGridViewTextBoxColumn,
-            this.ativo,
-            this.dataInclusao,
-            this.usuarioInclusao,
-            this.dataAlteracao,
-            this.usuarioAlteracao});
-            this.dgvCliente.DataSource = this.vwClienteGridBindingSource;
-            this.dgvCliente.Location = new System.Drawing.Point(21, 19);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.Size = new System.Drawing.Size(1172, 226);
-            this.dgvCliente.TabIndex = 0;
+            this.ativoDataGridViewTextBoxColumn,
+            this.dataInclusaoDataGridViewTextBoxColumn,
+            this.dataAlteracaoDataGridViewTextBoxColumn,
+            this.usuarioInclusaoDataGridViewTextBoxColumn,
+            this.usuarioAlteracaoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.vwClienteGridBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(21, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1172, 226);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // codigoDataGridViewTextBoxColumn
+            // 
+            this.codigoDataGridViewTextBoxColumn.DataPropertyName = "codigo";
+            this.codigoDataGridViewTextBoxColumn.HeaderText = "codigo";
+            this.codigoDataGridViewTextBoxColumn.Name = "codigoDataGridViewTextBoxColumn";
+            // 
+            // razaoSocialDataGridViewTextBoxColumn
+            // 
+            this.razaoSocialDataGridViewTextBoxColumn.DataPropertyName = "razaoSocial";
+            this.razaoSocialDataGridViewTextBoxColumn.HeaderText = "razaoSocial";
+            this.razaoSocialDataGridViewTextBoxColumn.Name = "razaoSocialDataGridViewTextBoxColumn";
+            // 
+            // nomeFantasiaDataGridViewTextBoxColumn
+            // 
+            this.nomeFantasiaDataGridViewTextBoxColumn.DataPropertyName = "nomeFantasia";
+            this.nomeFantasiaDataGridViewTextBoxColumn.HeaderText = "nomeFantasia";
+            this.nomeFantasiaDataGridViewTextBoxColumn.Name = "nomeFantasiaDataGridViewTextBoxColumn";
+            // 
+            // cnpjDataGridViewTextBoxColumn
+            // 
+            this.cnpjDataGridViewTextBoxColumn.DataPropertyName = "cnpj";
+            this.cnpjDataGridViewTextBoxColumn.HeaderText = "cnpj";
+            this.cnpjDataGridViewTextBoxColumn.Name = "cnpjDataGridViewTextBoxColumn";
+            // 
+            // telefone1DataGridViewTextBoxColumn
+            // 
+            this.telefone1DataGridViewTextBoxColumn.DataPropertyName = "telefone1";
+            this.telefone1DataGridViewTextBoxColumn.HeaderText = "telefone1";
+            this.telefone1DataGridViewTextBoxColumn.Name = "telefone1DataGridViewTextBoxColumn";
+            // 
+            // telefone2DataGridViewTextBoxColumn
+            // 
+            this.telefone2DataGridViewTextBoxColumn.DataPropertyName = "telefone2";
+            this.telefone2DataGridViewTextBoxColumn.HeaderText = "telefone2";
+            this.telefone2DataGridViewTextBoxColumn.Name = "telefone2DataGridViewTextBoxColumn";
+            // 
+            // ativoDataGridViewTextBoxColumn
+            // 
+            this.ativoDataGridViewTextBoxColumn.DataPropertyName = "ativo";
+            this.ativoDataGridViewTextBoxColumn.HeaderText = "ativo";
+            this.ativoDataGridViewTextBoxColumn.Name = "ativoDataGridViewTextBoxColumn";
+            // 
+            // dataInclusaoDataGridViewTextBoxColumn
+            // 
+            this.dataInclusaoDataGridViewTextBoxColumn.DataPropertyName = "dataInclusao";
+            this.dataInclusaoDataGridViewTextBoxColumn.HeaderText = "dataInclusao";
+            this.dataInclusaoDataGridViewTextBoxColumn.Name = "dataInclusaoDataGridViewTextBoxColumn";
+            // 
+            // dataAlteracaoDataGridViewTextBoxColumn
+            // 
+            this.dataAlteracaoDataGridViewTextBoxColumn.DataPropertyName = "dataAlteracao";
+            this.dataAlteracaoDataGridViewTextBoxColumn.HeaderText = "dataAlteracao";
+            this.dataAlteracaoDataGridViewTextBoxColumn.Name = "dataAlteracaoDataGridViewTextBoxColumn";
+            // 
+            // usuarioInclusaoDataGridViewTextBoxColumn
+            // 
+            this.usuarioInclusaoDataGridViewTextBoxColumn.DataPropertyName = "usuarioInclusao";
+            this.usuarioInclusaoDataGridViewTextBoxColumn.HeaderText = "usuarioInclusao";
+            this.usuarioInclusaoDataGridViewTextBoxColumn.Name = "usuarioInclusaoDataGridViewTextBoxColumn";
+            // 
+            // usuarioAlteracaoDataGridViewTextBoxColumn
+            // 
+            this.usuarioAlteracaoDataGridViewTextBoxColumn.DataPropertyName = "usuarioAlteracao";
+            this.usuarioAlteracaoDataGridViewTextBoxColumn.HeaderText = "usuarioAlteracao";
+            this.usuarioAlteracaoDataGridViewTextBoxColumn.Name = "usuarioAlteracaoDataGridViewTextBoxColumn";
             // 
             // vwClienteGridBindingSource
             // 
@@ -186,11 +269,12 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Enabled = false;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.Location = new System.Drawing.Point(16, 165);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(83, 23);
             this.btnSalvar.TabIndex = 4;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -201,7 +285,7 @@
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(105, 165);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(83, 23);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -211,73 +295,73 @@
             // 
             this.vw_Cliente_GridTableAdapter.ClearBeforeFill = true;
             // 
-            // codigo
+            // txtUsuarioInclusao
             // 
-            this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
+            this.txtUsuarioInclusao.Enabled = false;
+            this.txtUsuarioInclusao.Location = new System.Drawing.Point(15, 42);
+            this.txtUsuarioInclusao.Name = "txtUsuarioInclusao";
+            this.txtUsuarioInclusao.Size = new System.Drawing.Size(154, 20);
+            this.txtUsuarioInclusao.TabIndex = 0;
             // 
-            // razaoSocial
+            // label2
             // 
-            this.razaoSocial.DataPropertyName = "razaoSocial";
-            this.razaoSocial.FillWeight = 150F;
-            this.razaoSocial.HeaderText = "Razão Social";
-            this.razaoSocial.Name = "razaoSocial";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Usuário Inclusão";
             // 
-            // nomeFantasia
+            // label3
             // 
-            this.nomeFantasia.DataPropertyName = "nomeFantasia";
-            this.nomeFantasia.HeaderText = "Nome Fantasia";
-            this.nomeFantasia.Name = "nomeFantasia";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Usuário Alteração";
             // 
-            // Cnpj
+            // txtUsuarioAlteracao
             // 
-            this.Cnpj.DataPropertyName = "cnpj";
-            this.Cnpj.HeaderText = "CNPH";
-            this.Cnpj.Name = "Cnpj";
+            this.txtUsuarioAlteracao.Enabled = false;
+            this.txtUsuarioAlteracao.Location = new System.Drawing.Point(15, 88);
+            this.txtUsuarioAlteracao.Name = "txtUsuarioAlteracao";
+            this.txtUsuarioAlteracao.Size = new System.Drawing.Size(154, 20);
+            this.txtUsuarioAlteracao.TabIndex = 2;
             // 
-            // telefone1
+            // label4
             // 
-            this.telefone1.DataPropertyName = "telefone1";
-            this.telefone1.HeaderText = "Telefone";
-            this.telefone1.Name = "telefone1";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(182, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Data Inclusão";
             // 
-            // telefone2DataGridViewTextBoxColumn
+            // txtDataInclusao
             // 
-            this.telefone2DataGridViewTextBoxColumn.DataPropertyName = "telefone2";
-            this.telefone2DataGridViewTextBoxColumn.HeaderText = "telefone2";
-            this.telefone2DataGridViewTextBoxColumn.Name = "telefone2DataGridViewTextBoxColumn";
-            this.telefone2DataGridViewTextBoxColumn.Visible = false;
+            this.txtDataInclusao.Enabled = false;
+            this.txtDataInclusao.Location = new System.Drawing.Point(185, 42);
+            this.txtDataInclusao.Name = "txtDataInclusao";
+            this.txtDataInclusao.Size = new System.Drawing.Size(130, 20);
+            this.txtDataInclusao.TabIndex = 4;
             // 
-            // ativo
+            // label5
             // 
-            this.ativo.DataPropertyName = "ativo";
-            this.ativo.HeaderText = "Ativo";
-            this.ativo.Name = "ativo";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(182, 72);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Data Alteração";
             // 
-            // dataInclusao
+            // txtDataAlteracao
             // 
-            this.dataInclusao.DataPropertyName = "dataInclusao";
-            this.dataInclusao.HeaderText = "Data Inclusão";
-            this.dataInclusao.Name = "dataInclusao";
-            // 
-            // usuarioInclusao
-            // 
-            this.usuarioInclusao.DataPropertyName = "usuarioInclusao";
-            this.usuarioInclusao.HeaderText = "Usuário Inclusão";
-            this.usuarioInclusao.Name = "usuarioInclusao";
-            // 
-            // dataAlteracao
-            // 
-            this.dataAlteracao.DataPropertyName = "dataAlteracao";
-            this.dataAlteracao.HeaderText = "Data Alteração";
-            this.dataAlteracao.Name = "dataAlteracao";
-            // 
-            // usuarioAlteracao
-            // 
-            this.usuarioAlteracao.DataPropertyName = "usuarioAlteracao";
-            this.usuarioAlteracao.HeaderText = "Usuário Alteração";
-            this.usuarioAlteracao.Name = "usuarioAlteracao";
+            this.txtDataAlteracao.Enabled = false;
+            this.txtDataAlteracao.Location = new System.Drawing.Point(185, 88);
+            this.txtDataAlteracao.Name = "txtDataAlteracao";
+            this.txtDataAlteracao.Size = new System.Drawing.Size(130, 20);
+            this.txtDataAlteracao.TabIndex = 6;
             // 
             // frmCliente
             // 
@@ -291,13 +375,16 @@
             this.Controls.Add(this.gboxDados);
             this.Controls.Add(this.gboxInfoControle);
             this.Controls.Add(this.gboxCliente);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCliente";
             this.Text = "Cadastro de Clientes";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             this.gboxCliente.ResumeLayout(false);
             this.gboxCliente.PerformLayout();
+            this.gboxInfoControle.ResumeLayout(false);
+            this.gboxInfoControle.PerformLayout();
             this.gboxDados.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             this.stAcoes.ResumeLayout(false);
@@ -318,22 +405,30 @@
         private System.Windows.Forms.ToolStripButton stbtExcluir;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.DataGridView dgvCliente;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private ControlePesagemDataSet controlePesagemDataSet;
         private System.Windows.Forms.BindingSource vwClienteGridBindingSource;
         private ControlePesagemDataSetTableAdapters.vw_Cliente_GridTableAdapter vw_Cliente_GridTableAdapter;
-        private System.Windows.Forms.Label txtCodigo;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn razaoSocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeFantasia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cnpj;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefone1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn razaoSocialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeFantasiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cnpjDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefone1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone2DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ativo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataInclusao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioInclusao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataAlteracao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioAlteracao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ativoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataInclusaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataAlteracaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioInclusaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioAlteracaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtDataAlteracao;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtDataInclusao;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtUsuarioAlteracao;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtUsuarioInclusao;
     }
 }
