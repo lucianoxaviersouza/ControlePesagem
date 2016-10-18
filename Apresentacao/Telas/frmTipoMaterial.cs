@@ -96,6 +96,11 @@ namespace Apresentacao.Telas
             chkAtivo.Enabled = false;
             dgvTipoMaterial.Enabled = true;
 
+            btnBuscarTodos.Enabled = true;
+            btnBuscar.Enabled = true;
+            txtDescricaoBusca.Enabled = true;
+            txtCodigoBusca.Enabled = true;
+
             
         }
 
@@ -116,6 +121,12 @@ namespace Apresentacao.Telas
             dgvTipoMaterial.Enabled = false;
             globalTipoAcao = enunTipoAcao.inclusao;
             stAcoes.Enabled = false;
+            
+            btnBuscarTodos.Enabled = false;
+            btnBuscar.Enabled = false;
+            txtDescricaoBusca.Enabled = false;
+            txtCodigoBusca.Enabled = false;
+
             txtDescricao.Enabled = true;
             txtDescricao.Focus();
             chkAtivo.Enabled = true;
@@ -141,6 +152,12 @@ namespace Apresentacao.Telas
                 chkAtivo.Enabled = true;
                 btnSalvar.Enabled = true;
                 btnCancelar.Enabled = true;
+
+
+                btnBuscarTodos.Enabled = false;
+                btnBuscar.Enabled = false;
+                txtDescricaoBusca.Enabled = false;
+                txtCodigoBusca.Enabled = false;
             }
             
             
@@ -155,6 +172,10 @@ namespace Apresentacao.Telas
             dgvTipoMaterial.Enabled = true;
             txtDataAlteracao.Enabled = false;
             chkAtivo.Enabled = false;
+            btnBuscarTodos.Enabled = true;
+            btnBuscar.Enabled = true;
+            txtDescricaoBusca.Enabled = true;
+            txtCodigoBusca.Enabled = true;
 
         }
 
@@ -168,11 +189,14 @@ namespace Apresentacao.Telas
 
             txtDescricao.Text = dgvTipoMaterial.CurrentRow.Cells["descricao"].Value.ToString();
             txtCodigo.Text = dgvTipoMaterial.CurrentRow.Cells["codigo"].Value.ToString();
+            chkAtivo.Checked = Convert.ToBoolean(Convert.ToInt16(dgvTipoMaterial.CurrentRow.Cells["ativo"].Value.ToString()));
+
             txtDataAlteracao.Text = dgvTipoMaterial.CurrentRow.Cells["dataAlteracao"].Value.ToString();
             txtDataInclusao.Text = dgvTipoMaterial.CurrentRow.Cells["dataInclusao"].Value.ToString();
+            
             txtUsuarioAlteracao.Text = dgvTipoMaterial.CurrentRow.Cells["UsuarioAlteracao"].Value.ToString();
-            txtUsuarioInclusao.Text = dgvTipoMaterial.CurrentRow.Cells["dataInclusao"].Value.ToString();
-            chkAtivo.Checked = Convert.ToBoolean(Convert.ToInt16(dgvTipoMaterial.CurrentRow.Cells["ativo"].Value.ToString()));
+            txtUsuarioInclusao.Text = dgvTipoMaterial.CurrentRow.Cells["UsuarioInclusao"].Value.ToString();
+            
             
         }
 
@@ -223,5 +247,25 @@ namespace Apresentacao.Telas
 
             }
             }
+
+        private void bntBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtCodigoBusca.Text != "")
+            {
+                vw_TipoMaterial_GridTableAdapter.FillByCodigo(controlePesagemDataSet.vw_TipoMaterial_Grid, Convert.ToInt32(txtCodigoBusca.Text));
+            }
+            else if (txtDescricaoBusca.Text != "")
+            {
+                vw_TipoMaterial_GridTableAdapter.FillByDescricao(controlePesagemDataSet.vw_TipoMaterial_Grid, txtDescricaoBusca.Text);
+                
+            }
+        }
+
+        private void btnBuscarTodos_Click(object sender, EventArgs e)
+        {
+            txtCodigoBusca.Text = "";
+            txtDescricaoBusca.Text = "";
+            vw_TipoMaterial_GridTableAdapter.Fill(controlePesagemDataSet.vw_TipoMaterial_Grid);
+          }
      }
 }

@@ -55,6 +55,12 @@ namespace Apresentacao.Telas
             this.btnCancelar = new System.Windows.Forms.Button();
             this.gboxDados = new System.Windows.Forms.GroupBox();
             this.dgvTipoMaterial = new System.Windows.Forms.DataGridView();
+            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtCodigoBusca = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtDescricaoBusca = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ativo_string = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,10 +68,10 @@ namespace Apresentacao.Telas
             this.usuarioInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwTipoMaterialGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
             this.vw_TipoMaterial_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_TipoMaterial_GridTableAdapter();
+            this.btnBuscarTodos = new System.Windows.Forms.Button();
             this.gboxTipoMaterial.SuspendLayout();
             this.gboxInfoControle.SuspendLayout();
             this.stAcoes.SuspendLayout();
@@ -299,7 +305,7 @@ namespace Apresentacao.Telas
             // gboxDados
             // 
             this.gboxDados.Controls.Add(this.dgvTipoMaterial);
-            this.gboxDados.Location = new System.Drawing.Point(10, 226);
+            this.gboxDados.Location = new System.Drawing.Point(10, 267);
             this.gboxDados.Name = "gboxDados";
             this.gboxDados.Size = new System.Drawing.Size(1035, 244);
             this.gboxDados.TabIndex = 7;
@@ -331,6 +337,58 @@ namespace Apresentacao.Telas
             this.dgvTipoMaterial.TabIndex = 6;
             this.dgvTipoMaterial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoMaterial_CellContentClick_1);
             // 
+            // ativo
+            // 
+            this.ativo.DataPropertyName = "ativo";
+            this.ativo.HeaderText = "ativo";
+            this.ativo.Name = "ativo";
+            this.ativo.ReadOnly = true;
+            this.ativo.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 225);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Código";
+            // 
+            // txtCodigoBusca
+            // 
+            this.txtCodigoBusca.Location = new System.Drawing.Point(16, 241);
+            this.txtCodigoBusca.Name = "txtCodigoBusca";
+            this.txtCodigoBusca.Size = new System.Drawing.Size(95, 20);
+            this.txtCodigoBusca.TabIndex = 10;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(114, 225);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Descrição";
+            // 
+            // txtDescricaoBusca
+            // 
+            this.txtDescricaoBusca.Location = new System.Drawing.Point(117, 241);
+            this.txtDescricaoBusca.Name = "txtDescricaoBusca";
+            this.txtDescricaoBusca.Size = new System.Drawing.Size(349, 20);
+            this.txtDescricaoBusca.TabIndex = 9;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(472, 241);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(83, 23);
+            this.btnBuscar.TabIndex = 12;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.bntBuscar_Click);
+            // 
             // codigo
             // 
             this.codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -338,7 +396,7 @@ namespace Apresentacao.Telas
             this.codigo.HeaderText = "Código";
             this.codigo.Name = "codigo";
             this.codigo.ReadOnly = true;
-            this.codigo.Width = 65;
+            this.codigo.Width = 63;
             // 
             // descricao
             // 
@@ -387,14 +445,6 @@ namespace Apresentacao.Telas
             this.usuarioAlteracao.ReadOnly = true;
             this.usuarioAlteracao.Width = 150;
             // 
-            // ativo
-            // 
-            this.ativo.DataPropertyName = "ativo";
-            this.ativo.HeaderText = "ativo";
-            this.ativo.Name = "ativo";
-            this.ativo.ReadOnly = true;
-            this.ativo.Visible = false;
-            // 
             // vwTipoMaterialGridBindingSource
             // 
             this.vwTipoMaterialGridBindingSource.DataMember = "vw_TipoMaterial_Grid";
@@ -409,12 +459,30 @@ namespace Apresentacao.Telas
             // 
             this.vw_TipoMaterial_GridTableAdapter.ClearBeforeFill = true;
             // 
+            // btnBuscarTodos
+            // 
+            this.btnBuscarTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarTodos.Image")));
+            this.btnBuscarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarTodos.Location = new System.Drawing.Point(565, 241);
+            this.btnBuscarTodos.Name = "btnBuscarTodos";
+            this.btnBuscarTodos.Size = new System.Drawing.Size(108, 23);
+            this.btnBuscarTodos.TabIndex = 13;
+            this.btnBuscarTodos.Text = "Buscar todos";
+            this.btnBuscarTodos.UseVisualStyleBackColor = true;
+            this.btnBuscarTodos.Click += new System.EventHandler(this.btnBuscarTodos_Click);
+            // 
             // frmTipoMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1057, 482);
+            this.ClientSize = new System.Drawing.Size(1057, 519);
+            this.Controls.Add(this.btnBuscarTodos);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtCodigoBusca);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtDescricaoBusca);
             this.Controls.Add(this.gboxDados);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
@@ -488,6 +556,12 @@ namespace Apresentacao.Telas
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAlteracao;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioAlteracao;
         private System.Windows.Forms.DataGridViewTextBoxColumn ativo;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtCodigoBusca;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtDescricaoBusca;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnBuscarTodos;
 
     }
 }
