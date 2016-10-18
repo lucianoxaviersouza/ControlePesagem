@@ -56,15 +56,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsuarioInclusao = new System.Windows.Forms.TextBox();
             this.gboxDados = new System.Windows.Forms.GroupBox();
+            this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.stAcoes = new System.Windows.Forms.ToolStrip();
             this.stbtIncluir = new System.Windows.Forms.ToolStripButton();
             this.stbtAlterar = new System.Windows.Forms.ToolStripButton();
             this.stbtExcluir = new System.Windows.Forms.ToolStripButton();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
-            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
             this.vwClienteGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
             this.vw_Cliente_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_Cliente_GridTableAdapter();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razaoSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,19 +72,20 @@
             this.cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativo_string = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gboxCliente.SuspendLayout();
             this.gboxInfoControle.SuspendLayout();
             this.gboxDados.SuspendLayout();
-            this.stAcoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
+            this.stAcoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // gboxCliente
@@ -339,6 +340,35 @@
             this.gboxDados.TabStop = false;
             this.gboxDados.Text = "Registros: ";
             // 
+            // dgvCliente
+            // 
+            this.dgvCliente.AllowUserToAddRows = false;
+            this.dgvCliente.AutoGenerateColumns = false;
+            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigo,
+            this.razaoSocial,
+            this.nomeFantasia,
+            this.cnpj,
+            this.telefone1,
+            this.email,
+            this.ativo_string,
+            this.telefone2,
+            this.dataInclusao,
+            this.usuarioInclusao,
+            this.dataAlteracao,
+            this.usuarioAlteracao,
+            this.ativo});
+            this.dgvCliente.DataSource = this.vwClienteGridBindingSource;
+            this.dgvCliente.Location = new System.Drawing.Point(21, 19);
+            this.dgvCliente.MultiSelect = false;
+            this.dgvCliente.Name = "dgvCliente";
+            this.dgvCliente.ReadOnly = true;
+            this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCliente.Size = new System.Drawing.Size(1186, 231);
+            this.dgvCliente.TabIndex = 0;
+            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
+            // 
             // stAcoes
             // 
             this.stAcoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -410,43 +440,15 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dgvCliente
+            // vwClienteGridBindingSource
             // 
-            this.dgvCliente.AllowUserToAddRows = false;
-            this.dgvCliente.AutoGenerateColumns = false;
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo,
-            this.razaoSocial,
-            this.nomeFantasia,
-            this.cnpj,
-            this.telefone1,
-            this.email,
-            this.ativo,
-            this.telefone2,
-            this.dataInclusao,
-            this.usuarioInclusao,
-            this.dataAlteracao,
-            this.usuarioAlteracao});
-            this.dgvCliente.DataSource = this.vwClienteGridBindingSource;
-            this.dgvCliente.Location = new System.Drawing.Point(21, 19);
-            this.dgvCliente.MultiSelect = false;
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.ReadOnly = true;
-            this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCliente.Size = new System.Drawing.Size(1186, 231);
-            this.dgvCliente.TabIndex = 0;
-            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
+            this.vwClienteGridBindingSource.DataMember = "vw_Cliente_Grid";
+            this.vwClienteGridBindingSource.DataSource = this.controlePesagemDataSet;
             // 
             // controlePesagemDataSet
             // 
             this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
             this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vwClienteGridBindingSource
-            // 
-            this.vwClienteGridBindingSource.DataMember = "vw_Cliente_Grid";
-            this.vwClienteGridBindingSource.DataSource = this.controlePesagemDataSet;
             // 
             // vw_Cliente_GridTableAdapter
             // 
@@ -495,12 +497,12 @@
             this.email.Name = "email";
             this.email.ReadOnly = true;
             // 
-            // ativo
+            // ativo_string
             // 
-            this.ativo.DataPropertyName = "ativo";
-            this.ativo.HeaderText = "Ativo";
-            this.ativo.Name = "ativo";
-            this.ativo.ReadOnly = true;
+            this.ativo_string.DataPropertyName = "ativo_string";
+            this.ativo_string.HeaderText = "Ativo";
+            this.ativo_string.Name = "ativo_string";
+            this.ativo_string.ReadOnly = true;
             // 
             // telefone2
             // 
@@ -542,6 +544,14 @@
             this.usuarioAlteracao.ReadOnly = true;
             this.usuarioAlteracao.Visible = false;
             // 
+            // ativo
+            // 
+            this.ativo.DataPropertyName = "ativo";
+            this.ativo.HeaderText = "Ativo";
+            this.ativo.Name = "ativo";
+            this.ativo.ReadOnly = true;
+            this.ativo.Visible = false;
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,6 +564,7 @@
             this.Controls.Add(this.gboxDados);
             this.Controls.Add(this.gboxInfoControle);
             this.Controls.Add(this.gboxCliente);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCliente";
             this.Text = "Cadastro de Clientes";
             this.Load += new System.EventHandler(this.frmCliente_Load);
@@ -562,11 +573,11 @@
             this.gboxInfoControle.ResumeLayout(false);
             this.gboxInfoControle.PerformLayout();
             this.gboxDados.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
             this.stAcoes.ResumeLayout(false);
             this.stAcoes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -616,11 +627,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cnpj;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone1;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ativo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ativo_string;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataInclusao;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioInclusao;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAlteracao;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioAlteracao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ativo;
     }
 }

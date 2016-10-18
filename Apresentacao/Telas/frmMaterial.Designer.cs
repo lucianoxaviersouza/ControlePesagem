@@ -101,7 +101,7 @@
             this.stbtIncluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.stbtIncluir.Name = "stbtIncluir";
             this.stbtIncluir.Size = new System.Drawing.Size(28, 28);
-            this.stbtIncluir.Text = "toolStripButton1";
+            this.stbtIncluir.Text = "Incluir";
             this.stbtIncluir.Click += new System.EventHandler(this.stbtIncluir_Click);
             // 
             // stbtAlterar
@@ -137,7 +137,7 @@
             this.gboxCampos.Controls.Add(this.cboTipoMaterial);
             this.gboxCampos.Location = new System.Drawing.Point(12, 39);
             this.gboxCampos.Name = "gboxCampos";
-            this.gboxCampos.Size = new System.Drawing.Size(507, 119);
+            this.gboxCampos.Size = new System.Drawing.Size(507, 120);
             this.gboxCampos.TabIndex = 1;
             this.gboxCampos.TabStop = false;
             this.gboxCampos.Text = "Material";
@@ -230,7 +230,7 @@
             this.gboxInfoControle.Controls.Add(this.label1);
             this.gboxInfoControle.Location = new System.Drawing.Point(538, 39);
             this.gboxInfoControle.Name = "gboxInfoControle";
-            this.gboxInfoControle.Size = new System.Drawing.Size(334, 119);
+            this.gboxInfoControle.Size = new System.Drawing.Size(334, 120);
             this.gboxInfoControle.TabIndex = 2;
             this.gboxInfoControle.TabStop = false;
             this.gboxInfoControle.Text = "Informações de Controle";

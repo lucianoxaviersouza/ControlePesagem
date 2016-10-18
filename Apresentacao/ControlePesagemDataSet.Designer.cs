@@ -2887,6 +2887,8 @@ namespace Apresentacao {
             
             private global::System.Data.DataColumn columnusuarioAlteracao;
             
+            private global::System.Data.DataColumn columnativo_string;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public vw_Cliente_GridDataTable() {
@@ -3018,6 +3020,14 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ativo_stringColumn {
+                get {
+                    return this.columnativo_string;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3053,7 +3063,7 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Cliente_GridRow Addvw_Cliente_GridRow(int codigo, string razaoSocial, string nomeFantasia, string cnpj, string telefone1, string telefone2, string email, int ativo, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao) {
+            public vw_Cliente_GridRow Addvw_Cliente_GridRow(int codigo, string razaoSocial, string nomeFantasia, string cnpj, string telefone1, string telefone2, string email, int ativo, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao, string ativo_string) {
                 vw_Cliente_GridRow rowvw_Cliente_GridRow = ((vw_Cliente_GridRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         codigo,
@@ -3067,7 +3077,8 @@ namespace Apresentacao {
                         dataInclusao,
                         dataAlteracao,
                         usuarioInclusao,
-                        usuarioAlteracao};
+                        usuarioAlteracao,
+                        ativo_string};
                 rowvw_Cliente_GridRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowvw_Cliente_GridRow);
                 return rowvw_Cliente_GridRow;
@@ -3109,6 +3120,7 @@ namespace Apresentacao {
                 this.columndataAlteracao = base.Columns["dataAlteracao"];
                 this.columnusuarioInclusao = base.Columns["usuarioInclusao"];
                 this.columnusuarioAlteracao = base.Columns["usuarioAlteracao"];
+                this.columnativo_string = base.Columns["ativo_string"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3138,6 +3150,8 @@ namespace Apresentacao {
                 base.Columns.Add(this.columnusuarioInclusao);
                 this.columnusuarioAlteracao = new global::System.Data.DataColumn("usuarioAlteracao", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuarioAlteracao);
+                this.columnativo_string = new global::System.Data.DataColumn("ativo_string", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnativo_string);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncodigo}, true));
                 this.columncodigo.AllowDBNull = false;
@@ -3153,6 +3167,8 @@ namespace Apresentacao {
                 this.columndataInclusao.AllowDBNull = false;
                 this.columnusuarioInclusao.MaxLength = 100;
                 this.columnusuarioAlteracao.MaxLength = 100;
+                this.columnativo_string.ReadOnly = true;
+                this.columnativo_string.MaxLength = 3;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4741,6 +4757,22 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ativo_string {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Cliente_Grid.ativo_stringColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ativo_string\' in table \'vw_Cliente_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Cliente_Grid.ativo_stringColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IscnpjNull() {
                 return this.IsNull(this.tablevw_Cliente_Grid.cnpjColumn);
             }
@@ -4833,6 +4865,18 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetusuarioAlteracaoNull() {
                 this[this.tablevw_Cliente_Grid.usuarioAlteracaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isativo_stringNull() {
+                return this.IsNull(this.tablevw_Cliente_Grid.ativo_stringColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setativo_stringNull() {
+                this[this.tablevw_Cliente_Grid.ativo_stringColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6278,6 +6322,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("dataAlteracao", "dataAlteracao");
             tableMapping.ColumnMappings.Add("usuarioInclusao", "usuarioInclusao");
             tableMapping.ColumnMappings.Add("usuarioAlteracao", "usuarioAlteracao");
+            tableMapping.ColumnMappings.Add("ativo_string", "ativo_string");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6295,8 +6340,8 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT codigo, razaoSocial, nomeFantasia, cnpj, telefone1, telefone2, email, ativ" +
-                "o, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao FROM dbo.vw_Cl" +
-                "iente_Grid";
+                "o, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao, ativo_string " +
+                "FROM vw_Cliente_Grid";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -159,10 +159,11 @@ namespace Apresentacao.Telas
             txtTelefone2.Text = dgvCliente.CurrentRow.Cells["telefone2"].Value.ToString();
             txtEmail.Text = dgvCliente.CurrentRow.Cells["email"].Value.ToString();
             chkAtivo.Checked = Convert.ToBoolean(Convert.ToInt16(dgvCliente.CurrentRow.Cells["ativo"].Value.ToString()));
-            txtDataAlteracao.Text = dgvCliente.CurrentRow.Cells["dataAlteracao"].Value.ToString();
             txtDataInclusao.Text = dgvCliente.CurrentRow.Cells["dataInclusao"].Value.ToString();
+            txtUsuarioInclusao.Text = dgvCliente.CurrentRow.Cells["UsuarioInclusao"].Value.ToString();
+
+            txtDataAlteracao.Text = dgvCliente.CurrentRow.Cells["dataAlteracao"].Value.ToString();
             txtUsuarioAlteracao.Text = dgvCliente.CurrentRow.Cells["UsuarioAlteracao"].Value.ToString();
-            txtUsuarioInclusao.Text = dgvCliente.CurrentRow.Cells["dataInclusao"].Value.ToString();
             
         }
 

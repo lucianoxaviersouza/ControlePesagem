@@ -163,7 +163,7 @@
               <DbSource ConnectionRef="ControlePesagemConnectionString (Settings)" DbObjectName="ControlePesagem.dbo.vw_Cliente_Grid" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT codigo, razaoSocial, nomeFantasia, cnpj, telefone1, telefone2, email, ativo, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao FROM dbo.vw_Cliente_Grid</CommandText>
+                    <CommandText>SELECT codigo, razaoSocial, nomeFantasia, cnpj, telefone1, telefone2, email, ativo, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao, ativo_string FROM vw_Cliente_Grid</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -182,6 +182,7 @@
               <Mapping SourceColumn="dataAlteracao" DataSetColumn="dataAlteracao" />
               <Mapping SourceColumn="usuarioInclusao" DataSetColumn="usuarioInclusao" />
               <Mapping SourceColumn="usuarioAlteracao" DataSetColumn="usuarioAlteracao" />
+              <Mapping SourceColumn="ativo_string" DataSetColumn="ativo_string" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -193,7 +194,7 @@
   <xs:element name="ControlePesagemDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ControlePesagemDataSet" msprop:Generator_UserDSName="ControlePesagemDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="vw_TipoMaterial_Grid" msprop:Generator_TableClassName="vw_TipoMaterial_GridDataTable" msprop:Generator_TableVarName="tablevw_TipoMaterial_Grid" msprop:Generator_TablePropName="vw_TipoMaterial_Grid" msprop:Generator_RowDeletingName="vw_TipoMaterial_GridRowDeleting" msprop:Generator_RowChangingName="vw_TipoMaterial_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_TipoMaterial_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_TipoMaterial_GridRowDeleted" msprop:Generator_UserTableName="vw_TipoMaterial_Grid" msprop:Generator_RowChangedName="vw_TipoMaterial_GridRowChanged" msprop:Generator_RowEvArgName="vw_TipoMaterial_GridRowChangeEvent" msprop:Generator_RowClassName="vw_TipoMaterial_GridRow">
+        <xs:element name="vw_TipoMaterial_Grid" msprop:Generator_TableClassName="vw_TipoMaterial_GridDataTable" msprop:Generator_TableVarName="tablevw_TipoMaterial_Grid" msprop:Generator_RowChangedName="vw_TipoMaterial_GridRowChanged" msprop:Generator_TablePropName="vw_TipoMaterial_Grid" msprop:Generator_RowDeletingName="vw_TipoMaterial_GridRowDeleting" msprop:Generator_RowChangingName="vw_TipoMaterial_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_TipoMaterial_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_TipoMaterial_GridRowDeleted" msprop:Generator_RowClassName="vw_TipoMaterial_GridRow" msprop:Generator_UserTableName="vw_TipoMaterial_Grid" msprop:Generator_RowEvArgName="vw_TipoMaterial_GridRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:int" />
@@ -231,7 +232,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vw_Material_Grid" msprop:Generator_TableClassName="vw_Material_GridDataTable" msprop:Generator_TableVarName="tablevw_Material_Grid" msprop:Generator_RowChangedName="vw_Material_GridRowChanged" msprop:Generator_TablePropName="vw_Material_Grid" msprop:Generator_RowDeletingName="vw_Material_GridRowDeleting" msprop:Generator_RowChangingName="vw_Material_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Material_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Material_GridRowDeleted" msprop:Generator_RowClassName="vw_Material_GridRow" msprop:Generator_UserTableName="vw_Material_Grid" msprop:Generator_RowEvArgName="vw_Material_GridRowChangeEvent">
+        <xs:element name="vw_Material_Grid" msprop:Generator_TableClassName="vw_Material_GridDataTable" msprop:Generator_TableVarName="tablevw_Material_Grid" msprop:Generator_TablePropName="vw_Material_Grid" msprop:Generator_RowDeletingName="vw_Material_GridRowDeleting" msprop:Generator_RowChangingName="vw_Material_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Material_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Material_GridRowDeleted" msprop:Generator_UserTableName="vw_Material_Grid" msprop:Generator_RowChangedName="vw_Material_GridRowChanged" msprop:Generator_RowEvArgName="vw_Material_GridRowChangeEvent" msprop:Generator_RowClassName="vw_Material_GridRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:int" />
@@ -277,7 +278,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vw_Motorista_Grid" msprop:Generator_TableClassName="vw_Motorista_GridDataTable" msprop:Generator_TableVarName="tablevw_Motorista_Grid" msprop:Generator_RowChangedName="vw_Motorista_GridRowChanged" msprop:Generator_TablePropName="vw_Motorista_Grid" msprop:Generator_RowDeletingName="vw_Motorista_GridRowDeleting" msprop:Generator_RowChangingName="vw_Motorista_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Motorista_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Motorista_GridRowDeleted" msprop:Generator_RowClassName="vw_Motorista_GridRow" msprop:Generator_UserTableName="vw_Motorista_Grid" msprop:Generator_RowEvArgName="vw_Motorista_GridRowChangeEvent">
+        <xs:element name="vw_Motorista_Grid" msprop:Generator_TableClassName="vw_Motorista_GridDataTable" msprop:Generator_TableVarName="tablevw_Motorista_Grid" msprop:Generator_TablePropName="vw_Motorista_Grid" msprop:Generator_RowDeletingName="vw_Motorista_GridRowDeleting" msprop:Generator_RowChangingName="vw_Motorista_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Motorista_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Motorista_GridRowDeleted" msprop:Generator_UserTableName="vw_Motorista_Grid" msprop:Generator_RowChangedName="vw_Motorista_GridRowChanged" msprop:Generator_RowEvArgName="vw_Motorista_GridRowChangeEvent" msprop:Generator_RowClassName="vw_Motorista_GridRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:int" />
@@ -343,7 +344,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vw_Veiculo_Grid" msprop:Generator_TableClassName="vw_Veiculo_GridDataTable" msprop:Generator_TableVarName="tablevw_Veiculo_Grid" msprop:Generator_RowChangedName="vw_Veiculo_GridRowChanged" msprop:Generator_TablePropName="vw_Veiculo_Grid" msprop:Generator_RowDeletingName="vw_Veiculo_GridRowDeleting" msprop:Generator_RowChangingName="vw_Veiculo_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Veiculo_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Veiculo_GridRowDeleted" msprop:Generator_RowClassName="vw_Veiculo_GridRow" msprop:Generator_UserTableName="vw_Veiculo_Grid" msprop:Generator_RowEvArgName="vw_Veiculo_GridRowChangeEvent">
+        <xs:element name="vw_Veiculo_Grid" msprop:Generator_TableClassName="vw_Veiculo_GridDataTable" msprop:Generator_TableVarName="tablevw_Veiculo_Grid" msprop:Generator_TablePropName="vw_Veiculo_Grid" msprop:Generator_RowDeletingName="vw_Veiculo_GridRowDeleting" msprop:Generator_RowChangingName="vw_Veiculo_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Veiculo_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Veiculo_GridRowDeleted" msprop:Generator_UserTableName="vw_Veiculo_Grid" msprop:Generator_RowChangedName="vw_Veiculo_GridRowChanged" msprop:Generator_RowEvArgName="vw_Veiculo_GridRowChangeEvent" msprop:Generator_RowClassName="vw_Veiculo_GridRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:int" />
@@ -408,7 +409,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vw_Usuario_Grid" msprop:Generator_TableClassName="vw_Usuario_GridDataTable" msprop:Generator_TableVarName="tablevw_Usuario_Grid" msprop:Generator_RowChangedName="vw_Usuario_GridRowChanged" msprop:Generator_TablePropName="vw_Usuario_Grid" msprop:Generator_RowDeletingName="vw_Usuario_GridRowDeleting" msprop:Generator_RowChangingName="vw_Usuario_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Usuario_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Usuario_GridRowDeleted" msprop:Generator_RowClassName="vw_Usuario_GridRow" msprop:Generator_UserTableName="vw_Usuario_Grid" msprop:Generator_RowEvArgName="vw_Usuario_GridRowChangeEvent">
+        <xs:element name="vw_Usuario_Grid" msprop:Generator_TableClassName="vw_Usuario_GridDataTable" msprop:Generator_TableVarName="tablevw_Usuario_Grid" msprop:Generator_TablePropName="vw_Usuario_Grid" msprop:Generator_RowDeletingName="vw_Usuario_GridRowDeleting" msprop:Generator_RowChangingName="vw_Usuario_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Usuario_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Usuario_GridRowDeleted" msprop:Generator_UserTableName="vw_Usuario_Grid" msprop:Generator_RowChangedName="vw_Usuario_GridRowChanged" msprop:Generator_RowEvArgName="vw_Usuario_GridRowChangeEvent" msprop:Generator_RowClassName="vw_Usuario_GridRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="codigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:int" />
@@ -439,7 +440,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vw_Pesagem_Grid" msprop:Generator_TableClassName="vw_Pesagem_GridDataTable" msprop:Generator_TableVarName="tablevw_Pesagem_Grid" msprop:Generator_TablePropName="vw_Pesagem_Grid" msprop:Generator_RowDeletingName="vw_Pesagem_GridRowDeleting" msprop:Generator_RowChangingName="vw_Pesagem_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Pesagem_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Pesagem_GridRowDeleted" msprop:Generator_UserTableName="vw_Pesagem_Grid" msprop:Generator_RowChangedName="vw_Pesagem_GridRowChanged" msprop:Generator_RowEvArgName="vw_Pesagem_GridRowChangeEvent" msprop:Generator_RowClassName="vw_Pesagem_GridRow">
+        <xs:element name="vw_Pesagem_Grid" msprop:Generator_TableClassName="vw_Pesagem_GridDataTable" msprop:Generator_TableVarName="tablevw_Pesagem_Grid" msprop:Generator_RowChangedName="vw_Pesagem_GridRowChanged" msprop:Generator_TablePropName="vw_Pesagem_Grid" msprop:Generator_RowDeletingName="vw_Pesagem_GridRowDeleting" msprop:Generator_RowChangingName="vw_Pesagem_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Pesagem_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Pesagem_GridRowDeleted" msprop:Generator_RowClassName="vw_Pesagem_GridRow" msprop:Generator_UserTableName="vw_Pesagem_Grid" msprop:Generator_RowEvArgName="vw_Pesagem_GridRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:int" />
@@ -500,7 +501,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="vw_Cliente_Grid" msprop:Generator_TableClassName="vw_Cliente_GridDataTable" msprop:Generator_TableVarName="tablevw_Cliente_Grid" msprop:Generator_TablePropName="vw_Cliente_Grid" msprop:Generator_RowDeletingName="vw_Cliente_GridRowDeleting" msprop:Generator_RowChangingName="vw_Cliente_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Cliente_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Cliente_GridRowDeleted" msprop:Generator_UserTableName="vw_Cliente_Grid" msprop:Generator_RowChangedName="vw_Cliente_GridRowChanged" msprop:Generator_RowEvArgName="vw_Cliente_GridRowChangeEvent" msprop:Generator_RowClassName="vw_Cliente_GridRow">
+        <xs:element name="vw_Cliente_Grid" msprop:Generator_TableClassName="vw_Cliente_GridDataTable" msprop:Generator_TableVarName="tablevw_Cliente_Grid" msprop:Generator_RowChangedName="vw_Cliente_GridRowChanged" msprop:Generator_TablePropName="vw_Cliente_Grid" msprop:Generator_RowDeletingName="vw_Cliente_GridRowDeleting" msprop:Generator_RowChangingName="vw_Cliente_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Cliente_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Cliente_GridRowDeleted" msprop:Generator_RowClassName="vw_Cliente_GridRow" msprop:Generator_UserTableName="vw_Cliente_Grid" msprop:Generator_RowEvArgName="vw_Cliente_GridRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:int" />
@@ -560,6 +561,13 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ativo_string" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnativo_string" msprop:Generator_ColumnPropNameInRow="ativo_string" msprop:Generator_ColumnPropNameInTable="ativo_stringColumn" msprop:Generator_UserColumnName="ativo_string" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
