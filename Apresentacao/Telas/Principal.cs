@@ -46,5 +46,14 @@ namespace Apresentacao.Telas
             // Display the new form.
             material.Show();
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCliente cliente = new frmCliente();
+            // Set the Parent Form of the Child window.
+            cliente.MdiParent = this;
+            // Display the new form.
+            cliente.Show();
+        }
     }
 }

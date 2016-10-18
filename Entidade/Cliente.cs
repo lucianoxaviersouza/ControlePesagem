@@ -14,12 +14,18 @@ namespace Entidade
         public String CNPJ { get; set; }
         public String Telefone1 { get; set; }
         public String Telefone2 { get; set; }
+        public String email { get; set; }
+
         public int Ativo { get; set; }
-        public int UsuarioInclusao { get; set; }
+        public Usuario UsuarioInclusao { get; set; }
         public DateTime DataInclusao { get; set; }
-        public int UsuarioAlteracao { get; set; }
-
-
+        public Usuario UsuarioAlteracao { get; set; }
         public DateTime DataAlteracao { get; set; }
+
+        public Cliente()
+        {
+            this.UsuarioAlteracao = new Usuario();
+            this.UsuarioInclusao = new Usuario();
+        }
     }
 }

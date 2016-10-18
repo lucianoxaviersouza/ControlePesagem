@@ -55,32 +55,6 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_Cliente_GridTableAdapter" GeneratorDataComponentClassName="vw_Cliente_GridTableAdapter" Name="vw_Cliente_Grid" UserDataComponentName="vw_Cliente_GridTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="ControlePesagemConnectionString (Settings)" DbObjectName="ControlePesagem.dbo.vw_Cliente_Grid" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT codigo, razaoSocial, nomeFantasia, cnpj, telefone1, telefone2, ativo, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao FROM dbo.vw_Cliente_Grid</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="codigo" DataSetColumn="codigo" />
-              <Mapping SourceColumn="razaoSocial" DataSetColumn="razaoSocial" />
-              <Mapping SourceColumn="nomeFantasia" DataSetColumn="nomeFantasia" />
-              <Mapping SourceColumn="cnpj" DataSetColumn="cnpj" />
-              <Mapping SourceColumn="telefone1" DataSetColumn="telefone1" />
-              <Mapping SourceColumn="telefone2" DataSetColumn="telefone2" />
-              <Mapping SourceColumn="ativo" DataSetColumn="ativo" />
-              <Mapping SourceColumn="dataInclusao" DataSetColumn="dataInclusao" />
-              <Mapping SourceColumn="dataAlteracao" DataSetColumn="dataAlteracao" />
-              <Mapping SourceColumn="usuarioInclusao" DataSetColumn="usuarioInclusao" />
-              <Mapping SourceColumn="usuarioAlteracao" DataSetColumn="usuarioAlteracao" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_Motorista_GridTableAdapter" GeneratorDataComponentClassName="vw_Motorista_GridTableAdapter" Name="vw_Motorista_Grid" UserDataComponentName="vw_Motorista_GridTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="ControlePesagemConnectionString (Settings)" DbObjectName="ControlePesagem.dbo.vw_Motorista_Grid" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -184,6 +158,33 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_Cliente_GridTableAdapter" GeneratorDataComponentClassName="vw_Cliente_GridTableAdapter" Name="vw_Cliente_Grid" UserDataComponentName="vw_Cliente_GridTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ControlePesagemConnectionString (Settings)" DbObjectName="ControlePesagem.dbo.vw_Cliente_Grid" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT codigo, razaoSocial, nomeFantasia, cnpj, telefone1, telefone2, email, ativo, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao FROM dbo.vw_Cliente_Grid</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codigo" DataSetColumn="codigo" />
+              <Mapping SourceColumn="razaoSocial" DataSetColumn="razaoSocial" />
+              <Mapping SourceColumn="nomeFantasia" DataSetColumn="nomeFantasia" />
+              <Mapping SourceColumn="cnpj" DataSetColumn="cnpj" />
+              <Mapping SourceColumn="telefone1" DataSetColumn="telefone1" />
+              <Mapping SourceColumn="telefone2" DataSetColumn="telefone2" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="ativo" DataSetColumn="ativo" />
+              <Mapping SourceColumn="dataInclusao" DataSetColumn="dataInclusao" />
+              <Mapping SourceColumn="dataAlteracao" DataSetColumn="dataAlteracao" />
+              <Mapping SourceColumn="usuarioInclusao" DataSetColumn="usuarioInclusao" />
+              <Mapping SourceColumn="usuarioAlteracao" DataSetColumn="usuarioAlteracao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -270,65 +271,6 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="3" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="vw_Cliente_Grid" msprop:Generator_TableClassName="vw_Cliente_GridDataTable" msprop:Generator_TableVarName="tablevw_Cliente_Grid" msprop:Generator_RowChangedName="vw_Cliente_GridRowChanged" msprop:Generator_TablePropName="vw_Cliente_Grid" msprop:Generator_RowDeletingName="vw_Cliente_GridRowDeleting" msprop:Generator_RowChangingName="vw_Cliente_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Cliente_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Cliente_GridRowDeleted" msprop:Generator_RowClassName="vw_Cliente_GridRow" msprop:Generator_UserTableName="vw_Cliente_Grid" msprop:Generator_RowEvArgName="vw_Cliente_GridRowChangeEvent">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:int" />
-              <xs:element name="razaoSocial" msprop:Generator_ColumnVarNameInTable="columnrazaoSocial" msprop:Generator_ColumnPropNameInRow="razaoSocial" msprop:Generator_ColumnPropNameInTable="razaoSocialColumn" msprop:Generator_UserColumnName="razaoSocial">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="nomeFantasia" msprop:Generator_ColumnVarNameInTable="columnnomeFantasia" msprop:Generator_ColumnPropNameInRow="nomeFantasia" msprop:Generator_ColumnPropNameInTable="nomeFantasiaColumn" msprop:Generator_UserColumnName="nomeFantasia">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="cnpj" msprop:Generator_ColumnVarNameInTable="columncnpj" msprop:Generator_ColumnPropNameInRow="cnpj" msprop:Generator_ColumnPropNameInTable="cnpjColumn" msprop:Generator_UserColumnName="cnpj" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="telefone1" msprop:Generator_ColumnVarNameInTable="columntelefone1" msprop:Generator_ColumnPropNameInRow="telefone1" msprop:Generator_ColumnPropNameInTable="telefone1Column" msprop:Generator_UserColumnName="telefone1" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="telefone2" msprop:Generator_ColumnVarNameInTable="columntelefone2" msprop:Generator_ColumnPropNameInRow="telefone2" msprop:Generator_ColumnPropNameInTable="telefone2Column" msprop:Generator_UserColumnName="telefone2" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="ativo" msprop:Generator_ColumnVarNameInTable="columnativo" msprop:Generator_ColumnPropNameInRow="ativo" msprop:Generator_ColumnPropNameInTable="ativoColumn" msprop:Generator_UserColumnName="ativo" type="xs:int" minOccurs="0" />
-              <xs:element name="dataInclusao" msprop:Generator_ColumnVarNameInTable="columndataInclusao" msprop:Generator_ColumnPropNameInRow="dataInclusao" msprop:Generator_ColumnPropNameInTable="dataInclusaoColumn" msprop:Generator_UserColumnName="dataInclusao" type="xs:dateTime" />
-              <xs:element name="dataAlteracao" msprop:Generator_ColumnVarNameInTable="columndataAlteracao" msprop:Generator_ColumnPropNameInRow="dataAlteracao" msprop:Generator_ColumnPropNameInTable="dataAlteracaoColumn" msprop:Generator_UserColumnName="dataAlteracao" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="usuarioInclusao" msprop:Generator_ColumnVarNameInTable="columnusuarioInclusao" msprop:Generator_ColumnPropNameInRow="usuarioInclusao" msprop:Generator_ColumnPropNameInTable="usuarioInclusaoColumn" msprop:Generator_UserColumnName="usuarioInclusao" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="usuarioAlteracao" msprop:Generator_ColumnVarNameInTable="columnusuarioAlteracao" msprop:Generator_ColumnPropNameInRow="usuarioAlteracao" msprop:Generator_ColumnPropNameInTable="usuarioAlteracaoColumn" msprop:Generator_UserColumnName="usuarioAlteracao" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -558,6 +500,72 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="vw_Cliente_Grid" msprop:Generator_TableClassName="vw_Cliente_GridDataTable" msprop:Generator_TableVarName="tablevw_Cliente_Grid" msprop:Generator_TablePropName="vw_Cliente_Grid" msprop:Generator_RowDeletingName="vw_Cliente_GridRowDeleting" msprop:Generator_RowChangingName="vw_Cliente_GridRowChanging" msprop:Generator_RowEvHandlerName="vw_Cliente_GridRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_Cliente_GridRowDeleted" msprop:Generator_UserTableName="vw_Cliente_Grid" msprop:Generator_RowChangedName="vw_Cliente_GridRowChanged" msprop:Generator_RowEvArgName="vw_Cliente_GridRowChangeEvent" msprop:Generator_RowClassName="vw_Cliente_GridRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:int" />
+              <xs:element name="razaoSocial" msprop:Generator_ColumnVarNameInTable="columnrazaoSocial" msprop:Generator_ColumnPropNameInRow="razaoSocial" msprop:Generator_ColumnPropNameInTable="razaoSocialColumn" msprop:Generator_UserColumnName="razaoSocial">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nomeFantasia" msprop:Generator_ColumnVarNameInTable="columnnomeFantasia" msprop:Generator_ColumnPropNameInRow="nomeFantasia" msprop:Generator_ColumnPropNameInTable="nomeFantasiaColumn" msprop:Generator_UserColumnName="nomeFantasia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cnpj" msprop:Generator_ColumnVarNameInTable="columncnpj" msprop:Generator_ColumnPropNameInRow="cnpj" msprop:Generator_ColumnPropNameInTable="cnpjColumn" msprop:Generator_UserColumnName="cnpj" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefone1" msprop:Generator_ColumnVarNameInTable="columntelefone1" msprop:Generator_ColumnPropNameInRow="telefone1" msprop:Generator_ColumnPropNameInTable="telefone1Column" msprop:Generator_UserColumnName="telefone1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefone2" msprop:Generator_ColumnVarNameInTable="columntelefone2" msprop:Generator_ColumnPropNameInRow="telefone2" msprop:Generator_ColumnPropNameInTable="telefone2Column" msprop:Generator_UserColumnName="telefone2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ativo" msprop:Generator_ColumnVarNameInTable="columnativo" msprop:Generator_ColumnPropNameInRow="ativo" msprop:Generator_ColumnPropNameInTable="ativoColumn" msprop:Generator_UserColumnName="ativo" type="xs:int" minOccurs="0" />
+              <xs:element name="dataInclusao" msprop:Generator_ColumnVarNameInTable="columndataInclusao" msprop:Generator_ColumnPropNameInRow="dataInclusao" msprop:Generator_ColumnPropNameInTable="dataInclusaoColumn" msprop:Generator_UserColumnName="dataInclusao" type="xs:dateTime" />
+              <xs:element name="dataAlteracao" msprop:Generator_ColumnVarNameInTable="columndataAlteracao" msprop:Generator_ColumnPropNameInRow="dataAlteracao" msprop:Generator_ColumnPropNameInTable="dataAlteracaoColumn" msprop:Generator_UserColumnName="dataAlteracao" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="usuarioInclusao" msprop:Generator_ColumnVarNameInTable="columnusuarioInclusao" msprop:Generator_ColumnPropNameInRow="usuarioInclusao" msprop:Generator_ColumnPropNameInTable="usuarioInclusaoColumn" msprop:Generator_UserColumnName="usuarioInclusao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usuarioAlteracao" msprop:Generator_ColumnVarNameInTable="columnusuarioAlteracao" msprop:Generator_ColumnPropNameInRow="usuarioAlteracao" msprop:Generator_ColumnPropNameInTable="usuarioAlteracaoColumn" msprop:Generator_UserColumnName="usuarioAlteracao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -566,10 +574,6 @@
     </xs:unique>
     <xs:unique name="vw_Material_Grid_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:vw_Material_Grid" />
-      <xs:field xpath="mstns:codigo" />
-    </xs:unique>
-    <xs:unique name="vw_Cliente_Grid_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:vw_Cliente_Grid" />
       <xs:field xpath="mstns:codigo" />
     </xs:unique>
     <xs:unique name="vw_Motorista_Grid_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
@@ -582,6 +586,10 @@
     </xs:unique>
     <xs:unique name="vw_Usuario_Grid_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:vw_Usuario_Grid" />
+      <xs:field xpath="mstns:codigo" />
+    </xs:unique>
+    <xs:unique name="vw_Cliente_Grid_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Cliente_Grid" />
       <xs:field xpath="mstns:codigo" />
     </xs:unique>
   </xs:element>

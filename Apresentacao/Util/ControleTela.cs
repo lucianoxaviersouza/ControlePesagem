@@ -20,6 +20,12 @@ namespace Apresentacao.Util
             {
                 checkBox.Checked = false;
             }
+
+            foreach (var mask in _form.Controls.OfType<GroupBox>().SelectMany(groupBox => groupBox.Controls.OfType<MaskedTextBox>()))
+            {
+                mask.Text = "";
+            }
+            
         }
     }
 }

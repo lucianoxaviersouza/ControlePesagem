@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Apresentacao {
+namespace Dados {
     
     
     /// <summary>
@@ -24,19 +24,19 @@ namespace Apresentacao {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class ControlePesagemDataSet : global::System.Data.DataSet {
         
-        private vw_TipoMaterial_GridDataTable tablevw_TipoMaterial_Grid;
+        private vw_Cliente_GridDataTable tablevw_Cliente_Grid;
         
         private vw_Material_GridDataTable tablevw_Material_Grid;
         
         private vw_Motorista_GridDataTable tablevw_Motorista_Grid;
         
-        private vw_Veiculo_GridDataTable tablevw_Veiculo_Grid;
+        private vw_Pesagem_GridDataTable tablevw_Pesagem_Grid;
+        
+        private vw_TipoMaterial_GridDataTable tablevw_TipoMaterial_Grid;
         
         private vw_Usuario_GridDataTable tablevw_Usuario_Grid;
         
-        private vw_Pesagem_GridDataTable tablevw_Pesagem_Grid;
-        
-        private vw_Cliente_GridDataTable tablevw_Cliente_Grid;
+        private vw_Veiculo_GridDataTable tablevw_Veiculo_Grid;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -66,8 +66,8 @@ namespace Apresentacao {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["vw_TipoMaterial_Grid"] != null)) {
-                    base.Tables.Add(new vw_TipoMaterial_GridDataTable(ds.Tables["vw_TipoMaterial_Grid"]));
+                if ((ds.Tables["vw_Cliente_Grid"] != null)) {
+                    base.Tables.Add(new vw_Cliente_GridDataTable(ds.Tables["vw_Cliente_Grid"]));
                 }
                 if ((ds.Tables["vw_Material_Grid"] != null)) {
                     base.Tables.Add(new vw_Material_GridDataTable(ds.Tables["vw_Material_Grid"]));
@@ -75,17 +75,17 @@ namespace Apresentacao {
                 if ((ds.Tables["vw_Motorista_Grid"] != null)) {
                     base.Tables.Add(new vw_Motorista_GridDataTable(ds.Tables["vw_Motorista_Grid"]));
                 }
-                if ((ds.Tables["vw_Veiculo_Grid"] != null)) {
-                    base.Tables.Add(new vw_Veiculo_GridDataTable(ds.Tables["vw_Veiculo_Grid"]));
+                if ((ds.Tables["vw_Pesagem_Grid"] != null)) {
+                    base.Tables.Add(new vw_Pesagem_GridDataTable(ds.Tables["vw_Pesagem_Grid"]));
+                }
+                if ((ds.Tables["vw_TipoMaterial_Grid"] != null)) {
+                    base.Tables.Add(new vw_TipoMaterial_GridDataTable(ds.Tables["vw_TipoMaterial_Grid"]));
                 }
                 if ((ds.Tables["vw_Usuario_Grid"] != null)) {
                     base.Tables.Add(new vw_Usuario_GridDataTable(ds.Tables["vw_Usuario_Grid"]));
                 }
-                if ((ds.Tables["vw_Pesagem_Grid"] != null)) {
-                    base.Tables.Add(new vw_Pesagem_GridDataTable(ds.Tables["vw_Pesagem_Grid"]));
-                }
-                if ((ds.Tables["vw_Cliente_Grid"] != null)) {
-                    base.Tables.Add(new vw_Cliente_GridDataTable(ds.Tables["vw_Cliente_Grid"]));
+                if ((ds.Tables["vw_Veiculo_Grid"] != null)) {
+                    base.Tables.Add(new vw_Veiculo_GridDataTable(ds.Tables["vw_Veiculo_Grid"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -109,9 +109,9 @@ namespace Apresentacao {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public vw_TipoMaterial_GridDataTable vw_TipoMaterial_Grid {
+        public vw_Cliente_GridDataTable vw_Cliente_Grid {
             get {
-                return this.tablevw_TipoMaterial_Grid;
+                return this.tablevw_Cliente_Grid;
             }
         }
         
@@ -139,9 +139,19 @@ namespace Apresentacao {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public vw_Veiculo_GridDataTable vw_Veiculo_Grid {
+        public vw_Pesagem_GridDataTable vw_Pesagem_Grid {
             get {
-                return this.tablevw_Veiculo_Grid;
+                return this.tablevw_Pesagem_Grid;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public vw_TipoMaterial_GridDataTable vw_TipoMaterial_Grid {
+            get {
+                return this.tablevw_TipoMaterial_Grid;
             }
         }
         
@@ -159,19 +169,9 @@ namespace Apresentacao {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public vw_Pesagem_GridDataTable vw_Pesagem_Grid {
+        public vw_Veiculo_GridDataTable vw_Veiculo_Grid {
             get {
-                return this.tablevw_Pesagem_Grid;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public vw_Cliente_GridDataTable vw_Cliente_Grid {
-            get {
-                return this.tablevw_Cliente_Grid;
+                return this.tablevw_Veiculo_Grid;
             }
         }
         
@@ -242,8 +242,8 @@ namespace Apresentacao {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["vw_TipoMaterial_Grid"] != null)) {
-                    base.Tables.Add(new vw_TipoMaterial_GridDataTable(ds.Tables["vw_TipoMaterial_Grid"]));
+                if ((ds.Tables["vw_Cliente_Grid"] != null)) {
+                    base.Tables.Add(new vw_Cliente_GridDataTable(ds.Tables["vw_Cliente_Grid"]));
                 }
                 if ((ds.Tables["vw_Material_Grid"] != null)) {
                     base.Tables.Add(new vw_Material_GridDataTable(ds.Tables["vw_Material_Grid"]));
@@ -251,17 +251,17 @@ namespace Apresentacao {
                 if ((ds.Tables["vw_Motorista_Grid"] != null)) {
                     base.Tables.Add(new vw_Motorista_GridDataTable(ds.Tables["vw_Motorista_Grid"]));
                 }
-                if ((ds.Tables["vw_Veiculo_Grid"] != null)) {
-                    base.Tables.Add(new vw_Veiculo_GridDataTable(ds.Tables["vw_Veiculo_Grid"]));
+                if ((ds.Tables["vw_Pesagem_Grid"] != null)) {
+                    base.Tables.Add(new vw_Pesagem_GridDataTable(ds.Tables["vw_Pesagem_Grid"]));
+                }
+                if ((ds.Tables["vw_TipoMaterial_Grid"] != null)) {
+                    base.Tables.Add(new vw_TipoMaterial_GridDataTable(ds.Tables["vw_TipoMaterial_Grid"]));
                 }
                 if ((ds.Tables["vw_Usuario_Grid"] != null)) {
                     base.Tables.Add(new vw_Usuario_GridDataTable(ds.Tables["vw_Usuario_Grid"]));
                 }
-                if ((ds.Tables["vw_Pesagem_Grid"] != null)) {
-                    base.Tables.Add(new vw_Pesagem_GridDataTable(ds.Tables["vw_Pesagem_Grid"]));
-                }
-                if ((ds.Tables["vw_Cliente_Grid"] != null)) {
-                    base.Tables.Add(new vw_Cliente_GridDataTable(ds.Tables["vw_Cliente_Grid"]));
+                if ((ds.Tables["vw_Veiculo_Grid"] != null)) {
+                    base.Tables.Add(new vw_Veiculo_GridDataTable(ds.Tables["vw_Veiculo_Grid"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -296,10 +296,10 @@ namespace Apresentacao {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablevw_TipoMaterial_Grid = ((vw_TipoMaterial_GridDataTable)(base.Tables["vw_TipoMaterial_Grid"]));
+            this.tablevw_Cliente_Grid = ((vw_Cliente_GridDataTable)(base.Tables["vw_Cliente_Grid"]));
             if ((initTable == true)) {
-                if ((this.tablevw_TipoMaterial_Grid != null)) {
-                    this.tablevw_TipoMaterial_Grid.InitVars();
+                if ((this.tablevw_Cliente_Grid != null)) {
+                    this.tablevw_Cliente_Grid.InitVars();
                 }
             }
             this.tablevw_Material_Grid = ((vw_Material_GridDataTable)(base.Tables["vw_Material_Grid"]));
@@ -314,10 +314,16 @@ namespace Apresentacao {
                     this.tablevw_Motorista_Grid.InitVars();
                 }
             }
-            this.tablevw_Veiculo_Grid = ((vw_Veiculo_GridDataTable)(base.Tables["vw_Veiculo_Grid"]));
+            this.tablevw_Pesagem_Grid = ((vw_Pesagem_GridDataTable)(base.Tables["vw_Pesagem_Grid"]));
             if ((initTable == true)) {
-                if ((this.tablevw_Veiculo_Grid != null)) {
-                    this.tablevw_Veiculo_Grid.InitVars();
+                if ((this.tablevw_Pesagem_Grid != null)) {
+                    this.tablevw_Pesagem_Grid.InitVars();
+                }
+            }
+            this.tablevw_TipoMaterial_Grid = ((vw_TipoMaterial_GridDataTable)(base.Tables["vw_TipoMaterial_Grid"]));
+            if ((initTable == true)) {
+                if ((this.tablevw_TipoMaterial_Grid != null)) {
+                    this.tablevw_TipoMaterial_Grid.InitVars();
                 }
             }
             this.tablevw_Usuario_Grid = ((vw_Usuario_GridDataTable)(base.Tables["vw_Usuario_Grid"]));
@@ -326,16 +332,10 @@ namespace Apresentacao {
                     this.tablevw_Usuario_Grid.InitVars();
                 }
             }
-            this.tablevw_Pesagem_Grid = ((vw_Pesagem_GridDataTable)(base.Tables["vw_Pesagem_Grid"]));
+            this.tablevw_Veiculo_Grid = ((vw_Veiculo_GridDataTable)(base.Tables["vw_Veiculo_Grid"]));
             if ((initTable == true)) {
-                if ((this.tablevw_Pesagem_Grid != null)) {
-                    this.tablevw_Pesagem_Grid.InitVars();
-                }
-            }
-            this.tablevw_Cliente_Grid = ((vw_Cliente_GridDataTable)(base.Tables["vw_Cliente_Grid"]));
-            if ((initTable == true)) {
-                if ((this.tablevw_Cliente_Grid != null)) {
-                    this.tablevw_Cliente_Grid.InitVars();
+                if ((this.tablevw_Veiculo_Grid != null)) {
+                    this.tablevw_Veiculo_Grid.InitVars();
                 }
             }
         }
@@ -345,28 +345,28 @@ namespace Apresentacao {
         private void InitClass() {
             this.DataSetName = "ControlePesagemDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ControlePesagemDataSet.xsd";
+            this.Namespace = "http://tempuri.org/ControlePesagemDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablevw_TipoMaterial_Grid = new vw_TipoMaterial_GridDataTable();
-            base.Tables.Add(this.tablevw_TipoMaterial_Grid);
+            this.tablevw_Cliente_Grid = new vw_Cliente_GridDataTable();
+            base.Tables.Add(this.tablevw_Cliente_Grid);
             this.tablevw_Material_Grid = new vw_Material_GridDataTable();
             base.Tables.Add(this.tablevw_Material_Grid);
             this.tablevw_Motorista_Grid = new vw_Motorista_GridDataTable();
             base.Tables.Add(this.tablevw_Motorista_Grid);
-            this.tablevw_Veiculo_Grid = new vw_Veiculo_GridDataTable();
-            base.Tables.Add(this.tablevw_Veiculo_Grid);
-            this.tablevw_Usuario_Grid = new vw_Usuario_GridDataTable();
-            base.Tables.Add(this.tablevw_Usuario_Grid);
             this.tablevw_Pesagem_Grid = new vw_Pesagem_GridDataTable();
             base.Tables.Add(this.tablevw_Pesagem_Grid);
-            this.tablevw_Cliente_Grid = new vw_Cliente_GridDataTable();
-            base.Tables.Add(this.tablevw_Cliente_Grid);
+            this.tablevw_TipoMaterial_Grid = new vw_TipoMaterial_GridDataTable();
+            base.Tables.Add(this.tablevw_TipoMaterial_Grid);
+            this.tablevw_Usuario_Grid = new vw_Usuario_GridDataTable();
+            base.Tables.Add(this.tablevw_Usuario_Grid);
+            this.tablevw_Veiculo_Grid = new vw_Veiculo_GridDataTable();
+            base.Tables.Add(this.tablevw_Veiculo_Grid);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializevw_TipoMaterial_Grid() {
+        private bool ShouldSerializevw_Cliente_Grid() {
             return false;
         }
         
@@ -384,7 +384,13 @@ namespace Apresentacao {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializevw_Veiculo_Grid() {
+        private bool ShouldSerializevw_Pesagem_Grid() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializevw_TipoMaterial_Grid() {
             return false;
         }
         
@@ -396,13 +402,7 @@ namespace Apresentacao {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializevw_Pesagem_Grid() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializevw_Cliente_Grid() {
+        private bool ShouldSerializevw_Veiculo_Grid() {
             return false;
         }
         
@@ -462,7 +462,7 @@ namespace Apresentacao {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void vw_TipoMaterial_GridRowChangeEventHandler(object sender, vw_TipoMaterial_GridRowChangeEvent e);
+        public delegate void vw_Cliente_GridRowChangeEventHandler(object sender, vw_Cliente_GridRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void vw_Material_GridRowChangeEventHandler(object sender, vw_Material_GridRowChangeEvent e);
@@ -471,27 +471,37 @@ namespace Apresentacao {
         public delegate void vw_Motorista_GridRowChangeEventHandler(object sender, vw_Motorista_GridRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void vw_Veiculo_GridRowChangeEventHandler(object sender, vw_Veiculo_GridRowChangeEvent e);
+        public delegate void vw_Pesagem_GridRowChangeEventHandler(object sender, vw_Pesagem_GridRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void vw_TipoMaterial_GridRowChangeEventHandler(object sender, vw_TipoMaterial_GridRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void vw_Usuario_GridRowChangeEventHandler(object sender, vw_Usuario_GridRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void vw_Pesagem_GridRowChangeEventHandler(object sender, vw_Pesagem_GridRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void vw_Cliente_GridRowChangeEventHandler(object sender, vw_Cliente_GridRowChangeEvent e);
+        public delegate void vw_Veiculo_GridRowChangeEventHandler(object sender, vw_Veiculo_GridRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class vw_TipoMaterial_GridDataTable : global::System.Data.TypedTableBase<vw_TipoMaterial_GridRow> {
+        public partial class vw_Cliente_GridDataTable : global::System.Data.TypedTableBase<vw_Cliente_GridRow> {
             
             private global::System.Data.DataColumn columncodigo;
             
-            private global::System.Data.DataColumn columndescricao;
+            private global::System.Data.DataColumn columnrazaoSocial;
+            
+            private global::System.Data.DataColumn columnnomeFantasia;
+            
+            private global::System.Data.DataColumn columncnpj;
+            
+            private global::System.Data.DataColumn columntelefone1;
+            
+            private global::System.Data.DataColumn columntelefone2;
+            
+            private global::System.Data.DataColumn columnemail;
             
             private global::System.Data.DataColumn columnativo;
             
@@ -503,12 +513,10 @@ namespace Apresentacao {
             
             private global::System.Data.DataColumn columnusuarioAlteracao;
             
-            private global::System.Data.DataColumn columnativo_string;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_TipoMaterial_GridDataTable() {
-                this.TableName = "vw_TipoMaterial_Grid";
+            public vw_Cliente_GridDataTable() {
+                this.TableName = "vw_Cliente_Grid";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -516,7 +524,7 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal vw_TipoMaterial_GridDataTable(global::System.Data.DataTable table) {
+            internal vw_Cliente_GridDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -533,7 +541,7 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected vw_TipoMaterial_GridDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected vw_Cliente_GridDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -548,9 +556,49 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn descricaoColumn {
+            public global::System.Data.DataColumn razaoSocialColumn {
                 get {
-                    return this.columndescricao;
+                    return this.columnrazaoSocial;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nomeFantasiaColumn {
+                get {
+                    return this.columnnomeFantasia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cnpjColumn {
+                get {
+                    return this.columncnpj;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn telefone1Column {
+                get {
+                    return this.columntelefone1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn telefone2Column {
+                get {
+                    return this.columntelefone2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn emailColumn {
+                get {
+                    return this.columnemail;
                 }
             }
             
@@ -596,14 +644,6 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ativo_stringColumn {
-                get {
-                    return this.columnativo_string;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -613,59 +653,63 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_TipoMaterial_GridRow this[int index] {
+            public vw_Cliente_GridRow this[int index] {
                 get {
-                    return ((vw_TipoMaterial_GridRow)(this.Rows[index]));
+                    return ((vw_Cliente_GridRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_TipoMaterial_GridRowChangeEventHandler vw_TipoMaterial_GridRowChanging;
+            public event vw_Cliente_GridRowChangeEventHandler vw_Cliente_GridRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_TipoMaterial_GridRowChangeEventHandler vw_TipoMaterial_GridRowChanged;
+            public event vw_Cliente_GridRowChangeEventHandler vw_Cliente_GridRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_TipoMaterial_GridRowChangeEventHandler vw_TipoMaterial_GridRowDeleting;
+            public event vw_Cliente_GridRowChangeEventHandler vw_Cliente_GridRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_TipoMaterial_GridRowChangeEventHandler vw_TipoMaterial_GridRowDeleted;
+            public event vw_Cliente_GridRowChangeEventHandler vw_Cliente_GridRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Addvw_TipoMaterial_GridRow(vw_TipoMaterial_GridRow row) {
+            public void Addvw_Cliente_GridRow(vw_Cliente_GridRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_TipoMaterial_GridRow Addvw_TipoMaterial_GridRow(int codigo, string descricao, int ativo, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao, string ativo_string) {
-                vw_TipoMaterial_GridRow rowvw_TipoMaterial_GridRow = ((vw_TipoMaterial_GridRow)(this.NewRow()));
+            public vw_Cliente_GridRow Addvw_Cliente_GridRow(int codigo, string razaoSocial, string nomeFantasia, string cnpj, string telefone1, string telefone2, string email, int ativo, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao) {
+                vw_Cliente_GridRow rowvw_Cliente_GridRow = ((vw_Cliente_GridRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         codigo,
-                        descricao,
+                        razaoSocial,
+                        nomeFantasia,
+                        cnpj,
+                        telefone1,
+                        telefone2,
+                        email,
                         ativo,
                         dataInclusao,
                         dataAlteracao,
                         usuarioInclusao,
-                        usuarioAlteracao,
-                        ativo_string};
-                rowvw_TipoMaterial_GridRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowvw_TipoMaterial_GridRow);
-                return rowvw_TipoMaterial_GridRow;
+                        usuarioAlteracao};
+                rowvw_Cliente_GridRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowvw_Cliente_GridRow);
+                return rowvw_Cliente_GridRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_TipoMaterial_GridRow FindBycodigo(int codigo) {
-                return ((vw_TipoMaterial_GridRow)(this.Rows.Find(new object[] {
+            public vw_Cliente_GridRow FindBycodigo(int codigo) {
+                return ((vw_Cliente_GridRow)(this.Rows.Find(new object[] {
                             codigo})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                vw_TipoMaterial_GridDataTable cln = ((vw_TipoMaterial_GridDataTable)(base.Clone()));
+                vw_Cliente_GridDataTable cln = ((vw_Cliente_GridDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -673,20 +717,24 @@ namespace Apresentacao {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new vw_TipoMaterial_GridDataTable();
+                return new vw_Cliente_GridDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columncodigo = base.Columns["codigo"];
-                this.columndescricao = base.Columns["descricao"];
+                this.columnrazaoSocial = base.Columns["razaoSocial"];
+                this.columnnomeFantasia = base.Columns["nomeFantasia"];
+                this.columncnpj = base.Columns["cnpj"];
+                this.columntelefone1 = base.Columns["telefone1"];
+                this.columntelefone2 = base.Columns["telefone2"];
+                this.columnemail = base.Columns["email"];
                 this.columnativo = base.Columns["ativo"];
                 this.columndataInclusao = base.Columns["dataInclusao"];
                 this.columndataAlteracao = base.Columns["dataAlteracao"];
                 this.columnusuarioInclusao = base.Columns["usuarioInclusao"];
                 this.columnusuarioAlteracao = base.Columns["usuarioAlteracao"];
-                this.columnativo_string = base.Columns["ativo_string"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -694,8 +742,18 @@ namespace Apresentacao {
             private void InitClass() {
                 this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncodigo);
-                this.columndescricao = new global::System.Data.DataColumn("descricao", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndescricao);
+                this.columnrazaoSocial = new global::System.Data.DataColumn("razaoSocial", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrazaoSocial);
+                this.columnnomeFantasia = new global::System.Data.DataColumn("nomeFantasia", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnomeFantasia);
+                this.columncnpj = new global::System.Data.DataColumn("cnpj", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncnpj);
+                this.columntelefone1 = new global::System.Data.DataColumn("telefone1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntelefone1);
+                this.columntelefone2 = new global::System.Data.DataColumn("telefone2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntelefone2);
+                this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnemail);
                 this.columnativo = new global::System.Data.DataColumn("ativo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnativo);
                 this.columndataInclusao = new global::System.Data.DataColumn("dataInclusao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -706,46 +764,47 @@ namespace Apresentacao {
                 base.Columns.Add(this.columnusuarioInclusao);
                 this.columnusuarioAlteracao = new global::System.Data.DataColumn("usuarioAlteracao", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuarioAlteracao);
-                this.columnativo_string = new global::System.Data.DataColumn("ativo_string", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnativo_string);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncodigo}, true));
                 this.columncodigo.AllowDBNull = false;
                 this.columncodigo.Unique = true;
-                this.columndescricao.AllowDBNull = false;
-                this.columndescricao.MaxLength = 50;
-                this.columnativo.AllowDBNull = false;
+                this.columnrazaoSocial.AllowDBNull = false;
+                this.columnrazaoSocial.MaxLength = 100;
+                this.columnnomeFantasia.AllowDBNull = false;
+                this.columnnomeFantasia.MaxLength = 100;
+                this.columncnpj.MaxLength = 20;
+                this.columntelefone1.MaxLength = 20;
+                this.columntelefone2.MaxLength = 20;
+                this.columnemail.MaxLength = 150;
                 this.columndataInclusao.AllowDBNull = false;
                 this.columnusuarioInclusao.MaxLength = 100;
                 this.columnusuarioAlteracao.MaxLength = 100;
-                this.columnativo_string.ReadOnly = true;
-                this.columnativo_string.MaxLength = 3;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_TipoMaterial_GridRow Newvw_TipoMaterial_GridRow() {
-                return ((vw_TipoMaterial_GridRow)(this.NewRow()));
+            public vw_Cliente_GridRow Newvw_Cliente_GridRow() {
+                return ((vw_Cliente_GridRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new vw_TipoMaterial_GridRow(builder);
+                return new vw_Cliente_GridRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(vw_TipoMaterial_GridRow);
+                return typeof(vw_Cliente_GridRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.vw_TipoMaterial_GridRowChanged != null)) {
-                    this.vw_TipoMaterial_GridRowChanged(this, new vw_TipoMaterial_GridRowChangeEvent(((vw_TipoMaterial_GridRow)(e.Row)), e.Action));
+                if ((this.vw_Cliente_GridRowChanged != null)) {
+                    this.vw_Cliente_GridRowChanged(this, new vw_Cliente_GridRowChangeEvent(((vw_Cliente_GridRow)(e.Row)), e.Action));
                 }
             }
             
@@ -753,8 +812,8 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.vw_TipoMaterial_GridRowChanging != null)) {
-                    this.vw_TipoMaterial_GridRowChanging(this, new vw_TipoMaterial_GridRowChangeEvent(((vw_TipoMaterial_GridRow)(e.Row)), e.Action));
+                if ((this.vw_Cliente_GridRowChanging != null)) {
+                    this.vw_Cliente_GridRowChanging(this, new vw_Cliente_GridRowChangeEvent(((vw_Cliente_GridRow)(e.Row)), e.Action));
                 }
             }
             
@@ -762,8 +821,8 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.vw_TipoMaterial_GridRowDeleted != null)) {
-                    this.vw_TipoMaterial_GridRowDeleted(this, new vw_TipoMaterial_GridRowChangeEvent(((vw_TipoMaterial_GridRow)(e.Row)), e.Action));
+                if ((this.vw_Cliente_GridRowDeleted != null)) {
+                    this.vw_Cliente_GridRowDeleted(this, new vw_Cliente_GridRowChangeEvent(((vw_Cliente_GridRow)(e.Row)), e.Action));
                 }
             }
             
@@ -771,14 +830,14 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.vw_TipoMaterial_GridRowDeleting != null)) {
-                    this.vw_TipoMaterial_GridRowDeleting(this, new vw_TipoMaterial_GridRowChangeEvent(((vw_TipoMaterial_GridRow)(e.Row)), e.Action));
+                if ((this.vw_Cliente_GridRowDeleting != null)) {
+                    this.vw_Cliente_GridRowDeleting(this, new vw_Cliente_GridRowChangeEvent(((vw_Cliente_GridRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removevw_TipoMaterial_GridRow(vw_TipoMaterial_GridRow row) {
+            public void Removevw_Cliente_GridRow(vw_Cliente_GridRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -805,7 +864,7 @@ namespace Apresentacao {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "vw_TipoMaterial_GridDataTable";
+                attribute2.FixedValue = "vw_Cliente_GridDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -861,6 +920,8 @@ namespace Apresentacao {
             
             private global::System.Data.DataColumn columndescricaoTipoMaterial;
             
+            private global::System.Data.DataColumn columncodigoTipoMaterial;
+            
             private global::System.Data.DataColumn columndataInclusao;
             
             private global::System.Data.DataColumn columndataAlteracao;
@@ -868,8 +929,6 @@ namespace Apresentacao {
             private global::System.Data.DataColumn columnusuarioInclusao;
             
             private global::System.Data.DataColumn columnusuarioAlteracao;
-            
-            private global::System.Data.DataColumn columncodigoTipoMaterial;
             
             private global::System.Data.DataColumn columnativo_string;
             
@@ -940,6 +999,14 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn codigoTipoMaterialColumn {
+                get {
+                    return this.columncodigoTipoMaterial;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn dataInclusaoColumn {
                 get {
                     return this.columndataInclusao;
@@ -967,14 +1034,6 @@ namespace Apresentacao {
             public global::System.Data.DataColumn usuarioAlteracaoColumn {
                 get {
                     return this.columnusuarioAlteracao;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn codigoTipoMaterialColumn {
-                get {
-                    return this.columncodigoTipoMaterial;
                 }
             }
             
@@ -1023,29 +1082,22 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Material_GridRow Addvw_Material_GridRow(int codigo, string descricao, int ativo, string descricaoTipoMaterial, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao, int codigoTipoMaterial, string ativo_string) {
+            public vw_Material_GridRow Addvw_Material_GridRow(int codigo, string descricao, int ativo, string descricaoTipoMaterial, int codigoTipoMaterial, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao, string ativo_string) {
                 vw_Material_GridRow rowvw_Material_GridRow = ((vw_Material_GridRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         codigo,
                         descricao,
                         ativo,
                         descricaoTipoMaterial,
+                        codigoTipoMaterial,
                         dataInclusao,
                         dataAlteracao,
                         usuarioInclusao,
                         usuarioAlteracao,
-                        codigoTipoMaterial,
                         ativo_string};
                 rowvw_Material_GridRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowvw_Material_GridRow);
                 return rowvw_Material_GridRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Material_GridRow FindBycodigo(int codigo) {
-                return ((vw_Material_GridRow)(this.Rows.Find(new object[] {
-                            codigo})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1069,11 +1121,11 @@ namespace Apresentacao {
                 this.columndescricao = base.Columns["descricao"];
                 this.columnativo = base.Columns["ativo"];
                 this.columndescricaoTipoMaterial = base.Columns["descricaoTipoMaterial"];
+                this.columncodigoTipoMaterial = base.Columns["codigoTipoMaterial"];
                 this.columndataInclusao = base.Columns["dataInclusao"];
                 this.columndataAlteracao = base.Columns["dataAlteracao"];
                 this.columnusuarioInclusao = base.Columns["usuarioInclusao"];
                 this.columnusuarioAlteracao = base.Columns["usuarioAlteracao"];
-                this.columncodigoTipoMaterial = base.Columns["codigoTipoMaterial"];
                 this.columnativo_string = base.Columns["ativo_string"];
             }
             
@@ -1088,6 +1140,8 @@ namespace Apresentacao {
                 base.Columns.Add(this.columnativo);
                 this.columndescricaoTipoMaterial = new global::System.Data.DataColumn("descricaoTipoMaterial", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescricaoTipoMaterial);
+                this.columncodigoTipoMaterial = new global::System.Data.DataColumn("codigoTipoMaterial", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodigoTipoMaterial);
                 this.columndataInclusao = new global::System.Data.DataColumn("dataInclusao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndataInclusao);
                 this.columndataAlteracao = new global::System.Data.DataColumn("dataAlteracao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -1096,23 +1150,18 @@ namespace Apresentacao {
                 base.Columns.Add(this.columnusuarioInclusao);
                 this.columnusuarioAlteracao = new global::System.Data.DataColumn("usuarioAlteracao", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuarioAlteracao);
-                this.columncodigoTipoMaterial = new global::System.Data.DataColumn("codigoTipoMaterial", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncodigoTipoMaterial);
                 this.columnativo_string = new global::System.Data.DataColumn("ativo_string", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnativo_string);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columncodigo}, true));
                 this.columncodigo.AllowDBNull = false;
-                this.columncodigo.Unique = true;
                 this.columndescricao.AllowDBNull = false;
                 this.columndescricao.MaxLength = 100;
                 this.columnativo.AllowDBNull = false;
                 this.columndescricaoTipoMaterial.AllowDBNull = false;
                 this.columndescricaoTipoMaterial.MaxLength = 50;
+                this.columncodigoTipoMaterial.AllowDBNull = false;
                 this.columndataInclusao.AllowDBNull = false;
                 this.columnusuarioInclusao.MaxLength = 100;
                 this.columnusuarioAlteracao.MaxLength = 100;
-                this.columncodigoTipoMaterial.AllowDBNull = false;
                 this.columnativo_string.ReadOnly = true;
                 this.columnativo_string.MaxLength = 3;
             }
@@ -1672,766 +1721,6 @@ namespace Apresentacao {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class vw_Veiculo_GridDataTable : global::System.Data.TypedTableBase<vw_Veiculo_GridRow> {
-            
-            private global::System.Data.DataColumn columncodigo;
-            
-            private global::System.Data.DataColumn columnplaca;
-            
-            private global::System.Data.DataColumn columncor;
-            
-            private global::System.Data.DataColumn columnmodelo;
-            
-            private global::System.Data.DataColumn columnativo;
-            
-            private global::System.Data.DataColumn columnRazaoSocialCliente;
-            
-            private global::System.Data.DataColumn columnNomeFantasiaCliente;
-            
-            private global::System.Data.DataColumn columndataInclusao;
-            
-            private global::System.Data.DataColumn columndataAlteracao;
-            
-            private global::System.Data.DataColumn columnusuarioInclusao;
-            
-            private global::System.Data.DataColumn columnusuarioAlteracao;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Veiculo_GridDataTable() {
-                this.TableName = "vw_Veiculo_Grid";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal vw_Veiculo_GridDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected vw_Veiculo_GridDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn codigoColumn {
-                get {
-                    return this.columncodigo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn placaColumn {
-                get {
-                    return this.columnplaca;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn corColumn {
-                get {
-                    return this.columncor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn modeloColumn {
-                get {
-                    return this.columnmodelo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ativoColumn {
-                get {
-                    return this.columnativo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn RazaoSocialClienteColumn {
-                get {
-                    return this.columnRazaoSocialCliente;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NomeFantasiaClienteColumn {
-                get {
-                    return this.columnNomeFantasiaCliente;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn dataInclusaoColumn {
-                get {
-                    return this.columndataInclusao;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn dataAlteracaoColumn {
-                get {
-                    return this.columndataAlteracao;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn usuarioInclusaoColumn {
-                get {
-                    return this.columnusuarioInclusao;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn usuarioAlteracaoColumn {
-                get {
-                    return this.columnusuarioAlteracao;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Veiculo_GridRow this[int index] {
-                get {
-                    return ((vw_Veiculo_GridRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_Veiculo_GridRowChangeEventHandler vw_Veiculo_GridRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_Veiculo_GridRowChangeEventHandler vw_Veiculo_GridRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_Veiculo_GridRowChangeEventHandler vw_Veiculo_GridRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_Veiculo_GridRowChangeEventHandler vw_Veiculo_GridRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Addvw_Veiculo_GridRow(vw_Veiculo_GridRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Veiculo_GridRow Addvw_Veiculo_GridRow(int codigo, string placa, string cor, string modelo, string ativo, string RazaoSocialCliente, string NomeFantasiaCliente, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao) {
-                vw_Veiculo_GridRow rowvw_Veiculo_GridRow = ((vw_Veiculo_GridRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        codigo,
-                        placa,
-                        cor,
-                        modelo,
-                        ativo,
-                        RazaoSocialCliente,
-                        NomeFantasiaCliente,
-                        dataInclusao,
-                        dataAlteracao,
-                        usuarioInclusao,
-                        usuarioAlteracao};
-                rowvw_Veiculo_GridRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowvw_Veiculo_GridRow);
-                return rowvw_Veiculo_GridRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Veiculo_GridRow FindBycodigo(int codigo) {
-                return ((vw_Veiculo_GridRow)(this.Rows.Find(new object[] {
-                            codigo})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                vw_Veiculo_GridDataTable cln = ((vw_Veiculo_GridDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new vw_Veiculo_GridDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columncodigo = base.Columns["codigo"];
-                this.columnplaca = base.Columns["placa"];
-                this.columncor = base.Columns["cor"];
-                this.columnmodelo = base.Columns["modelo"];
-                this.columnativo = base.Columns["ativo"];
-                this.columnRazaoSocialCliente = base.Columns["RazaoSocialCliente"];
-                this.columnNomeFantasiaCliente = base.Columns["NomeFantasiaCliente"];
-                this.columndataInclusao = base.Columns["dataInclusao"];
-                this.columndataAlteracao = base.Columns["dataAlteracao"];
-                this.columnusuarioInclusao = base.Columns["usuarioInclusao"];
-                this.columnusuarioAlteracao = base.Columns["usuarioAlteracao"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncodigo);
-                this.columnplaca = new global::System.Data.DataColumn("placa", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnplaca);
-                this.columncor = new global::System.Data.DataColumn("cor", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncor);
-                this.columnmodelo = new global::System.Data.DataColumn("modelo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmodelo);
-                this.columnativo = new global::System.Data.DataColumn("ativo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnativo);
-                this.columnRazaoSocialCliente = new global::System.Data.DataColumn("RazaoSocialCliente", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRazaoSocialCliente);
-                this.columnNomeFantasiaCliente = new global::System.Data.DataColumn("NomeFantasiaCliente", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNomeFantasiaCliente);
-                this.columndataInclusao = new global::System.Data.DataColumn("dataInclusao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndataInclusao);
-                this.columndataAlteracao = new global::System.Data.DataColumn("dataAlteracao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndataAlteracao);
-                this.columnusuarioInclusao = new global::System.Data.DataColumn("usuarioInclusao", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuarioInclusao);
-                this.columnusuarioAlteracao = new global::System.Data.DataColumn("usuarioAlteracao", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuarioAlteracao);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columncodigo}, true));
-                this.columncodigo.AllowDBNull = false;
-                this.columncodigo.Unique = true;
-                this.columnplaca.MaxLength = 10;
-                this.columncor.MaxLength = 50;
-                this.columnmodelo.MaxLength = 50;
-                this.columnativo.AllowDBNull = false;
-                this.columnativo.MaxLength = 50;
-                this.columnRazaoSocialCliente.AllowDBNull = false;
-                this.columnRazaoSocialCliente.MaxLength = 100;
-                this.columnNomeFantasiaCliente.AllowDBNull = false;
-                this.columnNomeFantasiaCliente.MaxLength = 100;
-                this.columndataInclusao.AllowDBNull = false;
-                this.columnusuarioInclusao.MaxLength = 100;
-                this.columnusuarioAlteracao.MaxLength = 100;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Veiculo_GridRow Newvw_Veiculo_GridRow() {
-                return ((vw_Veiculo_GridRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new vw_Veiculo_GridRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(vw_Veiculo_GridRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.vw_Veiculo_GridRowChanged != null)) {
-                    this.vw_Veiculo_GridRowChanged(this, new vw_Veiculo_GridRowChangeEvent(((vw_Veiculo_GridRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.vw_Veiculo_GridRowChanging != null)) {
-                    this.vw_Veiculo_GridRowChanging(this, new vw_Veiculo_GridRowChangeEvent(((vw_Veiculo_GridRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.vw_Veiculo_GridRowDeleted != null)) {
-                    this.vw_Veiculo_GridRowDeleted(this, new vw_Veiculo_GridRowChangeEvent(((vw_Veiculo_GridRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.vw_Veiculo_GridRowDeleting != null)) {
-                    this.vw_Veiculo_GridRowDeleting(this, new vw_Veiculo_GridRowChangeEvent(((vw_Veiculo_GridRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removevw_Veiculo_GridRow(vw_Veiculo_GridRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ControlePesagemDataSet ds = new ControlePesagemDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "vw_Veiculo_GridDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class vw_Usuario_GridDataTable : global::System.Data.TypedTableBase<vw_Usuario_GridRow> {
-            
-            private global::System.Data.DataColumn columncodigo;
-            
-            private global::System.Data.DataColumn columnlogin;
-            
-            private global::System.Data.DataColumn columnsenha;
-            
-            private global::System.Data.DataColumn columnnome;
-            
-            private global::System.Data.DataColumn columnativo;
-            
-            private global::System.Data.DataColumn columndataInclusao;
-            
-            private global::System.Data.DataColumn columndataAlteracao;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Usuario_GridDataTable() {
-                this.TableName = "vw_Usuario_Grid";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal vw_Usuario_GridDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected vw_Usuario_GridDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn codigoColumn {
-                get {
-                    return this.columncodigo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn loginColumn {
-                get {
-                    return this.columnlogin;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn senhaColumn {
-                get {
-                    return this.columnsenha;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nomeColumn {
-                get {
-                    return this.columnnome;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ativoColumn {
-                get {
-                    return this.columnativo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn dataInclusaoColumn {
-                get {
-                    return this.columndataInclusao;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn dataAlteracaoColumn {
-                get {
-                    return this.columndataAlteracao;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Usuario_GridRow this[int index] {
-                get {
-                    return ((vw_Usuario_GridRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_Usuario_GridRowChangeEventHandler vw_Usuario_GridRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_Usuario_GridRowChangeEventHandler vw_Usuario_GridRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_Usuario_GridRowChangeEventHandler vw_Usuario_GridRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_Usuario_GridRowChangeEventHandler vw_Usuario_GridRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Addvw_Usuario_GridRow(vw_Usuario_GridRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Usuario_GridRow Addvw_Usuario_GridRow(string login, string senha, string nome, int ativo, System.DateTime dataInclusao, System.DateTime dataAlteracao) {
-                vw_Usuario_GridRow rowvw_Usuario_GridRow = ((vw_Usuario_GridRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        login,
-                        senha,
-                        nome,
-                        ativo,
-                        dataInclusao,
-                        dataAlteracao};
-                rowvw_Usuario_GridRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowvw_Usuario_GridRow);
-                return rowvw_Usuario_GridRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Usuario_GridRow FindBycodigo(int codigo) {
-                return ((vw_Usuario_GridRow)(this.Rows.Find(new object[] {
-                            codigo})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                vw_Usuario_GridDataTable cln = ((vw_Usuario_GridDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new vw_Usuario_GridDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columncodigo = base.Columns["codigo"];
-                this.columnlogin = base.Columns["login"];
-                this.columnsenha = base.Columns["senha"];
-                this.columnnome = base.Columns["nome"];
-                this.columnativo = base.Columns["ativo"];
-                this.columndataInclusao = base.Columns["dataInclusao"];
-                this.columndataAlteracao = base.Columns["dataAlteracao"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncodigo);
-                this.columnlogin = new global::System.Data.DataColumn("login", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlogin);
-                this.columnsenha = new global::System.Data.DataColumn("senha", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsenha);
-                this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnome);
-                this.columnativo = new global::System.Data.DataColumn("ativo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnativo);
-                this.columndataInclusao = new global::System.Data.DataColumn("dataInclusao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndataInclusao);
-                this.columndataAlteracao = new global::System.Data.DataColumn("dataAlteracao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndataAlteracao);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columncodigo}, true));
-                this.columncodigo.AutoIncrement = true;
-                this.columncodigo.AutoIncrementSeed = -1;
-                this.columncodigo.AutoIncrementStep = -1;
-                this.columncodigo.AllowDBNull = false;
-                this.columncodigo.ReadOnly = true;
-                this.columncodigo.Unique = true;
-                this.columnlogin.AllowDBNull = false;
-                this.columnlogin.MaxLength = 50;
-                this.columnsenha.MaxLength = 50;
-                this.columnnome.MaxLength = 100;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Usuario_GridRow Newvw_Usuario_GridRow() {
-                return ((vw_Usuario_GridRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new vw_Usuario_GridRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(vw_Usuario_GridRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.vw_Usuario_GridRowChanged != null)) {
-                    this.vw_Usuario_GridRowChanged(this, new vw_Usuario_GridRowChangeEvent(((vw_Usuario_GridRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.vw_Usuario_GridRowChanging != null)) {
-                    this.vw_Usuario_GridRowChanging(this, new vw_Usuario_GridRowChangeEvent(((vw_Usuario_GridRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.vw_Usuario_GridRowDeleted != null)) {
-                    this.vw_Usuario_GridRowDeleted(this, new vw_Usuario_GridRowChangeEvent(((vw_Usuario_GridRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.vw_Usuario_GridRowDeleting != null)) {
-                    this.vw_Usuario_GridRowDeleting(this, new vw_Usuario_GridRowChangeEvent(((vw_Usuario_GridRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removevw_Usuario_GridRow(vw_Usuario_GridRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ControlePesagemDataSet ds = new ControlePesagemDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "vw_Usuario_GridDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class vw_Pesagem_GridDataTable : global::System.Data.TypedTableBase<vw_Pesagem_GridRow> {
             
             private global::System.Data.DataColumn columncodigo;
@@ -2861,21 +2150,11 @@ namespace Apresentacao {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class vw_Cliente_GridDataTable : global::System.Data.TypedTableBase<vw_Cliente_GridRow> {
+        public partial class vw_TipoMaterial_GridDataTable : global::System.Data.TypedTableBase<vw_TipoMaterial_GridRow> {
             
             private global::System.Data.DataColumn columncodigo;
             
-            private global::System.Data.DataColumn columnrazaoSocial;
-            
-            private global::System.Data.DataColumn columnnomeFantasia;
-            
-            private global::System.Data.DataColumn columncnpj;
-            
-            private global::System.Data.DataColumn columntelefone1;
-            
-            private global::System.Data.DataColumn columntelefone2;
-            
-            private global::System.Data.DataColumn columnemail;
+            private global::System.Data.DataColumn columndescricao;
             
             private global::System.Data.DataColumn columnativo;
             
@@ -2887,10 +2166,12 @@ namespace Apresentacao {
             
             private global::System.Data.DataColumn columnusuarioAlteracao;
             
+            private global::System.Data.DataColumn columnativo_string;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Cliente_GridDataTable() {
-                this.TableName = "vw_Cliente_Grid";
+            public vw_TipoMaterial_GridDataTable() {
+                this.TableName = "vw_TipoMaterial_Grid";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2898,7 +2179,7 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal vw_Cliente_GridDataTable(global::System.Data.DataTable table) {
+            internal vw_TipoMaterial_GridDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2915,7 +2196,7 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected vw_Cliente_GridDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected vw_TipoMaterial_GridDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2930,49 +2211,9 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn razaoSocialColumn {
+            public global::System.Data.DataColumn descricaoColumn {
                 get {
-                    return this.columnrazaoSocial;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nomeFantasiaColumn {
-                get {
-                    return this.columnnomeFantasia;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cnpjColumn {
-                get {
-                    return this.columncnpj;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn telefone1Column {
-                get {
-                    return this.columntelefone1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn telefone2Column {
-                get {
-                    return this.columntelefone2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn emailColumn {
-                get {
-                    return this.columnemail;
+                    return this.columndescricao;
                 }
             }
             
@@ -2981,6 +2222,758 @@ namespace Apresentacao {
             public global::System.Data.DataColumn ativoColumn {
                 get {
                     return this.columnativo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dataInclusaoColumn {
+                get {
+                    return this.columndataInclusao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dataAlteracaoColumn {
+                get {
+                    return this.columndataAlteracao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn usuarioInclusaoColumn {
+                get {
+                    return this.columnusuarioInclusao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn usuarioAlteracaoColumn {
+                get {
+                    return this.columnusuarioAlteracao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ativo_stringColumn {
+                get {
+                    return this.columnativo_string;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vw_TipoMaterial_GridRow this[int index] {
+                get {
+                    return ((vw_TipoMaterial_GridRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event vw_TipoMaterial_GridRowChangeEventHandler vw_TipoMaterial_GridRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event vw_TipoMaterial_GridRowChangeEventHandler vw_TipoMaterial_GridRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event vw_TipoMaterial_GridRowChangeEventHandler vw_TipoMaterial_GridRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event vw_TipoMaterial_GridRowChangeEventHandler vw_TipoMaterial_GridRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addvw_TipoMaterial_GridRow(vw_TipoMaterial_GridRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vw_TipoMaterial_GridRow Addvw_TipoMaterial_GridRow(int codigo, string descricao, int ativo, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao, string ativo_string) {
+                vw_TipoMaterial_GridRow rowvw_TipoMaterial_GridRow = ((vw_TipoMaterial_GridRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        codigo,
+                        descricao,
+                        ativo,
+                        dataInclusao,
+                        dataAlteracao,
+                        usuarioInclusao,
+                        usuarioAlteracao,
+                        ativo_string};
+                rowvw_TipoMaterial_GridRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowvw_TipoMaterial_GridRow);
+                return rowvw_TipoMaterial_GridRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vw_TipoMaterial_GridRow FindBycodigo(int codigo) {
+                return ((vw_TipoMaterial_GridRow)(this.Rows.Find(new object[] {
+                            codigo})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                vw_TipoMaterial_GridDataTable cln = ((vw_TipoMaterial_GridDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new vw_TipoMaterial_GridDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columncodigo = base.Columns["codigo"];
+                this.columndescricao = base.Columns["descricao"];
+                this.columnativo = base.Columns["ativo"];
+                this.columndataInclusao = base.Columns["dataInclusao"];
+                this.columndataAlteracao = base.Columns["dataAlteracao"];
+                this.columnusuarioInclusao = base.Columns["usuarioInclusao"];
+                this.columnusuarioAlteracao = base.Columns["usuarioAlteracao"];
+                this.columnativo_string = base.Columns["ativo_string"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodigo);
+                this.columndescricao = new global::System.Data.DataColumn("descricao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescricao);
+                this.columnativo = new global::System.Data.DataColumn("ativo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnativo);
+                this.columndataInclusao = new global::System.Data.DataColumn("dataInclusao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndataInclusao);
+                this.columndataAlteracao = new global::System.Data.DataColumn("dataAlteracao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndataAlteracao);
+                this.columnusuarioInclusao = new global::System.Data.DataColumn("usuarioInclusao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusuarioInclusao);
+                this.columnusuarioAlteracao = new global::System.Data.DataColumn("usuarioAlteracao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusuarioAlteracao);
+                this.columnativo_string = new global::System.Data.DataColumn("ativo_string", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnativo_string);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columncodigo}, true));
+                this.columncodigo.AllowDBNull = false;
+                this.columncodigo.Unique = true;
+                this.columndescricao.AllowDBNull = false;
+                this.columndescricao.MaxLength = 50;
+                this.columnativo.AllowDBNull = false;
+                this.columndataInclusao.AllowDBNull = false;
+                this.columnusuarioInclusao.MaxLength = 100;
+                this.columnusuarioAlteracao.MaxLength = 100;
+                this.columnativo_string.ReadOnly = true;
+                this.columnativo_string.MaxLength = 3;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vw_TipoMaterial_GridRow Newvw_TipoMaterial_GridRow() {
+                return ((vw_TipoMaterial_GridRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new vw_TipoMaterial_GridRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(vw_TipoMaterial_GridRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.vw_TipoMaterial_GridRowChanged != null)) {
+                    this.vw_TipoMaterial_GridRowChanged(this, new vw_TipoMaterial_GridRowChangeEvent(((vw_TipoMaterial_GridRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.vw_TipoMaterial_GridRowChanging != null)) {
+                    this.vw_TipoMaterial_GridRowChanging(this, new vw_TipoMaterial_GridRowChangeEvent(((vw_TipoMaterial_GridRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.vw_TipoMaterial_GridRowDeleted != null)) {
+                    this.vw_TipoMaterial_GridRowDeleted(this, new vw_TipoMaterial_GridRowChangeEvent(((vw_TipoMaterial_GridRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.vw_TipoMaterial_GridRowDeleting != null)) {
+                    this.vw_TipoMaterial_GridRowDeleting(this, new vw_TipoMaterial_GridRowChangeEvent(((vw_TipoMaterial_GridRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removevw_TipoMaterial_GridRow(vw_TipoMaterial_GridRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ControlePesagemDataSet ds = new ControlePesagemDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "vw_TipoMaterial_GridDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class vw_Usuario_GridDataTable : global::System.Data.TypedTableBase<vw_Usuario_GridRow> {
+            
+            private global::System.Data.DataColumn columncodigo;
+            
+            private global::System.Data.DataColumn columnlogin;
+            
+            private global::System.Data.DataColumn columnsenha;
+            
+            private global::System.Data.DataColumn columnnome;
+            
+            private global::System.Data.DataColumn columnativo;
+            
+            private global::System.Data.DataColumn columndataInclusao;
+            
+            private global::System.Data.DataColumn columndataAlteracao;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vw_Usuario_GridDataTable() {
+                this.TableName = "vw_Usuario_Grid";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal vw_Usuario_GridDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected vw_Usuario_GridDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn codigoColumn {
+                get {
+                    return this.columncodigo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn loginColumn {
+                get {
+                    return this.columnlogin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn senhaColumn {
+                get {
+                    return this.columnsenha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn nomeColumn {
+                get {
+                    return this.columnnome;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ativoColumn {
+                get {
+                    return this.columnativo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dataInclusaoColumn {
+                get {
+                    return this.columndataInclusao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dataAlteracaoColumn {
+                get {
+                    return this.columndataAlteracao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vw_Usuario_GridRow this[int index] {
+                get {
+                    return ((vw_Usuario_GridRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event vw_Usuario_GridRowChangeEventHandler vw_Usuario_GridRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event vw_Usuario_GridRowChangeEventHandler vw_Usuario_GridRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event vw_Usuario_GridRowChangeEventHandler vw_Usuario_GridRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event vw_Usuario_GridRowChangeEventHandler vw_Usuario_GridRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Addvw_Usuario_GridRow(vw_Usuario_GridRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vw_Usuario_GridRow Addvw_Usuario_GridRow(string login, string senha, string nome, int ativo, System.DateTime dataInclusao, System.DateTime dataAlteracao) {
+                vw_Usuario_GridRow rowvw_Usuario_GridRow = ((vw_Usuario_GridRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        login,
+                        senha,
+                        nome,
+                        ativo,
+                        dataInclusao,
+                        dataAlteracao};
+                rowvw_Usuario_GridRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowvw_Usuario_GridRow);
+                return rowvw_Usuario_GridRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vw_Usuario_GridRow FindBycodigo(int codigo) {
+                return ((vw_Usuario_GridRow)(this.Rows.Find(new object[] {
+                            codigo})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                vw_Usuario_GridDataTable cln = ((vw_Usuario_GridDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new vw_Usuario_GridDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columncodigo = base.Columns["codigo"];
+                this.columnlogin = base.Columns["login"];
+                this.columnsenha = base.Columns["senha"];
+                this.columnnome = base.Columns["nome"];
+                this.columnativo = base.Columns["ativo"];
+                this.columndataInclusao = base.Columns["dataInclusao"];
+                this.columndataAlteracao = base.Columns["dataAlteracao"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodigo);
+                this.columnlogin = new global::System.Data.DataColumn("login", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlogin);
+                this.columnsenha = new global::System.Data.DataColumn("senha", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsenha);
+                this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnome);
+                this.columnativo = new global::System.Data.DataColumn("ativo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnativo);
+                this.columndataInclusao = new global::System.Data.DataColumn("dataInclusao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndataInclusao);
+                this.columndataAlteracao = new global::System.Data.DataColumn("dataAlteracao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndataAlteracao);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columncodigo}, true));
+                this.columncodigo.AutoIncrement = true;
+                this.columncodigo.AutoIncrementSeed = -1;
+                this.columncodigo.AutoIncrementStep = -1;
+                this.columncodigo.AllowDBNull = false;
+                this.columncodigo.ReadOnly = true;
+                this.columncodigo.Unique = true;
+                this.columnlogin.AllowDBNull = false;
+                this.columnlogin.MaxLength = 50;
+                this.columnsenha.MaxLength = 50;
+                this.columnnome.MaxLength = 100;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vw_Usuario_GridRow Newvw_Usuario_GridRow() {
+                return ((vw_Usuario_GridRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new vw_Usuario_GridRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(vw_Usuario_GridRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.vw_Usuario_GridRowChanged != null)) {
+                    this.vw_Usuario_GridRowChanged(this, new vw_Usuario_GridRowChangeEvent(((vw_Usuario_GridRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.vw_Usuario_GridRowChanging != null)) {
+                    this.vw_Usuario_GridRowChanging(this, new vw_Usuario_GridRowChangeEvent(((vw_Usuario_GridRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.vw_Usuario_GridRowDeleted != null)) {
+                    this.vw_Usuario_GridRowDeleted(this, new vw_Usuario_GridRowChangeEvent(((vw_Usuario_GridRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.vw_Usuario_GridRowDeleting != null)) {
+                    this.vw_Usuario_GridRowDeleting(this, new vw_Usuario_GridRowChangeEvent(((vw_Usuario_GridRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Removevw_Usuario_GridRow(vw_Usuario_GridRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ControlePesagemDataSet ds = new ControlePesagemDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "vw_Usuario_GridDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class vw_Veiculo_GridDataTable : global::System.Data.TypedTableBase<vw_Veiculo_GridRow> {
+            
+            private global::System.Data.DataColumn columncodigo;
+            
+            private global::System.Data.DataColumn columnplaca;
+            
+            private global::System.Data.DataColumn columncor;
+            
+            private global::System.Data.DataColumn columnmodelo;
+            
+            private global::System.Data.DataColumn columnativo;
+            
+            private global::System.Data.DataColumn columnRazaoSocialCliente;
+            
+            private global::System.Data.DataColumn columnNomeFantasiaCliente;
+            
+            private global::System.Data.DataColumn columndataInclusao;
+            
+            private global::System.Data.DataColumn columndataAlteracao;
+            
+            private global::System.Data.DataColumn columnusuarioInclusao;
+            
+            private global::System.Data.DataColumn columnusuarioAlteracao;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vw_Veiculo_GridDataTable() {
+                this.TableName = "vw_Veiculo_Grid";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal vw_Veiculo_GridDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected vw_Veiculo_GridDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn codigoColumn {
+                get {
+                    return this.columncodigo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn placaColumn {
+                get {
+                    return this.columnplaca;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn corColumn {
+                get {
+                    return this.columncor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn modeloColumn {
+                get {
+                    return this.columnmodelo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ativoColumn {
+                get {
+                    return this.columnativo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RazaoSocialClienteColumn {
+                get {
+                    return this.columnRazaoSocialCliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NomeFantasiaClienteColumn {
+                get {
+                    return this.columnNomeFantasiaCliente;
                 }
             }
             
@@ -3027,63 +3020,62 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Cliente_GridRow this[int index] {
+            public vw_Veiculo_GridRow this[int index] {
                 get {
-                    return ((vw_Cliente_GridRow)(this.Rows[index]));
+                    return ((vw_Veiculo_GridRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_Cliente_GridRowChangeEventHandler vw_Cliente_GridRowChanging;
+            public event vw_Veiculo_GridRowChangeEventHandler vw_Veiculo_GridRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_Cliente_GridRowChangeEventHandler vw_Cliente_GridRowChanged;
+            public event vw_Veiculo_GridRowChangeEventHandler vw_Veiculo_GridRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_Cliente_GridRowChangeEventHandler vw_Cliente_GridRowDeleting;
+            public event vw_Veiculo_GridRowChangeEventHandler vw_Veiculo_GridRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vw_Cliente_GridRowChangeEventHandler vw_Cliente_GridRowDeleted;
+            public event vw_Veiculo_GridRowChangeEventHandler vw_Veiculo_GridRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Addvw_Cliente_GridRow(vw_Cliente_GridRow row) {
+            public void Addvw_Veiculo_GridRow(vw_Veiculo_GridRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Cliente_GridRow Addvw_Cliente_GridRow(int codigo, string razaoSocial, string nomeFantasia, string cnpj, string telefone1, string telefone2, string email, int ativo, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao) {
-                vw_Cliente_GridRow rowvw_Cliente_GridRow = ((vw_Cliente_GridRow)(this.NewRow()));
+            public vw_Veiculo_GridRow Addvw_Veiculo_GridRow(int codigo, string placa, string cor, string modelo, string ativo, string RazaoSocialCliente, string NomeFantasiaCliente, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao) {
+                vw_Veiculo_GridRow rowvw_Veiculo_GridRow = ((vw_Veiculo_GridRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         codigo,
-                        razaoSocial,
-                        nomeFantasia,
-                        cnpj,
-                        telefone1,
-                        telefone2,
-                        email,
+                        placa,
+                        cor,
+                        modelo,
                         ativo,
+                        RazaoSocialCliente,
+                        NomeFantasiaCliente,
                         dataInclusao,
                         dataAlteracao,
                         usuarioInclusao,
                         usuarioAlteracao};
-                rowvw_Cliente_GridRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowvw_Cliente_GridRow);
-                return rowvw_Cliente_GridRow;
+                rowvw_Veiculo_GridRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowvw_Veiculo_GridRow);
+                return rowvw_Veiculo_GridRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Cliente_GridRow FindBycodigo(int codigo) {
-                return ((vw_Cliente_GridRow)(this.Rows.Find(new object[] {
+            public vw_Veiculo_GridRow FindBycodigo(int codigo) {
+                return ((vw_Veiculo_GridRow)(this.Rows.Find(new object[] {
                             codigo})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                vw_Cliente_GridDataTable cln = ((vw_Cliente_GridDataTable)(base.Clone()));
+                vw_Veiculo_GridDataTable cln = ((vw_Veiculo_GridDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3091,20 +3083,19 @@ namespace Apresentacao {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new vw_Cliente_GridDataTable();
+                return new vw_Veiculo_GridDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columncodigo = base.Columns["codigo"];
-                this.columnrazaoSocial = base.Columns["razaoSocial"];
-                this.columnnomeFantasia = base.Columns["nomeFantasia"];
-                this.columncnpj = base.Columns["cnpj"];
-                this.columntelefone1 = base.Columns["telefone1"];
-                this.columntelefone2 = base.Columns["telefone2"];
-                this.columnemail = base.Columns["email"];
+                this.columnplaca = base.Columns["placa"];
+                this.columncor = base.Columns["cor"];
+                this.columnmodelo = base.Columns["modelo"];
                 this.columnativo = base.Columns["ativo"];
+                this.columnRazaoSocialCliente = base.Columns["RazaoSocialCliente"];
+                this.columnNomeFantasiaCliente = base.Columns["NomeFantasiaCliente"];
                 this.columndataInclusao = base.Columns["dataInclusao"];
                 this.columndataAlteracao = base.Columns["dataAlteracao"];
                 this.columnusuarioInclusao = base.Columns["usuarioInclusao"];
@@ -3116,20 +3107,18 @@ namespace Apresentacao {
             private void InitClass() {
                 this.columncodigo = new global::System.Data.DataColumn("codigo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncodigo);
-                this.columnrazaoSocial = new global::System.Data.DataColumn("razaoSocial", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrazaoSocial);
-                this.columnnomeFantasia = new global::System.Data.DataColumn("nomeFantasia", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnomeFantasia);
-                this.columncnpj = new global::System.Data.DataColumn("cnpj", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncnpj);
-                this.columntelefone1 = new global::System.Data.DataColumn("telefone1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntelefone1);
-                this.columntelefone2 = new global::System.Data.DataColumn("telefone2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntelefone2);
-                this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnemail);
-                this.columnativo = new global::System.Data.DataColumn("ativo", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnplaca = new global::System.Data.DataColumn("placa", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnplaca);
+                this.columncor = new global::System.Data.DataColumn("cor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncor);
+                this.columnmodelo = new global::System.Data.DataColumn("modelo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmodelo);
+                this.columnativo = new global::System.Data.DataColumn("ativo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnativo);
+                this.columnRazaoSocialCliente = new global::System.Data.DataColumn("RazaoSocialCliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRazaoSocialCliente);
+                this.columnNomeFantasiaCliente = new global::System.Data.DataColumn("NomeFantasiaCliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNomeFantasiaCliente);
                 this.columndataInclusao = new global::System.Data.DataColumn("dataInclusao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndataInclusao);
                 this.columndataAlteracao = new global::System.Data.DataColumn("dataAlteracao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -3142,14 +3131,15 @@ namespace Apresentacao {
                                 this.columncodigo}, true));
                 this.columncodigo.AllowDBNull = false;
                 this.columncodigo.Unique = true;
-                this.columnrazaoSocial.AllowDBNull = false;
-                this.columnrazaoSocial.MaxLength = 100;
-                this.columnnomeFantasia.AllowDBNull = false;
-                this.columnnomeFantasia.MaxLength = 100;
-                this.columncnpj.MaxLength = 20;
-                this.columntelefone1.MaxLength = 20;
-                this.columntelefone2.MaxLength = 20;
-                this.columnemail.MaxLength = 150;
+                this.columnplaca.MaxLength = 10;
+                this.columncor.MaxLength = 50;
+                this.columnmodelo.MaxLength = 50;
+                this.columnativo.AllowDBNull = false;
+                this.columnativo.MaxLength = 50;
+                this.columnRazaoSocialCliente.AllowDBNull = false;
+                this.columnRazaoSocialCliente.MaxLength = 100;
+                this.columnNomeFantasiaCliente.AllowDBNull = false;
+                this.columnNomeFantasiaCliente.MaxLength = 100;
                 this.columndataInclusao.AllowDBNull = false;
                 this.columnusuarioInclusao.MaxLength = 100;
                 this.columnusuarioAlteracao.MaxLength = 100;
@@ -3157,28 +3147,28 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Cliente_GridRow Newvw_Cliente_GridRow() {
-                return ((vw_Cliente_GridRow)(this.NewRow()));
+            public vw_Veiculo_GridRow Newvw_Veiculo_GridRow() {
+                return ((vw_Veiculo_GridRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new vw_Cliente_GridRow(builder);
+                return new vw_Veiculo_GridRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(vw_Cliente_GridRow);
+                return typeof(vw_Veiculo_GridRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.vw_Cliente_GridRowChanged != null)) {
-                    this.vw_Cliente_GridRowChanged(this, new vw_Cliente_GridRowChangeEvent(((vw_Cliente_GridRow)(e.Row)), e.Action));
+                if ((this.vw_Veiculo_GridRowChanged != null)) {
+                    this.vw_Veiculo_GridRowChanged(this, new vw_Veiculo_GridRowChangeEvent(((vw_Veiculo_GridRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3186,8 +3176,8 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.vw_Cliente_GridRowChanging != null)) {
-                    this.vw_Cliente_GridRowChanging(this, new vw_Cliente_GridRowChangeEvent(((vw_Cliente_GridRow)(e.Row)), e.Action));
+                if ((this.vw_Veiculo_GridRowChanging != null)) {
+                    this.vw_Veiculo_GridRowChanging(this, new vw_Veiculo_GridRowChangeEvent(((vw_Veiculo_GridRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3195,8 +3185,8 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.vw_Cliente_GridRowDeleted != null)) {
-                    this.vw_Cliente_GridRowDeleted(this, new vw_Cliente_GridRowChangeEvent(((vw_Cliente_GridRow)(e.Row)), e.Action));
+                if ((this.vw_Veiculo_GridRowDeleted != null)) {
+                    this.vw_Veiculo_GridRowDeleted(this, new vw_Veiculo_GridRowChangeEvent(((vw_Veiculo_GridRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3204,14 +3194,14 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.vw_Cliente_GridRowDeleting != null)) {
-                    this.vw_Cliente_GridRowDeleting(this, new vw_Cliente_GridRowChangeEvent(((vw_Cliente_GridRow)(e.Row)), e.Action));
+                if ((this.vw_Veiculo_GridRowDeleting != null)) {
+                    this.vw_Veiculo_GridRowDeleting(this, new vw_Veiculo_GridRowChangeEvent(((vw_Veiculo_GridRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removevw_Cliente_GridRow(vw_Cliente_GridRow row) {
+            public void Removevw_Veiculo_GridRow(vw_Veiculo_GridRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3238,7 +3228,7 @@ namespace Apresentacao {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "vw_Cliente_GridDataTable";
+                attribute2.FixedValue = "vw_Veiculo_GridDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3282,36 +3272,111 @@ namespace Apresentacao {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class vw_TipoMaterial_GridRow : global::System.Data.DataRow {
+        public partial class vw_Cliente_GridRow : global::System.Data.DataRow {
             
-            private vw_TipoMaterial_GridDataTable tablevw_TipoMaterial_Grid;
+            private vw_Cliente_GridDataTable tablevw_Cliente_Grid;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal vw_TipoMaterial_GridRow(global::System.Data.DataRowBuilder rb) : 
+            internal vw_Cliente_GridRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablevw_TipoMaterial_Grid = ((vw_TipoMaterial_GridDataTable)(this.Table));
+                this.tablevw_Cliente_Grid = ((vw_Cliente_GridDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int codigo {
                 get {
-                    return ((int)(this[this.tablevw_TipoMaterial_Grid.codigoColumn]));
+                    return ((int)(this[this.tablevw_Cliente_Grid.codigoColumn]));
                 }
                 set {
-                    this[this.tablevw_TipoMaterial_Grid.codigoColumn] = value;
+                    this[this.tablevw_Cliente_Grid.codigoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string descricao {
+            public string razaoSocial {
                 get {
-                    return ((string)(this[this.tablevw_TipoMaterial_Grid.descricaoColumn]));
+                    return ((string)(this[this.tablevw_Cliente_Grid.razaoSocialColumn]));
                 }
                 set {
-                    this[this.tablevw_TipoMaterial_Grid.descricaoColumn] = value;
+                    this[this.tablevw_Cliente_Grid.razaoSocialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nomeFantasia {
+                get {
+                    return ((string)(this[this.tablevw_Cliente_Grid.nomeFantasiaColumn]));
+                }
+                set {
+                    this[this.tablevw_Cliente_Grid.nomeFantasiaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cnpj {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Cliente_Grid.cnpjColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cnpj\' in table \'vw_Cliente_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Cliente_Grid.cnpjColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string telefone1 {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Cliente_Grid.telefone1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'telefone1\' in table \'vw_Cliente_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Cliente_Grid.telefone1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string telefone2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Cliente_Grid.telefone2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'telefone2\' in table \'vw_Cliente_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Cliente_Grid.telefone2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string email {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Cliente_Grid.emailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'email\' in table \'vw_Cliente_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Cliente_Grid.emailColumn] = value;
                 }
             }
             
@@ -3319,10 +3384,15 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ativo {
                 get {
-                    return ((int)(this[this.tablevw_TipoMaterial_Grid.ativoColumn]));
+                    try {
+                        return ((int)(this[this.tablevw_Cliente_Grid.ativoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ativo\' in table \'vw_Cliente_Grid\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tablevw_TipoMaterial_Grid.ativoColumn] = value;
+                    this[this.tablevw_Cliente_Grid.ativoColumn] = value;
                 }
             }
             
@@ -3330,10 +3400,10 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime dataInclusao {
                 get {
-                    return ((global::System.DateTime)(this[this.tablevw_TipoMaterial_Grid.dataInclusaoColumn]));
+                    return ((global::System.DateTime)(this[this.tablevw_Cliente_Grid.dataInclusaoColumn]));
                 }
                 set {
-                    this[this.tablevw_TipoMaterial_Grid.dataInclusaoColumn] = value;
+                    this[this.tablevw_Cliente_Grid.dataInclusaoColumn] = value;
                 }
             }
             
@@ -3342,14 +3412,14 @@ namespace Apresentacao {
             public System.DateTime dataAlteracao {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tablevw_TipoMaterial_Grid.dataAlteracaoColumn]));
+                        return ((global::System.DateTime)(this[this.tablevw_Cliente_Grid.dataAlteracaoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dataAlteracao\' in table \'vw_TipoMaterial_Grid\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'dataAlteracao\' in table \'vw_Cliente_Grid\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevw_TipoMaterial_Grid.dataAlteracaoColumn] = value;
+                    this[this.tablevw_Cliente_Grid.dataAlteracaoColumn] = value;
                 }
             }
             
@@ -3358,15 +3428,14 @@ namespace Apresentacao {
             public string usuarioInclusao {
                 get {
                     try {
-                        return ((string)(this[this.tablevw_TipoMaterial_Grid.usuarioInclusaoColumn]));
+                        return ((string)(this[this.tablevw_Cliente_Grid.usuarioInclusaoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuarioInclusao\' in table \'vw_TipoMaterial_Grid\' is DBNull." +
-                                "", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'usuarioInclusao\' in table \'vw_Cliente_Grid\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevw_TipoMaterial_Grid.usuarioInclusaoColumn] = value;
+                    this[this.tablevw_Cliente_Grid.usuarioInclusaoColumn] = value;
                 }
             }
             
@@ -3375,80 +3444,111 @@ namespace Apresentacao {
             public string usuarioAlteracao {
                 get {
                     try {
-                        return ((string)(this[this.tablevw_TipoMaterial_Grid.usuarioAlteracaoColumn]));
+                        return ((string)(this[this.tablevw_Cliente_Grid.usuarioAlteracaoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuarioAlteracao\' in table \'vw_TipoMaterial_Grid\' is DBNull" +
-                                ".", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'usuarioAlteracao\' in table \'vw_Cliente_Grid\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevw_TipoMaterial_Grid.usuarioAlteracaoColumn] = value;
+                    this[this.tablevw_Cliente_Grid.usuarioAlteracaoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ativo_string {
-                get {
-                    try {
-                        return ((string)(this[this.tablevw_TipoMaterial_Grid.ativo_stringColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ativo_string\' in table \'vw_TipoMaterial_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_TipoMaterial_Grid.ativo_stringColumn] = value;
-                }
+            public bool IscnpjNull() {
+                return this.IsNull(this.tablevw_Cliente_Grid.cnpjColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcnpjNull() {
+                this[this.tablevw_Cliente_Grid.cnpjColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istelefone1Null() {
+                return this.IsNull(this.tablevw_Cliente_Grid.telefone1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settelefone1Null() {
+                this[this.tablevw_Cliente_Grid.telefone1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istelefone2Null() {
+                return this.IsNull(this.tablevw_Cliente_Grid.telefone2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settelefone2Null() {
+                this[this.tablevw_Cliente_Grid.telefone2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsemailNull() {
+                return this.IsNull(this.tablevw_Cliente_Grid.emailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetemailNull() {
+                this[this.tablevw_Cliente_Grid.emailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsativoNull() {
+                return this.IsNull(this.tablevw_Cliente_Grid.ativoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetativoNull() {
+                this[this.tablevw_Cliente_Grid.ativoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsdataAlteracaoNull() {
-                return this.IsNull(this.tablevw_TipoMaterial_Grid.dataAlteracaoColumn);
+                return this.IsNull(this.tablevw_Cliente_Grid.dataAlteracaoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetdataAlteracaoNull() {
-                this[this.tablevw_TipoMaterial_Grid.dataAlteracaoColumn] = global::System.Convert.DBNull;
+                this[this.tablevw_Cliente_Grid.dataAlteracaoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsusuarioInclusaoNull() {
-                return this.IsNull(this.tablevw_TipoMaterial_Grid.usuarioInclusaoColumn);
+                return this.IsNull(this.tablevw_Cliente_Grid.usuarioInclusaoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetusuarioInclusaoNull() {
-                this[this.tablevw_TipoMaterial_Grid.usuarioInclusaoColumn] = global::System.Convert.DBNull;
+                this[this.tablevw_Cliente_Grid.usuarioInclusaoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsusuarioAlteracaoNull() {
-                return this.IsNull(this.tablevw_TipoMaterial_Grid.usuarioAlteracaoColumn);
+                return this.IsNull(this.tablevw_Cliente_Grid.usuarioAlteracaoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetusuarioAlteracaoNull() {
-                this[this.tablevw_TipoMaterial_Grid.usuarioAlteracaoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isativo_stringNull() {
-                return this.IsNull(this.tablevw_TipoMaterial_Grid.ativo_stringColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setativo_stringNull() {
-                this[this.tablevw_TipoMaterial_Grid.ativo_stringColumn] = global::System.Convert.DBNull;
+                this[this.tablevw_Cliente_Grid.usuarioAlteracaoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3512,6 +3612,17 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int codigoTipoMaterial {
+                get {
+                    return ((int)(this[this.tablevw_Material_Grid.codigoTipoMaterialColumn]));
+                }
+                set {
+                    this[this.tablevw_Material_Grid.codigoTipoMaterialColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime dataInclusao {
                 get {
                     return ((global::System.DateTime)(this[this.tablevw_Material_Grid.dataInclusaoColumn]));
@@ -3566,17 +3677,6 @@ namespace Apresentacao {
                 }
                 set {
                     this[this.tablevw_Material_Grid.usuarioAlteracaoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int codigoTipoMaterial {
-                get {
-                    return ((int)(this[this.tablevw_Material_Grid.codigoTipoMaterialColumn]));
-                }
-                set {
-                    this[this.tablevw_Material_Grid.codigoTipoMaterialColumn] = value;
                 }
             }
             
@@ -3880,421 +3980,6 @@ namespace Apresentacao {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class vw_Veiculo_GridRow : global::System.Data.DataRow {
-            
-            private vw_Veiculo_GridDataTable tablevw_Veiculo_Grid;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal vw_Veiculo_GridRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablevw_Veiculo_Grid = ((vw_Veiculo_GridDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int codigo {
-                get {
-                    return ((int)(this[this.tablevw_Veiculo_Grid.codigoColumn]));
-                }
-                set {
-                    this[this.tablevw_Veiculo_Grid.codigoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string placa {
-                get {
-                    try {
-                        return ((string)(this[this.tablevw_Veiculo_Grid.placaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'placa\' in table \'vw_Veiculo_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Veiculo_Grid.placaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cor {
-                get {
-                    try {
-                        return ((string)(this[this.tablevw_Veiculo_Grid.corColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cor\' in table \'vw_Veiculo_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Veiculo_Grid.corColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string modelo {
-                get {
-                    try {
-                        return ((string)(this[this.tablevw_Veiculo_Grid.modeloColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'modelo\' in table \'vw_Veiculo_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Veiculo_Grid.modeloColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ativo {
-                get {
-                    return ((string)(this[this.tablevw_Veiculo_Grid.ativoColumn]));
-                }
-                set {
-                    this[this.tablevw_Veiculo_Grid.ativoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string RazaoSocialCliente {
-                get {
-                    return ((string)(this[this.tablevw_Veiculo_Grid.RazaoSocialClienteColumn]));
-                }
-                set {
-                    this[this.tablevw_Veiculo_Grid.RazaoSocialClienteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NomeFantasiaCliente {
-                get {
-                    return ((string)(this[this.tablevw_Veiculo_Grid.NomeFantasiaClienteColumn]));
-                }
-                set {
-                    this[this.tablevw_Veiculo_Grid.NomeFantasiaClienteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime dataInclusao {
-                get {
-                    return ((global::System.DateTime)(this[this.tablevw_Veiculo_Grid.dataInclusaoColumn]));
-                }
-                set {
-                    this[this.tablevw_Veiculo_Grid.dataInclusaoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime dataAlteracao {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablevw_Veiculo_Grid.dataAlteracaoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dataAlteracao\' in table \'vw_Veiculo_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Veiculo_Grid.dataAlteracaoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string usuarioInclusao {
-                get {
-                    try {
-                        return ((string)(this[this.tablevw_Veiculo_Grid.usuarioInclusaoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuarioInclusao\' in table \'vw_Veiculo_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Veiculo_Grid.usuarioInclusaoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string usuarioAlteracao {
-                get {
-                    try {
-                        return ((string)(this[this.tablevw_Veiculo_Grid.usuarioAlteracaoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuarioAlteracao\' in table \'vw_Veiculo_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Veiculo_Grid.usuarioAlteracaoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsplacaNull() {
-                return this.IsNull(this.tablevw_Veiculo_Grid.placaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetplacaNull() {
-                this[this.tablevw_Veiculo_Grid.placaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscorNull() {
-                return this.IsNull(this.tablevw_Veiculo_Grid.corColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcorNull() {
-                this[this.tablevw_Veiculo_Grid.corColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsmodeloNull() {
-                return this.IsNull(this.tablevw_Veiculo_Grid.modeloColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetmodeloNull() {
-                this[this.tablevw_Veiculo_Grid.modeloColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsdataAlteracaoNull() {
-                return this.IsNull(this.tablevw_Veiculo_Grid.dataAlteracaoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetdataAlteracaoNull() {
-                this[this.tablevw_Veiculo_Grid.dataAlteracaoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsusuarioInclusaoNull() {
-                return this.IsNull(this.tablevw_Veiculo_Grid.usuarioInclusaoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetusuarioInclusaoNull() {
-                this[this.tablevw_Veiculo_Grid.usuarioInclusaoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsusuarioAlteracaoNull() {
-                return this.IsNull(this.tablevw_Veiculo_Grid.usuarioAlteracaoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetusuarioAlteracaoNull() {
-                this[this.tablevw_Veiculo_Grid.usuarioAlteracaoColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class vw_Usuario_GridRow : global::System.Data.DataRow {
-            
-            private vw_Usuario_GridDataTable tablevw_Usuario_Grid;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal vw_Usuario_GridRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablevw_Usuario_Grid = ((vw_Usuario_GridDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int codigo {
-                get {
-                    return ((int)(this[this.tablevw_Usuario_Grid.codigoColumn]));
-                }
-                set {
-                    this[this.tablevw_Usuario_Grid.codigoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string login {
-                get {
-                    return ((string)(this[this.tablevw_Usuario_Grid.loginColumn]));
-                }
-                set {
-                    this[this.tablevw_Usuario_Grid.loginColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string senha {
-                get {
-                    try {
-                        return ((string)(this[this.tablevw_Usuario_Grid.senhaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'senha\' in table \'vw_Usuario_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Usuario_Grid.senhaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nome {
-                get {
-                    try {
-                        return ((string)(this[this.tablevw_Usuario_Grid.nomeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'nome\' in table \'vw_Usuario_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Usuario_Grid.nomeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ativo {
-                get {
-                    try {
-                        return ((int)(this[this.tablevw_Usuario_Grid.ativoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ativo\' in table \'vw_Usuario_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Usuario_Grid.ativoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime dataInclusao {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablevw_Usuario_Grid.dataInclusaoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dataInclusao\' in table \'vw_Usuario_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Usuario_Grid.dataInclusaoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime dataAlteracao {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablevw_Usuario_Grid.dataAlteracaoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dataAlteracao\' in table \'vw_Usuario_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Usuario_Grid.dataAlteracaoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IssenhaNull() {
-                return this.IsNull(this.tablevw_Usuario_Grid.senhaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetsenhaNull() {
-                this[this.tablevw_Usuario_Grid.senhaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsnomeNull() {
-                return this.IsNull(this.tablevw_Usuario_Grid.nomeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetnomeNull() {
-                this[this.tablevw_Usuario_Grid.nomeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsativoNull() {
-                return this.IsNull(this.tablevw_Usuario_Grid.ativoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetativoNull() {
-                this[this.tablevw_Usuario_Grid.ativoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsdataInclusaoNull() {
-                return this.IsNull(this.tablevw_Usuario_Grid.dataInclusaoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetdataInclusaoNull() {
-                this[this.tablevw_Usuario_Grid.dataInclusaoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsdataAlteracaoNull() {
-                return this.IsNull(this.tablevw_Usuario_Grid.dataAlteracaoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetdataAlteracaoNull() {
-                this[this.tablevw_Usuario_Grid.dataAlteracaoColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class vw_Pesagem_GridRow : global::System.Data.DataRow {
             
             private vw_Pesagem_GridDataTable tablevw_Pesagem_Grid;
@@ -4556,111 +4241,36 @@ namespace Apresentacao {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class vw_Cliente_GridRow : global::System.Data.DataRow {
+        public partial class vw_TipoMaterial_GridRow : global::System.Data.DataRow {
             
-            private vw_Cliente_GridDataTable tablevw_Cliente_Grid;
+            private vw_TipoMaterial_GridDataTable tablevw_TipoMaterial_Grid;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal vw_Cliente_GridRow(global::System.Data.DataRowBuilder rb) : 
+            internal vw_TipoMaterial_GridRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablevw_Cliente_Grid = ((vw_Cliente_GridDataTable)(this.Table));
+                this.tablevw_TipoMaterial_Grid = ((vw_TipoMaterial_GridDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int codigo {
                 get {
-                    return ((int)(this[this.tablevw_Cliente_Grid.codigoColumn]));
+                    return ((int)(this[this.tablevw_TipoMaterial_Grid.codigoColumn]));
                 }
                 set {
-                    this[this.tablevw_Cliente_Grid.codigoColumn] = value;
+                    this[this.tablevw_TipoMaterial_Grid.codigoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string razaoSocial {
+            public string descricao {
                 get {
-                    return ((string)(this[this.tablevw_Cliente_Grid.razaoSocialColumn]));
+                    return ((string)(this[this.tablevw_TipoMaterial_Grid.descricaoColumn]));
                 }
                 set {
-                    this[this.tablevw_Cliente_Grid.razaoSocialColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nomeFantasia {
-                get {
-                    return ((string)(this[this.tablevw_Cliente_Grid.nomeFantasiaColumn]));
-                }
-                set {
-                    this[this.tablevw_Cliente_Grid.nomeFantasiaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cnpj {
-                get {
-                    try {
-                        return ((string)(this[this.tablevw_Cliente_Grid.cnpjColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cnpj\' in table \'vw_Cliente_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Cliente_Grid.cnpjColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string telefone1 {
-                get {
-                    try {
-                        return ((string)(this[this.tablevw_Cliente_Grid.telefone1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'telefone1\' in table \'vw_Cliente_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Cliente_Grid.telefone1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string telefone2 {
-                get {
-                    try {
-                        return ((string)(this[this.tablevw_Cliente_Grid.telefone2Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'telefone2\' in table \'vw_Cliente_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Cliente_Grid.telefone2Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string email {
-                get {
-                    try {
-                        return ((string)(this[this.tablevw_Cliente_Grid.emailColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'email\' in table \'vw_Cliente_Grid\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevw_Cliente_Grid.emailColumn] = value;
+                    this[this.tablevw_TipoMaterial_Grid.descricaoColumn] = value;
                 }
             }
             
@@ -4668,15 +4278,10 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ativo {
                 get {
-                    try {
-                        return ((int)(this[this.tablevw_Cliente_Grid.ativoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ativo\' in table \'vw_Cliente_Grid\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tablevw_TipoMaterial_Grid.ativoColumn]));
                 }
                 set {
-                    this[this.tablevw_Cliente_Grid.ativoColumn] = value;
+                    this[this.tablevw_TipoMaterial_Grid.ativoColumn] = value;
                 }
             }
             
@@ -4684,10 +4289,10 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime dataInclusao {
                 get {
-                    return ((global::System.DateTime)(this[this.tablevw_Cliente_Grid.dataInclusaoColumn]));
+                    return ((global::System.DateTime)(this[this.tablevw_TipoMaterial_Grid.dataInclusaoColumn]));
                 }
                 set {
-                    this[this.tablevw_Cliente_Grid.dataInclusaoColumn] = value;
+                    this[this.tablevw_TipoMaterial_Grid.dataInclusaoColumn] = value;
                 }
             }
             
@@ -4696,14 +4301,14 @@ namespace Apresentacao {
             public System.DateTime dataAlteracao {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tablevw_Cliente_Grid.dataAlteracaoColumn]));
+                        return ((global::System.DateTime)(this[this.tablevw_TipoMaterial_Grid.dataAlteracaoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'dataAlteracao\' in table \'vw_Cliente_Grid\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'dataAlteracao\' in table \'vw_TipoMaterial_Grid\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevw_Cliente_Grid.dataAlteracaoColumn] = value;
+                    this[this.tablevw_TipoMaterial_Grid.dataAlteracaoColumn] = value;
                 }
             }
             
@@ -4712,14 +4317,15 @@ namespace Apresentacao {
             public string usuarioInclusao {
                 get {
                     try {
-                        return ((string)(this[this.tablevw_Cliente_Grid.usuarioInclusaoColumn]));
+                        return ((string)(this[this.tablevw_TipoMaterial_Grid.usuarioInclusaoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuarioInclusao\' in table \'vw_Cliente_Grid\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'usuarioInclusao\' in table \'vw_TipoMaterial_Grid\' is DBNull." +
+                                "", e);
                     }
                 }
                 set {
-                    this[this.tablevw_Cliente_Grid.usuarioInclusaoColumn] = value;
+                    this[this.tablevw_TipoMaterial_Grid.usuarioInclusaoColumn] = value;
                 }
             }
             
@@ -4728,111 +4334,495 @@ namespace Apresentacao {
             public string usuarioAlteracao {
                 get {
                     try {
-                        return ((string)(this[this.tablevw_Cliente_Grid.usuarioAlteracaoColumn]));
+                        return ((string)(this[this.tablevw_TipoMaterial_Grid.usuarioAlteracaoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'usuarioAlteracao\' in table \'vw_Cliente_Grid\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'usuarioAlteracao\' in table \'vw_TipoMaterial_Grid\' is DBNull" +
+                                ".", e);
                     }
                 }
                 set {
-                    this[this.tablevw_Cliente_Grid.usuarioAlteracaoColumn] = value;
+                    this[this.tablevw_TipoMaterial_Grid.usuarioAlteracaoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscnpjNull() {
-                return this.IsNull(this.tablevw_Cliente_Grid.cnpjColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcnpjNull() {
-                this[this.tablevw_Cliente_Grid.cnpjColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istelefone1Null() {
-                return this.IsNull(this.tablevw_Cliente_Grid.telefone1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settelefone1Null() {
-                this[this.tablevw_Cliente_Grid.telefone1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istelefone2Null() {
-                return this.IsNull(this.tablevw_Cliente_Grid.telefone2Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settelefone2Null() {
-                this[this.tablevw_Cliente_Grid.telefone2Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsemailNull() {
-                return this.IsNull(this.tablevw_Cliente_Grid.emailColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetemailNull() {
-                this[this.tablevw_Cliente_Grid.emailColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsativoNull() {
-                return this.IsNull(this.tablevw_Cliente_Grid.ativoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetativoNull() {
-                this[this.tablevw_Cliente_Grid.ativoColumn] = global::System.Convert.DBNull;
+            public string ativo_string {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_TipoMaterial_Grid.ativo_stringColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ativo_string\' in table \'vw_TipoMaterial_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_TipoMaterial_Grid.ativo_stringColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsdataAlteracaoNull() {
-                return this.IsNull(this.tablevw_Cliente_Grid.dataAlteracaoColumn);
+                return this.IsNull(this.tablevw_TipoMaterial_Grid.dataAlteracaoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetdataAlteracaoNull() {
-                this[this.tablevw_Cliente_Grid.dataAlteracaoColumn] = global::System.Convert.DBNull;
+                this[this.tablevw_TipoMaterial_Grid.dataAlteracaoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsusuarioInclusaoNull() {
-                return this.IsNull(this.tablevw_Cliente_Grid.usuarioInclusaoColumn);
+                return this.IsNull(this.tablevw_TipoMaterial_Grid.usuarioInclusaoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetusuarioInclusaoNull() {
-                this[this.tablevw_Cliente_Grid.usuarioInclusaoColumn] = global::System.Convert.DBNull;
+                this[this.tablevw_TipoMaterial_Grid.usuarioInclusaoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsusuarioAlteracaoNull() {
-                return this.IsNull(this.tablevw_Cliente_Grid.usuarioAlteracaoColumn);
+                return this.IsNull(this.tablevw_TipoMaterial_Grid.usuarioAlteracaoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetusuarioAlteracaoNull() {
-                this[this.tablevw_Cliente_Grid.usuarioAlteracaoColumn] = global::System.Convert.DBNull;
+                this[this.tablevw_TipoMaterial_Grid.usuarioAlteracaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isativo_stringNull() {
+                return this.IsNull(this.tablevw_TipoMaterial_Grid.ativo_stringColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setativo_stringNull() {
+                this[this.tablevw_TipoMaterial_Grid.ativo_stringColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class vw_Usuario_GridRow : global::System.Data.DataRow {
+            
+            private vw_Usuario_GridDataTable tablevw_Usuario_Grid;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal vw_Usuario_GridRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablevw_Usuario_Grid = ((vw_Usuario_GridDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int codigo {
+                get {
+                    return ((int)(this[this.tablevw_Usuario_Grid.codigoColumn]));
+                }
+                set {
+                    this[this.tablevw_Usuario_Grid.codigoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string login {
+                get {
+                    return ((string)(this[this.tablevw_Usuario_Grid.loginColumn]));
+                }
+                set {
+                    this[this.tablevw_Usuario_Grid.loginColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string senha {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Usuario_Grid.senhaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'senha\' in table \'vw_Usuario_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Usuario_Grid.senhaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string nome {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Usuario_Grid.nomeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nome\' in table \'vw_Usuario_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Usuario_Grid.nomeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ativo {
+                get {
+                    try {
+                        return ((int)(this[this.tablevw_Usuario_Grid.ativoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ativo\' in table \'vw_Usuario_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Usuario_Grid.ativoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime dataInclusao {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablevw_Usuario_Grid.dataInclusaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'dataInclusao\' in table \'vw_Usuario_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Usuario_Grid.dataInclusaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime dataAlteracao {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablevw_Usuario_Grid.dataAlteracaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'dataAlteracao\' in table \'vw_Usuario_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Usuario_Grid.dataAlteracaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IssenhaNull() {
+                return this.IsNull(this.tablevw_Usuario_Grid.senhaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetsenhaNull() {
+                this[this.tablevw_Usuario_Grid.senhaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsnomeNull() {
+                return this.IsNull(this.tablevw_Usuario_Grid.nomeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetnomeNull() {
+                this[this.tablevw_Usuario_Grid.nomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsativoNull() {
+                return this.IsNull(this.tablevw_Usuario_Grid.ativoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetativoNull() {
+                this[this.tablevw_Usuario_Grid.ativoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdataInclusaoNull() {
+                return this.IsNull(this.tablevw_Usuario_Grid.dataInclusaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdataInclusaoNull() {
+                this[this.tablevw_Usuario_Grid.dataInclusaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdataAlteracaoNull() {
+                return this.IsNull(this.tablevw_Usuario_Grid.dataAlteracaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdataAlteracaoNull() {
+                this[this.tablevw_Usuario_Grid.dataAlteracaoColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class vw_Veiculo_GridRow : global::System.Data.DataRow {
+            
+            private vw_Veiculo_GridDataTable tablevw_Veiculo_Grid;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal vw_Veiculo_GridRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablevw_Veiculo_Grid = ((vw_Veiculo_GridDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int codigo {
+                get {
+                    return ((int)(this[this.tablevw_Veiculo_Grid.codigoColumn]));
+                }
+                set {
+                    this[this.tablevw_Veiculo_Grid.codigoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string placa {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Veiculo_Grid.placaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'placa\' in table \'vw_Veiculo_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Veiculo_Grid.placaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cor {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Veiculo_Grid.corColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cor\' in table \'vw_Veiculo_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Veiculo_Grid.corColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string modelo {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Veiculo_Grid.modeloColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'modelo\' in table \'vw_Veiculo_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Veiculo_Grid.modeloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ativo {
+                get {
+                    return ((string)(this[this.tablevw_Veiculo_Grid.ativoColumn]));
+                }
+                set {
+                    this[this.tablevw_Veiculo_Grid.ativoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RazaoSocialCliente {
+                get {
+                    return ((string)(this[this.tablevw_Veiculo_Grid.RazaoSocialClienteColumn]));
+                }
+                set {
+                    this[this.tablevw_Veiculo_Grid.RazaoSocialClienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NomeFantasiaCliente {
+                get {
+                    return ((string)(this[this.tablevw_Veiculo_Grid.NomeFantasiaClienteColumn]));
+                }
+                set {
+                    this[this.tablevw_Veiculo_Grid.NomeFantasiaClienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime dataInclusao {
+                get {
+                    return ((global::System.DateTime)(this[this.tablevw_Veiculo_Grid.dataInclusaoColumn]));
+                }
+                set {
+                    this[this.tablevw_Veiculo_Grid.dataInclusaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime dataAlteracao {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablevw_Veiculo_Grid.dataAlteracaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'dataAlteracao\' in table \'vw_Veiculo_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Veiculo_Grid.dataAlteracaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string usuarioInclusao {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Veiculo_Grid.usuarioInclusaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'usuarioInclusao\' in table \'vw_Veiculo_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Veiculo_Grid.usuarioInclusaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string usuarioAlteracao {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Veiculo_Grid.usuarioAlteracaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'usuarioAlteracao\' in table \'vw_Veiculo_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Veiculo_Grid.usuarioAlteracaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsplacaNull() {
+                return this.IsNull(this.tablevw_Veiculo_Grid.placaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetplacaNull() {
+                this[this.tablevw_Veiculo_Grid.placaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscorNull() {
+                return this.IsNull(this.tablevw_Veiculo_Grid.corColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcorNull() {
+                this[this.tablevw_Veiculo_Grid.corColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsmodeloNull() {
+                return this.IsNull(this.tablevw_Veiculo_Grid.modeloColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetmodeloNull() {
+                this[this.tablevw_Veiculo_Grid.modeloColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdataAlteracaoNull() {
+                return this.IsNull(this.tablevw_Veiculo_Grid.dataAlteracaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdataAlteracaoNull() {
+                this[this.tablevw_Veiculo_Grid.dataAlteracaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsusuarioInclusaoNull() {
+                return this.IsNull(this.tablevw_Veiculo_Grid.usuarioInclusaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetusuarioInclusaoNull() {
+                this[this.tablevw_Veiculo_Grid.usuarioInclusaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsusuarioAlteracaoNull() {
+                return this.IsNull(this.tablevw_Veiculo_Grid.usuarioAlteracaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetusuarioAlteracaoNull() {
+                this[this.tablevw_Veiculo_Grid.usuarioAlteracaoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4840,22 +4830,22 @@ namespace Apresentacao {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class vw_TipoMaterial_GridRowChangeEvent : global::System.EventArgs {
+        public class vw_Cliente_GridRowChangeEvent : global::System.EventArgs {
             
-            private vw_TipoMaterial_GridRow eventRow;
+            private vw_Cliente_GridRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_TipoMaterial_GridRowChangeEvent(vw_TipoMaterial_GridRow row, global::System.Data.DataRowAction action) {
+            public vw_Cliente_GridRowChangeEvent(vw_Cliente_GridRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_TipoMaterial_GridRow Row {
+            public vw_Cliente_GridRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4942,22 +4932,56 @@ namespace Apresentacao {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class vw_Veiculo_GridRowChangeEvent : global::System.EventArgs {
+        public class vw_Pesagem_GridRowChangeEvent : global::System.EventArgs {
             
-            private vw_Veiculo_GridRow eventRow;
+            private vw_Pesagem_GridRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Veiculo_GridRowChangeEvent(vw_Veiculo_GridRow row, global::System.Data.DataRowAction action) {
+            public vw_Pesagem_GridRowChangeEvent(vw_Pesagem_GridRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Veiculo_GridRow Row {
+            public vw_Pesagem_GridRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class vw_TipoMaterial_GridRowChangeEvent : global::System.EventArgs {
+            
+            private vw_TipoMaterial_GridRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vw_TipoMaterial_GridRowChangeEvent(vw_TipoMaterial_GridRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public vw_TipoMaterial_GridRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5010,56 +5034,22 @@ namespace Apresentacao {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class vw_Pesagem_GridRowChangeEvent : global::System.EventArgs {
+        public class vw_Veiculo_GridRowChangeEvent : global::System.EventArgs {
             
-            private vw_Pesagem_GridRow eventRow;
+            private vw_Veiculo_GridRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Pesagem_GridRowChangeEvent(vw_Pesagem_GridRow row, global::System.Data.DataRowAction action) {
+            public vw_Veiculo_GridRowChangeEvent(vw_Veiculo_GridRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Pesagem_GridRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class vw_Cliente_GridRowChangeEvent : global::System.EventArgs {
-            
-            private vw_Cliente_GridRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Cliente_GridRowChangeEvent(vw_Cliente_GridRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Cliente_GridRow Row {
+            public vw_Veiculo_GridRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5075,7 +5065,7 @@ namespace Apresentacao {
         }
     }
 }
-namespace Apresentacao.ControlePesagemDataSetTableAdapters {
+namespace Dados.ControlePesagemDataSetTableAdapters {
     
     
     /// <summary>
@@ -5087,7 +5077,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class vw_TipoMaterial_GridTableAdapter : global::System.ComponentModel.Component {
+    public partial class vw_Cliente_GridTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -5101,7 +5091,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public vw_TipoMaterial_GridTableAdapter() {
+        public vw_Cliente_GridTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5198,15 +5188,19 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "vw_TipoMaterial_Grid";
+            tableMapping.DataSetTable = "vw_Cliente_Grid";
             tableMapping.ColumnMappings.Add("codigo", "codigo");
-            tableMapping.ColumnMappings.Add("descricao", "descricao");
+            tableMapping.ColumnMappings.Add("razaoSocial", "razaoSocial");
+            tableMapping.ColumnMappings.Add("nomeFantasia", "nomeFantasia");
+            tableMapping.ColumnMappings.Add("cnpj", "cnpj");
+            tableMapping.ColumnMappings.Add("telefone1", "telefone1");
+            tableMapping.ColumnMappings.Add("telefone2", "telefone2");
+            tableMapping.ColumnMappings.Add("email", "email");
             tableMapping.ColumnMappings.Add("ativo", "ativo");
             tableMapping.ColumnMappings.Add("dataInclusao", "dataInclusao");
             tableMapping.ColumnMappings.Add("dataAlteracao", "dataAlteracao");
             tableMapping.ColumnMappings.Add("usuarioInclusao", "usuarioInclusao");
             tableMapping.ColumnMappings.Add("usuarioAlteracao", "usuarioAlteracao");
-            tableMapping.ColumnMappings.Add("ativo_string", "ativo_string");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -5214,7 +5208,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Apresentacao.Properties.Settings.Default.ControlePesagemConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5223,8 +5217,9 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT codigo, descricao, ativo, dataInclusao, dataAlteracao, usuarioInclusao, us" +
-                "uarioAlteracao, ativo_string FROM vw_TipoMaterial_Grid";
+            this._commandCollection[0].CommandText = "SELECT codigo, razaoSocial, nomeFantasia, cnpj, telefone1, telefone2, email, ativ" +
+                "o, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao FROM dbo.vw_Cl" +
+                "iente_Grid";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5232,7 +5227,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ControlePesagemDataSet.vw_TipoMaterial_GridDataTable dataTable) {
+        public virtual int Fill(ControlePesagemDataSet.vw_Cliente_GridDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5245,9 +5240,9 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ControlePesagemDataSet.vw_TipoMaterial_GridDataTable GetData() {
+        public virtual ControlePesagemDataSet.vw_Cliente_GridDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ControlePesagemDataSet.vw_TipoMaterial_GridDataTable dataTable = new ControlePesagemDataSet.vw_TipoMaterial_GridDataTable();
+            ControlePesagemDataSet.vw_Cliente_GridDataTable dataTable = new ControlePesagemDataSet.vw_Cliente_GridDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5378,11 +5373,11 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("descricao", "descricao");
             tableMapping.ColumnMappings.Add("ativo", "ativo");
             tableMapping.ColumnMappings.Add("descricaoTipoMaterial", "descricaoTipoMaterial");
+            tableMapping.ColumnMappings.Add("codigoTipoMaterial", "codigoTipoMaterial");
             tableMapping.ColumnMappings.Add("dataInclusao", "dataInclusao");
             tableMapping.ColumnMappings.Add("dataAlteracao", "dataAlteracao");
             tableMapping.ColumnMappings.Add("usuarioInclusao", "usuarioInclusao");
             tableMapping.ColumnMappings.Add("usuarioAlteracao", "usuarioAlteracao");
-            tableMapping.ColumnMappings.Add("codigoTipoMaterial", "codigoTipoMaterial");
             tableMapping.ColumnMappings.Add("ativo_string", "ativo_string");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -5391,7 +5386,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Apresentacao.Properties.Settings.Default.ControlePesagemConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5400,9 +5395,9 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT codigo, descricao, ativo, descricaoTipoMaterial, dataInclusao, dataAlterac" +
-                "ao, usuarioInclusao, usuarioAlteracao, ativo_string, codigoTipoMaterial FROM vw_" +
-                "Material_Grid";
+            this._commandCollection[0].CommandText = "SELECT codigo, descricao, ativo, descricaoTipoMaterial, codigoTipoMaterial, dataI" +
+                "nclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao, ativo_string FROM dbo" +
+                ".vw_Material_Grid";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5571,7 +5566,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Apresentacao.Properties.Settings.Default.ControlePesagemConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5606,359 +5601,6 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         public virtual ControlePesagemDataSet.vw_Motorista_GridDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             ControlePesagemDataSet.vw_Motorista_GridDataTable dataTable = new ControlePesagemDataSet.vw_Motorista_GridDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class vw_Veiculo_GridTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public vw_Veiculo_GridTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "vw_Veiculo_Grid";
-            tableMapping.ColumnMappings.Add("codigo", "codigo");
-            tableMapping.ColumnMappings.Add("placa", "placa");
-            tableMapping.ColumnMappings.Add("cor", "cor");
-            tableMapping.ColumnMappings.Add("modelo", "modelo");
-            tableMapping.ColumnMappings.Add("ativo", "ativo");
-            tableMapping.ColumnMappings.Add("RazaoSocialCliente", "RazaoSocialCliente");
-            tableMapping.ColumnMappings.Add("NomeFantasiaCliente", "NomeFantasiaCliente");
-            tableMapping.ColumnMappings.Add("dataInclusao", "dataInclusao");
-            tableMapping.ColumnMappings.Add("dataAlteracao", "dataAlteracao");
-            tableMapping.ColumnMappings.Add("usuarioInclusao", "usuarioInclusao");
-            tableMapping.ColumnMappings.Add("usuarioAlteracao", "usuarioAlteracao");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Apresentacao.Properties.Settings.Default.ControlePesagemConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT codigo, placa, cor, modelo, ativo, RazaoSocialCliente, NomeFantasiaCliente" +
-                ", dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao FROM dbo.vw_Vei" +
-                "culo_Grid";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ControlePesagemDataSet.vw_Veiculo_GridDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ControlePesagemDataSet.vw_Veiculo_GridDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            ControlePesagemDataSet.vw_Veiculo_GridDataTable dataTable = new ControlePesagemDataSet.vw_Veiculo_GridDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class vw_Usuario_GridTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public vw_Usuario_GridTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "vw_Usuario_Grid";
-            tableMapping.ColumnMappings.Add("codigo", "codigo");
-            tableMapping.ColumnMappings.Add("login", "login");
-            tableMapping.ColumnMappings.Add("senha", "senha");
-            tableMapping.ColumnMappings.Add("nome", "nome");
-            tableMapping.ColumnMappings.Add("ativo", "ativo");
-            tableMapping.ColumnMappings.Add("dataInclusao", "dataInclusao");
-            tableMapping.ColumnMappings.Add("dataAlteracao", "dataAlteracao");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Apresentacao.Properties.Settings.Default.ControlePesagemConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT codigo, login, senha, nome, ativo, dataInclusao, dataAlteracao FROM dbo.vw" +
-                "_Usuario_Grid";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ControlePesagemDataSet.vw_Usuario_GridDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ControlePesagemDataSet.vw_Usuario_GridDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            ControlePesagemDataSet.vw_Usuario_GridDataTable dataTable = new ControlePesagemDataSet.vw_Usuario_GridDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6105,7 +5747,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Apresentacao.Properties.Settings.Default.ControlePesagemConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6154,7 +5796,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class vw_Cliente_GridTableAdapter : global::System.ComponentModel.Component {
+    public partial class vw_TipoMaterial_GridTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -6168,7 +5810,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public vw_Cliente_GridTableAdapter() {
+        public vw_TipoMaterial_GridTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6265,19 +5907,15 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "vw_Cliente_Grid";
+            tableMapping.DataSetTable = "vw_TipoMaterial_Grid";
             tableMapping.ColumnMappings.Add("codigo", "codigo");
-            tableMapping.ColumnMappings.Add("razaoSocial", "razaoSocial");
-            tableMapping.ColumnMappings.Add("nomeFantasia", "nomeFantasia");
-            tableMapping.ColumnMappings.Add("cnpj", "cnpj");
-            tableMapping.ColumnMappings.Add("telefone1", "telefone1");
-            tableMapping.ColumnMappings.Add("telefone2", "telefone2");
-            tableMapping.ColumnMappings.Add("email", "email");
+            tableMapping.ColumnMappings.Add("descricao", "descricao");
             tableMapping.ColumnMappings.Add("ativo", "ativo");
             tableMapping.ColumnMappings.Add("dataInclusao", "dataInclusao");
             tableMapping.ColumnMappings.Add("dataAlteracao", "dataAlteracao");
             tableMapping.ColumnMappings.Add("usuarioInclusao", "usuarioInclusao");
             tableMapping.ColumnMappings.Add("usuarioAlteracao", "usuarioAlteracao");
+            tableMapping.ColumnMappings.Add("ativo_string", "ativo_string");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6285,7 +5923,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Apresentacao.Properties.Settings.Default.ControlePesagemConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6294,9 +5932,8 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT codigo, razaoSocial, nomeFantasia, cnpj, telefone1, telefone2, email, ativ" +
-                "o, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao FROM dbo.vw_Cl" +
-                "iente_Grid";
+            this._commandCollection[0].CommandText = "SELECT codigo, descricao, ativo, dataInclusao, dataAlteracao, usuarioInclusao, us" +
+                "uarioAlteracao, ativo_string FROM dbo.vw_TipoMaterial_Grid";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6304,7 +5941,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ControlePesagemDataSet.vw_Cliente_GridDataTable dataTable) {
+        public virtual int Fill(ControlePesagemDataSet.vw_TipoMaterial_GridDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6317,9 +5954,362 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ControlePesagemDataSet.vw_Cliente_GridDataTable GetData() {
+        public virtual ControlePesagemDataSet.vw_TipoMaterial_GridDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ControlePesagemDataSet.vw_Cliente_GridDataTable dataTable = new ControlePesagemDataSet.vw_Cliente_GridDataTable();
+            ControlePesagemDataSet.vw_TipoMaterial_GridDataTable dataTable = new ControlePesagemDataSet.vw_TipoMaterial_GridDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class vw_Usuario_GridTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public vw_Usuario_GridTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "vw_Usuario_Grid";
+            tableMapping.ColumnMappings.Add("codigo", "codigo");
+            tableMapping.ColumnMappings.Add("login", "login");
+            tableMapping.ColumnMappings.Add("senha", "senha");
+            tableMapping.ColumnMappings.Add("nome", "nome");
+            tableMapping.ColumnMappings.Add("ativo", "ativo");
+            tableMapping.ColumnMappings.Add("dataInclusao", "dataInclusao");
+            tableMapping.ColumnMappings.Add("dataAlteracao", "dataAlteracao");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = "";
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT codigo, login, senha, nome, ativo, dataInclusao, dataAlteracao FROM dbo.vw" +
+                "_Usuario_Grid";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ControlePesagemDataSet.vw_Usuario_GridDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ControlePesagemDataSet.vw_Usuario_GridDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ControlePesagemDataSet.vw_Usuario_GridDataTable dataTable = new ControlePesagemDataSet.vw_Usuario_GridDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class vw_Veiculo_GridTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public vw_Veiculo_GridTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "vw_Veiculo_Grid";
+            tableMapping.ColumnMappings.Add("codigo", "codigo");
+            tableMapping.ColumnMappings.Add("placa", "placa");
+            tableMapping.ColumnMappings.Add("cor", "cor");
+            tableMapping.ColumnMappings.Add("modelo", "modelo");
+            tableMapping.ColumnMappings.Add("ativo", "ativo");
+            tableMapping.ColumnMappings.Add("RazaoSocialCliente", "RazaoSocialCliente");
+            tableMapping.ColumnMappings.Add("NomeFantasiaCliente", "NomeFantasiaCliente");
+            tableMapping.ColumnMappings.Add("dataInclusao", "dataInclusao");
+            tableMapping.ColumnMappings.Add("dataAlteracao", "dataAlteracao");
+            tableMapping.ColumnMappings.Add("usuarioInclusao", "usuarioInclusao");
+            tableMapping.ColumnMappings.Add("usuarioAlteracao", "usuarioAlteracao");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = "";
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT codigo, placa, cor, modelo, ativo, RazaoSocialCliente, NomeFantasiaCliente" +
+                ", dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao FROM dbo.vw_Vei" +
+                "culo_Grid";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ControlePesagemDataSet.vw_Veiculo_GridDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ControlePesagemDataSet.vw_Veiculo_GridDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ControlePesagemDataSet.vw_Veiculo_GridDataTable dataTable = new ControlePesagemDataSet.vw_Veiculo_GridDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
