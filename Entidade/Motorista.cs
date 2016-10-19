@@ -19,5 +19,11 @@ namespace Entidade
         public DateTime DataInclusao { get; set; }
         public Usuario UsuarioAlteracao { get; set; }
         public DateTime DataAlteracao { get; set; }
+
+        public Motorista(){
+            this.Cliente = new Cliente();
+            this.UsuarioAlteracao = new Usuario();
+            this.UsuarioInclusao = new Usuario();
+        }
     }
 }

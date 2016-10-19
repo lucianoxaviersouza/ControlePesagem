@@ -166,16 +166,25 @@ namespace Apresentacao.Telas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             ControleTela.LimpaCampos(this);
+                        
+            //Controles de ação
             stAcoes.Enabled = true;
             btnCancelar.Enabled = false;
             btnSalvar.Enabled = false;
-            dgvTipoMaterial.Enabled = true;
-            txtDataAlteracao.Enabled = false;
+            
+            
+            //Controles de Input
+            txtDescricao.Enabled = false;
             chkAtivo.Enabled = false;
+
+            //Controles de Busca
             btnBuscarTodos.Enabled = true;
             btnBuscar.Enabled = true;
             txtDescricaoBusca.Enabled = true;
             txtCodigoBusca.Enabled = true;
+
+            //Controles de Exibição
+            dgvTipoMaterial.Enabled = true;
 
         }
 

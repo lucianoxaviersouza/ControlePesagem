@@ -70,6 +70,12 @@
             this.vw_TipoMaterial_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_TipoMaterial_GridTableAdapter();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtDescricaoBusca = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cboTipoMaterialBusca = new System.Windows.Forms.ComboBox();
+            this.btnBuscarTodos = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.stAcoes.SuspendLayout();
             this.gboxCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vwTipoMaterialGridBindingSource)).BeginInit();
@@ -307,7 +313,7 @@
             // gboxDados
             // 
             this.gboxDados.Controls.Add(this.dgvMaterial);
-            this.gboxDados.Location = new System.Drawing.Point(12, 205);
+            this.gboxDados.Location = new System.Drawing.Point(12, 251);
             this.gboxDados.Name = "gboxDados";
             this.gboxDados.Size = new System.Drawing.Size(1223, 265);
             this.gboxDados.TabIndex = 3;
@@ -318,6 +324,7 @@
             // 
             this.dgvMaterial.AllowUserToAddRows = false;
             this.dgvMaterial.AllowUserToDeleteRows = false;
+            this.dgvMaterial.AllowUserToOrderColumns = true;
             this.dgvMaterial.AutoGenerateColumns = false;
             this.dgvMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMaterial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -460,12 +467,80 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(273, 203);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 13);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Descrição";
+            // 
+            // txtDescricaoBusca
+            // 
+            this.txtDescricaoBusca.Location = new System.Drawing.Point(273, 219);
+            this.txtDescricaoBusca.Name = "txtDescricaoBusca";
+            this.txtDescricaoBusca.Size = new System.Drawing.Size(430, 20);
+            this.txtDescricaoBusca.TabIndex = 8;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(24, 200);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 13);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Tipo Material";
+            // 
+            // cboTipoMaterialBusca
+            // 
+            this.cboTipoMaterialBusca.DataSource = this.vwTipoMaterialGridBindingSource;
+            this.cboTipoMaterialBusca.DisplayMember = "descricao";
+            this.cboTipoMaterialBusca.FormattingEnabled = true;
+            this.cboTipoMaterialBusca.Location = new System.Drawing.Point(24, 219);
+            this.cboTipoMaterialBusca.Name = "cboTipoMaterialBusca";
+            this.cboTipoMaterialBusca.Size = new System.Drawing.Size(243, 21);
+            this.cboTipoMaterialBusca.TabIndex = 6;
+            this.cboTipoMaterialBusca.ValueMember = "codigo";
+            // 
+            // btnBuscarTodos
+            // 
+            this.btnBuscarTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarTodos.Image")));
+            this.btnBuscarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarTodos.Location = new System.Drawing.Point(786, 217);
+            this.btnBuscarTodos.Name = "btnBuscarTodos";
+            this.btnBuscarTodos.Size = new System.Drawing.Size(94, 23);
+            this.btnBuscarTodos.TabIndex = 11;
+            this.btnBuscarTodos.Text = "Buscar todos";
+            this.btnBuscarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarTodos.UseVisualStyleBackColor = true;
+            this.btnBuscarTodos.Click += new System.EventHandler(this.btnBuscarTodos_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(714, 217);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(66, 23);
+            this.btnBuscar.TabIndex = 10;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // frmMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1244, 482);
+            this.ClientSize = new System.Drawing.Size(1244, 526);
+            this.Controls.Add(this.btnBuscarTodos);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtDescricaoBusca);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.cboTipoMaterialBusca);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.gboxDados);
@@ -534,5 +609,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtDescricaoBusca;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cboTipoMaterialBusca;
+        private System.Windows.Forms.Button btnBuscarTodos;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

@@ -86,6 +86,7 @@
             this.motoristasToolStripMenuItem.Name = "motoristasToolStripMenuItem";
             this.motoristasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.motoristasToolStripMenuItem.Text = "Motoristas";
+            this.motoristasToolStripMenuItem.Click += new System.EventHandler(this.motoristasToolStripMenuItem_Click);
             // 
             // veículosToolStripMenuItem
             // 

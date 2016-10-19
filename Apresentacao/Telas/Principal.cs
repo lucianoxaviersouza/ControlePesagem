@@ -55,5 +55,14 @@ namespace Apresentacao.Telas
             // Display the new form.
             cliente.Show();
         }
+
+        private void motoristasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMotorista motorista = new frmMotorista();
+            // Set the Parent Form of the Child window.
+            motorista.MdiParent = this;
+            // Display the new form.
+            motorista.Show();
+        }
     }
 }

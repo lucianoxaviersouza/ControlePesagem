@@ -46,7 +46,7 @@ namespace Dados
                 objReader.Close();
                 return objMaterial;
             }
-            catch (SqlException err)
+            catch (Exception err)
             {
                 throw err;
             }
@@ -86,7 +86,7 @@ namespace Dados
             {
                 objCommand.ExecuteNonQuery();
             }
-            catch (SqlException err)
+            catch (Exception err)
             {
                 throw err;
             }
@@ -103,7 +103,7 @@ namespace Dados
             {
                 objCommand.ExecuteNonQuery();
             }
-            catch (SqlException err)
+            catch (Exception err)
             {
                 throw err;
             }
