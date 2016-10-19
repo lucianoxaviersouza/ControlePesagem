@@ -48,10 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControlePesagemDataSet.cs">
-      <DependentUpon>ControlePesagemDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="ControlePesagemDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -62,6 +58,12 @@
     </Compile>
     <Compile Include="Telas\frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\frmMaterial.cs">
       <SubType>Form</SubType>
@@ -74,6 +76,24 @@
     </Compile>
     <Compile Include="Telas\frmMotorista.Designer.cs">
       <DependentUpon>frmMotorista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmPesagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmPesagem.Designer.cs">
+      <DependentUpon>frmPesagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmVeiculo.Designer.cs">
+      <DependentUpon>frmVeiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\ControleTela.cs" />
     <Compile Include="Telas\frmTipoMaterial.cs">
@@ -101,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmTipoMaterial.resx">
       <DependentUpon>frmTipoMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmVeiculo.resx">
+      <DependentUpon>frmVeiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

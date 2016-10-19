@@ -13,10 +13,16 @@ namespace Entidade
         public String Cor { get; set; }
         public String Modelo { get; set; }
         public int Ativo { get; set; }
-        public int Cliente { get; set; }
-        public int UsuarioInclusao { get; set; }
+        public Cliente Cliente { get; set; }
+        public Usuario UsuarioInclusao { get; set; }
         public DateTime DataInclusao { get; set; }
-        public int UsuarioAlteracao { get; set; }
+        public Usuario UsuarioAlteracao { get; set; }
         public DateTime DataAlteracao { get; set; }
+        public Veiculo()
+        {
+            this.Cliente = new Cliente();
+            this.UsuarioAlteracao = new Usuario();
+            this.UsuarioInclusao = new Usuario();
+        }
     }
 }

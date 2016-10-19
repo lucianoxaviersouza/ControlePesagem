@@ -15,7 +15,7 @@ using Apresentacao;
 
 namespace Apresentacao.Telas
 {
-    public partial class frmMotorista : Form
+    public partial class frmVeiculo : Form
     {
 
         internal enunTipoAcao globalTipoAcao;
@@ -24,38 +24,38 @@ namespace Apresentacao.Telas
             inclusao, alteracao, delecao
         };
         
-        public frmMotorista()
+        public frmVeiculo()
         {
             InitializeComponent();
         }
 
-        private void frmMotorista_Load(object sender, EventArgs e)
+        private void frmVeiculo_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'controlePesagemDataSet.vw_Cliente_Grid' table. You can move, or remove it, as needed.
             this.vw_Cliente_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Cliente_Grid);
-            // TODO: This line of code loads data into the 'controlePesagemDataSet.vw_Cliente_Grid' table. You can move, or remove it, as needed.
+            
             cboCliente.Text = "";
             cboClienteBusca.Text = "";
-            // TODO: This line of code loads data into the 'controlePesagemDataSet.vw_Motorista_Grid' table. You can move, or remove it, as needed.
-            this.vw_Motorista_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Motorista_Grid);
+            // TODO: This line of code loads data into the 'controlePesagemDataSet.vw_Veiculo_Grid' table. You can move, or remove it, as needed.
+            this.vw_Veiculo_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Veiculo_Grid);
 
 
             
-            dgvMotorista.Sort(dgvMotorista.Columns[0], ListSortDirection.Descending);
-            gboxDados.Text = String.Concat("Registros: ", this.dgvMotorista.RowCount);
+           dgvVeiculo.Sort(dgvVeiculo.Columns[0], ListSortDirection.Descending);
+            gboxDados.Text = String.Concat("Registros: ", this.dgvVeiculo.RowCount);
 
         }
 
         private void stbtIncluir_Click(object sender, EventArgs e)
         {
 
-            dgvMotorista.Enabled = false;
+           dgvVeiculo.Enabled = false;
             globalTipoAcao = enunTipoAcao.inclusao;
             stAcoes.Enabled = false;
-            txtNome.Enabled = true;
-            txtNomeConhecido.Enabled = true;
-            txtSobreNome.Enabled = true;
-            txtCPF.Enabled = true;
+            txtModelo.Enabled = true;
+            txtCor.Enabled = true;
+            txtPlaca.Enabled = true;
+            
             
             cboCliente.Enabled = true;
             cboCliente.Focus();
@@ -67,8 +67,7 @@ namespace Apresentacao.Telas
 
             btnBuscarTodos.Enabled = false;
             btnBuscar.Enabled = false;
-            txtNomeBusca.Enabled = false;
-            txtNomeConhecidoBusca.Enabled = false;
+            txtPlacaBusca.Enabled = false;
             cboClienteBusca.Enabled = false;
 
         }
@@ -83,21 +82,19 @@ namespace Apresentacao.Telas
             btnSalvar.Enabled = false;
 
             //Controles de Exibição
-            dgvMotorista.Enabled = true;
+           dgvVeiculo.Enabled = true;
 
             //Controles de Input
-            txtNome.Enabled = false;
-            txtNomeConhecido.Enabled = false;
-            txtSobreNome.Enabled = false;
-            txtCPF.Enabled = false;
+            txtModelo.Enabled = false;
+            txtCor.Enabled = false;
+            txtPlaca.Enabled = false;
             cboCliente.Enabled = false;
             chkAtivo.Enabled = false;
 
             //Controles de Busca
             btnBuscarTodos.Enabled = true;
             btnBuscar.Enabled = true;
-            txtNomeBusca.Enabled = true;
-            txtNomeConhecidoBusca.Enabled = true;
+            txtPlacaBusca.Enabled = true;
             cboClienteBusca.Enabled = true;
 
 
@@ -107,41 +104,40 @@ namespace Apresentacao.Telas
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             try{
-            Motorista objMotorista = new Motorista();
-            MotoristaBus motorista = new MotoristaBus();
+            Veiculo objVeiculo = new Veiculo();
+            VeiculoBus veiculo = new VeiculoBus();
 
-            objMotorista.Cliente.Codigo = Convert.ToInt16(cboCliente.SelectedValue.ToString());
-            objMotorista.Nome = txtNome.Text;
-            objMotorista.Sobrenome = txtSobreNome.Text;
-            objMotorista.nomeConhecido = txtNomeConhecido.Text;
-            objMotorista.CPF  = txtCPF.Text;
-            objMotorista.Ativo = Convert.ToInt16(chkAtivo.Checked);
+            objVeiculo.Cliente.Codigo = Convert.ToInt16(cboCliente.SelectedValue.ToString());
+            objVeiculo.Modelo = txtModelo.Text;
+            objVeiculo.Placa = txtPlaca.Text;
+            objVeiculo.Cor = txtCor.Text;
+            objVeiculo.Ativo = Convert.ToInt16(chkAtivo.Checked);
 
             if (globalTipoAcao.Equals(enunTipoAcao.inclusao))
             {
-                objMotorista.UsuarioInclusao = Principal.usuario;
-                objMotorista.DataInclusao = DateTime.Now;
-                motorista.inserir(objMotorista);
+                objVeiculo.UsuarioInclusao = Principal.usuario;
+                objVeiculo.DataInclusao = DateTime.Now;
+                veiculo.inserir(objVeiculo);
                 MessageBox.Show("Registro Inserido com sucesso!");
             }
             else if (globalTipoAcao.Equals(enunTipoAcao.alteracao))
             {
 
-                objMotorista.Codigo = Convert.ToInt16(txtCodigo.Text);
-                objMotorista.UsuarioAlteracao = Principal.usuario;
-                objMotorista.DataAlteracao = DateTime.Now;
-                motorista.alterar(objMotorista);
+                objVeiculo.Codigo = Convert.ToInt16(txtCodigo.Text);
+                objVeiculo.UsuarioAlteracao = Principal.usuario;
+                objVeiculo.DataAlteracao = DateTime.Now;
+                veiculo.alterar(objVeiculo);
                 MessageBox.Show("Registro Alterado com sucesso!");
             }
             
             ControleTela.LimpaCampos(this);
 
             //Controles de Exibição
-            dgvMotorista.Enabled = true;
-            this.vw_Motorista_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Motorista_Grid);
-            dgvMotorista.Refresh();
-            dgvMotorista.Update();
-            gboxDados.Text = String.Concat("Registros: ", dgvMotorista.RowCount);
+           dgvVeiculo.Enabled = true;
+            this.vw_Veiculo_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Veiculo_Grid);
+           dgvVeiculo.Refresh();
+           dgvVeiculo.Update();
+            gboxDados.Text = String.Concat("Registros: ",dgvVeiculo.RowCount);
                 
             //Controles de ação
             stAcoes.Enabled = true;
@@ -149,18 +145,16 @@ namespace Apresentacao.Telas
             btnSalvar.Enabled = false;
 
             //Controles de Input
-            txtNome.Enabled = false;
-            txtNomeConhecido.Enabled = false;
-            txtSobreNome.Enabled = false;
-            txtCPF.Enabled = false;
+            txtModelo.Enabled = false;
+            txtCor.Enabled = false;
+            txtPlaca.Enabled = false;
             cboCliente.Enabled = false;
             chkAtivo.Enabled = false;
 
             //Controles de Busca
             btnBuscarTodos.Enabled = true;
             btnBuscar.Enabled = true;
-            txtNomeBusca.Enabled = true;
-            txtNomeConhecidoBusca.Enabled = true;
+            txtPlacaBusca.Enabled = true;
             cboClienteBusca.Enabled = true;
 
             }
@@ -194,7 +188,7 @@ namespace Apresentacao.Telas
             
 
             //Controles de Exibição
-            dgvMotorista.Enabled = false;
+           dgvVeiculo.Enabled = false;
             
 
             //Controles de ação
@@ -203,39 +197,35 @@ namespace Apresentacao.Telas
             btnSalvar.Enabled = true;
 
             //Controles de Input
-            txtNome.Enabled = true;
-            txtNomeConhecido.Enabled = true;
-            txtSobreNome.Enabled = true;
-            txtCPF.Enabled = true;
+            txtModelo.Enabled = true;
+            txtCor.Enabled = true;
+            txtPlaca.Enabled = true;
             cboCliente.Enabled = true;
             chkAtivo.Enabled = true;
 
             //Controles de Busca
             btnBuscarTodos.Enabled = false;
             btnBuscar.Enabled = false;
-            txtNomeBusca.Enabled = false;
-            txtNomeConhecidoBusca.Enabled = false;
+            txtPlacaBusca.Enabled = false;
             cboClienteBusca.Enabled = false;
 
             
         }
 
-        private void dgvMotorista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvVeiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
 
-            txtCodigo.Text = dgvMotorista.CurrentRow.Cells["codigo"].Value.ToString();
-            txtNome.Text = dgvMotorista.CurrentRow.Cells["nome"].Value.ToString();
-            txtNomeConhecido.Text = dgvMotorista.CurrentRow.Cells["nomeConhecido"].Value.ToString();
-            txtSobreNome.Text = dgvMotorista.CurrentRow.Cells["sobrenome"].Value.ToString();
-            txtCPF.Text = dgvMotorista.CurrentRow.Cells["cpf"].Value.ToString();
-            cboCliente.Text = dgvMotorista.CurrentRow.Cells["NomeFantasiaCliente"].Value.ToString();
-            chkAtivo.Checked = Convert.ToBoolean(Convert.ToInt16(dgvMotorista.CurrentRow.Cells["ativo"].Value.ToString()));
-            txtDataAlteracao.Text = dgvMotorista.CurrentRow.Cells["dataAlteracao"].Value.ToString();
-            txtDataInclusao.Text = dgvMotorista.CurrentRow.Cells["dataInclusao"].Value.ToString();
-            txtUsuarioAlteracao.Text = dgvMotorista.CurrentRow.Cells["UsuarioAlteracao"].Value.ToString();
-            txtUsuarioInclusao.Text = dgvMotorista.CurrentRow.Cells["dataInclusao"].Value.ToString();
-
+            txtCodigo.Text =dgvVeiculo.CurrentRow.Cells["codigo"].Value.ToString();
+            txtModelo.Text =dgvVeiculo.CurrentRow.Cells["modelo"].Value.ToString();
+            txtCor.Text =dgvVeiculo.CurrentRow.Cells["cor"].Value.ToString();
+            txtPlaca.Text =dgvVeiculo.CurrentRow.Cells["placa"].Value.ToString();
+            cboCliente.Text =dgvVeiculo.CurrentRow.Cells["NomeFantasiaCliente"].Value.ToString();
+            chkAtivo.Checked = Convert.ToBoolean(Convert.ToInt16(dgvVeiculo.CurrentRow.Cells["ativo"].Value.ToString()));
+            txtDataAlteracao.Text =dgvVeiculo.CurrentRow.Cells["dataAlteracao"].Value.ToString();
+            txtDataInclusao.Text =dgvVeiculo.CurrentRow.Cells["dataInclusao"].Value.ToString();
+            txtUsuarioAlteracao.Text =dgvVeiculo.CurrentRow.Cells["UsuarioAlteracao"].Value.ToString();
+            txtUsuarioInclusao.Text =dgvVeiculo.CurrentRow.Cells["dataInclusao"].Value.ToString();
             
         }
 
@@ -251,18 +241,18 @@ namespace Apresentacao.Telas
 
                 }
                 
-            Motorista objMotorista = new Motorista();
-            MotoristaBus motorista = new MotoristaBus();
+            Veiculo objVeiculo = new Veiculo();
+            VeiculoBus veiculo = new VeiculoBus();
 
-            objMotorista.Codigo = Convert.ToInt16(txtCodigo.Text);
+            objVeiculo.Codigo = Convert.ToInt16(txtCodigo.Text);
 
-            motorista.excluir(objMotorista);
+            veiculo.excluir(objVeiculo);
             MessageBox.Show("Registro Excluído com sucesso!");
             ControleTela.LimpaCampos(this);
-            this.vw_Motorista_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Motorista_Grid);
-            dgvMotorista.Refresh();
-            dgvMotorista.Update();
-            gboxDados.Text = String.Concat("Registros: ", dgvMotorista.RowCount);
+            this.vw_Veiculo_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Veiculo_Grid);
+           dgvVeiculo.Refresh();
+           dgvVeiculo.Update();
+            gboxDados.Text = String.Concat("Registros: ",dgvVeiculo.RowCount);
                 
             }
             catch (Exception ex)
@@ -289,25 +279,18 @@ namespace Apresentacao.Telas
         {
             if (cboClienteBusca.Text != "")
             {
-                vw_Motorista_GridTableAdapter.FillByNomeFantasiaCliente(controlePesagemDataSet.vw_Motorista_Grid, cboClienteBusca.Text);
+                vw_Veiculo_GridTableAdapter.FillByNomeFantasiaCliente(controlePesagemDataSet.vw_Veiculo_Grid, cboClienteBusca.Text);
             }
-            else if (txtNomeBusca.Text != "")
+            else if (txtPlacaBusca.Text != "")
             {
-                vw_Motorista_GridTableAdapter.FillByNome(controlePesagemDataSet.vw_Motorista_Grid, txtNomeBusca.Text);
-
-            }
-            else if (txtNomeConhecidoBusca.Text != "")
-            {
-                vw_Motorista_GridTableAdapter.FillByNomeConhecido(controlePesagemDataSet.vw_Motorista_Grid, txtNomeConhecidoBusca.Text);
-
+                vw_Veiculo_GridTableAdapter.FillByPlaca(controlePesagemDataSet.vw_Veiculo_Grid, txtPlacaBusca.Text);
             }
         }
 
         private void btnBuscarTodos_Click(object sender, EventArgs e)
         {
-            txtNomeConhecidoBusca.Text = "";
-            txtNomeBusca.Text = "";
-            vw_Motorista_GridTableAdapter.Fill(controlePesagemDataSet.vw_Motorista_Grid);
+            txtPlacaBusca.Text = "";
+            vw_Veiculo_GridTableAdapter.Fill(controlePesagemDataSet.vw_Veiculo_Grid);
         }
     }
 }

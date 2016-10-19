@@ -43,6 +43,7 @@
     <Compile Include="IBusiness.cs" />
     <Compile Include="MaterialBus.cs" />
     <Compile Include="MotoristaBus.cs" />
+    <Compile Include="PesagemBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TipoMaterialBus.cs" />
     <Compile Include="UsuarioBus.cs" />

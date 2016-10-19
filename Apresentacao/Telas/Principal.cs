@@ -64,5 +64,33 @@ namespace Apresentacao.Telas
             // Display the new form.
             motorista.Show();
         }
+
+        private void veículosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVeiculo veiculo = new frmVeiculo();
+            // Set the Parent Form of the Child window.
+            veiculo.MdiParent = this;
+            // Display the new form.
+            veiculo.Show();
+        }
+
+        private void registroDePesagemEntradaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPesagem pesagem = new frmPesagem();
+            // Set the Parent Form of the Child window.
+            pesagem.MdiParent = this;
+            // Display the new form.
+            pesagem.Show();
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSobre sobre = new frmSobre();
+            // Set the Parent Form of the Child window.
+            sobre.MdiParent = this;
+            // Display the new form.
+            sobre.Show();
+        }
+        
     }
 }

@@ -57,35 +57,43 @@
             this.txtUsuarioInclusao = new System.Windows.Forms.TextBox();
             this.gboxDados = new System.Windows.Forms.GroupBox();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.vwClienteGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
             this.stAcoes = new System.Windows.Forms.ToolStrip();
             this.stbtIncluir = new System.Windows.Forms.ToolStripButton();
             this.stbtAlterar = new System.Windows.Forms.ToolStripButton();
             this.stbtExcluir = new System.Windows.Forms.ToolStripButton();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.vwClienteGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
+            this.txtCNPJBusca = new System.Windows.Forms.MaskedTextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtNomeFantasiaBusca = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtCodigoBusca = new System.Windows.Forms.TextBox();
+            this.btnBuscarTodos = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.vw_Cliente_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_Cliente_GridTableAdapter();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razaoSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeFantasia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ativo_string = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativo_string = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gboxCliente.SuspendLayout();
             this.gboxInfoControle.SuspendLayout();
             this.gboxDados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
-            this.stAcoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
+            this.stAcoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // gboxCliente
@@ -333,7 +341,7 @@
             // gboxDados
             // 
             this.gboxDados.Controls.Add(this.dgvCliente);
-            this.gboxDados.Location = new System.Drawing.Point(12, 237);
+            this.gboxDados.Location = new System.Drawing.Point(12, 277);
             this.gboxDados.Name = "gboxDados";
             this.gboxDados.Size = new System.Drawing.Size(1223, 265);
             this.gboxDados.TabIndex = 2;
@@ -343,6 +351,7 @@
             // dgvCliente
             // 
             this.dgvCliente.AllowUserToAddRows = false;
+            this.dgvCliente.AllowUserToDeleteRows = false;
             this.dgvCliente.AutoGenerateColumns = false;
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -351,23 +360,31 @@
             this.nomeFantasia,
             this.cnpj,
             this.telefone1,
-            this.email,
-            this.ativo_string,
             this.telefone2,
+            this.email,
+            this.ativo,
             this.dataInclusao,
-            this.usuarioInclusao,
             this.dataAlteracao,
+            this.usuarioInclusao,
             this.usuarioAlteracao,
-            this.ativo});
+            this.ativo_string});
             this.dgvCliente.DataSource = this.vwClienteGridBindingSource;
             this.dgvCliente.Location = new System.Drawing.Point(21, 19);
-            this.dgvCliente.MultiSelect = false;
             this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.ReadOnly = true;
             this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCliente.Size = new System.Drawing.Size(1186, 231);
+            this.dgvCliente.Size = new System.Drawing.Size(1187, 240);
             this.dgvCliente.TabIndex = 0;
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
+            // 
+            // vwClienteGridBindingSource
+            // 
+            this.vwClienteGridBindingSource.DataMember = "vw_Cliente_Grid";
+            this.vwClienteGridBindingSource.DataSource = this.controlePesagemDataSet;
+            // 
+            // controlePesagemDataSet
+            // 
+            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
+            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // stAcoes
             // 
@@ -440,15 +457,83 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // vwClienteGridBindingSource
+            // txtCNPJBusca
             // 
-            this.vwClienteGridBindingSource.DataMember = "vw_Cliente_Grid";
-            this.vwClienteGridBindingSource.DataSource = this.controlePesagemDataSet;
+            this.txtCNPJBusca.Enabled = false;
+            this.txtCNPJBusca.Location = new System.Drawing.Point(463, 251);
+            this.txtCNPJBusca.Mask = "00.000.000/0000-00";
+            this.txtCNPJBusca.Name = "txtCNPJBusca";
+            this.txtCNPJBusca.Size = new System.Drawing.Size(118, 20);
+            this.txtCNPJBusca.TabIndex = 14;
             // 
-            // controlePesagemDataSet
+            // label12
             // 
-            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
-            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(460, 235);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 13);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "CNPJ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(136, 235);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(78, 13);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Nome Fantasia";
+            // 
+            // txtNomeFantasiaBusca
+            // 
+            this.txtNomeFantasiaBusca.Enabled = false;
+            this.txtNomeFantasiaBusca.Location = new System.Drawing.Point(139, 251);
+            this.txtNomeFantasiaBusca.Name = "txtNomeFantasiaBusca";
+            this.txtNomeFantasiaBusca.Size = new System.Drawing.Size(318, 20);
+            this.txtNomeFantasiaBusca.TabIndex = 11;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(30, 235);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(40, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Código";
+            // 
+            // txtCodigoBusca
+            // 
+            this.txtCodigoBusca.Enabled = false;
+            this.txtCodigoBusca.Location = new System.Drawing.Point(33, 251);
+            this.txtCodigoBusca.Name = "txtCodigoBusca";
+            this.txtCodigoBusca.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigoBusca.TabIndex = 9;
+            // 
+            // btnBuscarTodos
+            // 
+            this.btnBuscarTodos.Enabled = false;
+            this.btnBuscarTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarTodos.Image")));
+            this.btnBuscarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarTodos.Location = new System.Drawing.Point(667, 249);
+            this.btnBuscarTodos.Name = "btnBuscarTodos";
+            this.btnBuscarTodos.Size = new System.Drawing.Size(97, 23);
+            this.btnBuscarTodos.TabIndex = 16;
+            this.btnBuscarTodos.Text = "Buscar todos";
+            this.btnBuscarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarTodos.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Enabled = false;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(587, 249);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(74, 23);
+            this.btnBuscar.TabIndex = 15;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // vw_Cliente_GridTableAdapter
             // 
@@ -457,107 +542,96 @@
             // codigo
             // 
             this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "Código";
+            this.codigo.HeaderText = "codigo";
             this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
             // 
             // razaoSocial
             // 
             this.razaoSocial.DataPropertyName = "razaoSocial";
-            this.razaoSocial.FillWeight = 200F;
-            this.razaoSocial.HeaderText = "Razão Social";
+            this.razaoSocial.HeaderText = "razaoSocial";
             this.razaoSocial.Name = "razaoSocial";
-            this.razaoSocial.ReadOnly = true;
             // 
             // nomeFantasia
             // 
             this.nomeFantasia.DataPropertyName = "nomeFantasia";
-            this.nomeFantasia.HeaderText = "Nome Fantasia";
+            this.nomeFantasia.HeaderText = "nomeFantasia";
             this.nomeFantasia.Name = "nomeFantasia";
-            this.nomeFantasia.ReadOnly = true;
             // 
             // cnpj
             // 
             this.cnpj.DataPropertyName = "cnpj";
-            this.cnpj.HeaderText = "CNPJ";
+            this.cnpj.HeaderText = "cnpj";
             this.cnpj.Name = "cnpj";
-            this.cnpj.ReadOnly = true;
             // 
             // telefone1
             // 
             this.telefone1.DataPropertyName = "telefone1";
-            this.telefone1.HeaderText = "Telefone Principal ";
+            this.telefone1.HeaderText = "telefone1";
             this.telefone1.Name = "telefone1";
-            this.telefone1.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "E-mail";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // ativo_string
-            // 
-            this.ativo_string.DataPropertyName = "ativo_string";
-            this.ativo_string.HeaderText = "Ativo";
-            this.ativo_string.Name = "ativo_string";
-            this.ativo_string.ReadOnly = true;
             // 
             // telefone2
             // 
             this.telefone2.DataPropertyName = "telefone2";
             this.telefone2.HeaderText = "telefone2";
             this.telefone2.Name = "telefone2";
-            this.telefone2.ReadOnly = true;
-            this.telefone2.Visible = false;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "email";
+            this.email.Name = "email";
+            // 
+            // ativo
+            // 
+            this.ativo.DataPropertyName = "ativo";
+            this.ativo.HeaderText = "ativo";
+            this.ativo.Name = "ativo";
             // 
             // dataInclusao
             // 
             this.dataInclusao.DataPropertyName = "dataInclusao";
             this.dataInclusao.HeaderText = "dataInclusao";
             this.dataInclusao.Name = "dataInclusao";
-            this.dataInclusao.ReadOnly = true;
-            this.dataInclusao.Visible = false;
-            // 
-            // usuarioInclusao
-            // 
-            this.usuarioInclusao.DataPropertyName = "usuarioInclusao";
-            this.usuarioInclusao.HeaderText = "usuarioInclusao";
-            this.usuarioInclusao.Name = "usuarioInclusao";
-            this.usuarioInclusao.ReadOnly = true;
-            this.usuarioInclusao.Visible = false;
             // 
             // dataAlteracao
             // 
             this.dataAlteracao.DataPropertyName = "dataAlteracao";
             this.dataAlteracao.HeaderText = "dataAlteracao";
             this.dataAlteracao.Name = "dataAlteracao";
-            this.dataAlteracao.ReadOnly = true;
-            this.dataAlteracao.Visible = false;
+            // 
+            // usuarioInclusao
+            // 
+            this.usuarioInclusao.DataPropertyName = "usuarioInclusao";
+            this.usuarioInclusao.HeaderText = "usuarioInclusao";
+            this.usuarioInclusao.Name = "usuarioInclusao";
             // 
             // usuarioAlteracao
             // 
             this.usuarioAlteracao.DataPropertyName = "usuarioAlteracao";
             this.usuarioAlteracao.HeaderText = "usuarioAlteracao";
             this.usuarioAlteracao.Name = "usuarioAlteracao";
-            this.usuarioAlteracao.ReadOnly = true;
-            this.usuarioAlteracao.Visible = false;
             // 
-            // ativo
+            // ativo_string
             // 
-            this.ativo.DataPropertyName = "ativo";
-            this.ativo.HeaderText = "Ativo";
-            this.ativo.Name = "ativo";
-            this.ativo.ReadOnly = true;
-            this.ativo.Visible = false;
+            this.ativo_string.DataPropertyName = "ativo_string";
+            this.ativo_string.HeaderText = "ativo_string";
+            this.ativo_string.Name = "ativo_string";
+            this.ativo_string.ReadOnly = true;
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1244, 515);
+            this.ClientSize = new System.Drawing.Size(1244, 548);
+            this.Controls.Add(this.btnBuscarTodos);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtCNPJBusca);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtNomeFantasiaBusca);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.txtCodigoBusca);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.stAcoes);
@@ -574,10 +648,10 @@
             this.gboxInfoControle.PerformLayout();
             this.gboxDados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
-            this.stAcoes.ResumeLayout(false);
-            this.stAcoes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
+            this.stAcoes.ResumeLayout(false);
+            this.stAcoes.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -617,6 +691,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNomeFantasia;
+        private System.Windows.Forms.MaskedTextBox txtCNPJBusca;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtNomeFantasiaBusca;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtCodigoBusca;
+        private System.Windows.Forms.Button btnBuscarTodos;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvCliente;
         private ControlePesagemDataSet controlePesagemDataSet;
         private System.Windows.Forms.BindingSource vwClienteGridBindingSource;
@@ -626,13 +708,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeFantasia;
         private System.Windows.Forms.DataGridViewTextBoxColumn cnpj;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ativo_string;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataInclusao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioInclusao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataAlteracao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioAlteracao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn ativo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataInclusao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataAlteracao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioInclusao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioAlteracao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ativo_string;
     }
 }

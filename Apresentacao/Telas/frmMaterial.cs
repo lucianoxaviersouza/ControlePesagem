@@ -226,7 +226,7 @@ namespace Apresentacao.Telas
             }
             else if (txtDescricaoBusca.Text != "")
             {
-                vw_Material_GridTableAdapter.FillByDescricao(controlePesagemDataSet.vw_Material_Grid, txtDescricaoBusca.Text);
+               vw_Material_GridTableAdapter.FillByDescricao(controlePesagemDataSet.vw_Material_Grid, txtDescricaoBusca.Text);
 
             }
             

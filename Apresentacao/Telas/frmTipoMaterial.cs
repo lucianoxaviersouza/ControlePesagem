@@ -261,11 +261,11 @@ namespace Apresentacao.Telas
         {
             if (txtCodigoBusca.Text != "")
             {
-                vw_TipoMaterial_GridTableAdapter.FillByCodigo(controlePesagemDataSet.vw_TipoMaterial_Grid, Convert.ToInt32(txtCodigoBusca.Text));
+                //vw_TipoMaterial_GridTableAdapter.FillByCodigo(controlePesagemDataSet.vw_TipoMaterial_Grid, Convert.ToInt32(txtCodigoBusca.Text));
             }
             else if (txtDescricaoBusca.Text != "")
             {
-                vw_TipoMaterial_GridTableAdapter.FillByDescricao(controlePesagemDataSet.vw_TipoMaterial_Grid, txtDescricaoBusca.Text);
+                //vw_TipoMaterial_GridTableAdapter.FillByDescricao(controlePesagemDataSet.vw_TipoMaterial_Grid, txtDescricaoBusca.Text);
                 
             }
         }

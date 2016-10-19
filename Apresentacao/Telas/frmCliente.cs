@@ -51,8 +51,10 @@ namespace Apresentacao.Telas
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
-
+            
             this.vw_Cliente_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Cliente_Grid);
+            
+           
             dgvCliente.Sort(dgvCliente.Columns[0], ListSortDirection.Descending);
             gboxDados.Text = String.Concat("Registros: ", this.dgvCliente.RowCount);
 
@@ -75,7 +77,7 @@ namespace Apresentacao.Telas
 
             btnSalvar.Enabled = true;
             btnCancelar.Enabled = true;
-            this.vw_Cliente_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Cliente_Grid);
+
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -112,7 +114,8 @@ namespace Apresentacao.Telas
                 }
 
 
-                this.vw_Cliente_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Cliente_Grid);
+               this.vw_Cliente_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Cliente_Grid);
+                
                 dgvCliente.Refresh();
                 dgvCliente.Update();
                 gboxDados.Text = String.Concat("Registros: ", dgvCliente.RowCount);
@@ -141,31 +144,13 @@ namespace Apresentacao.Telas
                     
                 }
                 else {
-                    MessageBox.Show("Erro inesperado ao realizar a exclusão. \n Informe o erro abaixo ao administrador do sistema. \n Erro: " + ex.Message.ToString(),"Erro inesperado",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Erro inesperado ao realizar a inclusão. \n Informe o erro abaixo ao administrador do sistema. \n Erro: " + ex.Message.ToString(), "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 
 
             }
         }
 
-        private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            txtCodigo.Text = dgvCliente.CurrentRow.Cells["codigo"].Value.ToString();
-            txtRazaoSocial.Text = dgvCliente.CurrentRow.Cells["razaoSocial"].Value.ToString();
-            txtNomeFantasia.Text = dgvCliente.CurrentRow.Cells["nomeFantasia"].Value.ToString();
-            txtCNPJ.Text = dgvCliente.CurrentRow.Cells["cnpj"].Value.ToString();
-            txtTelefone1.Text = dgvCliente.CurrentRow.Cells["telefone1"].Value.ToString();
-            txtTelefone2.Text = dgvCliente.CurrentRow.Cells["telefone2"].Value.ToString();
-            txtEmail.Text = dgvCliente.CurrentRow.Cells["email"].Value.ToString();
-            chkAtivo.Checked = Convert.ToBoolean(Convert.ToInt16(dgvCliente.CurrentRow.Cells["ativo"].Value.ToString()));
-            txtDataInclusao.Text = dgvCliente.CurrentRow.Cells["dataInclusao"].Value.ToString();
-            txtUsuarioInclusao.Text = dgvCliente.CurrentRow.Cells["UsuarioInclusao"].Value.ToString();
-
-            txtDataAlteracao.Text = dgvCliente.CurrentRow.Cells["dataAlteracao"].Value.ToString();
-            txtUsuarioAlteracao.Text = dgvCliente.CurrentRow.Cells["UsuarioAlteracao"].Value.ToString();
-            
-        }
 
         private void stbtExcluir_Click(object sender, EventArgs e)
         {
@@ -191,7 +176,7 @@ namespace Apresentacao.Telas
                     ControleTela.LimpaCampos(this);
 
 
-                    this.vw_Cliente_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Cliente_Grid);
+                   this.vw_Cliente_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Cliente_Grid);
                     dgvCliente.Refresh();
                     dgvCliente.Update();
                     gboxDados.Text = String.Concat("Registros: ", dgvCliente.RowCount);
@@ -242,6 +227,25 @@ namespace Apresentacao.Telas
                 btnCancelar.Enabled = true;
                 
             }
+        }
+
+
+
+        private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCodigo.Text = dgvCliente.CurrentRow.Cells["codigo"].Value.ToString();
+            txtRazaoSocial.Text = dgvCliente.CurrentRow.Cells["razaoSocial"].Value.ToString();
+            txtNomeFantasia.Text = dgvCliente.CurrentRow.Cells["nomeFantasia"].Value.ToString();
+            txtCNPJ.Text = dgvCliente.CurrentRow.Cells["cnpj"].Value.ToString();
+            txtTelefone1.Text = dgvCliente.CurrentRow.Cells["telefone1"].Value.ToString();
+            txtTelefone2.Text = dgvCliente.CurrentRow.Cells["telefone2"].Value.ToString();
+            txtEmail.Text = dgvCliente.CurrentRow.Cells["email"].Value.ToString();
+            chkAtivo.Checked = Convert.ToBoolean(Convert.ToInt16(dgvCliente.CurrentRow.Cells["ativo"].Value.ToString()));
+            txtDataInclusao.Text = dgvCliente.CurrentRow.Cells["dataInclusao"].Value.ToString();
+            txtUsuarioInclusao.Text = dgvCliente.CurrentRow.Cells["UsuarioInclusao"].Value.ToString();
+
+            txtDataAlteracao.Text = dgvCliente.CurrentRow.Cells["dataAlteracao"].Value.ToString();
+            txtUsuarioAlteracao.Text = dgvCliente.CurrentRow.Cells["UsuarioAlteracao"].Value.ToString();
         }
         }
     }
