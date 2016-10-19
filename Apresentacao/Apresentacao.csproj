@@ -57,6 +57,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlePesagemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ControlePesagemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlePesagemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +79,12 @@
     </Compile>
     <Compile Include="Telas\frmMotorista.Designer.cs">
       <DependentUpon>frmMotorista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmVeiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmVeiculo.Designer.cs">
+      <DependentUpon>frmVeiculo.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\ControleTela.cs" />
     <Compile Include="Telas\frmTipoMaterial.cs">
@@ -102,6 +113,9 @@
     <EmbeddedResource Include="Telas\frmTipoMaterial.resx">
       <DependentUpon>frmTipoMaterial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmVeiculo.resx">
+      <DependentUpon>frmVeiculo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,8 +133,8 @@
     </None>
     <None Include="ControlePesagemDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ControlePesagemDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>ControlePesagemDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="ControlePesagemDataSet.xss">
       <DependentUpon>ControlePesagemDataSet.xsd</DependentUpon>

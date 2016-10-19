@@ -64,5 +64,14 @@ namespace Apresentacao.Telas
             // Display the new form.
             motorista.Show();
         }
+
+        private void veículosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVeiculo veiculo = new frmVeiculo();
+            // Set the Parent Form of the Child window.
+            veiculo.MdiParent = this;
+            // Display the new form.
+            veiculo.Show();
+        }
     }
 }
