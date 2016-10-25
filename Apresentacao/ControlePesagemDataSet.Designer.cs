@@ -1272,6 +1272,8 @@ namespace Apresentacao {
             
             private global::System.Data.DataColumn columnusuarioAlteracao;
             
+            private global::System.Data.DataColumn columnativo_string;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public vw_Motorista_GridDataTable() {
@@ -1403,6 +1405,14 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ativo_stringColumn {
+                get {
+                    return this.columnativo_string;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1438,7 +1448,7 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Motorista_GridRow Addvw_Motorista_GridRow(int codigo, string nome, string sobrenome, string nomeConhecido, string cpf, int ativo, string RazaoSocialCliente, string NomeFantasiaCliente, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao) {
+            public vw_Motorista_GridRow Addvw_Motorista_GridRow(int codigo, string nome, string sobrenome, string nomeConhecido, string cpf, int ativo, string RazaoSocialCliente, string NomeFantasiaCliente, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao, string ativo_string) {
                 vw_Motorista_GridRow rowvw_Motorista_GridRow = ((vw_Motorista_GridRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         codigo,
@@ -1452,7 +1462,8 @@ namespace Apresentacao {
                         dataInclusao,
                         dataAlteracao,
                         usuarioInclusao,
-                        usuarioAlteracao};
+                        usuarioAlteracao,
+                        ativo_string};
                 rowvw_Motorista_GridRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowvw_Motorista_GridRow);
                 return rowvw_Motorista_GridRow;
@@ -1494,6 +1505,7 @@ namespace Apresentacao {
                 this.columndataAlteracao = base.Columns["dataAlteracao"];
                 this.columnusuarioInclusao = base.Columns["usuarioInclusao"];
                 this.columnusuarioAlteracao = base.Columns["usuarioAlteracao"];
+                this.columnativo_string = base.Columns["ativo_string"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1523,6 +1535,8 @@ namespace Apresentacao {
                 base.Columns.Add(this.columnusuarioInclusao);
                 this.columnusuarioAlteracao = new global::System.Data.DataColumn("usuarioAlteracao", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuarioAlteracao);
+                this.columnativo_string = new global::System.Data.DataColumn("ativo_string", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnativo_string);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncodigo}, true));
                 this.columncodigo.AllowDBNull = false;
@@ -1541,6 +1555,8 @@ namespace Apresentacao {
                 this.columndataInclusao.AllowDBNull = false;
                 this.columnusuarioInclusao.MaxLength = 100;
                 this.columnusuarioAlteracao.MaxLength = 100;
+                this.columnativo_string.ReadOnly = true;
+                this.columnativo_string.MaxLength = 3;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1696,6 +1712,8 @@ namespace Apresentacao {
             
             private global::System.Data.DataColumn columnusuarioAlteracao;
             
+            private global::System.Data.DataColumn columnativo_string;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public vw_Veiculo_GridDataTable() {
@@ -1819,6 +1837,14 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ativo_stringColumn {
+                get {
+                    return this.columnativo_string;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1854,7 +1880,7 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_Veiculo_GridRow Addvw_Veiculo_GridRow(int codigo, string placa, string cor, string modelo, string ativo, string RazaoSocialCliente, string NomeFantasiaCliente, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao) {
+            public vw_Veiculo_GridRow Addvw_Veiculo_GridRow(int codigo, string placa, string cor, string modelo, string ativo, string RazaoSocialCliente, string NomeFantasiaCliente, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao, string ativo_string) {
                 vw_Veiculo_GridRow rowvw_Veiculo_GridRow = ((vw_Veiculo_GridRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         codigo,
@@ -1867,7 +1893,8 @@ namespace Apresentacao {
                         dataInclusao,
                         dataAlteracao,
                         usuarioInclusao,
-                        usuarioAlteracao};
+                        usuarioAlteracao,
+                        ativo_string};
                 rowvw_Veiculo_GridRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowvw_Veiculo_GridRow);
                 return rowvw_Veiculo_GridRow;
@@ -1908,6 +1935,7 @@ namespace Apresentacao {
                 this.columndataAlteracao = base.Columns["dataAlteracao"];
                 this.columnusuarioInclusao = base.Columns["usuarioInclusao"];
                 this.columnusuarioAlteracao = base.Columns["usuarioAlteracao"];
+                this.columnativo_string = base.Columns["ativo_string"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1935,6 +1963,8 @@ namespace Apresentacao {
                 base.Columns.Add(this.columnusuarioInclusao);
                 this.columnusuarioAlteracao = new global::System.Data.DataColumn("usuarioAlteracao", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuarioAlteracao);
+                this.columnativo_string = new global::System.Data.DataColumn("ativo_string", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnativo_string);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncodigo}, true));
                 this.columncodigo.AllowDBNull = false;
@@ -1951,6 +1981,8 @@ namespace Apresentacao {
                 this.columndataInclusao.AllowDBNull = false;
                 this.columnusuarioInclusao.MaxLength = 100;
                 this.columnusuarioAlteracao.MaxLength = 100;
+                this.columnativo_string.ReadOnly = true;
+                this.columnativo_string.MaxLength = 3;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3834,6 +3866,22 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ativo_string {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Motorista_Grid.ativo_stringColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ativo_string\' in table \'vw_Motorista_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Motorista_Grid.ativo_stringColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsnomeConhecidoNull() {
                 return this.IsNull(this.tablevw_Motorista_Grid.nomeConhecidoColumn);
             }
@@ -3890,6 +3938,18 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetusuarioAlteracaoNull() {
                 this[this.tablevw_Motorista_Grid.usuarioAlteracaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isativo_stringNull() {
+                return this.IsNull(this.tablevw_Motorista_Grid.ativo_stringColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setativo_stringNull() {
+                this[this.tablevw_Motorista_Grid.ativo_stringColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4060,6 +4120,22 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ativo_string {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_Veiculo_Grid.ativo_stringColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ativo_string\' in table \'vw_Veiculo_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_Veiculo_Grid.ativo_stringColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsplacaNull() {
                 return this.IsNull(this.tablevw_Veiculo_Grid.placaColumn);
             }
@@ -4128,6 +4204,18 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetusuarioAlteracaoNull() {
                 this[this.tablevw_Veiculo_Grid.usuarioAlteracaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isativo_stringNull() {
+                return this.IsNull(this.tablevw_Veiculo_Grid.ativo_stringColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setativo_stringNull() {
+                this[this.tablevw_Veiculo_Grid.ativo_stringColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5517,13 +5605,28 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT codigo, descricao, ativo, descricaoTipoMaterial, dataInclusao, dataAlterac" +
                 "ao, usuarioInclusao, usuarioAlteracao, ativo_string, codigoTipoMaterial FROM vw_" +
                 "Material_Grid";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT codigo, descricao, ativo, descricaoTipoMaterial, dataInclusao, dataAlterac" +
+                "ao, usuarioInclusao, usuarioAlteracao, ativo_string, codigoTipoMaterial FROM vw_" +
+                "Material_Grid where (descricao like \'%\' + @descricao + \'%\')";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descricao", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "descricao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT codigo, descricao, ativo, descricaoTipoMaterial, dataInclusao, dataAlterac" +
+                "ao, usuarioInclusao, usuarioAlteracao, ativo_string, codigoTipoMaterial FROM vw_" +
+                "Material_Grid Where (descricaoTipoMaterial like \'%\' + @descricaoTipoMaterial +\'%" +
+                "\')";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@descricaoTipoMaterial", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "descricaoTipoMaterial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5545,6 +5648,78 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ControlePesagemDataSet.vw_Material_GridDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            ControlePesagemDataSet.vw_Material_GridDataTable dataTable = new ControlePesagemDataSet.vw_Material_GridDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByDescricao(ControlePesagemDataSet.vw_Material_GridDataTable dataTable, string descricao) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((descricao == null)) {
+                throw new global::System.ArgumentNullException("descricao");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(descricao));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ControlePesagemDataSet.vw_Material_GridDataTable GetDataByDescricao(string descricao) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((descricao == null)) {
+                throw new global::System.ArgumentNullException("descricao");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(descricao));
+            }
+            ControlePesagemDataSet.vw_Material_GridDataTable dataTable = new ControlePesagemDataSet.vw_Material_GridDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBydescricaoTipoMaterial(ControlePesagemDataSet.vw_Material_GridDataTable dataTable, string descricaoTipoMaterial) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((descricaoTipoMaterial == null)) {
+                throw new global::System.ArgumentNullException("descricaoTipoMaterial");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(descricaoTipoMaterial));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ControlePesagemDataSet.vw_Material_GridDataTable GetDataBydescricaoTipoMaterial(string descricaoTipoMaterial) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((descricaoTipoMaterial == null)) {
+                throw new global::System.ArgumentNullException("descricaoTipoMaterial");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(descricaoTipoMaterial));
+            }
             ControlePesagemDataSet.vw_Material_GridDataTable dataTable = new ControlePesagemDataSet.vw_Material_GridDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -5684,6 +5859,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("dataAlteracao", "dataAlteracao");
             tableMapping.ColumnMappings.Add("usuarioInclusao", "usuarioInclusao");
             tableMapping.ColumnMappings.Add("usuarioAlteracao", "usuarioAlteracao");
+            tableMapping.ColumnMappings.Add("ativo_string", "ativo_string");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -5697,13 +5873,33 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT codigo, nome, sobrenome, nomeConhecido, cpf, ativo, RazaoSocialCliente, No" +
                 "meFantasiaCliente, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteraca" +
-                "o FROM dbo.vw_Motorista_Grid";
+                "o, ativo_string FROM vw_Motorista_Grid";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT codigo, nome, sobrenome, nomeConhecido, cpf, ativo, RazaoSocialCliente, No" +
+                "meFantasiaCliente, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteraca" +
+                "o, ativo_string FROM vw_Motorista_Grid where (nome LIKE \'%\' + @nome + \'%\')";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nome", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT codigo, nome, sobrenome, nomeConhecido, cpf, ativo, RazaoSocialCliente, No" +
+                "meFantasiaCliente, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteraca" +
+                "o, ativo_string FROM vw_Motorista_Grid where (nomeConhecido like \'%\' + @nomeConh" +
+                "ecido + \'%\')";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nomeConhecido", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "nomeConhecido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = @"SELECT codigo, nome, sobrenome, nomeConhecido, cpf, ativo, RazaoSocialCliente, NomeFantasiaCliente, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao, ativo_string FROM vw_Motorista_Grid where (NomeFantasiaCliente like '%' + @NomeFantasiaCliente + '%')";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NomeFantasiaCliente", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "NomeFantasiaCliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5725,6 +5921,114 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ControlePesagemDataSet.vw_Motorista_GridDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            ControlePesagemDataSet.vw_Motorista_GridDataTable dataTable = new ControlePesagemDataSet.vw_Motorista_GridDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByNome(ControlePesagemDataSet.vw_Motorista_GridDataTable dataTable, string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((nome == null)) {
+                throw new global::System.ArgumentNullException("nome");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ControlePesagemDataSet.vw_Motorista_GridDataTable GetDataByNome(string nome) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((nome == null)) {
+                throw new global::System.ArgumentNullException("nome");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nome));
+            }
+            ControlePesagemDataSet.vw_Motorista_GridDataTable dataTable = new ControlePesagemDataSet.vw_Motorista_GridDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByNomeConhecido(ControlePesagemDataSet.vw_Motorista_GridDataTable dataTable, string nomeConhecido) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((nomeConhecido == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nomeConhecido));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ControlePesagemDataSet.vw_Motorista_GridDataTable GetDataByNomeConhecido(string nomeConhecido) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((nomeConhecido == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(nomeConhecido));
+            }
+            ControlePesagemDataSet.vw_Motorista_GridDataTable dataTable = new ControlePesagemDataSet.vw_Motorista_GridDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByNomeFantasiaCliente(ControlePesagemDataSet.vw_Motorista_GridDataTable dataTable, string NomeFantasiaCliente) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((NomeFantasiaCliente == null)) {
+                throw new global::System.ArgumentNullException("NomeFantasiaCliente");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(NomeFantasiaCliente));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ControlePesagemDataSet.vw_Motorista_GridDataTable GetDataByNomeFantasiaCliente(string NomeFantasiaCliente) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((NomeFantasiaCliente == null)) {
+                throw new global::System.ArgumentNullException("NomeFantasiaCliente");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(NomeFantasiaCliente));
+            }
             ControlePesagemDataSet.vw_Motorista_GridDataTable dataTable = new ControlePesagemDataSet.vw_Motorista_GridDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -5863,6 +6167,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("dataAlteracao", "dataAlteracao");
             tableMapping.ColumnMappings.Add("usuarioInclusao", "usuarioInclusao");
             tableMapping.ColumnMappings.Add("usuarioAlteracao", "usuarioAlteracao");
+            tableMapping.ColumnMappings.Add("ativo_string", "ativo_string");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -5880,8 +6185,8 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT codigo, placa, cor, modelo, ativo, RazaoSocialCliente, NomeFantasiaCliente" +
-                ", dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao FROM dbo.vw_Vei" +
-                "culo_Grid";
+                ", dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao, ativo_string F" +
+                "ROM vw_Veiculo_Grid";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

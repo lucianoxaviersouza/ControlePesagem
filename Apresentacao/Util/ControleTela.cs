@@ -26,6 +26,11 @@ namespace Apresentacao.Util
                 mask.Text = "";
             }
             
+            foreach (var combo in _form.Controls.OfType<GroupBox>().SelectMany(groupBox => groupBox.Controls.OfType<ComboBox>()))
+            {
+                combo.Text = "";
+            }
+            
         }
     }
 }

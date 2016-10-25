@@ -39,6 +39,10 @@ namespace Apresentacao.Telas
             dgvMaterial.Sort(dgvMaterial.Columns[0], ListSortDirection.Descending);
             gboxDados.Text = String.Concat("Registros: ", this.dgvMaterial.RowCount);
 
+            this.vw_TipoMaterial_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_TipoMaterial_Grid);
+            cboTipoMaterialBusca.Text = "";
+            cboTipoMaterial.Text = "";
+
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -85,6 +89,11 @@ namespace Apresentacao.Telas
             cboTipoMaterial.Text = "";
             cboTipoMaterial.Enabled = false;
             dgvMaterial.Enabled = true;
+
+            btnBuscar.Enabled = true;
+            btnBuscarTodos.Enabled = true;
+            txtDescricaoBusca.Enabled = true;
+            cboTipoMaterialBusca.Enabled = true;
         }
 
         private void stbtIncluir_Click(object sender, EventArgs e)
@@ -101,6 +110,10 @@ namespace Apresentacao.Telas
             btnCancelar.Enabled = true;
             this.vw_TipoMaterial_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_TipoMaterial_Grid);
 
+            btnBuscar.Enabled = false;
+            btnBuscarTodos.Enabled = false;
+            txtDescricaoBusca.Enabled = false;
+            cboTipoMaterialBusca.Enabled = false;
         }
 
         private void stbtAlterar_Click(object sender, EventArgs e)
@@ -110,17 +123,23 @@ namespace Apresentacao.Telas
             {
                 MessageBox.Show("Selecione um registro para alteração!");
             }
+            else
+            {
+                /* Manipula controles em tela */
+                dgvMaterial.Enabled = false;
+                stAcoes.Enabled = false;
+                txtDescricao.Enabled = true;
+                chkAtivo.Enabled = true;
+                cboTipoMaterial.Enabled = true;
+                btnSalvar.Enabled = true;
+                btnCancelar.Enabled = true;
+                
+                btnBuscar.Enabled = false;
+                btnBuscarTodos.Enabled = false;
+                txtDescricaoBusca.Enabled = false;
+                cboTipoMaterialBusca.Enabled = false;
+            }
 
-            /* Manipula controles em tela */
-            dgvMaterial.Enabled = false;
-            stAcoes.Enabled = false;
-            txtDescricao.Enabled = true;
-            chkAtivo.Enabled = true;
-            cboTipoMaterial.Enabled = true;
-            btnSalvar.Enabled = true;
-            btnCancelar.Enabled = true;
-
-            this.vw_TipoMaterial_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_TipoMaterial_Grid);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -134,6 +153,10 @@ namespace Apresentacao.Telas
             cboTipoMaterial.Text="" ;
             cboTipoMaterial.Enabled = false;
 
+            btnBuscar.Enabled = true;
+            btnBuscarTodos.Enabled = true;
+            txtDescricaoBusca.Enabled = true;
+            cboTipoMaterialBusca.Enabled = true;
 
         }
 
@@ -193,6 +216,27 @@ namespace Apresentacao.Telas
             chkAtivo.Checked = Convert.ToBoolean(Convert.ToInt16(dgvMaterial.CurrentRow.Cells["ativo"].Value.ToString()));
             cboTipoMaterial.Text = dgvMaterial.CurrentRow.Cells["descricaoTipoMaterial"].Value.ToString();
             
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (cboTipoMaterialBusca.Text != "")
+            {
+                vw_Material_GridTableAdapter.FillBydescricaoTipoMaterial(controlePesagemDataSet.vw_Material_Grid, cboTipoMaterialBusca.Text);
+            }
+            else if (txtDescricaoBusca.Text != "")
+            {
+                vw_Material_GridTableAdapter.FillByDescricao(controlePesagemDataSet.vw_Material_Grid, txtDescricaoBusca.Text);
+
+            }
+            
+        }
+
+        private void btnBuscarTodos_Click(object sender, EventArgs e)
+        {
+            txtDescricaoBusca.Text = "";
+            cboTipoMaterialBusca.Text = "";
+            vw_Material_GridTableAdapter.Fill(controlePesagemDataSet.vw_Material_Grid);
         }
     }
 }
