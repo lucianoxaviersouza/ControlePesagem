@@ -14,6 +14,7 @@ namespace Apresentacao.Telas
     public partial class Principal : Form
     {
         public static Usuario usuario;
+    
         public Principal()
         {
             InitializeComponent();
@@ -27,68 +28,68 @@ namespace Apresentacao.Telas
         private void tipoMaterialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmTipoMaterial tipoMaterial = new frmTipoMaterial();
-            // Set the Parent Form of the Child window.
             tipoMaterial.MdiParent = this;
-            // Display the new form.
+            tipoMaterial.StartPosition = FormStartPosition.CenterScreen;
             tipoMaterial.Show();
         }
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            
+           
+
         }
 
         private void materialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMaterial material = new frmMaterial();
-            // Set the Parent Form of the Child window.
+
             material.MdiParent = this;
-            // Display the new form.
+            material.StartPosition = FormStartPosition.CenterScreen;
             material.Show();
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCliente cliente = new frmCliente();
-            // Set the Parent Form of the Child window.
+
             cliente.MdiParent = this;
-            // Display the new form.
+            cliente.StartPosition = FormStartPosition.CenterScreen;
             cliente.Show();
         }
 
         private void motoristasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMotorista motorista = new frmMotorista();
-            // Set the Parent Form of the Child window.
+            
             motorista.MdiParent = this;
-            // Display the new form.
+            motorista.StartPosition = FormStartPosition.CenterScreen;
             motorista.Show();
         }
 
         private void veículosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmVeiculo veiculo = new frmVeiculo();
-            // Set the Parent Form of the Child window.
+            
             veiculo.MdiParent = this;
-            // Display the new form.
+            veiculo.StartPosition = FormStartPosition.CenterScreen;
             veiculo.Show();
         }
 
         private void registroDePesagemEntradaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPesagem pesagem = new frmPesagem();
-            // Set the Parent Form of the Child window.
+            
             pesagem.MdiParent = this;
-            // Display the new form.
+            pesagem.StartPosition = FormStartPosition.CenterScreen;
             pesagem.Show();
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmSobre sobre = new frmSobre();
-            // Set the Parent Form of the Child window.
+
             sobre.MdiParent = this;
-            // Display the new form.
+            sobre.StartPosition = FormStartPosition.CenterScreen;
             sobre.Show();
         }
         

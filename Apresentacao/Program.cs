@@ -18,9 +18,12 @@ namespace Apresentacao
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Usuario usu = new Usuario();
-            usu.Codigo = 1;
-            Application.Run(new Principal(usu));
+
+           // Usuario usu = new Usuario();
+           // usu.Codigo = 1;
+           // Application.Run(new Principal(usu));
+           Application.Run(new frmLogin());
+
         }
         
             

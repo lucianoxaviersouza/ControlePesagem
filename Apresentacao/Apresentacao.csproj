@@ -113,6 +113,9 @@
     <EmbeddedResource Include="Telas\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmMaterial.resx">
       <DependentUpon>frmMaterial.cs</DependentUpon>
     </EmbeddedResource>
