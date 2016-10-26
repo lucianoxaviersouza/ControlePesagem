@@ -81,12 +81,12 @@
             this.telefone1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativo_string = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ativo_string = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gboxCliente.SuspendLayout();
             this.gboxInfoControle.SuspendLayout();
             this.gboxDados.SuspendLayout();
@@ -362,12 +362,12 @@
             this.telefone1,
             this.telefone2,
             this.email,
-            this.ativo,
+            this.ativo_string,
             this.dataInclusao,
             this.dataAlteracao,
             this.usuarioInclusao,
             this.usuarioAlteracao,
-            this.ativo_string});
+            this.ativo});
             this.dgvCliente.DataSource = this.vwClienteGridBindingSource;
             this.dgvCliente.Location = new System.Drawing.Point(21, 19);
             this.dgvCliente.Name = "dgvCliente";
@@ -542,81 +542,91 @@
             // codigo
             // 
             this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "codigo";
+            this.codigo.HeaderText = "Código";
             this.codigo.Name = "codigo";
             // 
             // razaoSocial
             // 
             this.razaoSocial.DataPropertyName = "razaoSocial";
-            this.razaoSocial.HeaderText = "razaoSocial";
+            this.razaoSocial.HeaderText = "Razão Social";
             this.razaoSocial.Name = "razaoSocial";
+            this.razaoSocial.Width = 220;
             // 
             // nomeFantasia
             // 
             this.nomeFantasia.DataPropertyName = "nomeFantasia";
-            this.nomeFantasia.HeaderText = "nomeFantasia";
+            this.nomeFantasia.HeaderText = "Nome Fantasia";
             this.nomeFantasia.Name = "nomeFantasia";
+            this.nomeFantasia.Width = 220;
             // 
             // cnpj
             // 
             this.cnpj.DataPropertyName = "cnpj";
-            this.cnpj.HeaderText = "cnpj";
+            this.cnpj.HeaderText = "CNPJ";
             this.cnpj.Name = "cnpj";
+            this.cnpj.Width = 120;
             // 
             // telefone1
             // 
             this.telefone1.DataPropertyName = "telefone1";
-            this.telefone1.HeaderText = "telefone1";
+            this.telefone1.HeaderText = "Telefone Principal";
             this.telefone1.Name = "telefone1";
+            this.telefone1.Width = 110;
             // 
             // telefone2
             // 
             this.telefone2.DataPropertyName = "telefone2";
-            this.telefone2.HeaderText = "telefone2";
+            this.telefone2.HeaderText = "Telefone";
             this.telefone2.Name = "telefone2";
             // 
             // email
             // 
             this.email.DataPropertyName = "email";
-            this.email.HeaderText = "email";
+            this.email.HeaderText = "E-mail";
             this.email.Name = "email";
+            this.email.Width = 230;
             // 
-            // ativo
+            // ativo_string
             // 
-            this.ativo.DataPropertyName = "ativo";
-            this.ativo.HeaderText = "ativo";
-            this.ativo.Name = "ativo";
+            this.ativo_string.DataPropertyName = "ativo_string";
+            this.ativo_string.HeaderText = "Ativo?";
+            this.ativo_string.Name = "ativo_string";
+            this.ativo_string.ReadOnly = true;
+            this.ativo_string.Visible = false;
             // 
             // dataInclusao
             // 
             this.dataInclusao.DataPropertyName = "dataInclusao";
             this.dataInclusao.HeaderText = "dataInclusao";
             this.dataInclusao.Name = "dataInclusao";
+            this.dataInclusao.Visible = false;
             // 
             // dataAlteracao
             // 
             this.dataAlteracao.DataPropertyName = "dataAlteracao";
             this.dataAlteracao.HeaderText = "dataAlteracao";
             this.dataAlteracao.Name = "dataAlteracao";
+            this.dataAlteracao.Visible = false;
             // 
             // usuarioInclusao
             // 
             this.usuarioInclusao.DataPropertyName = "usuarioInclusao";
             this.usuarioInclusao.HeaderText = "usuarioInclusao";
             this.usuarioInclusao.Name = "usuarioInclusao";
+            this.usuarioInclusao.Visible = false;
             // 
             // usuarioAlteracao
             // 
             this.usuarioAlteracao.DataPropertyName = "usuarioAlteracao";
             this.usuarioAlteracao.HeaderText = "usuarioAlteracao";
             this.usuarioAlteracao.Name = "usuarioAlteracao";
+            this.usuarioAlteracao.Visible = false;
             // 
-            // ativo_string
+            // ativo
             // 
-            this.ativo_string.DataPropertyName = "ativo_string";
-            this.ativo_string.HeaderText = "ativo_string";
-            this.ativo_string.Name = "ativo_string";
-            this.ativo_string.ReadOnly = true;
+            this.ativo.DataPropertyName = "ativo";
+            this.ativo.HeaderText = "Ativo?";
+            this.ativo.Name = "ativo";
             // 
             // frmCliente
             // 
@@ -710,11 +720,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone1;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone2;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ativo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ativo_string;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataInclusao;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAlteracao;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioInclusao;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuarioAlteracao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ativo_string;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ativo;
     }
 }

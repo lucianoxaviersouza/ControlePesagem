@@ -45,6 +45,46 @@ namespace Dados
             }
         }
 
+        public Usuario validaLogin(string usuario,string senha)
+        {
+            SqlConnection objConexao = ConnectionFactory.getConexao();
+            SqlParameter[] param = new SqlParameter[2]
+             {
+                new SqlParameter("@login", SqlDbType.NVarChar),
+                new SqlParameter("@senha", SqlDbType.NVarChar)
+             };
+            param[0].Value = usuario;
+            param[1].Value = senha;
+
+            string strQuery = "SELECT * FROM Usuario WHERE login = @login and senha = @senha";
+
+            SqlCommand objCommand = new SqlCommand(strQuery, objConexao);
+            objCommand.Parameters.AddRange(param);
+
+            try
+            {
+                SqlDataReader objReader = objCommand.ExecuteReader();
+                Usuario objUsuario = null;
+                if (objReader.Read())
+                {
+                    objUsuario = new Usuario();
+                    objUsuario.Codigo = Convert.ToInt16(objReader["codigo"]);
+                    objUsuario.Login = Convert.ToString(objReader["login"]);
+                    objUsuario.Senha = Convert.ToString(objReader["senha"]);
+                    objUsuario.Nome = Convert.ToString(objReader["nome"]);
+                    objUsuario.Ativo = Convert.ToInt16(objReader["ativo"]);
+                    objUsuario.DataInclusao = Convert.ToDateTime(objReader["dataInclusao"]);
+                    objUsuario.DataAlteracao = Convert.ToDateTime(objReader["dataAlteracao"]);
+                    
+                }
+                objReader.Close();
+                return objUsuario;
+            }
+            catch (SqlException err)
+            {
+                throw err;
+            }
+        }
         public void alterar(Usuario obj)
         {
             SqlConnection objConexao = ConnectionFactory.getConexao();

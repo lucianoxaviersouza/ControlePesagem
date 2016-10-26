@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidade;
+using Negocio;
 
 namespace Apresentacao.Telas
 {
@@ -34,9 +35,27 @@ namespace Apresentacao.Telas
         {
             Usuario usu = new Usuario();
             usu.Codigo = 1;
-            Principal principal = new Principal(usu);
-            this.Visible = false;
-            principal.Show();
+
+            UsuarioBus ubs = new UsuarioBus();
+
+            usu = ubs.validaLogin (txtLogin.Text,txtSenha.Text);
+
+            if (usu != null){
+                Principal principal = new Principal(usu);
+                this.Visible = false;
+                principal.Show();
+                
+            } else {
+
+                MessageBox.Show("Usuário ou senha incorreto!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

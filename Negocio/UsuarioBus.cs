@@ -24,6 +24,19 @@ namespace Negocio
             }
         }
 
+        public Usuario validaLogin(string usuario,string senha)
+        {
+            UsuarioDao dao = new UsuarioDao();
+            try
+            {
+                return dao.validaLogin(usuario, senha);
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
+        }
+
         public void alterar(Usuario obj)
         {
             UsuarioDao dao = new UsuarioDao();

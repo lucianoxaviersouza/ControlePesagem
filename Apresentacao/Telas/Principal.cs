@@ -38,7 +38,11 @@ namespace Apresentacao.Telas
            
 
         }
+        private void Principal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
 
+        }
         private void materialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMaterial material = new frmMaterial();
