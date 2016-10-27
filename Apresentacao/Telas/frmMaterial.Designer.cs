@@ -549,6 +549,7 @@
             this.Controls.Add(this.stAcoes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMaterial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro de Materiais";
             this.Load += new System.EventHandler(this.frmMaterial_Load);
             this.stAcoes.ResumeLayout(false);

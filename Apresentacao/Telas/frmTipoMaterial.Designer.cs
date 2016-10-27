@@ -493,6 +493,7 @@ namespace Apresentacao.Telas
             this.Controls.Add(this.gboxTipoMaterial);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTipoMaterial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tipo de Material";
             this.TransparencyKey = System.Drawing.Color.White;
             this.Load += new System.EventHandler(this.frmTipoMaterial_Load);

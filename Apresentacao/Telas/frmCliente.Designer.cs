@@ -57,6 +57,19 @@
             this.txtUsuarioInclusao = new System.Windows.Forms.TextBox();
             this.gboxDados = new System.Windows.Forms.GroupBox();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razaoSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeFantasia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefone1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefone2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativo_string = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwClienteGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
             this.stAcoes = new System.Windows.Forms.ToolStrip();
@@ -74,19 +87,6 @@
             this.btnBuscarTodos = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.vw_Cliente_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_Cliente_GridTableAdapter();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.razaoSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeFantasia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ativo_string = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gboxCliente.SuspendLayout();
             this.gboxInfoControle.SuspendLayout();
             this.gboxDados.SuspendLayout();
@@ -376,6 +376,95 @@
             this.dgvCliente.TabIndex = 0;
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
             // 
+            // codigo
+            // 
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            // 
+            // razaoSocial
+            // 
+            this.razaoSocial.DataPropertyName = "razaoSocial";
+            this.razaoSocial.HeaderText = "Razão Social";
+            this.razaoSocial.Name = "razaoSocial";
+            this.razaoSocial.Width = 220;
+            // 
+            // nomeFantasia
+            // 
+            this.nomeFantasia.DataPropertyName = "nomeFantasia";
+            this.nomeFantasia.HeaderText = "Nome Fantasia";
+            this.nomeFantasia.Name = "nomeFantasia";
+            this.nomeFantasia.Width = 220;
+            // 
+            // cnpj
+            // 
+            this.cnpj.DataPropertyName = "cnpj";
+            this.cnpj.HeaderText = "CNPJ";
+            this.cnpj.Name = "cnpj";
+            this.cnpj.Width = 120;
+            // 
+            // telefone1
+            // 
+            this.telefone1.DataPropertyName = "telefone1";
+            this.telefone1.HeaderText = "Telefone Principal";
+            this.telefone1.Name = "telefone1";
+            this.telefone1.Width = 110;
+            // 
+            // telefone2
+            // 
+            this.telefone2.DataPropertyName = "telefone2";
+            this.telefone2.HeaderText = "Telefone";
+            this.telefone2.Name = "telefone2";
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            this.email.Width = 230;
+            // 
+            // ativo_string
+            // 
+            this.ativo_string.DataPropertyName = "ativo_string";
+            this.ativo_string.HeaderText = "Ativo?";
+            this.ativo_string.Name = "ativo_string";
+            this.ativo_string.ReadOnly = true;
+            this.ativo_string.Visible = false;
+            // 
+            // dataInclusao
+            // 
+            this.dataInclusao.DataPropertyName = "dataInclusao";
+            this.dataInclusao.HeaderText = "dataInclusao";
+            this.dataInclusao.Name = "dataInclusao";
+            this.dataInclusao.Visible = false;
+            // 
+            // dataAlteracao
+            // 
+            this.dataAlteracao.DataPropertyName = "dataAlteracao";
+            this.dataAlteracao.HeaderText = "dataAlteracao";
+            this.dataAlteracao.Name = "dataAlteracao";
+            this.dataAlteracao.Visible = false;
+            // 
+            // usuarioInclusao
+            // 
+            this.usuarioInclusao.DataPropertyName = "usuarioInclusao";
+            this.usuarioInclusao.HeaderText = "usuarioInclusao";
+            this.usuarioInclusao.Name = "usuarioInclusao";
+            this.usuarioInclusao.Visible = false;
+            // 
+            // usuarioAlteracao
+            // 
+            this.usuarioAlteracao.DataPropertyName = "usuarioAlteracao";
+            this.usuarioAlteracao.HeaderText = "usuarioAlteracao";
+            this.usuarioAlteracao.Name = "usuarioAlteracao";
+            this.usuarioAlteracao.Visible = false;
+            // 
+            // ativo
+            // 
+            this.ativo.DataPropertyName = "ativo";
+            this.ativo.HeaderText = "Ativo?";
+            this.ativo.Name = "ativo";
+            // 
             // vwClienteGridBindingSource
             // 
             this.vwClienteGridBindingSource.DataMember = "vw_Cliente_Grid";
@@ -539,95 +628,6 @@
             // 
             this.vw_Cliente_GridTableAdapter.ClearBeforeFill = true;
             // 
-            // codigo
-            // 
-            this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
-            // 
-            // razaoSocial
-            // 
-            this.razaoSocial.DataPropertyName = "razaoSocial";
-            this.razaoSocial.HeaderText = "Razão Social";
-            this.razaoSocial.Name = "razaoSocial";
-            this.razaoSocial.Width = 220;
-            // 
-            // nomeFantasia
-            // 
-            this.nomeFantasia.DataPropertyName = "nomeFantasia";
-            this.nomeFantasia.HeaderText = "Nome Fantasia";
-            this.nomeFantasia.Name = "nomeFantasia";
-            this.nomeFantasia.Width = 220;
-            // 
-            // cnpj
-            // 
-            this.cnpj.DataPropertyName = "cnpj";
-            this.cnpj.HeaderText = "CNPJ";
-            this.cnpj.Name = "cnpj";
-            this.cnpj.Width = 120;
-            // 
-            // telefone1
-            // 
-            this.telefone1.DataPropertyName = "telefone1";
-            this.telefone1.HeaderText = "Telefone Principal";
-            this.telefone1.Name = "telefone1";
-            this.telefone1.Width = 110;
-            // 
-            // telefone2
-            // 
-            this.telefone2.DataPropertyName = "telefone2";
-            this.telefone2.HeaderText = "Telefone";
-            this.telefone2.Name = "telefone2";
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "E-mail";
-            this.email.Name = "email";
-            this.email.Width = 230;
-            // 
-            // ativo_string
-            // 
-            this.ativo_string.DataPropertyName = "ativo_string";
-            this.ativo_string.HeaderText = "Ativo?";
-            this.ativo_string.Name = "ativo_string";
-            this.ativo_string.ReadOnly = true;
-            this.ativo_string.Visible = false;
-            // 
-            // dataInclusao
-            // 
-            this.dataInclusao.DataPropertyName = "dataInclusao";
-            this.dataInclusao.HeaderText = "dataInclusao";
-            this.dataInclusao.Name = "dataInclusao";
-            this.dataInclusao.Visible = false;
-            // 
-            // dataAlteracao
-            // 
-            this.dataAlteracao.DataPropertyName = "dataAlteracao";
-            this.dataAlteracao.HeaderText = "dataAlteracao";
-            this.dataAlteracao.Name = "dataAlteracao";
-            this.dataAlteracao.Visible = false;
-            // 
-            // usuarioInclusao
-            // 
-            this.usuarioInclusao.DataPropertyName = "usuarioInclusao";
-            this.usuarioInclusao.HeaderText = "usuarioInclusao";
-            this.usuarioInclusao.Name = "usuarioInclusao";
-            this.usuarioInclusao.Visible = false;
-            // 
-            // usuarioAlteracao
-            // 
-            this.usuarioAlteracao.DataPropertyName = "usuarioAlteracao";
-            this.usuarioAlteracao.HeaderText = "usuarioAlteracao";
-            this.usuarioAlteracao.Name = "usuarioAlteracao";
-            this.usuarioAlteracao.Visible = false;
-            // 
-            // ativo
-            // 
-            this.ativo.DataPropertyName = "ativo";
-            this.ativo.HeaderText = "Ativo?";
-            this.ativo.Name = "ativo";
-            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -650,6 +650,7 @@
             this.Controls.Add(this.gboxCliente);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro de Clientes";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             this.gboxCliente.ResumeLayout(false);

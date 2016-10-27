@@ -122,6 +122,12 @@
     <EmbeddedResource Include="Telas\frmMotorista.resx">
       <DependentUpon>frmMotorista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmPesagem.resx">
+      <DependentUpon>frmPesagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmTipoMaterial.resx">
       <DependentUpon>frmTipoMaterial.cs</DependentUpon>
     </EmbeddedResource>

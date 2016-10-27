@@ -33,6 +33,7 @@
             this.gboxCampos = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cboCliente = new System.Windows.Forms.ComboBox();
+            this.vwClienteGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -87,9 +88,9 @@
             this.btnBuscarTodos = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.vwMotoristaGridBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.vwClienteGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vw_Cliente_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_Cliente_GridTableAdapter();
             this.gboxCampos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
             this.gboxDados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMotorista)).BeginInit();
@@ -98,7 +99,6 @@
             this.stAcoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwMotoristaGridBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gboxCampos
@@ -144,6 +144,11 @@
             this.cboCliente.Size = new System.Drawing.Size(596, 21);
             this.cboCliente.TabIndex = 11;
             this.cboCliente.ValueMember = "codigo";
+            // 
+            // vwClienteGridBindingSource
+            // 
+            this.vwClienteGridBindingSource.DataMember = "vw_Cliente_Grid";
+            this.vwClienteGridBindingSource.DataSource = this.controlePesagemDataSet;
             // 
             // controlePesagemDataSet
             // 
@@ -637,11 +642,6 @@
             this.vwMotoristaGridBindingSource1.DataMember = "vw_Motorista_Grid";
             this.vwMotoristaGridBindingSource1.DataSource = this.controlePesagemDataSet;
             // 
-            // vwClienteGridBindingSource
-            // 
-            this.vwClienteGridBindingSource.DataMember = "vw_Cliente_Grid";
-            this.vwClienteGridBindingSource.DataSource = this.controlePesagemDataSet;
-            // 
             // vw_Cliente_GridTableAdapter
             // 
             this.vw_Cliente_GridTableAdapter.ClearBeforeFill = true;
@@ -668,10 +668,12 @@
             this.Controls.Add(this.gboxCampos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMotorista";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro de Motorista";
             this.Load += new System.EventHandler(this.frmMotorista_Load);
             this.gboxCampos.ResumeLayout(false);
             this.gboxCampos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             this.gboxDados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMotorista)).EndInit();
@@ -682,7 +684,6 @@
             this.stAcoes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwMotoristaGridBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
