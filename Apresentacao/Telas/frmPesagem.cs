@@ -19,6 +19,10 @@ namespace Apresentacao.Telas
 
         private void frmPesagem_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'controlePesagemDataSet.vw_PesagemConsulta_Grid' table. You can move, or remove it, as needed.
+            this.vw_PesagemConsulta_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_PesagemConsulta_Grid);
+            // TODO: This line of code loads data into the 'controlePesagemDataSet.vw_PesagemConsulta_Grid' table. You can move, or remove it, as needed.
+            this.vw_PesagemConsulta_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_PesagemConsulta_Grid);
             
         }
 

@@ -222,11 +222,13 @@ namespace Apresentacao.Telas
         {
             if (cboTipoMaterialBusca.Text != "")
             {
-                vw_Material_GridTableAdapter.FillBydescricaoTipoMaterial(controlePesagemDataSet.vw_Material_Grid, cboTipoMaterialBusca.Text);
+                //TODO Fix
+               // vw_Material_GridTableAdapter.FillBydescricaoTipoMaterial(controlePesagemDataSet.vw_Material_Grid, cboTipoMaterialBusca.Text);
             }
             else if (txtDescricaoBusca.Text != "")
             {
-               vw_Material_GridTableAdapter.FillByDescricao(controlePesagemDataSet.vw_Material_Grid, txtDescricaoBusca.Text);
+                //TODO Fix
+               //vw_Material_GridTableAdapter.FillByDescricao(controlePesagemDataSet.vw_Material_Grid, txtDescricaoBusca.Text);
 
             }
             

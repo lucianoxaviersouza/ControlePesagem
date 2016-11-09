@@ -279,11 +279,13 @@ namespace Apresentacao.Telas
         {
             if (cboClienteBusca.Text != "")
             {
-                vw_Veiculo_GridTableAdapter.FillByNomeFantasiaCliente(controlePesagemDataSet.vw_Veiculo_Grid, cboClienteBusca.Text);
+                //TODO Fix
+                //vw_Veiculo_GridTableAdapter.FillByNomeFantasiaCliente(controlePesagemDataSet.vw_Veiculo_Grid, cboClienteBusca.Text);
             }
             else if (txtPlacaBusca.Text != "")
             {
-                vw_Veiculo_GridTableAdapter.FillByPlaca(controlePesagemDataSet.vw_Veiculo_Grid, txtPlacaBusca.Text);
+                //TODO Fix
+                //vw_Veiculo_GridTableAdapter.FillByPlaca(controlePesagemDataSet.vw_Veiculo_Grid, txtPlacaBusca.Text);
             }
         }
 

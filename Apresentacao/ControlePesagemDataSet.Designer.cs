@@ -2268,6 +2268,8 @@ namespace Apresentacao {
             
             private global::System.Data.DataColumn columnusuarioAlteracao;
             
+            private global::System.Data.DataColumn columnstatus;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public vw_PesagemConsulta_GridDataTable() {
@@ -2415,6 +2417,14 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn statusColumn {
+                get {
+                    return this.columnstatus;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2450,7 +2460,7 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vw_PesagemConsulta_GridRow Addvw_PesagemConsulta_GridRow(int codigo, System.DateTime dataHoraEntrada, System.DateTime dataHoraSaida, decimal pesoEntrada, decimal pesoSaida, decimal pesoTotal, string Cliente, string veiculo, string motorista, string material, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao) {
+            public vw_PesagemConsulta_GridRow Addvw_PesagemConsulta_GridRow(int codigo, System.DateTime dataHoraEntrada, System.DateTime dataHoraSaida, decimal pesoEntrada, decimal pesoSaida, decimal pesoTotal, string Cliente, string veiculo, string motorista, string material, System.DateTime dataInclusao, System.DateTime dataAlteracao, string usuarioInclusao, string usuarioAlteracao, string status) {
                 vw_PesagemConsulta_GridRow rowvw_PesagemConsulta_GridRow = ((vw_PesagemConsulta_GridRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         codigo,
@@ -2466,7 +2476,8 @@ namespace Apresentacao {
                         dataInclusao,
                         dataAlteracao,
                         usuarioInclusao,
-                        usuarioAlteracao};
+                        usuarioAlteracao,
+                        status};
                 rowvw_PesagemConsulta_GridRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowvw_PesagemConsulta_GridRow);
                 return rowvw_PesagemConsulta_GridRow;
@@ -2503,6 +2514,7 @@ namespace Apresentacao {
                 this.columndataAlteracao = base.Columns["dataAlteracao"];
                 this.columnusuarioInclusao = base.Columns["usuarioInclusao"];
                 this.columnusuarioAlteracao = base.Columns["usuarioAlteracao"];
+                this.columnstatus = base.Columns["status"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2536,6 +2548,8 @@ namespace Apresentacao {
                 base.Columns.Add(this.columnusuarioInclusao);
                 this.columnusuarioAlteracao = new global::System.Data.DataColumn("usuarioAlteracao", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuarioAlteracao);
+                this.columnstatus = new global::System.Data.DataColumn("status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstatus);
                 this.columncodigo.AllowDBNull = false;
                 this.columnpesoEntrada.ReadOnly = true;
                 this.columnpesoSaida.ReadOnly = true;
@@ -2551,6 +2565,7 @@ namespace Apresentacao {
                 this.columndataInclusao.AllowDBNull = false;
                 this.columnusuarioInclusao.MaxLength = 100;
                 this.columnusuarioAlteracao.MaxLength = 100;
+                this.columnstatus.MaxLength = 30;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5104,6 +5119,22 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string status {
+                get {
+                    try {
+                        return ((string)(this[this.tablevw_PesagemConsulta_Grid.statusColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'status\' in table \'vw_PesagemConsulta_Grid\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablevw_PesagemConsulta_Grid.statusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsdataHoraEntradaNull() {
                 return this.IsNull(this.tablevw_PesagemConsulta_Grid.dataHoraEntradaColumn);
             }
@@ -5244,6 +5275,18 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetusuarioAlteracaoNull() {
                 this[this.tablevw_PesagemConsulta_Grid.usuarioAlteracaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsstatusNull() {
+                return this.IsNull(this.tablevw_PesagemConsulta_Grid.statusColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetstatusNull() {
+                this[this.tablevw_PesagemConsulta_Grid.statusColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7009,6 +7052,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("dataAlteracao", "dataAlteracao");
             tableMapping.ColumnMappings.Add("usuarioInclusao", "usuarioInclusao");
             tableMapping.ColumnMappings.Add("usuarioAlteracao", "usuarioAlteracao");
+            tableMapping.ColumnMappings.Add("status", "status");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -7027,7 +7071,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT codigo, dataHoraEntrada, dataHoraSaida, pesoEntrada, pesoSaida, pesoTotal," +
                 " Cliente, veiculo, motorista, material, dataInclusao, dataAlteracao, usuarioIncl" +
-                "usao, usuarioAlteracao FROM dbo.vw_PesagemConsulta_Grid";
+                "usao, usuarioAlteracao, status FROM vw_PesagemConsulta_Grid";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

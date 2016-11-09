@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPesagem));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnRegistrarEntrada = new System.Windows.Forms.ToolStripButton();
@@ -66,11 +67,46 @@
             this.txtUsuarioAlteracao = new System.Windows.Forms.TextBox();
             this.txtUsuarioInclusao = new System.Windows.Forms.TextBox();
             this.txtClienteConsulta = new System.Windows.Forms.TextBox();
-            this.vw_Material_GridTableAdapter1 = new Dados.ControlePesagemDataSetTableAdapters.vw_Material_GridTableAdapter();
+            this.gboxDados = new System.Windows.Forms.GroupBox();
+            this.dgvPesagem = new System.Windows.Forms.DataGridView();
+            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
+            this.vwPesagemConsultaGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vw_PesagemConsulta_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_PesagemConsulta_GridTableAdapter();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataHoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataHoraSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.motorista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.material = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesoEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesoSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioInclusaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.btnBuscarTodos = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.gboxRegistroPesagemConsolidado.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gboxInfoControle.SuspendLayout();
+            this.gboxDados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPesagem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwPesagemConsultaGridBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -434,9 +470,271 @@
             this.txtClienteConsulta.Size = new System.Drawing.Size(660, 20);
             this.txtClienteConsulta.TabIndex = 0;
             // 
-            // vw_Material_GridTableAdapter1
+            // gboxDados
             // 
-            this.vw_Material_GridTableAdapter1.ClearBeforeFill = true;
+            this.gboxDados.Controls.Add(this.dgvPesagem);
+            this.gboxDados.Location = new System.Drawing.Point(12, 495);
+            this.gboxDados.Name = "gboxDados";
+            this.gboxDados.Size = new System.Drawing.Size(1048, 283);
+            this.gboxDados.TabIndex = 2;
+            this.gboxDados.TabStop = false;
+            this.gboxDados.Text = "Registros:";
+            // 
+            // dgvPesagem
+            // 
+            this.dgvPesagem.AllowUserToAddRows = false;
+            this.dgvPesagem.AllowUserToDeleteRows = false;
+            this.dgvPesagem.AllowUserToResizeRows = false;
+            this.dgvPesagem.AutoGenerateColumns = false;
+            this.dgvPesagem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPesagem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codigo,
+            this.dataHoraEntrada,
+            this.dataHoraSaida,
+            this.Cliente,
+            this.veiculo,
+            this.motorista,
+            this.material,
+            this.pesoEntrada,
+            this.pesoSaida,
+            this.pesoTotal,
+            this.dataInclusao,
+            this.dataAlteracao,
+            this.usuarioInclusaoDataGridViewTextBoxColumn,
+            this.usuarioAlteracao,
+            this.status});
+            this.dgvPesagem.DataSource = this.vwPesagemConsultaGridBindingSource;
+            this.dgvPesagem.Location = new System.Drawing.Point(18, 19);
+            this.dgvPesagem.MultiSelect = false;
+            this.dgvPesagem.Name = "dgvPesagem";
+            this.dgvPesagem.ReadOnly = true;
+            this.dgvPesagem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPesagem.Size = new System.Drawing.Size(1007, 244);
+            this.dgvPesagem.TabIndex = 0;
+            // 
+            // controlePesagemDataSet
+            // 
+            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
+            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vwPesagemConsultaGridBindingSource
+            // 
+            this.vwPesagemConsultaGridBindingSource.DataMember = "vw_PesagemConsulta_Grid";
+            this.vwPesagemConsultaGridBindingSource.DataSource = this.controlePesagemDataSet;
+            // 
+            // vw_PesagemConsulta_GridTableAdapter
+            // 
+            this.vw_PesagemConsulta_GridTableAdapter.ClearBeforeFill = true;
+            // 
+            // codigo
+            // 
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            // 
+            // dataHoraEntrada
+            // 
+            this.dataHoraEntrada.DataPropertyName = "dataHoraEntrada";
+            this.dataHoraEntrada.HeaderText = "Data Hora - Entrada";
+            this.dataHoraEntrada.Name = "dataHoraEntrada";
+            this.dataHoraEntrada.ReadOnly = true;
+            // 
+            // dataHoraSaida
+            // 
+            this.dataHoraSaida.DataPropertyName = "dataHoraSaida";
+            this.dataHoraSaida.HeaderText = "Data Hora - Saída";
+            this.dataHoraSaida.Name = "dataHoraSaida";
+            this.dataHoraSaida.ReadOnly = true;
+            // 
+            // Cliente
+            // 
+            this.Cliente.DataPropertyName = "Cliente";
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
+            // 
+            // veiculo
+            // 
+            this.veiculo.DataPropertyName = "veiculo";
+            this.veiculo.HeaderText = "Veículo";
+            this.veiculo.Name = "veiculo";
+            this.veiculo.ReadOnly = true;
+            // 
+            // motorista
+            // 
+            this.motorista.DataPropertyName = "motorista";
+            this.motorista.HeaderText = "Motorista";
+            this.motorista.Name = "motorista";
+            this.motorista.ReadOnly = true;
+            // 
+            // material
+            // 
+            this.material.DataPropertyName = "material";
+            this.material.HeaderText = "Material";
+            this.material.Name = "material";
+            this.material.ReadOnly = true;
+            // 
+            // pesoEntrada
+            // 
+            this.pesoEntrada.DataPropertyName = "pesoEntrada";
+            this.pesoEntrada.HeaderText = "Peso Entrada";
+            this.pesoEntrada.Name = "pesoEntrada";
+            this.pesoEntrada.ReadOnly = true;
+            // 
+            // pesoSaida
+            // 
+            this.pesoSaida.DataPropertyName = "pesoSaida";
+            this.pesoSaida.HeaderText = "Peso Saída";
+            this.pesoSaida.Name = "pesoSaida";
+            this.pesoSaida.ReadOnly = true;
+            // 
+            // pesoTotal
+            // 
+            this.pesoTotal.DataPropertyName = "pesoTotal";
+            this.pesoTotal.HeaderText = "Peso Total";
+            this.pesoTotal.Name = "pesoTotal";
+            this.pesoTotal.ReadOnly = true;
+            // 
+            // dataInclusao
+            // 
+            this.dataInclusao.DataPropertyName = "dataInclusao";
+            this.dataInclusao.HeaderText = "Data Inclusão";
+            this.dataInclusao.Name = "dataInclusao";
+            this.dataInclusao.ReadOnly = true;
+            // 
+            // dataAlteracao
+            // 
+            this.dataAlteracao.DataPropertyName = "dataAlteracao";
+            this.dataAlteracao.HeaderText = "Data Alteração";
+            this.dataAlteracao.Name = "dataAlteracao";
+            this.dataAlteracao.ReadOnly = true;
+            // 
+            // usuarioInclusaoDataGridViewTextBoxColumn
+            // 
+            this.usuarioInclusaoDataGridViewTextBoxColumn.DataPropertyName = "usuarioInclusao";
+            this.usuarioInclusaoDataGridViewTextBoxColumn.HeaderText = "Usuário Inclusão";
+            this.usuarioInclusaoDataGridViewTextBoxColumn.Name = "usuarioInclusaoDataGridViewTextBoxColumn";
+            this.usuarioInclusaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usuarioAlteracao
+            // 
+            this.usuarioAlteracao.DataPropertyName = "usuarioAlteracao";
+            this.usuarioAlteracao.HeaderText = "Usuário  Alteração";
+            this.usuarioAlteracao.Name = "usuarioAlteracao";
+            this.usuarioAlteracao.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(146, 461);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(105, 20);
+            this.textBox5.TabIndex = 3;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(257, 461);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(246, 20);
+            this.textBox6.TabIndex = 4;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(30, 461);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(109, 20);
+            this.dateTimePicker1.TabIndex = 5;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(510, 461);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(180, 20);
+            this.textBox7.TabIndex = 6;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(697, 461);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(180, 20);
+            this.textBox8.TabIndex = 7;
+            // 
+            // btnBuscarTodos
+            // 
+            this.btnBuscarTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarTodos.Image")));
+            this.btnBuscarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarTodos.Location = new System.Drawing.Point(953, 460);
+            this.btnBuscarTodos.Name = "btnBuscarTodos";
+            this.btnBuscarTodos.Size = new System.Drawing.Size(94, 23);
+            this.btnBuscarTodos.TabIndex = 13;
+            this.btnBuscarTodos.Text = "Buscar todos";
+            this.btnBuscarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarTodos.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(883, 459);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(66, 23);
+            this.btnBuscar.TabIndex = 12;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(31, 445);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(70, 13);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Data Entrada";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(145, 445);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(40, 13);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Código";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(254, 445);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(39, 13);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "Cliente";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(507, 445);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(50, 13);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "Motorista";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(694, 445);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(44, 13);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "Material";
             // 
             // frmPesagem
             // 
@@ -444,6 +742,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1086, 788);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.btnBuscarTodos);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.gboxDados);
             this.Controls.Add(this.gboxRegistroPesagemConsolidado);
             this.Controls.Add(this.toolStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -459,6 +770,10 @@
             this.groupBox1.PerformLayout();
             this.gboxInfoControle.ResumeLayout(false);
             this.gboxInfoControle.PerformLayout();
+            this.gboxDados.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPesagem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwPesagemConsultaGridBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,6 +818,37 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtUsuarioAlteracao;
-        private Dados.ControlePesagemDataSetTableAdapters.vw_Material_GridTableAdapter vw_Material_GridTableAdapter1;
+        private System.Windows.Forms.GroupBox gboxDados;
+        private System.Windows.Forms.DataGridView dgvPesagem;
+        private ControlePesagemDataSet controlePesagemDataSet;
+        private System.Windows.Forms.BindingSource vwPesagemConsultaGridBindingSource;
+        private ControlePesagemDataSetTableAdapters.vw_PesagemConsulta_GridTableAdapter vw_PesagemConsulta_GridTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataHoraEntrada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataHoraSaida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn veiculo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn motorista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn material;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pesoEntrada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pesoSaida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pesoTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataInclusao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataAlteracao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioInclusaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioAlteracao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Button btnBuscarTodos;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
     }
 }
