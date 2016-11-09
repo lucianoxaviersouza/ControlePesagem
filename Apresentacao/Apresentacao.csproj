@@ -53,11 +53,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ControlePesagemDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ControlePesagemDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ControlePesagemDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Telas\frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,8 +166,8 @@
     </None>
     <None Include="ControlePesagemDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ControlePesagemDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-      <LastGenOutput>ControlePesagemDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="ControlePesagemDataSet.xss">
       <DependentUpon>ControlePesagemDataSet.xsd</DependentUpon>
