@@ -28,31 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPesagemEntrada));
+            this.cboCliente = new System.Windows.Forms.ComboBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cboMotorista = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cboVeiculo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cboOperacao = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cboMaterial = new System.Windows.Forms.ComboBox();
+            this.dtpDataHoraEntrada = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtPesoEntrada = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtObservacoes = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cboCliente
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(10, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(453, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cboCliente.FormattingEnabled = true;
+            this.cboCliente.Location = new System.Drawing.Point(10, 27);
+            this.cboCliente.Name = "cboCliente";
+            this.cboCliente.Size = new System.Drawing.Size(453, 21);
+            this.cboCliente.TabIndex = 0;
             // 
             // lblCliente
             // 
@@ -72,13 +75,13 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Motorista";
             // 
-            // comboBox2
+            // cboMotorista
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(10, 70);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(453, 21);
-            this.comboBox2.TabIndex = 2;
+            this.cboMotorista.FormattingEnabled = true;
+            this.cboMotorista.Location = new System.Drawing.Point(10, 70);
+            this.cboMotorista.Name = "cboMotorista";
+            this.cboMotorista.Size = new System.Drawing.Size(453, 21);
+            this.cboMotorista.TabIndex = 2;
             // 
             // label2
             // 
@@ -89,13 +92,13 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Veículo";
             // 
-            // comboBox3
+            // cboVeiculo
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(10, 113);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(453, 21);
-            this.comboBox3.TabIndex = 4;
+            this.cboVeiculo.FormattingEnabled = true;
+            this.cboVeiculo.Location = new System.Drawing.Point(10, 113);
+            this.cboVeiculo.Name = "cboVeiculo";
+            this.cboVeiculo.Size = new System.Drawing.Size(453, 21);
+            this.cboVeiculo.TabIndex = 4;
             // 
             // label3
             // 
@@ -106,13 +109,16 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Tipo Operação";
             // 
-            // comboBox4
+            // cboOperacao
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(10, 156);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(127, 21);
-            this.comboBox4.TabIndex = 6;
+            this.cboOperacao.FormattingEnabled = true;
+            this.cboOperacao.Items.AddRange(new object[] {
+            "Compra",
+            "Venda"});
+            this.cboOperacao.Location = new System.Drawing.Point(10, 156);
+            this.cboOperacao.Name = "cboOperacao";
+            this.cboOperacao.Size = new System.Drawing.Size(127, 21);
+            this.cboOperacao.TabIndex = 6;
             // 
             // label4
             // 
@@ -123,21 +129,21 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Material";
             // 
-            // comboBox5
+            // cboMaterial
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(143, 156);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(320, 21);
-            this.comboBox5.TabIndex = 8;
+            this.cboMaterial.FormattingEnabled = true;
+            this.cboMaterial.Location = new System.Drawing.Point(143, 156);
+            this.cboMaterial.Name = "cboMaterial";
+            this.cboMaterial.Size = new System.Drawing.Size(320, 21);
+            this.cboMaterial.TabIndex = 8;
             // 
-            // dateTimePicker1
+            // dtpDataHoraEntrada
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(10, 200);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(127, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.dtpDataHoraEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataHoraEntrada.Location = new System.Drawing.Point(10, 200);
+            this.dtpDataHoraEntrada.Name = "dtpDataHoraEntrada";
+            this.dtpDataHoraEntrada.Size = new System.Drawing.Size(127, 20);
+            this.dtpDataHoraEntrada.TabIndex = 10;
             // 
             // label5
             // 
@@ -148,13 +154,13 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Data Hora Entrada";
             // 
-            // maskedTextBox1
+            // txtPesoEntrada
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(144, 199);
-            this.maskedTextBox1.Mask = "99999,99";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(86, 20);
-            this.maskedTextBox1.TabIndex = 12;
+            this.txtPesoEntrada.Location = new System.Drawing.Point(144, 199);
+            this.txtPesoEntrada.Mask = "99999,99";
+            this.txtPesoEntrada.Name = "txtPesoEntrada";
+            this.txtPesoEntrada.Size = new System.Drawing.Size(86, 20);
+            this.txtPesoEntrada.TabIndex = 12;
             // 
             // label6
             // 
@@ -174,36 +180,64 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Observações";
             // 
-            // textBox1
+            // txtObservacoes
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 244);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(450, 97);
-            this.textBox1.TabIndex = 15;
+            this.txtObservacoes.Location = new System.Drawing.Point(13, 244);
+            this.txtObservacoes.Multiline = true;
+            this.txtObservacoes.Name = "txtObservacoes";
+            this.txtObservacoes.Size = new System.Drawing.Size(450, 97);
+            this.txtObservacoes.TabIndex = 15;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(380, 347);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(83, 23);
+            this.btnCancelar.TabIndex = 17;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Enabled = false;
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.Location = new System.Drawing.Point(291, 347);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(83, 23);
+            this.btnSalvar.TabIndex = 16;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // frmPesagemEntrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(475, 411);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(475, 376);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.txtObservacoes);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.txtPesoEntrada);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpDataHoraEntrada);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.cboMaterial);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.cboOperacao);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cboVeiculo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cboMotorista);
             this.Controls.Add(this.lblCliente);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboCliente);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPesagemEntrada";
             this.Text = "Registrar entrada";
             this.ResumeLayout(false);
@@ -213,21 +247,23 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboCliente;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cboMotorista;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cboVeiculo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cboOperacao;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cboMaterial;
+        private System.Windows.Forms.DateTimePicker dtpDataHoraEntrada;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtPesoEntrada;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtObservacoes;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

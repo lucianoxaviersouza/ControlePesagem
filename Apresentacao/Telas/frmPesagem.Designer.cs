@@ -69,9 +69,6 @@
             this.txtClienteConsulta = new System.Windows.Forms.TextBox();
             this.gboxDados = new System.Windows.Forms.GroupBox();
             this.dgvPesagem = new System.Windows.Forms.DataGridView();
-            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
-            this.vwPesagemConsultaGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vw_PesagemConsulta_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_PesagemConsulta_GridTableAdapter();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataHoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataHoraSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,6 +84,9 @@
             this.usuarioInclusaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwPesagemConsultaGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
+            this.vw_PesagemConsulta_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_PesagemConsulta_GridTableAdapter();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -105,8 +105,8 @@
             this.gboxInfoControle.SuspendLayout();
             this.gboxDados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPesagem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwPesagemConsultaGridBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -388,6 +388,7 @@
             // textBox4
             // 
             this.textBox4.Enabled = false;
+            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.textBox4.Location = new System.Drawing.Point(17, 133);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(296, 20);
@@ -512,20 +513,6 @@
             this.dgvPesagem.Size = new System.Drawing.Size(1007, 244);
             this.dgvPesagem.TabIndex = 0;
             // 
-            // controlePesagemDataSet
-            // 
-            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
-            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vwPesagemConsultaGridBindingSource
-            // 
-            this.vwPesagemConsultaGridBindingSource.DataMember = "vw_PesagemConsulta_Grid";
-            this.vwPesagemConsultaGridBindingSource.DataSource = this.controlePesagemDataSet;
-            // 
-            // vw_PesagemConsulta_GridTableAdapter
-            // 
-            this.vw_PesagemConsulta_GridTableAdapter.ClearBeforeFill = true;
-            // 
             // codigo
             // 
             this.codigo.DataPropertyName = "codigo";
@@ -631,6 +618,20 @@
             this.status.Name = "status";
             this.status.ReadOnly = true;
             // 
+            // vwPesagemConsultaGridBindingSource
+            // 
+            this.vwPesagemConsultaGridBindingSource.DataMember = "vw_PesagemConsulta_Grid";
+            this.vwPesagemConsultaGridBindingSource.DataSource = this.controlePesagemDataSet;
+            // 
+            // controlePesagemDataSet
+            // 
+            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
+            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vw_PesagemConsulta_GridTableAdapter
+            // 
+            this.vw_PesagemConsulta_GridTableAdapter.ClearBeforeFill = true;
+            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(146, 461);
@@ -696,9 +697,9 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(31, 445);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(70, 13);
+            this.label16.Size = new System.Drawing.Size(77, 13);
             this.label16.TabIndex = 17;
-            this.label16.Text = "Data Entrada";
+            this.label16.Text = "Data Pesagem";
             // 
             // label17
             // 
@@ -772,8 +773,8 @@
             this.gboxInfoControle.PerformLayout();
             this.gboxDados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPesagem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwPesagemConsultaGridBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

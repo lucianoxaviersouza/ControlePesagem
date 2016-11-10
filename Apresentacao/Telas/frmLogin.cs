@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidade;
 using Negocio;
+using Apresentacao.Util;
+
 
 namespace Apresentacao.Telas
 {
@@ -37,8 +39,9 @@ namespace Apresentacao.Telas
             usu.Codigo = 1;
 
             UsuarioBus ubs = new UsuarioBus();
-
-            usu = ubs.validaLogin (txtLogin.Text,txtSenha.Text);
+            
+            String senhaCripto = Criptografia.GetMD5Hash(txtSenha.Text);
+            usu = ubs.validaLogin(txtLogin.Text, senhaCripto);
 
             if (usu != null){
                 Principal principal = new Principal(usu);
@@ -55,6 +58,12 @@ namespace Apresentacao.Telas
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+        
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
 
         }
     }
