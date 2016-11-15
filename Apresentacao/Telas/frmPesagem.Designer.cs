@@ -140,6 +140,7 @@
             this.btnRegistrarSaida.Name = "btnRegistrarSaida";
             this.btnRegistrarSaida.Size = new System.Drawing.Size(52, 52);
             this.btnRegistrarSaida.Text = "Registrar Saída";
+            this.btnRegistrarSaida.Click += new System.EventHandler(this.btnRegistrarSaida_Click);
             // 
             // gboxRegistroPesagemConsolidado
             // 

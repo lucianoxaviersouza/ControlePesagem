@@ -35,5 +35,16 @@ namespace Apresentacao.Telas
             pesagemEntrada.ShowDialog();
             this.Enabled = true;
         }
+
+        private void btnRegistrarSaida_Click(object sender, EventArgs e)
+        {
+            frmPesagemSaida pesagemSaida = new frmPesagemSaida();
+
+            this.Enabled = false;
+            pesagemSaida.StartPosition = FormStartPosition.CenterScreen;
+            pesagemSaida.ShowDialog();
+            this.Enabled = true;
+
+        }
     }
 }

@@ -96,6 +96,11 @@ namespace Apresentacao.Telas
             sobre.StartPosition = FormStartPosition.CenterScreen;
             sobre.Show();
         }
+
+        private void registroDePesagemSaídaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
         
     }
 }
