@@ -38,6 +38,7 @@
             this.veículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDePesagemEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDeEntradaESaídaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -104,7 +105,8 @@
             // pesagemToolStripMenuItem
             // 
             this.pesagemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registroDePesagemEntradaToolStripMenuItem});
+            this.registroDePesagemEntradaToolStripMenuItem,
+            this.relatórioDeEntradaESaídaToolStripMenuItem});
             this.pesagemToolStripMenuItem.Name = "pesagemToolStripMenuItem";
             this.pesagemToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.pesagemToolStripMenuItem.Text = "Pesagem";
@@ -112,9 +114,16 @@
             // registroDePesagemEntradaToolStripMenuItem
             // 
             this.registroDePesagemEntradaToolStripMenuItem.Name = "registroDePesagemEntradaToolStripMenuItem";
-            this.registroDePesagemEntradaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.registroDePesagemEntradaToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.registroDePesagemEntradaToolStripMenuItem.Text = "Registro de Pesagem";
             this.registroDePesagemEntradaToolStripMenuItem.Click += new System.EventHandler(this.registroDePesagemEntradaToolStripMenuItem_Click);
+            // 
+            // relatórioDeEntradaESaídaToolStripMenuItem
+            // 
+            this.relatórioDeEntradaESaídaToolStripMenuItem.Name = "relatórioDeEntradaESaídaToolStripMenuItem";
+            this.relatórioDeEntradaESaídaToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.relatórioDeEntradaESaídaToolStripMenuItem.Text = "Relatório de Entrada e Saída";
+            this.relatórioDeEntradaESaídaToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeEntradaESaídaToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
@@ -155,5 +164,6 @@
         private System.Windows.Forms.ToolStripMenuItem pesagemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroDePesagemEntradaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatórioDeEntradaESaídaToolStripMenuItem;
     }
 }

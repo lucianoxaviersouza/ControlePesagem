@@ -95,6 +95,12 @@
     <Compile Include="Telas\frmPesagemSaida.Designer.cs">
       <DependentUpon>frmPesagemSaida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\frmRelatorioPesagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmRelatorioPesagem.Designer.cs">
+      <DependentUpon>frmRelatorioPesagem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmSobre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmPesagemSaida.resx">
       <DependentUpon>frmPesagemSaida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmRelatorioPesagem.resx">
+      <DependentUpon>frmRelatorioPesagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmSobre.resx">
       <DependentUpon>frmSobre.cs</DependentUpon>

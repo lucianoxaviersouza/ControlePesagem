@@ -101,6 +101,15 @@ namespace Apresentacao.Telas
         {
 
         }
+
+        private void relatórioDeEntradaESaídaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRelatorioPesagem relatorioPesagem = new frmRelatorioPesagem();
+
+            relatorioPesagem.MdiParent = this;
+            relatorioPesagem.StartPosition = FormStartPosition.CenterScreen;
+            relatorioPesagem.Show();
+        }
         
     }
 }
