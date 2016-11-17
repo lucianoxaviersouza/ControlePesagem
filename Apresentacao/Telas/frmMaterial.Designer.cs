@@ -181,6 +181,7 @@
             // 
             this.txtDescricao.Enabled = false;
             this.txtDescricao.Location = new System.Drawing.Point(12, 89);
+            this.txtDescricao.MaxLength = 100;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(430, 20);
             this.txtDescricao.TabIndex = 3;
@@ -479,6 +480,7 @@
             // txtDescricaoBusca
             // 
             this.txtDescricaoBusca.Location = new System.Drawing.Point(273, 219);
+            this.txtDescricaoBusca.MaxLength = 100;
             this.txtDescricaoBusca.Name = "txtDescricaoBusca";
             this.txtDescricaoBusca.Size = new System.Drawing.Size(430, 20);
             this.txtDescricaoBusca.TabIndex = 8;

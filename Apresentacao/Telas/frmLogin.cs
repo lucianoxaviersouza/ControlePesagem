@@ -23,8 +23,9 @@ namespace Apresentacao.Telas
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
-        {
-            
+       {
+            txtLogin.Text = "admin";
+            txtSenha.Text = "123";
         }
         
 
@@ -44,7 +45,7 @@ namespace Apresentacao.Telas
             usu = ubs.validaLogin(txtLogin.Text, senhaCripto);
 
             if (usu != null){
-                Principal principal = new Principal(usu);
+                Principal principal = new Principal(usu,this);
                 this.Visible = false;
                 principal.Show();
                 

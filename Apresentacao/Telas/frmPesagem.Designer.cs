@@ -863,9 +863,9 @@
         private System.Windows.Forms.TextBox txtUsuarioAlteracao;
         private System.Windows.Forms.GroupBox gboxDados;
         private System.Windows.Forms.DataGridView dgvPesagem;
-        private ControlePesagemDataSet controlePesagemDataSet;
-        private System.Windows.Forms.BindingSource vwPesagemConsultaGridBindingSource;
-        private ControlePesagemDataSetTableAdapters.vw_PesagemConsulta_GridTableAdapter vw_PesagemConsulta_GridTableAdapter;
+        public ControlePesagemDataSet controlePesagemDataSet;
+        public System.Windows.Forms.BindingSource vwPesagemConsultaGridBindingSource;
+        public ControlePesagemDataSetTableAdapters.vw_PesagemConsulta_GridTableAdapter vw_PesagemConsulta_GridTableAdapter;
         private System.Windows.Forms.TextBox txtCodigoPesq;
         private System.Windows.Forms.TextBox txtClientePesq;
         private System.Windows.Forms.DateTimePicker dtpDataPesagemPesq;

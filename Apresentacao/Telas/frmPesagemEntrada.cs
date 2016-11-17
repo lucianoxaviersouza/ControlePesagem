@@ -18,6 +18,8 @@ namespace Apresentacao.Telas
 {
     public partial class frmPesagemEntrada : Form
     {
+        public frmPesagem frmPesagemGlobal;
+
         internal enunTipoAcao globalTipoAcao;
         internal enum enunTipoAcao
         {
@@ -29,6 +31,12 @@ namespace Apresentacao.Telas
             InitializeComponent();
         }
 
+        public frmPesagemEntrada(frmPesagem p)
+        {
+            InitializeComponent();
+            frmPesagemGlobal = p;
+            
+        }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             try
@@ -52,6 +60,7 @@ namespace Apresentacao.Telas
                     objPesagem.DataInclusao = DateTime.Now;
                     pesagem.inserir(objPesagem);
                     MessageBox.Show("Registro Inserido com sucesso!");
+                    frmPesagemGlobal.vw_PesagemConsulta_GridTableAdapter.Fill(frmPesagemGlobal.controlePesagemDataSet.vw_PesagemConsulta_Grid);
                     this.Close();
                 }
                 
@@ -70,7 +79,7 @@ namespace Apresentacao.Telas
                 }
                 else
                 {
-                    MessageBox.Show("Erro inesperado ao realizar a exclusão. \n Informe o erro abaixo ao administrador do sistema. \n Erro: " + ex.Message.ToString(), "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Erro inesperado ao realizar a inclusão. \n Informe o erro abaixo ao administrador do sistema. \n Erro: " + ex.Message.ToString(), "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
 
@@ -79,14 +88,16 @@ namespace Apresentacao.Telas
 
         private void frmPesagemEntrada_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'controlePesagemDataSet.vw_Material_Grid' table. You can move, or remove it, as needed.
+            
+            
             this.vw_Material_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Material_Grid);
-            // TODO: This line of code loads data into the 'controlePesagemDataSet.vw_Veiculo_Grid' table. You can move, or remove it, as needed.
             this.vw_Veiculo_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Veiculo_Grid);
-            // TODO: This line of code loads data into the 'controlePesagemDataSet.vw_Motorista_Grid' table. You can move, or remove it, as needed.
             this.vw_Motorista_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Motorista_Grid);
-            // TODO: This line of code loads data into the 'controlePesagemDataSet.vw_Cliente_Grid' table. You can move, or remove it, as needed.
             this.vw_Cliente_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Cliente_Grid);
+
+            dtpDataHoraEntrada.Format = DateTimePickerFormat.Custom;
+            dtpDataHoraEntrada.CustomFormat = "dd/MM/yyyy HH:mm:ss";
+            dtpDataHoraEntrada.Value = DateTime.Now;
 
         }
 

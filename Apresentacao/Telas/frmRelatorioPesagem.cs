@@ -23,5 +23,12 @@ namespace Apresentacao.Telas
             this.vw_PesagemConsulta_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_PesagemConsulta_Grid);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            webRelatorio.Visible = true;
+            webRelatorio.Navigate("www.google.com");
+
+        }
     }
 }

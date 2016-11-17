@@ -31,15 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPesagemEntrada));
             this.cboCliente = new System.Windows.Forms.ComboBox();
+            this.vwClienteGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
             this.lblCliente = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cboMotorista = new System.Windows.Forms.ComboBox();
+            this.vwMotoristaGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.cboVeiculo = new System.Windows.Forms.ComboBox();
+            this.vwVeiculoGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.cboOperacao = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cboMaterial = new System.Windows.Forms.ComboBox();
+            this.vwMaterialGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtpDataHoraEntrada = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,18 +52,14 @@
             this.txtObservacoes = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
-            this.vwClienteGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vw_Cliente_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_Cliente_GridTableAdapter();
-            this.vwMotoristaGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vw_Motorista_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_Motorista_GridTableAdapter();
-            this.vwVeiculoGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vw_Veiculo_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_Veiculo_GridTableAdapter();
-            this.vwMaterialGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vw_Material_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_Material_GridTableAdapter();
             this.txtPesoEntrada = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwMotoristaGridBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwVeiculoGridBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwMaterialGridBindingSource)).BeginInit();
@@ -74,6 +75,16 @@
             this.cboCliente.Size = new System.Drawing.Size(453, 21);
             this.cboCliente.TabIndex = 0;
             this.cboCliente.ValueMember = "codigo";
+            // 
+            // vwClienteGridBindingSource
+            // 
+            this.vwClienteGridBindingSource.DataMember = "vw_Cliente_Grid";
+            this.vwClienteGridBindingSource.DataSource = this.controlePesagemDataSet;
+            // 
+            // controlePesagemDataSet
+            // 
+            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
+            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblCliente
             // 
@@ -104,6 +115,11 @@
             this.cboMotorista.TabIndex = 2;
             this.cboMotorista.ValueMember = "codigo";
             // 
+            // vwMotoristaGridBindingSource
+            // 
+            this.vwMotoristaGridBindingSource.DataMember = "vw_Motorista_Grid";
+            this.vwMotoristaGridBindingSource.DataSource = this.controlePesagemDataSet;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -123,6 +139,11 @@
             this.cboVeiculo.Size = new System.Drawing.Size(453, 21);
             this.cboVeiculo.TabIndex = 4;
             this.cboVeiculo.ValueMember = "codigo";
+            // 
+            // vwVeiculoGridBindingSource
+            // 
+            this.vwVeiculoGridBindingSource.DataMember = "vw_Veiculo_Grid";
+            this.vwVeiculoGridBindingSource.DataSource = this.controlePesagemDataSet;
             // 
             // label3
             // 
@@ -164,12 +185,17 @@
             this.cboMaterial.TabIndex = 8;
             this.cboMaterial.ValueMember = "codigo";
             // 
+            // vwMaterialGridBindingSource
+            // 
+            this.vwMaterialGridBindingSource.DataMember = "vw_Material_Grid";
+            this.vwMaterialGridBindingSource.DataSource = this.controlePesagemDataSet;
+            // 
             // dtpDataHoraEntrada
             // 
             this.dtpDataHoraEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataHoraEntrada.Location = new System.Drawing.Point(10, 200);
             this.dtpDataHoraEntrada.Name = "dtpDataHoraEntrada";
-            this.dtpDataHoraEntrada.Size = new System.Drawing.Size(127, 20);
+            this.dtpDataHoraEntrada.Size = new System.Drawing.Size(150, 20);
             this.dtpDataHoraEntrada.TabIndex = 10;
             // 
             // label5
@@ -184,7 +210,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(143, 184);
+            this.label6.Location = new System.Drawing.Point(163, 184);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 13;
@@ -231,42 +257,17 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // controlePesagemDataSet
-            // 
-            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
-            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vwClienteGridBindingSource
-            // 
-            this.vwClienteGridBindingSource.DataMember = "vw_Cliente_Grid";
-            this.vwClienteGridBindingSource.DataSource = this.controlePesagemDataSet;
-            // 
             // vw_Cliente_GridTableAdapter
             // 
             this.vw_Cliente_GridTableAdapter.ClearBeforeFill = true;
-            // 
-            // vwMotoristaGridBindingSource
-            // 
-            this.vwMotoristaGridBindingSource.DataMember = "vw_Motorista_Grid";
-            this.vwMotoristaGridBindingSource.DataSource = this.controlePesagemDataSet;
             // 
             // vw_Motorista_GridTableAdapter
             // 
             this.vw_Motorista_GridTableAdapter.ClearBeforeFill = true;
             // 
-            // vwVeiculoGridBindingSource
-            // 
-            this.vwVeiculoGridBindingSource.DataMember = "vw_Veiculo_Grid";
-            this.vwVeiculoGridBindingSource.DataSource = this.controlePesagemDataSet;
-            // 
             // vw_Veiculo_GridTableAdapter
             // 
             this.vw_Veiculo_GridTableAdapter.ClearBeforeFill = true;
-            // 
-            // vwMaterialGridBindingSource
-            // 
-            this.vwMaterialGridBindingSource.DataMember = "vw_Material_Grid";
-            this.vwMaterialGridBindingSource.DataSource = this.controlePesagemDataSet;
             // 
             // vw_Material_GridTableAdapter
             // 
@@ -274,10 +275,18 @@
             // 
             // txtPesoEntrada
             // 
-            this.txtPesoEntrada.Location = new System.Drawing.Point(146, 199);
+            this.txtPesoEntrada.Location = new System.Drawing.Point(166, 203);
             this.txtPesoEntrada.Name = "txtPesoEntrada";
-            this.txtPesoEntrada.Size = new System.Drawing.Size(100, 20);
+            this.txtPesoEntrada.Size = new System.Drawing.Size(120, 20);
             this.txtPesoEntrada.TabIndex = 18;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(341, 202);
+            this.maskedTextBox1.Mask = "#####9,99";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 19;
             // 
             // frmPesagemEntrada
             // 
@@ -285,6 +294,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(475, 376);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.txtPesoEntrada);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
@@ -307,8 +317,8 @@
             this.Name = "frmPesagemEntrada";
             this.Text = "Registrar entrada";
             this.Load += new System.EventHandler(this.frmPesagemEntrada_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwMotoristaGridBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwVeiculoGridBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwMaterialGridBindingSource)).EndInit();
@@ -346,5 +356,6 @@
         private System.Windows.Forms.BindingSource vwMaterialGridBindingSource;
         private ControlePesagemDataSetTableAdapters.vw_Material_GridTableAdapter vw_Material_GridTableAdapter;
         private System.Windows.Forms.TextBox txtPesoEntrada;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

@@ -43,9 +43,6 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.gboxDados = new System.Windows.Forms.GroupBox();
             this.dgvPesagem = new System.Windows.Forms.DataGridView();
-            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
-            this.vwPesagemConsultaGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vw_PesagemConsulta_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_PesagemConsulta_GridTableAdapter();
             this.codigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataHoraEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataHoraSaidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,12 +58,16 @@
             this.usuarioInclusaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioAlteracaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwPesagemConsultaGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
+            this.vw_PesagemConsulta_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_PesagemConsulta_GridTableAdapter();
             this.btnBuscarTodos = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.webRelatorio = new System.Windows.Forms.WebBrowser();
             this.gboxDados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPesagem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwPesagemConsultaGridBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label20
@@ -164,6 +165,7 @@
             // 
             // gboxDados
             // 
+            this.gboxDados.Controls.Add(this.webRelatorio);
             this.gboxDados.Controls.Add(this.dgvPesagem);
             this.gboxDados.Location = new System.Drawing.Point(7, 65);
             this.gboxDados.Name = "gboxDados";
@@ -203,20 +205,6 @@
             this.dgvPesagem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPesagem.Size = new System.Drawing.Size(1177, 350);
             this.dgvPesagem.TabIndex = 0;
-            // 
-            // controlePesagemDataSet
-            // 
-            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
-            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vwPesagemConsultaGridBindingSource
-            // 
-            this.vwPesagemConsultaGridBindingSource.DataMember = "vw_PesagemConsulta_Grid";
-            this.vwPesagemConsultaGridBindingSource.DataSource = this.controlePesagemDataSet;
-            // 
-            // vw_PesagemConsulta_GridTableAdapter
-            // 
-            this.vw_PesagemConsulta_GridTableAdapter.ClearBeforeFill = true;
             // 
             // codigoDataGridViewTextBoxColumn
             // 
@@ -323,6 +311,20 @@
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // vwPesagemConsultaGridBindingSource
+            // 
+            this.vwPesagemConsultaGridBindingSource.DataMember = "vw_PesagemConsulta_Grid";
+            this.vwPesagemConsultaGridBindingSource.DataSource = this.controlePesagemDataSet;
+            // 
+            // controlePesagemDataSet
+            // 
+            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
+            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vw_PesagemConsulta_GridTableAdapter
+            // 
+            this.vw_PesagemConsulta_GridTableAdapter.ClearBeforeFill = true;
+            // 
             // btnBuscarTodos
             // 
             this.btnBuscarTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarTodos.Image")));
@@ -346,6 +348,16 @@
             this.button1.Text = "Imprimir Resultado";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // webRelatorio
+            // 
+            this.webRelatorio.Location = new System.Drawing.Point(81, -22);
+            this.webRelatorio.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webRelatorio.Name = "webRelatorio";
+            this.webRelatorio.Size = new System.Drawing.Size(998, 342);
+            this.webRelatorio.TabIndex = 36;
+            this.webRelatorio.Visible = false;
             // 
             // frmRelatorioPesagem
             // 
@@ -373,8 +385,8 @@
             this.Load += new System.EventHandler(this.frmRelatorioPesagem_Load);
             this.gboxDados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPesagem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwPesagemConsultaGridBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,5 +427,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnBuscarTodos;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.WebBrowser webRelatorio;
     }
 }

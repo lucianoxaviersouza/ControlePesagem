@@ -188,6 +188,7 @@
             // 
             this.txtNomeConhecido.Enabled = false;
             this.txtNomeConhecido.Location = new System.Drawing.Point(557, 83);
+            this.txtNomeConhecido.MaxLength = 100;
             this.txtNomeConhecido.Name = "txtNomeConhecido";
             this.txtNomeConhecido.Size = new System.Drawing.Size(168, 20);
             this.txtNomeConhecido.TabIndex = 7;
@@ -205,6 +206,7 @@
             // 
             this.txtSobreNome.Enabled = false;
             this.txtSobreNome.Location = new System.Drawing.Point(276, 83);
+            this.txtSobreNome.MaxLength = 100;
             this.txtSobreNome.Name = "txtSobreNome";
             this.txtSobreNome.Size = new System.Drawing.Size(275, 20);
             this.txtSobreNome.TabIndex = 5;
@@ -222,6 +224,7 @@
             // 
             this.txtNome.Enabled = false;
             this.txtNome.Location = new System.Drawing.Point(20, 83);
+            this.txtNome.MaxLength = 100;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(250, 20);
             this.txtNome.TabIndex = 3;
@@ -582,6 +585,7 @@
             // txtNomeConhecidoBusca
             // 
             this.txtNomeConhecidoBusca.Location = new System.Drawing.Point(576, 266);
+            this.txtNomeConhecidoBusca.MaxLength = 100;
             this.txtNomeConhecidoBusca.Name = "txtNomeConhecidoBusca";
             this.txtNomeConhecidoBusca.Size = new System.Drawing.Size(275, 20);
             this.txtNomeConhecidoBusca.TabIndex = 16;
@@ -598,6 +602,7 @@
             // txtNomeBusca
             // 
             this.txtNomeBusca.Location = new System.Drawing.Point(320, 266);
+            this.txtNomeBusca.MaxLength = 100;
             this.txtNomeBusca.Name = "txtNomeBusca";
             this.txtNomeBusca.Size = new System.Drawing.Size(250, 20);
             this.txtNomeBusca.TabIndex = 14;

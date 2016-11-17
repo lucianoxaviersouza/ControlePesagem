@@ -14,16 +14,17 @@ namespace Apresentacao.Telas
     public partial class Principal : Form
     {
         public static Usuario usuario;
+        frmLogin frmLogin;
     
         public Principal()
         {
             InitializeComponent();
         }
-        public Principal(Usuario usu)
+        public Principal(Usuario usu,frmLogin frmlogin)
         {
-            Principal.usuario = usu;
-
             InitializeComponent();
+            Principal.usuario = usu;
+            frmLogin = frmlogin;
         }
         private void tipoMaterialToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -40,7 +41,7 @@ namespace Apresentacao.Telas
         }
         private void Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            frmLogin.Close();
 
         }
         private void materialToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,6 +110,11 @@ namespace Apresentacao.Telas
             relatorioPesagem.MdiParent = this;
             relatorioPesagem.StartPosition = FormStartPosition.CenterScreen;
             relatorioPesagem.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
         
     }
