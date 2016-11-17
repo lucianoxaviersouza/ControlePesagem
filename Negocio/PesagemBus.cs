@@ -28,7 +28,17 @@ namespace Negocio
 
         public void inserir(Pesagem obj)
         {
-            throw new NotImplementedException();
+            PesagemDao dao = new PesagemDao();
+            try
+            {
+
+                dao.inserir(obj);
+
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
         }
 
         public List<Pesagem> listar()

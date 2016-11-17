@@ -46,5 +46,27 @@ namespace Apresentacao.Telas
             this.Enabled = true;
 
         }
+
+        private void dgvPesagem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            txtCodigoConsulta.Text = dgvPesagem.CurrentRow.Cells["codigo"].Value.ToString();
+            txtDataHoraEntradaConsulta.Text = dgvPesagem.CurrentRow.Cells["dataHoraEntrada"].Value.ToString();
+            txtDataHoraSaidaConsulta.Text = dgvPesagem.CurrentRow.Cells["dataHoraSaida"].Value.ToString();
+            txtClienteConsulta.Text = dgvPesagem.CurrentRow.Cells["Cliente"].Value.ToString();
+            txtVeiculoConsulta.Text = dgvPesagem.CurrentRow.Cells["veiculo"].Value.ToString();
+            txtMotoristaConsulta.Text = dgvPesagem.CurrentRow.Cells["motorista"].Value.ToString();
+            txtMaterialConsulta.Text = dgvPesagem.CurrentRow.Cells["material"].Value.ToString();
+            txtPesoEntrada.Text = dgvPesagem.CurrentRow.Cells["pesoEntrada"].Value.ToString();
+            txtPesoSaida.Text = dgvPesagem.CurrentRow.Cells["pesoSaida"].Value.ToString();
+            lblPesoTotal.Text = dgvPesagem.CurrentRow.Cells["pesoTotal"].Value.ToString();
+            txtDataInclusao.Text = dgvPesagem.CurrentRow.Cells["dataInclusao"].Value.ToString();
+            txtDataAlteracao.Text = dgvPesagem.CurrentRow.Cells["dataAlteracao"].Value.ToString();
+            txtUsuarioInclusao.Text = dgvPesagem.CurrentRow.Cells["usuarioInclusao"].Value.ToString();
+            txtUsuarioAlteracao.Text = dgvPesagem.CurrentRow.Cells["usuarioAlteracao"].Value.ToString();
+            txtStatus.Text = dgvPesagem.CurrentRow.Cells["status"].Value.ToString();
+            txtObservacoes.Text = dgvPesagem.CurrentRow.Cells["observacoes"].Value.ToString();
+            txtTipoOperacaoConsulta.Text = dgvPesagem.CurrentRow.Cells["tipoOperacao"].Value.ToString();
+        }
     }
 }
