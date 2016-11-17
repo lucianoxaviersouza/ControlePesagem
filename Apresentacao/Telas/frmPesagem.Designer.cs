@@ -34,6 +34,8 @@
             this.btnRegistrarEntrada = new System.Windows.Forms.ToolStripButton();
             this.btnRegistrarSaida = new System.Windows.Forms.ToolStripButton();
             this.gboxRegistroPesagemConsolidado = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtCodigoConsulta = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtObservacoes = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -69,23 +71,6 @@
             this.txtClienteConsulta = new System.Windows.Forms.TextBox();
             this.gboxDados = new System.Windows.Forms.GroupBox();
             this.dgvPesagem = new System.Windows.Forms.DataGridView();
-            this.txtCodigoPesq = new System.Windows.Forms.TextBox();
-            this.txtClientePesq = new System.Windows.Forms.TextBox();
-            this.dtpDataPesagemPesq = new System.Windows.Forms.DateTimePicker();
-            this.txtMotoristaPesq = new System.Windows.Forms.TextBox();
-            this.txtMaterialPesq = new System.Windows.Forms.TextBox();
-            this.btnBuscarTodos = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtCodigoConsulta = new System.Windows.Forms.TextBox();
-            this.vwPesagemConsultaGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
-            this.vw_PesagemConsulta_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_PesagemConsulta_GridTableAdapter();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataHoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataHoraSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,6 +88,21 @@
             this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwPesagemConsultaGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
+            this.txtCodigoPesq = new System.Windows.Forms.TextBox();
+            this.txtClientePesq = new System.Windows.Forms.TextBox();
+            this.dtpDataPesagemPesq = new System.Windows.Forms.DateTimePicker();
+            this.txtMotoristaPesq = new System.Windows.Forms.TextBox();
+            this.txtMaterialPesq = new System.Windows.Forms.TextBox();
+            this.btnBuscarTodos = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.vw_PesagemConsulta_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_PesagemConsulta_GridTableAdapter();
             this.toolStrip1.SuspendLayout();
             this.gboxRegistroPesagemConsolidado.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -179,6 +179,23 @@
             this.gboxRegistroPesagemConsolidado.TabStop = false;
             this.gboxRegistroPesagemConsolidado.Text = "Registro de Pesagem";
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(19, 25);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(40, 13);
+            this.label21.TabIndex = 23;
+            this.label21.Text = "Código";
+            // 
+            // txtCodigoConsulta
+            // 
+            this.txtCodigoConsulta.Enabled = false;
+            this.txtCodigoConsulta.Location = new System.Drawing.Point(22, 41);
+            this.txtCodigoConsulta.Name = "txtCodigoConsulta";
+            this.txtCodigoConsulta.Size = new System.Drawing.Size(106, 20);
+            this.txtCodigoConsulta.TabIndex = 22;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -215,9 +232,8 @@
             this.lblPesoTotal.ForeColor = System.Drawing.Color.Blue;
             this.lblPesoTotal.Location = new System.Drawing.Point(14, 24);
             this.lblPesoTotal.Name = "lblPesoTotal";
-            this.lblPesoTotal.Size = new System.Drawing.Size(112, 31);
+            this.lblPesoTotal.Size = new System.Drawing.Size(0, 31);
             this.lblPesoTotal.TabIndex = 0;
-            this.lblPesoTotal.Text = "9999,99";
             // 
             // label9
             // 
@@ -523,142 +539,6 @@
             this.dgvPesagem.TabIndex = 0;
             this.dgvPesagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPesagem_CellContentClick);
             // 
-            // txtCodigoPesq
-            // 
-            this.txtCodigoPesq.Location = new System.Drawing.Point(146, 461);
-            this.txtCodigoPesq.Name = "txtCodigoPesq";
-            this.txtCodigoPesq.Size = new System.Drawing.Size(105, 20);
-            this.txtCodigoPesq.TabIndex = 3;
-            // 
-            // txtClientePesq
-            // 
-            this.txtClientePesq.Location = new System.Drawing.Point(257, 461);
-            this.txtClientePesq.Name = "txtClientePesq";
-            this.txtClientePesq.Size = new System.Drawing.Size(246, 20);
-            this.txtClientePesq.TabIndex = 4;
-            // 
-            // dtpDataPesagemPesq
-            // 
-            this.dtpDataPesagemPesq.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataPesagemPesq.Location = new System.Drawing.Point(30, 461);
-            this.dtpDataPesagemPesq.Name = "dtpDataPesagemPesq";
-            this.dtpDataPesagemPesq.Size = new System.Drawing.Size(109, 20);
-            this.dtpDataPesagemPesq.TabIndex = 5;
-            // 
-            // txtMotoristaPesq
-            // 
-            this.txtMotoristaPesq.Location = new System.Drawing.Point(510, 461);
-            this.txtMotoristaPesq.Name = "txtMotoristaPesq";
-            this.txtMotoristaPesq.Size = new System.Drawing.Size(180, 20);
-            this.txtMotoristaPesq.TabIndex = 6;
-            // 
-            // txtMaterialPesq
-            // 
-            this.txtMaterialPesq.Location = new System.Drawing.Point(697, 461);
-            this.txtMaterialPesq.Name = "txtMaterialPesq";
-            this.txtMaterialPesq.Size = new System.Drawing.Size(180, 20);
-            this.txtMaterialPesq.TabIndex = 7;
-            // 
-            // btnBuscarTodos
-            // 
-            this.btnBuscarTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarTodos.Image")));
-            this.btnBuscarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarTodos.Location = new System.Drawing.Point(953, 460);
-            this.btnBuscarTodos.Name = "btnBuscarTodos";
-            this.btnBuscarTodos.Size = new System.Drawing.Size(94, 23);
-            this.btnBuscarTodos.TabIndex = 13;
-            this.btnBuscarTodos.Text = "Buscar todos";
-            this.btnBuscarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscarTodos.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(883, 459);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(66, 23);
-            this.btnBuscar.TabIndex = 12;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(31, 445);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(77, 13);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "Data Pesagem";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(145, 445);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(40, 13);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "Código";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(254, 445);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(39, 13);
-            this.label18.TabIndex = 19;
-            this.label18.Text = "Cliente";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(507, 445);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(50, 13);
-            this.label19.TabIndex = 20;
-            this.label19.Text = "Motorista";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(694, 445);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(44, 13);
-            this.label20.TabIndex = 21;
-            this.label20.Text = "Material";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(19, 25);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(40, 13);
-            this.label21.TabIndex = 23;
-            this.label21.Text = "Código";
-            // 
-            // txtCodigoConsulta
-            // 
-            this.txtCodigoConsulta.Enabled = false;
-            this.txtCodigoConsulta.Location = new System.Drawing.Point(22, 41);
-            this.txtCodigoConsulta.Name = "txtCodigoConsulta";
-            this.txtCodigoConsulta.Size = new System.Drawing.Size(106, 20);
-            this.txtCodigoConsulta.TabIndex = 22;
-            // 
-            // vwPesagemConsultaGridBindingSource
-            // 
-            this.vwPesagemConsultaGridBindingSource.DataMember = "vw_PesagemConsulta_Grid";
-            this.vwPesagemConsultaGridBindingSource.DataSource = this.controlePesagemDataSet;
-            // 
-            // controlePesagemDataSet
-            // 
-            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
-            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vw_PesagemConsulta_GridTableAdapter
-            // 
-            this.vw_PesagemConsulta_GridTableAdapter.ClearBeforeFill = true;
-            // 
             // codigo
             // 
             this.codigo.DataPropertyName = "codigo";
@@ -778,6 +658,125 @@
             this.observacoes.Name = "observacoes";
             this.observacoes.ReadOnly = true;
             this.observacoes.Visible = false;
+            // 
+            // vwPesagemConsultaGridBindingSource
+            // 
+            this.vwPesagemConsultaGridBindingSource.DataMember = "vw_PesagemConsulta_Grid";
+            this.vwPesagemConsultaGridBindingSource.DataSource = this.controlePesagemDataSet;
+            // 
+            // controlePesagemDataSet
+            // 
+            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
+            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txtCodigoPesq
+            // 
+            this.txtCodigoPesq.Location = new System.Drawing.Point(146, 461);
+            this.txtCodigoPesq.Name = "txtCodigoPesq";
+            this.txtCodigoPesq.Size = new System.Drawing.Size(105, 20);
+            this.txtCodigoPesq.TabIndex = 3;
+            // 
+            // txtClientePesq
+            // 
+            this.txtClientePesq.Location = new System.Drawing.Point(257, 461);
+            this.txtClientePesq.Name = "txtClientePesq";
+            this.txtClientePesq.Size = new System.Drawing.Size(246, 20);
+            this.txtClientePesq.TabIndex = 4;
+            // 
+            // dtpDataPesagemPesq
+            // 
+            this.dtpDataPesagemPesq.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataPesagemPesq.Location = new System.Drawing.Point(30, 461);
+            this.dtpDataPesagemPesq.Name = "dtpDataPesagemPesq";
+            this.dtpDataPesagemPesq.Size = new System.Drawing.Size(109, 20);
+            this.dtpDataPesagemPesq.TabIndex = 5;
+            // 
+            // txtMotoristaPesq
+            // 
+            this.txtMotoristaPesq.Location = new System.Drawing.Point(510, 461);
+            this.txtMotoristaPesq.Name = "txtMotoristaPesq";
+            this.txtMotoristaPesq.Size = new System.Drawing.Size(180, 20);
+            this.txtMotoristaPesq.TabIndex = 6;
+            // 
+            // txtMaterialPesq
+            // 
+            this.txtMaterialPesq.Location = new System.Drawing.Point(697, 461);
+            this.txtMaterialPesq.Name = "txtMaterialPesq";
+            this.txtMaterialPesq.Size = new System.Drawing.Size(180, 20);
+            this.txtMaterialPesq.TabIndex = 7;
+            // 
+            // btnBuscarTodos
+            // 
+            this.btnBuscarTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarTodos.Image")));
+            this.btnBuscarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarTodos.Location = new System.Drawing.Point(953, 460);
+            this.btnBuscarTodos.Name = "btnBuscarTodos";
+            this.btnBuscarTodos.Size = new System.Drawing.Size(94, 23);
+            this.btnBuscarTodos.TabIndex = 13;
+            this.btnBuscarTodos.Text = "Buscar todos";
+            this.btnBuscarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarTodos.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(883, 459);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(66, 23);
+            this.btnBuscar.TabIndex = 12;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(31, 445);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(77, 13);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Data Pesagem";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(145, 445);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(40, 13);
+            this.label17.TabIndex = 18;
+            this.label17.Text = "Código";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(254, 445);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(39, 13);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "Cliente";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(507, 445);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(50, 13);
+            this.label19.TabIndex = 20;
+            this.label19.Text = "Motorista";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(694, 445);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(44, 13);
+            this.label20.TabIndex = 21;
+            this.label20.Text = "Material";
+            // 
+            // vw_PesagemConsulta_GridTableAdapter
+            // 
+            this.vw_PesagemConsulta_GridTableAdapter.ClearBeforeFill = true;
             // 
             // frmPesagem
             // 
