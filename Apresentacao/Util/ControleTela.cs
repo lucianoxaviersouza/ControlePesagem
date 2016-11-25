@@ -9,7 +9,9 @@ namespace Apresentacao.Util
 {
     static public class ControleTela
     {
-       
+
+        
+        
         static internal void LimpaCampos(ContainerControl _form)
         {
             foreach (var textBox in _form.Controls.OfType<GroupBox>().SelectMany(groupBox => groupBox.Controls.OfType<TextBox>()))

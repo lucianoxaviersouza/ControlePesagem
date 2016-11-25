@@ -13,12 +13,30 @@ namespace Negocio
 
         public Pesagem buscarPorCodigo(int codigo)
         {
-            throw new NotImplementedException();
+            PesagemDao dao = new PesagemDao();
+            try
+            {
+                return dao.buscarPorCodigo(codigo);
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
         }
 
         public void alterar(Pesagem obj)
         {
-            throw new NotImplementedException();
+            PesagemDao dao = new PesagemDao();
+            try
+            {
+
+                dao.alterar(obj);
+
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
         }
 
         public void excluir(Pesagem obj)

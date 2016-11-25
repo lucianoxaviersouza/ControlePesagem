@@ -14,7 +14,43 @@ namespace Dados
 
         public Cliente buscarPorCodigo(int codigo)
         {
-            throw new NotImplementedException();
+            SqlConnection objConexao = ConnectionFactory.getConexao();
+            SqlParameter param = new SqlParameter("codigo", codigo);
+            string strQuery = "SELECT * FROM Cliente WHERE codigo=@codigo";
+            SqlCommand objCommand = new SqlCommand(strQuery, objConexao);
+            objCommand.Parameters.Add(param);
+            try
+            {
+                SqlDataReader objReader = objCommand.ExecuteReader();
+                Cliente objCliente = null;
+                if (objReader.Read())
+                {
+                    objCliente = new Cliente();
+                    objCliente.Codigo = Convert.ToInt16(objReader["codigo"]);
+                    objCliente.RazaoSocial = Convert.ToString(objReader["razaoSocial"]);
+                    objCliente.NomeFantasia = Convert.ToString(objReader["nomeFantasia"]);
+                    objCliente.CNPJ = Convert.ToString(objReader["cnpj"]);
+                    objCliente.Telefone1 = Convert.ToString(objReader["telefone1"]);
+                    objCliente.Telefone2 = Convert.ToString(objReader["telefone2"]);
+                    objCliente.Ativo = Convert.ToUInt16(objReader["ativo"]);
+                    objCliente.email = Convert.ToString(objReader["email"]);
+
+                    objCliente.DataInclusao = Convert.ToDateTime((objReader["dataInclusao"] == DBNull.Value) ? null : objReader["dataInclusao"]);
+                    objCliente.DataAlteracao = Convert.ToDateTime((objReader["dataAlteracao"] == DBNull.Value) ? null : objReader["dataAlteracao"]);
+
+                    UsuarioDao usuInc = new UsuarioDao();
+                    objCliente.UsuarioInclusao = usuInc.buscarPorCodigo(Convert.ToInt16((objReader["usuarioInclusao"] == DBNull.Value) ? null : objReader["usuarioInclusao"]));
+                    UsuarioDao usuAlt = new UsuarioDao();
+                    objCliente.UsuarioAlteracao = usuAlt.buscarPorCodigo(Convert.ToInt16((objReader["usuarioalteracao"] == DBNull.Value) ? null : objReader["usuarioAlteracao"]));
+
+                }
+                objReader.Close();
+                return objCliente;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
         }
 
         public void alterar(Cliente obj)

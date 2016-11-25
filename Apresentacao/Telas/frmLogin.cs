@@ -67,5 +67,21 @@ namespace Apresentacao.Telas
             this.Close();
 
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox txtTemp = (TextBox)sender;
+            //Verifica se já há uma vígula e se a tecla precionada for uma virgula impede a operação
+            if (txtTemp.Text.Contains(",") && e.KeyChar == (char)44)
+                {
+                    e.Handled = true;
+                }
+            //Se não for número, vírgula ou backspace trava a tecla
+            if (!(Char.IsNumber(e.KeyChar)) && !(e.KeyChar == (char)8) &&
+            !(e.KeyChar == (char)44))
+            {
+                e.Handled = true;
+             }
+        }
     }
 }

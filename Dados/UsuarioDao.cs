@@ -17,26 +17,26 @@ namespace Dados
             SqlConnection objConexao = ConnectionFactory.getConexao();
             SqlParameter param = new SqlParameter("codigo", codigo);
             string strQuery = "SELECT * FROM Usuario WHERE codigo=@codigo";
-            SqlCommand objCommand = new SqlCommand(strQuery, objConexao);
-            objCommand.Parameters.Add(param);
+            SqlCommand objCommandUsu = new SqlCommand(strQuery, objConexao);
+            objCommandUsu.Parameters.Add(param);
             try
             {
-                SqlDataReader objReader = objCommand.ExecuteReader();
+                SqlDataReader objReaderUsu = objCommandUsu.ExecuteReader();
                 Usuario objUsuario = null;
-                if (objReader.Read())
+                if (objReaderUsu.Read())
                 {
                     objUsuario = new Usuario();
-                    objUsuario.Codigo = Convert.ToInt16(objReader["codigo"]);
-                    objUsuario.Login = Convert.ToString(objReader["login"]);
-                    objUsuario.Senha = Convert.ToString(objReader["senha"]);
-                    objUsuario.Nome = Convert.ToString(objReader["nome"]);
-                    objUsuario.Ativo = Convert.ToInt16(objReader["ativo"]);
-                    objUsuario.DataInclusao = Convert.ToDateTime(objReader["dataInclusao"]);
-                    objUsuario.DataAlteracao = Convert.ToDateTime(objReader["dataAlteracao"]);
+                    objUsuario.Codigo = Convert.ToInt16(objReaderUsu["codigo"]);
+                    objUsuario.Login = Convert.ToString(objReaderUsu["login"]);
+                    objUsuario.Senha = Convert.ToString(objReaderUsu["senha"]);
+                    objUsuario.Nome = Convert.ToString(objReaderUsu["nome"]);
+                    objUsuario.Ativo = Convert.ToInt16(objReaderUsu["ativo"]);
+                    objUsuario.DataInclusao = Convert.ToDateTime(objReaderUsu["dataInclusao"]);
+                    objUsuario.DataAlteracao = Convert.ToDateTime(objReaderUsu["dataAlteracao"]);
                     //TESTE COMIT 2
                     
                 }
-                objReader.Close();
+                objReaderUsu.Close();
                 return objUsuario;
             }
             catch (SqlException err)

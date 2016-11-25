@@ -31,14 +31,14 @@ namespace Dados
                     objMaterial.Descricao = Convert.ToString(objReader["descricao"]);
                     objMaterial.TipoMaterial.Codigo = Convert.ToInt16(objReader["idTipoMaterial"]);
                     objMaterial.Ativo = Convert.ToInt16(objReader["ativo"]);
-                    objMaterial.DataInclusao = Convert.ToDateTime(objReader["dataInclusao"]);
+
+                    objMaterial.DataInclusao = Convert.ToDateTime((objReader["dataInclusao"] == DBNull.Value) ? null : objReader["dataInclusao"]);
+                    objMaterial.DataAlteracao = Convert.ToDateTime((objReader["dataAlteracao"] == DBNull.Value) ? null : objReader["dataAlteracao"]);
+
 
                     UsuarioDao usuInc = new UsuarioDao();
                     objMaterial.UsuarioInclusao = usuInc.buscarPorCodigo(Convert.ToInt16((objReader["usuarioInclusao"] == DBNull.Value) ? null : objReader["usuarioInclusao"])); 
-                    
-                    
-                    objMaterial.DataAlteracao = Convert.ToDateTime(objReader["dataAlteracao"]);
-
+                                        
                     UsuarioDao usuAlt = new UsuarioDao();
                     objMaterial.UsuarioAlteracao = usuAlt.buscarPorCodigo(Convert.ToInt16((objReader["usuarioalteracao"] == DBNull.Value) ? null : objReader["usuarioAlteracao"]));
 

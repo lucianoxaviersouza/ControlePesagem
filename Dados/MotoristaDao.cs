@@ -13,7 +13,45 @@ namespace Dados
     {
         public Motorista buscarPorCodigo(int codigo)
         {
-            throw new NotImplementedException();
+            SqlConnection objConexao = ConnectionFactory.getConexao();
+            SqlParameter param = new SqlParameter("codigo", codigo);
+            string strQuery = "SELECT * FROM Motorista WHERE codigo=@codigo";
+            SqlCommand objCommand = new SqlCommand(strQuery, objConexao);
+            objCommand.Parameters.Add(param);
+            try
+            {
+                SqlDataReader objReader = objCommand.ExecuteReader();
+                Motorista objMotorista = null;
+
+                if (objReader.Read())
+                {
+                    objMotorista = new Motorista();
+                    objMotorista.Codigo = Convert.ToInt16(objReader["codigo"]);
+                    objMotorista.Nome = Convert.ToString(objReader["nome"]);
+                    objMotorista.Sobrenome = Convert.ToString(objReader["sobrenome"]);
+                    objMotorista.nomeConhecido = Convert.ToString(objReader["nomeConhecido"]);
+                    objMotorista.CPF = Convert.ToString(objReader["cpf"]);
+                    objMotorista.Ativo = Convert.ToUInt16(objReader["ativo"]);
+
+                    objMotorista.DataInclusao = Convert.ToDateTime((objReader["dataInclusao"] == DBNull.Value) ? null : objReader["dataInclusao"]);
+                    objMotorista.DataAlteracao = Convert.ToDateTime((objReader["dataAlteracao"] == DBNull.Value) ? null : objReader["dataAlteracao"]);
+
+                    ClienteDao cli = new ClienteDao();
+                    objMotorista.Cliente = cli.buscarPorCodigo(Convert.ToInt16((objReader["idCliente"] == DBNull.Value) ? null : objReader["idCliente"]));
+
+                    UsuarioDao usuInc = new UsuarioDao();
+                    objMotorista.UsuarioInclusao = usuInc.buscarPorCodigo(Convert.ToInt16((objReader["usuarioInclusao"] == DBNull.Value) ? null : objReader["usuarioInclusao"]));
+                    UsuarioDao usuAlt = new UsuarioDao();
+                    objMotorista.UsuarioAlteracao = usuAlt.buscarPorCodigo(Convert.ToInt16((objReader["usuarioalteracao"] == DBNull.Value) ? null : objReader["usuarioAlteracao"]));
+
+                }
+                objReader.Close();
+                return objMotorista;
+            }
+            catch (Exception err)
+            {
+                throw err;
+            }
         }
 
         public void alterar(Motorista obj)

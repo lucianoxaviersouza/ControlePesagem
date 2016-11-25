@@ -39,7 +39,8 @@ namespace Apresentacao.Telas
 
         private void btnRegistrarSaida_Click(object sender, EventArgs e)
         {
-            frmPesagemSaida pesagemSaida = new frmPesagemSaida();
+            int codigoPesagem = Convert.ToInt16(txtCodigoConsulta.Text);
+            frmPesagemSaida pesagemSaida = new frmPesagemSaida(this,codigoPesagem);
 
             this.Enabled = false;
             pesagemSaida.StartPosition = FormStartPosition.CenterScreen;
