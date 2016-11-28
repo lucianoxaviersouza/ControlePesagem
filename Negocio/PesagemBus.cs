@@ -39,6 +39,7 @@ namespace Negocio
             }
         }
 
+        
         public void excluir(Pesagem obj)
         {
             throw new NotImplementedException();

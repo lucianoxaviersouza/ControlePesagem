@@ -158,6 +158,8 @@
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Checked = true;
+            this.chkAtivo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAtivo.Enabled = false;
             this.chkAtivo.Location = new System.Drawing.Point(125, 125);
             this.chkAtivo.Name = "chkAtivo";
@@ -188,7 +190,7 @@
             // 
             this.txtNomeConhecido.Enabled = false;
             this.txtNomeConhecido.Location = new System.Drawing.Point(557, 83);
-            this.txtNomeConhecido.MaxLength = 100;
+            this.txtNomeConhecido.MaxLength = 50;
             this.txtNomeConhecido.Name = "txtNomeConhecido";
             this.txtNomeConhecido.Size = new System.Drawing.Size(168, 20);
             this.txtNomeConhecido.TabIndex = 7;
@@ -206,7 +208,7 @@
             // 
             this.txtSobreNome.Enabled = false;
             this.txtSobreNome.Location = new System.Drawing.Point(276, 83);
-            this.txtSobreNome.MaxLength = 100;
+            this.txtSobreNome.MaxLength = 50;
             this.txtSobreNome.Name = "txtSobreNome";
             this.txtSobreNome.Size = new System.Drawing.Size(275, 20);
             this.txtSobreNome.TabIndex = 5;
@@ -224,7 +226,7 @@
             // 
             this.txtNome.Enabled = false;
             this.txtNome.Location = new System.Drawing.Point(20, 83);
-            this.txtNome.MaxLength = 100;
+            this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(250, 20);
             this.txtNome.TabIndex = 3;

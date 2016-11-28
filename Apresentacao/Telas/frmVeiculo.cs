@@ -49,7 +49,7 @@ namespace Apresentacao.Telas
         private void stbtIncluir_Click(object sender, EventArgs e)
         {
 
-           dgvVeiculo.Enabled = false;
+            dgvVeiculo.Enabled = false;
             globalTipoAcao = enunTipoAcao.inclusao;
             stAcoes.Enabled = false;
             txtModelo.Enabled = true;
@@ -62,6 +62,8 @@ namespace Apresentacao.Telas
             chkAtivo.Enabled = true;
 
             ControleTela.LimpaCampos(this);
+            chkAtivo.Checked = true;
+
             btnSalvar.Enabled = true;
             btnCancelar.Enabled = true;
 

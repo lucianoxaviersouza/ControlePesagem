@@ -51,7 +51,6 @@ namespace Apresentacao.Telas
             dtpDataHoraSaida.Format = DateTimePickerFormat.Custom;
             dtpDataHoraSaida.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             dtpDataHoraSaida.Value = DateTime.Now;
-            //txtPesoSaida.Text = pesagem.pesoSaida.ToString();
             txtObservacoes.Text = pesagem.observacoes;
 
 
@@ -114,6 +113,14 @@ namespace Apresentacao.Telas
             this.Close();
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+         
+        }
+        
+
 
     }
 }

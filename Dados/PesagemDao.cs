@@ -70,6 +70,10 @@ namespace Dados
 
         public void alterar(Pesagem obj)
         {
+            
+            
+            if (!obj.status.Equals("Cancelada"))
+            {
             SqlConnection objConexao = ConnectionFactory.getConexao();
             SqlParameter[] param = new SqlParameter[7]
             {
@@ -104,12 +108,54 @@ namespace Dados
             try
             {
                 objCommand.ExecuteNonQuery();
-                            }
+            }
             catch (SqlException err)
             {
                 throw err;
             }
+
+            }else {
+
+                SqlConnection objConexao = ConnectionFactory.getConexao();
+                SqlParameter[] param = new SqlParameter[5]
+            {
+                
+                new SqlParameter("@codigo", SqlDbType.Int),
+                new SqlParameter("@status", SqlDbType.NChar),
+                new SqlParameter("@observacoes", SqlDbType.NChar),
+                new SqlParameter("@usuarioAlteracao", SqlDbType.Int),
+                new SqlParameter("@dataAlteracao", SqlDbType.DateTime)
+            };
+                param[0].Value = obj.codigo;
+                param[1].Value = obj.status;
+                param[2].Value = obj.observacoes;
+                param[3].Value = obj.UsuarioAlteracao.Codigo;
+                param[4].Value = obj.DataAlteracao;
+
+                string strQuery = "Update Pesagem set "
+                    + "status= @status,"
+                    + "observacoes= @observacoes,"
+                    + "usuarioAlteracao= @usuarioAlteracao,"
+                    + "dataAlteracao= @dataAlteracao "
+                    + " where codigo=@codigo";
+
+                SqlCommand objCommand = new SqlCommand(strQuery, objConexao);
+                objCommand.Parameters.AddRange(param);
+                try
+                {
+                    objCommand.ExecuteNonQuery();
+                }
+                catch (SqlException err)
+                {
+                    throw err;
+                }
+            }
+            
+            
+            
+            
         }
+
 
         public void excluir(Pesagem obj)
         {

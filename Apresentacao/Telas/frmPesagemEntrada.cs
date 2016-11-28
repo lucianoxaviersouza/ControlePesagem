@@ -88,12 +88,11 @@ namespace Apresentacao.Telas
 
         private void frmPesagemEntrada_Load(object sender, EventArgs e)
         {
-            
-            
-            this.vw_Material_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Material_Grid);
-            this.vw_Veiculo_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Veiculo_Grid);
-            this.vw_Motorista_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Motorista_Grid);
+
             this.vw_Cliente_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Cliente_Grid);
+            this.vw_Material_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Material_Grid);
+            this.vw_Motorista_GridTableAdapter.FillByCodigoCliente(this.controlePesagemDataSet.vw_Motorista_Grid, ((int)(System.Convert.ChangeType(cboCliente.SelectedValue, typeof(int)))));
+            this.vw_Veiculo_GridTableAdapter.FillByCodigoCliente(this.controlePesagemDataSet.vw_Veiculo_Grid, ((int)(System.Convert.ChangeType(cboCliente.SelectedValue, typeof(int)))));
 
             dtpDataHoraEntrada.Format = DateTimePickerFormat.Custom;
             dtpDataHoraEntrada.CustomFormat = "dd/MM/yyyy HH:mm:ss";
@@ -105,5 +104,14 @@ namespace Apresentacao.Telas
         {
             this.Close();
         }
+
+
+        private void cboCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.vw_Motorista_GridTableAdapter.FillByCodigoCliente(this.controlePesagemDataSet.vw_Motorista_Grid, ((int)(System.Convert.ChangeType(cboCliente.SelectedValue, typeof(int)))));
+            this.vw_Veiculo_GridTableAdapter.FillByCodigoCliente(this.controlePesagemDataSet.vw_Veiculo_Grid, ((int)(System.Convert.ChangeType(cboCliente.SelectedValue, typeof(int)))));
+        }
+
+        
     }
 }

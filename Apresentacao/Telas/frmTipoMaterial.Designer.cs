@@ -116,8 +116,10 @@ namespace Apresentacao.Telas
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Checked = true;
+            this.chkAtivo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAtivo.Enabled = false;
-            this.chkAtivo.Location = new System.Drawing.Point(486, 46);
+            this.chkAtivo.Location = new System.Drawing.Point(582, 46);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
             this.chkAtivo.TabIndex = 2;
@@ -139,8 +141,9 @@ namespace Apresentacao.Telas
             // 
             this.txtDescricao.Enabled = false;
             this.txtDescricao.Location = new System.Drawing.Point(118, 44);
+            this.txtDescricao.MaxLength = 50;
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(349, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(458, 20);
             this.txtDescricao.TabIndex = 1;
             // 
             // gboxInfoControle
@@ -439,6 +442,7 @@ namespace Apresentacao.Telas
             // txtDescricaoBusca
             // 
             this.txtDescricaoBusca.Location = new System.Drawing.Point(117, 241);
+            this.txtDescricaoBusca.MaxLength = 50;
             this.txtDescricaoBusca.Name = "txtDescricaoBusca";
             this.txtDescricaoBusca.Size = new System.Drawing.Size(349, 20);
             this.txtDescricaoBusca.TabIndex = 9;

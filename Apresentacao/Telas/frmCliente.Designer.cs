@@ -123,6 +123,8 @@
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Checked = true;
+            this.chkAtivo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAtivo.Enabled = false;
             this.chkAtivo.Location = new System.Drawing.Point(664, 39);
             this.chkAtivo.Name = "chkAtivo";
@@ -551,7 +553,6 @@
             // 
             // txtCNPJBusca
             // 
-            this.txtCNPJBusca.Enabled = false;
             this.txtCNPJBusca.Location = new System.Drawing.Point(463, 251);
             this.txtCNPJBusca.Mask = "00.000.000/0000-00";
             this.txtCNPJBusca.Name = "txtCNPJBusca";
@@ -578,7 +579,6 @@
             // 
             // txtNomeFantasiaBusca
             // 
-            this.txtNomeFantasiaBusca.Enabled = false;
             this.txtNomeFantasiaBusca.Location = new System.Drawing.Point(139, 251);
             this.txtNomeFantasiaBusca.MaxLength = 100;
             this.txtNomeFantasiaBusca.Name = "txtNomeFantasiaBusca";
@@ -596,7 +596,6 @@
             // 
             // txtCodigoBusca
             // 
-            this.txtCodigoBusca.Enabled = false;
             this.txtCodigoBusca.Location = new System.Drawing.Point(33, 251);
             this.txtCodigoBusca.MaxLength = 20;
             this.txtCodigoBusca.Name = "txtCodigoBusca";
@@ -605,7 +604,6 @@
             // 
             // btnBuscarTodos
             // 
-            this.btnBuscarTodos.Enabled = false;
             this.btnBuscarTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarTodos.Image")));
             this.btnBuscarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscarTodos.Location = new System.Drawing.Point(667, 249);
@@ -615,10 +613,10 @@
             this.btnBuscarTodos.Text = "Buscar todos";
             this.btnBuscarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarTodos.UseVisualStyleBackColor = true;
+            this.btnBuscarTodos.Click += new System.EventHandler(this.btnBuscarTodos_Click);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Enabled = false;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(587, 249);

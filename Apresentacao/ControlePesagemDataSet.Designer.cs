@@ -6787,13 +6787,21 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT codigo, nome, sobrenome, nomeConhecido, cpf, ativo, codigoCliente, RazaoSo" +
                 "cialCliente, NomeFantasiaCliente, dataInclusao, dataAlteracao, usuarioInclusao, " +
                 "usuarioAlteracao, ativo_string FROM dbo.vw_Motorista_Grid";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT codigo, nome, sobrenome, nomeConhecido, cpf, ativo, codigoCliente, RazaoSo" +
+                "cialCliente, NomeFantasiaCliente, dataInclusao, dataAlteracao, usuarioInclusao, " +
+                "usuarioAlteracao, ativo_string FROM dbo.vw_Motorista_Grid where codigoCliente = " +
+                "@codigoCliente";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigoCliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "codigoCliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6818,6 +6826,20 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             ControlePesagemDataSet.vw_Motorista_GridDataTable dataTable = new ControlePesagemDataSet.vw_Motorista_GridDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByCodigoCliente(ControlePesagemDataSet.vw_Motorista_GridDataTable dataTable, int codigoCliente) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(codigoCliente));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
     }
     
@@ -7155,7 +7177,7 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT codigo, dataHoraEntrada, dataHoraSaida, pesoEntrada, pesoSaida, pesoTotal," +
@@ -7163,6 +7185,11 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
                 "usao, usuarioAlteracao, status, observacoes, tipoOperacao FROM vw_PesagemConsult" +
                 "a_Grid";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT codigo, dataHoraEntrada, dataHoraSaida, pesoEntrada, pesoSaida, pesoTotal, Cliente, veiculo, motorista, material, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao, status, observacoes, tipoOperacao FROM vw_PesagemConsulta_Grid where codigo =@codigo";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7184,6 +7211,32 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual ControlePesagemDataSet.vw_PesagemConsulta_GridDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            ControlePesagemDataSet.vw_PesagemConsulta_GridDataTable dataTable = new ControlePesagemDataSet.vw_PesagemConsulta_GridDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByCodigo(ControlePesagemDataSet.vw_PesagemConsulta_GridDataTable dataTable, int codigo) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(codigo));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual ControlePesagemDataSet.vw_PesagemConsulta_GridDataTable GetDataByCodigo(int codigo) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(codigo));
             ControlePesagemDataSet.vw_PesagemConsulta_GridDataTable dataTable = new ControlePesagemDataSet.vw_PesagemConsulta_GridDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -7686,13 +7739,20 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT codigo, placa, cor, modelo, ativo, RazaoSocialCliente, codigoCliente, Nome" +
                 "FantasiaCliente, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao," +
                 " ativo_string FROM dbo.vw_Veiculo_Grid";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT codigo, placa, cor, modelo, ativo, RazaoSocialCliente, codigoCliente, Nome" +
+                "FantasiaCliente, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao," +
+                " ativo_string FROM dbo.vw_Veiculo_Grid Where codigoCliente = @codigoCliente";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigoCliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "codigoCliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7717,6 +7777,20 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             ControlePesagemDataSet.vw_Veiculo_GridDataTable dataTable = new ControlePesagemDataSet.vw_Veiculo_GridDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByCodigoCliente(ControlePesagemDataSet.vw_Veiculo_GridDataTable dataTable, int codigoCliente) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(codigoCliente));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
     }
     

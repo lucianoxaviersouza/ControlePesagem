@@ -74,6 +74,7 @@
             this.cboCliente.Size = new System.Drawing.Size(453, 21);
             this.cboCliente.TabIndex = 0;
             this.cboCliente.ValueMember = "codigo";
+            this.cboCliente.SelectedIndexChanged += new System.EventHandler(this.cboCliente_SelectedIndexChanged);
             // 
             // vwClienteGridBindingSource
             // 
@@ -158,7 +159,8 @@
             this.cboOperacao.FormattingEnabled = true;
             this.cboOperacao.Items.AddRange(new object[] {
             "Compra",
-            "Venda"});
+            "Venda",
+            "Pesagem de Lixo"});
             this.cboOperacao.Location = new System.Drawing.Point(10, 156);
             this.cboOperacao.Name = "cboOperacao";
             this.cboOperacao.Size = new System.Drawing.Size(127, 21);
@@ -284,7 +286,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(475, 376);
+            this.ClientSize = new System.Drawing.Size(483, 390);
             this.Controls.Add(this.txtPesoEntrada);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);

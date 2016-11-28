@@ -38,7 +38,6 @@
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.txtCor = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtPlaca = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -84,6 +83,7 @@
             this.txtPlacaBusca = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.vw_Cliente_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_Cliente_GridTableAdapter();
+            this.txtPlaca = new System.Windows.Forms.MaskedTextBox();
             this.gboxCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
@@ -98,12 +98,12 @@
             // 
             // gboxCampos
             // 
+            this.gboxCampos.Controls.Add(this.txtPlaca);
             this.gboxCampos.Controls.Add(this.label10);
             this.gboxCampos.Controls.Add(this.cboCliente);
             this.gboxCampos.Controls.Add(this.chkAtivo);
             this.gboxCampos.Controls.Add(this.txtCor);
             this.gboxCampos.Controls.Add(this.label8);
-            this.gboxCampos.Controls.Add(this.txtPlaca);
             this.gboxCampos.Controls.Add(this.label7);
             this.gboxCampos.Controls.Add(this.txtModelo);
             this.gboxCampos.Controls.Add(this.label6);
@@ -151,6 +151,8 @@
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Checked = true;
+            this.chkAtivo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAtivo.Enabled = false;
             this.chkAtivo.Location = new System.Drawing.Point(674, 84);
             this.chkAtivo.Name = "chkAtivo";
@@ -162,27 +164,20 @@
             // txtCor
             // 
             this.txtCor.Enabled = false;
-            this.txtCor.Location = new System.Drawing.Point(553, 82);
+            this.txtCor.Location = new System.Drawing.Point(520, 82);
+            this.txtCor.MaxLength = 50;
             this.txtCor.Name = "txtCor";
-            this.txtCor.Size = new System.Drawing.Size(115, 20);
+            this.txtCor.Size = new System.Drawing.Size(148, 20);
             this.txtCor.TabIndex = 7;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(559, 67);
+            this.label8.Location = new System.Drawing.Point(526, 67);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(23, 13);
             this.label8.TabIndex = 6;
             this.label8.Text = "Cor";
-            // 
-            // txtPlaca
-            // 
-            this.txtPlaca.Enabled = false;
-            this.txtPlaca.Location = new System.Drawing.Point(414, 83);
-            this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(133, 20);
-            this.txtPlaca.TabIndex = 5;
             // 
             // label7
             // 
@@ -197,6 +192,7 @@
             // 
             this.txtModelo.Enabled = false;
             this.txtModelo.Location = new System.Drawing.Point(20, 83);
+            this.txtModelo.MaxLength = 50;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(388, 20);
             this.txtModelo.TabIndex = 3;
@@ -605,6 +601,14 @@
             // 
             this.vw_Cliente_GridTableAdapter.ClearBeforeFill = true;
             // 
+            // txtPlaca
+            // 
+            this.txtPlaca.Location = new System.Drawing.Point(414, 84);
+            this.txtPlaca.Mask = "AAA-9999";
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(100, 20);
+            this.txtPlaca.TabIndex = 23;
+            // 
             // frmVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -671,7 +675,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCor;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cboCliente;
@@ -703,5 +706,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ativo;
         private System.Windows.Forms.BindingSource vwClienteGridBindingSource;
         private ControlePesagemDataSetTableAdapters.vw_Cliente_GridTableAdapter vw_Cliente_GridTableAdapter;
+        private System.Windows.Forms.MaskedTextBox txtPlaca;
     }
 }

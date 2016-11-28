@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,13 +23,22 @@ namespace Apresentacao.Telas
             // TODO: This line of code loads data into the 'controlePesagemDataSet.vw_PesagemConsulta_Grid' table. You can move, or remove it, as needed.
             this.vw_PesagemConsulta_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_PesagemConsulta_Grid);
 
+            this.reportViewer1.RefreshReport();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            webRelatorio.Visible = true;
-            webRelatorio.Navigate("www.google.com");
+            
+        }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtCodigoBusca.Text != "")
+            {
+                vw_PesagemConsulta_GridTableAdapter.FillByCodigo(controlePesagemDataSet.vw_PesagemConsulta_Grid,Convert.ToInt32(txtCodigoBusca.Text));
+                reportViewer1.RefreshReport();
+
+            }
         }
     }
 }

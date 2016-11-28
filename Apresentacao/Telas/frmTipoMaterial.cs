@@ -131,6 +131,8 @@ namespace Apresentacao.Telas
             txtDescricao.Focus();
             chkAtivo.Enabled = true;
             ControleTela.LimpaCampos(this);
+            chkAtivo.Checked = true;
+
             btnSalvar.Enabled = true;
             btnCancelar.Enabled = true;
             

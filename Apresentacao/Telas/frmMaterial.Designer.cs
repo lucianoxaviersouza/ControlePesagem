@@ -151,6 +151,8 @@
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Checked = true;
+            this.chkAtivo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkAtivo.Enabled = false;
             this.chkAtivo.Location = new System.Drawing.Point(392, 43);
             this.chkAtivo.Name = "chkAtivo";
@@ -181,7 +183,7 @@
             // 
             this.txtDescricao.Enabled = false;
             this.txtDescricao.Location = new System.Drawing.Point(12, 89);
-            this.txtDescricao.MaxLength = 100;
+            this.txtDescricao.MaxLength = 95;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(430, 20);
             this.txtDescricao.TabIndex = 3;
@@ -480,7 +482,7 @@
             // txtDescricaoBusca
             // 
             this.txtDescricaoBusca.Location = new System.Drawing.Point(273, 219);
-            this.txtDescricaoBusca.MaxLength = 100;
+            this.txtDescricaoBusca.MaxLength = 95;
             this.txtDescricaoBusca.Name = "txtDescricaoBusca";
             this.txtDescricaoBusca.Size = new System.Drawing.Size(430, 20);
             this.txtDescricaoBusca.TabIndex = 8;

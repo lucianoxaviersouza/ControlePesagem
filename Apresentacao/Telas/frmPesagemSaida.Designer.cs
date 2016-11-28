@@ -185,6 +185,7 @@
             this.btnCancelar.TabIndex = 33;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -237,7 +238,7 @@
             this.dtpDataHoraSaida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataHoraSaida.Location = new System.Drawing.Point(154, 238);
             this.dtpDataHoraSaida.Name = "dtpDataHoraSaida";
-            this.dtpDataHoraSaida.Size = new System.Drawing.Size(127, 20);
+            this.dtpDataHoraSaida.Size = new System.Drawing.Size(150, 20);
             this.dtpDataHoraSaida.TabIndex = 36;
             // 
             // txtPesoSaida

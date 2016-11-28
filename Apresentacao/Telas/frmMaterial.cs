@@ -106,6 +106,8 @@ namespace Apresentacao.Telas
             cboTipoMaterial.Focus();
             chkAtivo.Enabled = true;
             ControleTela.LimpaCampos(this);
+            chkAtivo.Checked = true;
+
             btnSalvar.Enabled = true;
             btnCancelar.Enabled = true;
             this.vw_TipoMaterial_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_TipoMaterial_Grid);

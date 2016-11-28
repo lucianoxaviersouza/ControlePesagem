@@ -47,6 +47,12 @@ namespace Apresentacao.Telas
             btnSalvar.Enabled = false;
             dgvCliente.Enabled = true;
 
+            btnBuscarTodos.Enabled = true;
+            btnBuscar.Enabled = true;
+            txtNomeFantasiaBusca.Enabled = true;
+            txtCodigoBusca.Enabled = true;
+            txtCNPJBusca.Enabled = true;
+
         }
 
         private void frmCliente_Load(object sender, EventArgs e)
@@ -73,10 +79,18 @@ namespace Apresentacao.Telas
             txtTelefone2.Enabled = true;
             chkAtivo.Enabled = true;
             ControleTela.LimpaCampos(this);
-
+            chkAtivo.Checked = true;
 
             btnSalvar.Enabled = true;
             btnCancelar.Enabled = true;
+
+            btnBuscarTodos.Enabled = false;
+            btnBuscar.Enabled = false;
+            txtNomeFantasiaBusca.Enabled = false;
+            txtCodigoBusca.Enabled = false;
+            txtCNPJBusca.Enabled = false;
+
+
 
         }
 
@@ -132,6 +146,14 @@ namespace Apresentacao.Telas
                 txtEmail.Enabled = false;
                 chkAtivo.Enabled = false;
                 dgvCliente.Enabled = true;
+
+                btnBuscarTodos.Enabled = true;
+                btnBuscar.Enabled = true;
+                txtNomeFantasiaBusca.Enabled = true;
+                txtCodigoBusca.Enabled = true;
+                txtCNPJBusca.Enabled = true;
+
+
             
         }catch (Exception ex)
             {
@@ -225,6 +247,12 @@ namespace Apresentacao.Telas
                 chkAtivo.Enabled = true;
                 btnSalvar.Enabled = true;
                 btnCancelar.Enabled = true;
+
+                btnBuscarTodos.Enabled = false;
+                btnBuscar.Enabled = false;
+                txtNomeFantasiaBusca.Enabled = false;
+                txtCodigoBusca.Enabled = false;
+                txtCNPJBusca.Enabled = false;
                 
             }
         }
@@ -246,6 +274,19 @@ namespace Apresentacao.Telas
 
             txtDataAlteracao.Text = dgvCliente.CurrentRow.Cells["dataAlteracao"].Value.ToString();
             txtUsuarioAlteracao.Text = dgvCliente.CurrentRow.Cells["UsuarioAlteracao"].Value.ToString();
+        }
+
+        private void btnBuscarTodos_Click(object sender, EventArgs e)
+        {
+            txtCNPJBusca.Text = "";
+            txtCodigoBusca.Text = "";
+            txtNomeFantasiaBusca.Text = "";
+
+            this.vw_Cliente_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Cliente_Grid);
+            dgvCliente.Refresh();
+            dgvCliente.Update();
+            gboxDados.Text = String.Concat("Registros: ", dgvCliente.RowCount);
+
         }
         }
     }
