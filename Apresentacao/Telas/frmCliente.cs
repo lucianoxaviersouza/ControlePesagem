@@ -51,7 +51,7 @@ namespace Apresentacao.Telas
             btnBuscar.Enabled = true;
             txtNomeFantasiaBusca.Enabled = true;
             txtCodigoBusca.Enabled = true;
-            txtCNPJBusca.Enabled = true;
+            
 
         }
 
@@ -88,7 +88,7 @@ namespace Apresentacao.Telas
             btnBuscar.Enabled = false;
             txtNomeFantasiaBusca.Enabled = false;
             txtCodigoBusca.Enabled = false;
-            txtCNPJBusca.Enabled = false;
+            
 
 
 
@@ -151,9 +151,6 @@ namespace Apresentacao.Telas
                 btnBuscar.Enabled = true;
                 txtNomeFantasiaBusca.Enabled = true;
                 txtCodigoBusca.Enabled = true;
-                txtCNPJBusca.Enabled = true;
-
-
             
         }catch (Exception ex)
             {
@@ -252,8 +249,7 @@ namespace Apresentacao.Telas
                 btnBuscar.Enabled = false;
                 txtNomeFantasiaBusca.Enabled = false;
                 txtCodigoBusca.Enabled = false;
-                txtCNPJBusca.Enabled = false;
-                
+                                
             }
         }
 
@@ -278,11 +274,31 @@ namespace Apresentacao.Telas
 
         private void btnBuscarTodos_Click(object sender, EventArgs e)
         {
-            txtCNPJBusca.Text = "";
+            
             txtCodigoBusca.Text = "";
             txtNomeFantasiaBusca.Text = "";
 
             this.vw_Cliente_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Cliente_Grid);
+            dgvCliente.Refresh();
+            dgvCliente.Update();
+            gboxDados.Text = String.Concat("Registros: ", dgvCliente.RowCount);
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtCodigoBusca.Text != "")
+            {
+                vw_Cliente_GridTableAdapter.FillByCodigoCliente(controlePesagemDataSet.vw_Cliente_Grid, Convert.ToInt16(txtCodigoBusca.Text));
+
+            }
+
+            else if (txtNomeFantasiaBusca.Text != "")
+            {
+
+                vw_Cliente_GridTableAdapter.FillByNomeFantasiaCliente(controlePesagemDataSet.vw_Cliente_Grid, txtNomeFantasiaBusca.Text);
+
+            }
             dgvCliente.Refresh();
             dgvCliente.Update();
             gboxDados.Text = String.Concat("Registros: ", dgvCliente.RowCount);

@@ -123,9 +123,6 @@
   <metadata name="controlePesagemDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="controlePesagemDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnBuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -149,9 +146,6 @@
   <metadata name="vwPesagemConsultaGridBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>206, 17</value>
   </metadata>
-  <metadata name="vwPesagemConsultaGridBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>206, 17</value>
-  </metadata>
   <metadata name="vw_PesagemConsulta_GridTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>471, 17</value>
   </metadata>
@@ -172,25 +166,12 @@
         AElFTkSuQmCC
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACw0AAAsNAe0HwCwAAAAGYktHRAD/AP8A/6C9p5MAAAAHdElNRQfgCxAIDxEeYrop
-        AAACzElEQVQ4T41S30/SURz9YuJw/XiqZWvD5lNt2j/QUxtrPrTVMLd4bmVSPqi8OQ0m0kQU3MIxcsvY
-        QMQ23QQzEFcPxZJVQomkSBNBAgMEaeKATvdefTTX2e7uZ597zvl87udebmxsjDsETyKRnDEajRddTufl
-        Bbf7mslkukny/IPjY6DVam8EAoFwLpf7kc/v/srt5vczud9I7RbwzGA0EUrFAfMIAGC7xWKZKRbL2CsC
-        2T1gOw/EskAgli2JmyWNjHQUampq2P6w5cGlUORnOkGEm0QYTgPBbeBbAuh+OvyBUHiMeBxemK2ujRyp
-        mgR8ccAbBTybgHXhG23zygGL48rl8mFEMDQ0xDkcDhbfbbrVtESEi1QYA96TeHppByrjK0zaxr+rVKoB
-        oVDIWh4ZGWEarr+/v3JiYqJ+amrq8aR1/O3L2Y+wuL9i0GhBj1wB7aAasw47lpeXUdgv4POnLxgcGHpC
-        pAJmYLPZ7vj9fqysrCAcDsPtXvjjsM/A7/MhHo8jlUphZ2cHmUwGiVgSOlcfxhdNkLZIDUR+ghrc39jY
-        QCQSwdraGjOiQiqi4mQyia2tLayvh+F87YLU0wz9Gx00ak20oqLiAmc2m5kBJVMijakR7WZ1dRVerxfz
-        8/MgV4TVasWoYRR9yj60t7fHBQKBkJuenm5NJBIIBoNMRDuJRqMIhUIgZyC/EQaDATqdDj09Peju7oZa
-        rUZXV1ecz+fXUoNHxWIRpVIJ5CeCmvnI/Z1OJ8jUQYbMBJ2dnZBKpZDJZFAqlejo6EhXVVXVchqN5rrH
-        44mk0+kSeV9mVCgUmJFer6dEtLW10YpQKBRF0nqysbFxjlS/R4Z4mr0Ej8c7KxaLb8vl8jlanYLOhFbu
-        7e2l1bMikehdXV2drLq6up5ITjHhP3C1tbX1ud1uj5Ld39DQMExyIrJOstP/BP3358g6T1YlTRwNjvsL
-        G5P7cQ/KNAkAAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="vwMaterialGridBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1016, 17</value>
+  </metadata>
+  <metadata name="vw_Material_GridTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAgAEBAAAAEACABoBQAAhgAAABAQAAABACAAaAQAAO4FAAAYGAAAAQAIAMgGAABWCgAAGBgAAAEA

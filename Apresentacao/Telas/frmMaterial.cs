@@ -224,15 +224,19 @@ namespace Apresentacao.Telas
         {
             if (cboTipoMaterialBusca.Text != "")
             {
-                //TODO Fix
-               // vw_Material_GridTableAdapter.FillBydescricaoTipoMaterial(controlePesagemDataSet.vw_Material_Grid, cboTipoMaterialBusca.Text);
+                
+               vw_Material_GridTableAdapter.FillByDescricaoTipoMaterial(controlePesagemDataSet.vw_Material_Grid, cboTipoMaterialBusca.Text);
             }
             else if (txtDescricaoBusca.Text != "")
             {
-                //TODO Fix
-               //vw_Material_GridTableAdapter.FillByDescricao(controlePesagemDataSet.vw_Material_Grid, txtDescricaoBusca.Text);
+                
+               vw_Material_GridTableAdapter.FillByDescricaoMaterial(controlePesagemDataSet.vw_Material_Grid, txtDescricaoBusca.Text);
 
             }
+            
+            dgvMaterial.Refresh();
+            dgvMaterial.Update();
+            gboxDados.Text = String.Concat("Registros: ", dgvMaterial.RowCount);
             
         }
 
@@ -241,6 +245,9 @@ namespace Apresentacao.Telas
             txtDescricaoBusca.Text = "";
             cboTipoMaterialBusca.Text = "";
             vw_Material_GridTableAdapter.Fill(controlePesagemDataSet.vw_Material_Grid);
+            dgvMaterial.Refresh();
+            dgvMaterial.Update();
+            gboxDados.Text = String.Concat("Registros: ", dgvMaterial.RowCount);
         }
     }
 }

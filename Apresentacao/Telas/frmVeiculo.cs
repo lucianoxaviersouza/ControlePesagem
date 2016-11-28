@@ -281,20 +281,26 @@ namespace Apresentacao.Telas
         {
             if (cboClienteBusca.Text != "")
             {
-                //TODO Fix
-                //vw_Veiculo_GridTableAdapter.FillByNomeFantasiaCliente(controlePesagemDataSet.vw_Veiculo_Grid, cboClienteBusca.Text);
+                
+                vw_Veiculo_GridTableAdapter.FillByNomeFantasiaClienteVeic(controlePesagemDataSet.vw_Veiculo_Grid, cboClienteBusca.Text);
             }
             else if (txtPlacaBusca.Text != "")
             {
-                //TODO Fix
-                //vw_Veiculo_GridTableAdapter.FillByPlaca(controlePesagemDataSet.vw_Veiculo_Grid, txtPlacaBusca.Text);
+                
+                vw_Veiculo_GridTableAdapter.FillByPlacaVeiculo(controlePesagemDataSet.vw_Veiculo_Grid, txtPlacaBusca.Text);
             }
+            dgvVeiculo.Refresh();
+            dgvVeiculo.Update();
+            gboxDados.Text = String.Concat("Registros: ", dgvVeiculo.RowCount);
         }
 
         private void btnBuscarTodos_Click(object sender, EventArgs e)
         {
             txtPlacaBusca.Text = "";
             vw_Veiculo_GridTableAdapter.Fill(controlePesagemDataSet.vw_Veiculo_Grid);
+            dgvVeiculo.Refresh();
+            dgvVeiculo.Update();
+            gboxDados.Text = String.Concat("Registros: ", dgvVeiculo.RowCount);
         }
     }
 }

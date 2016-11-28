@@ -108,7 +108,6 @@ namespace Apresentacao.Telas
             frmRelatorioPesagem relatorioPesagem = new frmRelatorioPesagem();
 
             relatorioPesagem.MdiParent = this;
-            relatorioPesagem.StartPosition = FormStartPosition.CenterScreen;
             relatorioPesagem.Show();
         }
 

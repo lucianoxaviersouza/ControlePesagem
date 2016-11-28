@@ -57,6 +57,18 @@
             this.txtUsuarioInclusao = new System.Windows.Forms.TextBox();
             this.gboxDados = new System.Windows.Forms.GroupBox();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.stAcoes = new System.Windows.Forms.ToolStrip();
+            this.stbtIncluir = new System.Windows.Forms.ToolStripButton();
+            this.stbtAlterar = new System.Windows.Forms.ToolStripButton();
+            this.stbtExcluir = new System.Windows.Forms.ToolStripButton();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtNomeFantasiaBusca = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtCodigoBusca = new System.Windows.Forms.TextBox();
+            this.btnBuscarTodos = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razaoSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeFantasia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,28 +84,14 @@
             this.ativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vwClienteGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
-            this.stAcoes = new System.Windows.Forms.ToolStrip();
-            this.stbtIncluir = new System.Windows.Forms.ToolStripButton();
-            this.stbtAlterar = new System.Windows.Forms.ToolStripButton();
-            this.stbtExcluir = new System.Windows.Forms.ToolStripButton();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtCNPJBusca = new System.Windows.Forms.MaskedTextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtNomeFantasiaBusca = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtCodigoBusca = new System.Windows.Forms.TextBox();
-            this.btnBuscarTodos = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.vw_Cliente_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_Cliente_GridTableAdapter();
             this.gboxCliente.SuspendLayout();
             this.gboxInfoControle.SuspendLayout();
             this.gboxDados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            this.stAcoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).BeginInit();
-            this.stAcoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // gboxCliente
@@ -381,6 +379,137 @@
             this.dgvCliente.TabIndex = 0;
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
             // 
+            // stAcoes
+            // 
+            this.stAcoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stbtIncluir,
+            this.stbtAlterar,
+            this.stbtExcluir});
+            this.stAcoes.Location = new System.Drawing.Point(0, 0);
+            this.stAcoes.Name = "stAcoes";
+            this.stAcoes.Size = new System.Drawing.Size(1244, 31);
+            this.stAcoes.TabIndex = 3;
+            this.stAcoes.Text = "toolStrip1";
+            // 
+            // stbtIncluir
+            // 
+            this.stbtIncluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.stbtIncluir.Image = ((System.Drawing.Image)(resources.GetObject("stbtIncluir.Image")));
+            this.stbtIncluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.stbtIncluir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.stbtIncluir.Name = "stbtIncluir";
+            this.stbtIncluir.Size = new System.Drawing.Size(28, 28);
+            this.stbtIncluir.Text = "toolStripButton1";
+            this.stbtIncluir.Click += new System.EventHandler(this.stbtIncluir_Click);
+            // 
+            // stbtAlterar
+            // 
+            this.stbtAlterar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.stbtAlterar.Image = ((System.Drawing.Image)(resources.GetObject("stbtAlterar.Image")));
+            this.stbtAlterar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.stbtAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.stbtAlterar.Name = "stbtAlterar";
+            this.stbtAlterar.Size = new System.Drawing.Size(28, 28);
+            this.stbtAlterar.Text = "toolStripButton2";
+            this.stbtAlterar.Click += new System.EventHandler(this.stbtAlterar_Click);
+            // 
+            // stbtExcluir
+            // 
+            this.stbtExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.stbtExcluir.Image = ((System.Drawing.Image)(resources.GetObject("stbtExcluir.Image")));
+            this.stbtExcluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.stbtExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.stbtExcluir.Name = "stbtExcluir";
+            this.stbtExcluir.Size = new System.Drawing.Size(28, 28);
+            this.stbtExcluir.Text = "toolStripButton3";
+            this.stbtExcluir.Click += new System.EventHandler(this.stbtExcluir_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Enabled = false;
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.Location = new System.Drawing.Point(33, 199);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(83, 23);
+            this.btnSalvar.TabIndex = 4;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(122, 199);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(83, 23);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(136, 235);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(78, 13);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Nome Fantasia";
+            // 
+            // txtNomeFantasiaBusca
+            // 
+            this.txtNomeFantasiaBusca.Location = new System.Drawing.Point(139, 251);
+            this.txtNomeFantasiaBusca.MaxLength = 100;
+            this.txtNomeFantasiaBusca.Name = "txtNomeFantasiaBusca";
+            this.txtNomeFantasiaBusca.Size = new System.Drawing.Size(318, 20);
+            this.txtNomeFantasiaBusca.TabIndex = 11;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(30, 235);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(40, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Código";
+            // 
+            // txtCodigoBusca
+            // 
+            this.txtCodigoBusca.Location = new System.Drawing.Point(33, 251);
+            this.txtCodigoBusca.MaxLength = 20;
+            this.txtCodigoBusca.Name = "txtCodigoBusca";
+            this.txtCodigoBusca.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigoBusca.TabIndex = 9;
+            // 
+            // btnBuscarTodos
+            // 
+            this.btnBuscarTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarTodos.Image")));
+            this.btnBuscarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarTodos.Location = new System.Drawing.Point(543, 249);
+            this.btnBuscarTodos.Name = "btnBuscarTodos";
+            this.btnBuscarTodos.Size = new System.Drawing.Size(97, 23);
+            this.btnBuscarTodos.TabIndex = 16;
+            this.btnBuscarTodos.Text = "Buscar todos";
+            this.btnBuscarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscarTodos.UseVisualStyleBackColor = true;
+            this.btnBuscarTodos.Click += new System.EventHandler(this.btnBuscarTodos_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(463, 249);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(74, 23);
+            this.btnBuscar.TabIndex = 15;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // codigo
             // 
             this.codigo.DataPropertyName = "codigo";
@@ -480,153 +609,6 @@
             this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
             this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // stAcoes
-            // 
-            this.stAcoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stbtIncluir,
-            this.stbtAlterar,
-            this.stbtExcluir});
-            this.stAcoes.Location = new System.Drawing.Point(0, 0);
-            this.stAcoes.Name = "stAcoes";
-            this.stAcoes.Size = new System.Drawing.Size(1244, 31);
-            this.stAcoes.TabIndex = 3;
-            this.stAcoes.Text = "toolStrip1";
-            // 
-            // stbtIncluir
-            // 
-            this.stbtIncluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.stbtIncluir.Image = ((System.Drawing.Image)(resources.GetObject("stbtIncluir.Image")));
-            this.stbtIncluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.stbtIncluir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.stbtIncluir.Name = "stbtIncluir";
-            this.stbtIncluir.Size = new System.Drawing.Size(28, 28);
-            this.stbtIncluir.Text = "toolStripButton1";
-            this.stbtIncluir.Click += new System.EventHandler(this.stbtIncluir_Click);
-            // 
-            // stbtAlterar
-            // 
-            this.stbtAlterar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.stbtAlterar.Image = ((System.Drawing.Image)(resources.GetObject("stbtAlterar.Image")));
-            this.stbtAlterar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.stbtAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.stbtAlterar.Name = "stbtAlterar";
-            this.stbtAlterar.Size = new System.Drawing.Size(28, 28);
-            this.stbtAlterar.Text = "toolStripButton2";
-            this.stbtAlterar.Click += new System.EventHandler(this.stbtAlterar_Click);
-            // 
-            // stbtExcluir
-            // 
-            this.stbtExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.stbtExcluir.Image = ((System.Drawing.Image)(resources.GetObject("stbtExcluir.Image")));
-            this.stbtExcluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.stbtExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.stbtExcluir.Name = "stbtExcluir";
-            this.stbtExcluir.Size = new System.Drawing.Size(28, 28);
-            this.stbtExcluir.Text = "toolStripButton3";
-            this.stbtExcluir.Click += new System.EventHandler(this.stbtExcluir_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Enabled = false;
-            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(33, 199);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(83, 23);
-            this.btnSalvar.TabIndex = 4;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Enabled = false;
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(122, 199);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(83, 23);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // txtCNPJBusca
-            // 
-            this.txtCNPJBusca.Location = new System.Drawing.Point(463, 251);
-            this.txtCNPJBusca.Mask = "00.000.000/0000-00";
-            this.txtCNPJBusca.Name = "txtCNPJBusca";
-            this.txtCNPJBusca.Size = new System.Drawing.Size(118, 20);
-            this.txtCNPJBusca.TabIndex = 14;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(460, 235);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 13);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "CNPJ";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(136, 235);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 13);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Nome Fantasia";
-            // 
-            // txtNomeFantasiaBusca
-            // 
-            this.txtNomeFantasiaBusca.Location = new System.Drawing.Point(139, 251);
-            this.txtNomeFantasiaBusca.MaxLength = 100;
-            this.txtNomeFantasiaBusca.Name = "txtNomeFantasiaBusca";
-            this.txtNomeFantasiaBusca.Size = new System.Drawing.Size(318, 20);
-            this.txtNomeFantasiaBusca.TabIndex = 11;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(30, 235);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(40, 13);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Código";
-            // 
-            // txtCodigoBusca
-            // 
-            this.txtCodigoBusca.Location = new System.Drawing.Point(33, 251);
-            this.txtCodigoBusca.MaxLength = 20;
-            this.txtCodigoBusca.Name = "txtCodigoBusca";
-            this.txtCodigoBusca.Size = new System.Drawing.Size(100, 20);
-            this.txtCodigoBusca.TabIndex = 9;
-            // 
-            // btnBuscarTodos
-            // 
-            this.btnBuscarTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarTodos.Image")));
-            this.btnBuscarTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarTodos.Location = new System.Drawing.Point(667, 249);
-            this.btnBuscarTodos.Name = "btnBuscarTodos";
-            this.btnBuscarTodos.Size = new System.Drawing.Size(97, 23);
-            this.btnBuscarTodos.TabIndex = 16;
-            this.btnBuscarTodos.Text = "Buscar todos";
-            this.btnBuscarTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscarTodos.UseVisualStyleBackColor = true;
-            this.btnBuscarTodos.Click += new System.EventHandler(this.btnBuscarTodos_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(587, 249);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(74, 23);
-            this.btnBuscar.TabIndex = 15;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
             // vw_Cliente_GridTableAdapter
             // 
             this.vw_Cliente_GridTableAdapter.ClearBeforeFill = true;
@@ -639,8 +621,6 @@
             this.ClientSize = new System.Drawing.Size(1244, 548);
             this.Controls.Add(this.btnBuscarTodos);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtCNPJBusca);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtNomeFantasiaBusca);
             this.Controls.Add(this.label14);
@@ -662,10 +642,10 @@
             this.gboxInfoControle.PerformLayout();
             this.gboxDados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             this.stAcoes.ResumeLayout(false);
             this.stAcoes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vwClienteGridBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controlePesagemDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -705,8 +685,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNomeFantasia;
-        private System.Windows.Forms.MaskedTextBox txtCNPJBusca;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtNomeFantasiaBusca;
         private System.Windows.Forms.Label label14;
