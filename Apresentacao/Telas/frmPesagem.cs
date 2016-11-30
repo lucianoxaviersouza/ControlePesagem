@@ -178,5 +178,16 @@ namespace Apresentacao.Telas
             }
 
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            frmGuiaEntradaSaida guia = new frmGuiaEntradaSaida(Convert.ToInt16(txtCodigoConsulta.Text));
+            this.Enabled = false;
+            guia.StartPosition = FormStartPosition.CenterScreen;
+            guia.ShowDialog();
+            this.Enabled = true;
+
+
+        }
     }
 }

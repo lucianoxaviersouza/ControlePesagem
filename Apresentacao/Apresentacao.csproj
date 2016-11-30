@@ -62,6 +62,12 @@
     <Compile Include="Telas\frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\frmGuiaEntradaSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmGuiaEntradaSaida.Designer.cs">
+      <DependentUpon>frmGuiaEntradaSaida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     <Compile Include="Util\Criptografia.cs" />
     <EmbeddedResource Include="Telas\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmGuiaEntradaSaida.resx">
+      <DependentUpon>frmGuiaEntradaSaida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

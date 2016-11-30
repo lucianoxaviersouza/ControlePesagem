@@ -33,6 +33,8 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnRegistrarEntrada = new System.Windows.Forms.ToolStripButton();
             this.btnRegistrarSaida = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnCancelarPesagem = new System.Windows.Forms.ToolStripButton();
             this.gboxRegistroPesagemConsolidado = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txtCodigoConsulta = new System.Windows.Forms.TextBox();
@@ -58,6 +60,7 @@
             this.txtMotoristaConsulta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gboxInfoControle = new System.Windows.Forms.GroupBox();
+            this.txtStatus = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -70,8 +73,25 @@
             this.txtClienteConsulta = new System.Windows.Forms.TextBox();
             this.gboxDados = new System.Windows.Forms.GroupBox();
             this.dgvPesagem = new System.Windows.Forms.DataGridView();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataHoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataHoraSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.motorista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.material = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoOperacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesoEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesoSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwPesagemConsultaGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
             this.txtCodigoPesq = new System.Windows.Forms.TextBox();
             this.txtClientePesq = new System.Windows.Forms.TextBox();
             this.dtpDataPesagemPesq = new System.Windows.Forms.DateTimePicker();
@@ -84,27 +104,8 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.btnCancelarPesagem = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.txtStatus = new System.Windows.Forms.Label();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataHoraEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataHoraSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.motorista = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.material = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pesoEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pesoSaida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pesoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataInclusao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataAlteracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vwPesagemConsultaGridBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.controlePesagemDataSet = new Apresentacao.ControlePesagemDataSet();
             this.vw_PesagemConsulta_GridTableAdapter = new Apresentacao.ControlePesagemDataSetTableAdapters.vw_PesagemConsulta_GridTableAdapter();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.gboxRegistroPesagemConsolidado.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -121,7 +122,8 @@
             this.btnRegistrarEntrada,
             this.btnRegistrarSaida,
             this.toolStripSeparator1,
-            this.btnCancelarPesagem});
+            this.btnCancelarPesagem,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1086, 55);
@@ -149,6 +151,22 @@
             this.btnRegistrarSaida.Size = new System.Drawing.Size(52, 52);
             this.btnRegistrarSaida.Text = "Registrar Saída";
             this.btnRegistrarSaida.Click += new System.EventHandler(this.btnRegistrarSaida_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 55);
+            // 
+            // btnCancelarPesagem
+            // 
+            this.btnCancelarPesagem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCancelarPesagem.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarPesagem.Image")));
+            this.btnCancelarPesagem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnCancelarPesagem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelarPesagem.Name = "btnCancelarPesagem";
+            this.btnCancelarPesagem.Size = new System.Drawing.Size(52, 52);
+            this.btnCancelarPesagem.Text = "Cancelar pesagem";
+            this.btnCancelarPesagem.Click += new System.EventHandler(this.btnCancelarPesagem_Click);
             // 
             // gboxRegistroPesagemConsolidado
             // 
@@ -403,6 +421,16 @@
             this.gboxInfoControle.TabStop = false;
             this.gboxInfoControle.Text = "Informações de Controle";
             // 
+            // txtStatus
+            // 
+            this.txtStatus.AutoSize = true;
+            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.txtStatus.Location = new System.Drawing.Point(54, 117);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(0, 24);
+            this.txtStatus.TabIndex = 18;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -533,12 +561,117 @@
             this.dgvPesagem.TabIndex = 0;
             this.dgvPesagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPesagem_CellContentClick);
             // 
+            // codigo
+            // 
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            // 
+            // dataHoraEntrada
+            // 
+            this.dataHoraEntrada.DataPropertyName = "dataHoraEntrada";
+            this.dataHoraEntrada.HeaderText = "Data Hora - Entrada";
+            this.dataHoraEntrada.Name = "dataHoraEntrada";
+            this.dataHoraEntrada.ReadOnly = true;
+            // 
+            // dataHoraSaida
+            // 
+            this.dataHoraSaida.DataPropertyName = "dataHoraSaida";
+            this.dataHoraSaida.HeaderText = "Data Hora - Saída";
+            this.dataHoraSaida.Name = "dataHoraSaida";
+            this.dataHoraSaida.ReadOnly = true;
+            // 
+            // Cliente
+            // 
+            this.Cliente.DataPropertyName = "Cliente";
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
+            // 
+            // veiculo
+            // 
+            this.veiculo.DataPropertyName = "veiculo";
+            this.veiculo.HeaderText = "Veículo";
+            this.veiculo.Name = "veiculo";
+            this.veiculo.ReadOnly = true;
+            // 
+            // motorista
+            // 
+            this.motorista.DataPropertyName = "motorista";
+            this.motorista.HeaderText = "Motorista";
+            this.motorista.Name = "motorista";
+            this.motorista.ReadOnly = true;
+            // 
+            // material
+            // 
+            this.material.DataPropertyName = "material";
+            this.material.HeaderText = "Material";
+            this.material.Name = "material";
+            this.material.ReadOnly = true;
+            // 
             // tipoOperacao
             // 
             this.tipoOperacao.DataPropertyName = "tipoOperacao";
             this.tipoOperacao.HeaderText = "Tipo Operação";
             this.tipoOperacao.Name = "tipoOperacao";
             this.tipoOperacao.ReadOnly = true;
+            // 
+            // pesoEntrada
+            // 
+            this.pesoEntrada.DataPropertyName = "pesoEntrada";
+            this.pesoEntrada.HeaderText = "Peso Entrada";
+            this.pesoEntrada.Name = "pesoEntrada";
+            this.pesoEntrada.ReadOnly = true;
+            // 
+            // pesoSaida
+            // 
+            this.pesoSaida.DataPropertyName = "pesoSaida";
+            this.pesoSaida.HeaderText = "Peso Saída";
+            this.pesoSaida.Name = "pesoSaida";
+            this.pesoSaida.ReadOnly = true;
+            // 
+            // pesoTotal
+            // 
+            this.pesoTotal.DataPropertyName = "pesoTotal";
+            this.pesoTotal.HeaderText = "Peso Total";
+            this.pesoTotal.Name = "pesoTotal";
+            this.pesoTotal.ReadOnly = true;
+            // 
+            // status
+            // 
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "Status";
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            // 
+            // usuarioInclusao
+            // 
+            this.usuarioInclusao.DataPropertyName = "usuarioInclusao";
+            this.usuarioInclusao.HeaderText = "Usuário Inclusão";
+            this.usuarioInclusao.Name = "usuarioInclusao";
+            this.usuarioInclusao.ReadOnly = true;
+            // 
+            // dataInclusao
+            // 
+            this.dataInclusao.DataPropertyName = "dataInclusao";
+            this.dataInclusao.HeaderText = "Data Inclusão";
+            this.dataInclusao.Name = "dataInclusao";
+            this.dataInclusao.ReadOnly = true;
+            // 
+            // usuarioAlteracao
+            // 
+            this.usuarioAlteracao.DataPropertyName = "usuarioAlteracao";
+            this.usuarioAlteracao.HeaderText = "Usuário  Alteração";
+            this.usuarioAlteracao.Name = "usuarioAlteracao";
+            this.usuarioAlteracao.ReadOnly = true;
+            // 
+            // dataAlteracao
+            // 
+            this.dataAlteracao.DataPropertyName = "dataAlteracao";
+            this.dataAlteracao.HeaderText = "Data Alteração";
+            this.dataAlteracao.Name = "dataAlteracao";
+            this.dataAlteracao.ReadOnly = true;
             // 
             // observacoes
             // 
@@ -547,6 +680,16 @@
             this.observacoes.Name = "observacoes";
             this.observacoes.ReadOnly = true;
             this.observacoes.Visible = false;
+            // 
+            // vwPesagemConsultaGridBindingSource
+            // 
+            this.vwPesagemConsultaGridBindingSource.DataMember = "vw_PesagemConsulta_Grid";
+            this.vwPesagemConsultaGridBindingSource.DataSource = this.controlePesagemDataSet;
+            // 
+            // controlePesagemDataSet
+            // 
+            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
+            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtCodigoPesq
             // 
@@ -653,150 +796,20 @@
             this.label20.TabIndex = 21;
             this.label20.Text = "Material";
             // 
-            // btnCancelarPesagem
-            // 
-            this.btnCancelarPesagem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCancelarPesagem.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelarPesagem.Image")));
-            this.btnCancelarPesagem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnCancelarPesagem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelarPesagem.Name = "btnCancelarPesagem";
-            this.btnCancelarPesagem.Size = new System.Drawing.Size(52, 52);
-            this.btnCancelarPesagem.Text = "Cancelar pesagem";
-            this.btnCancelarPesagem.Click += new System.EventHandler(this.btnCancelarPesagem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 55);
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.AutoSize = true;
-            this.txtStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.txtStatus.Location = new System.Drawing.Point(54, 117);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(0, 24);
-            this.txtStatus.TabIndex = 18;
-            // 
-            // codigo
-            // 
-            this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            // 
-            // dataHoraEntrada
-            // 
-            this.dataHoraEntrada.DataPropertyName = "dataHoraEntrada";
-            this.dataHoraEntrada.HeaderText = "Data Hora - Entrada";
-            this.dataHoraEntrada.Name = "dataHoraEntrada";
-            this.dataHoraEntrada.ReadOnly = true;
-            // 
-            // dataHoraSaida
-            // 
-            this.dataHoraSaida.DataPropertyName = "dataHoraSaida";
-            this.dataHoraSaida.HeaderText = "Data Hora - Saída";
-            this.dataHoraSaida.Name = "dataHoraSaida";
-            this.dataHoraSaida.ReadOnly = true;
-            // 
-            // Cliente
-            // 
-            this.Cliente.DataPropertyName = "Cliente";
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
-            // 
-            // veiculo
-            // 
-            this.veiculo.DataPropertyName = "veiculo";
-            this.veiculo.HeaderText = "Veículo";
-            this.veiculo.Name = "veiculo";
-            this.veiculo.ReadOnly = true;
-            // 
-            // motorista
-            // 
-            this.motorista.DataPropertyName = "motorista";
-            this.motorista.HeaderText = "Motorista";
-            this.motorista.Name = "motorista";
-            this.motorista.ReadOnly = true;
-            // 
-            // material
-            // 
-            this.material.DataPropertyName = "material";
-            this.material.HeaderText = "Material";
-            this.material.Name = "material";
-            this.material.ReadOnly = true;
-            // 
-            // pesoEntrada
-            // 
-            this.pesoEntrada.DataPropertyName = "pesoEntrada";
-            this.pesoEntrada.HeaderText = "Peso Entrada";
-            this.pesoEntrada.Name = "pesoEntrada";
-            this.pesoEntrada.ReadOnly = true;
-            // 
-            // pesoSaida
-            // 
-            this.pesoSaida.DataPropertyName = "pesoSaida";
-            this.pesoSaida.HeaderText = "Peso Saída";
-            this.pesoSaida.Name = "pesoSaida";
-            this.pesoSaida.ReadOnly = true;
-            // 
-            // pesoTotal
-            // 
-            this.pesoTotal.DataPropertyName = "pesoTotal";
-            this.pesoTotal.HeaderText = "Peso Total";
-            this.pesoTotal.Name = "pesoTotal";
-            this.pesoTotal.ReadOnly = true;
-            // 
-            // status
-            // 
-            this.status.DataPropertyName = "status";
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            // 
-            // usuarioInclusao
-            // 
-            this.usuarioInclusao.DataPropertyName = "usuarioInclusao";
-            this.usuarioInclusao.HeaderText = "Usuário Inclusão";
-            this.usuarioInclusao.Name = "usuarioInclusao";
-            this.usuarioInclusao.ReadOnly = true;
-            // 
-            // dataInclusao
-            // 
-            this.dataInclusao.DataPropertyName = "dataInclusao";
-            this.dataInclusao.HeaderText = "Data Inclusão";
-            this.dataInclusao.Name = "dataInclusao";
-            this.dataInclusao.ReadOnly = true;
-            // 
-            // usuarioAlteracao
-            // 
-            this.usuarioAlteracao.DataPropertyName = "usuarioAlteracao";
-            this.usuarioAlteracao.HeaderText = "Usuário  Alteração";
-            this.usuarioAlteracao.Name = "usuarioAlteracao";
-            this.usuarioAlteracao.ReadOnly = true;
-            // 
-            // dataAlteracao
-            // 
-            this.dataAlteracao.DataPropertyName = "dataAlteracao";
-            this.dataAlteracao.HeaderText = "Data Alteração";
-            this.dataAlteracao.Name = "dataAlteracao";
-            this.dataAlteracao.ReadOnly = true;
-            // 
-            // vwPesagemConsultaGridBindingSource
-            // 
-            this.vwPesagemConsultaGridBindingSource.DataMember = "vw_PesagemConsulta_Grid";
-            this.vwPesagemConsultaGridBindingSource.DataSource = this.controlePesagemDataSet;
-            // 
-            // controlePesagemDataSet
-            // 
-            this.controlePesagemDataSet.DataSetName = "ControlePesagemDataSet";
-            this.controlePesagemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // vw_PesagemConsulta_GridTableAdapter
             // 
             this.vw_PesagemConsulta_GridTableAdapter.ClearBeforeFill = true;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(52, 52);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // frmPesagem
             // 
@@ -918,5 +931,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnCancelarPesagem;
         private System.Windows.Forms.Label txtStatus;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
