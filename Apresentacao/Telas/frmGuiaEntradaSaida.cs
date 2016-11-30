@@ -37,14 +37,29 @@ namespace Apresentacao.Telas
 
         private void frmGuiaEntradaSaida_Load(object sender, EventArgs e)
         {
-            string txtLine;
-            txtLine = "";
-
-            StreamReader rd = new StreamReader(@"c:\temp\relatorios\GuiadeEntradaSaida.html");
-            StreamWriter wr = new StreamWriter(@"c:\temp\relatorios\GuiadeEntradaSaidaTemp.html");
+            string txt;
+            txt = "";
+            
+            StreamReader rd = new StreamReader(@"c:\temp\relatorios\GuiadeEntradaSaida.html",false);
+            StreamWriter wr = new StreamWriter(@"c:\temp\relatorios\GuiadeEntradaSaidaTemp.html",false, Encoding.UTF8);
             
             while (!rd.EndOfStream)
             {
+                txt = "";
+                txt = rd.ReadLine();
+                txt = txt.Replace("@cliente", ppesagem.cliente.NomeFantasia);
+                txt = txt.Replace("@placa", ppesagem.veiculo.Placa);
+                txt = txt.Replace("@motorista", ppesagem.motorista.nomeConhecido);
+                txt = txt.Replace("@operacao", ppesagem.tipoOperacao);
+                txt = txt.Replace("@material", ppesagem.material.Descricao);
+                txt = txt.Replace("@codigo", ppesagem.codigo.ToString());
+                txt = txt.Replace("@dtEntrada", ppesagem.dataHoraEntrada.ToString());
+                txt = txt.Replace("@pesoEntrada", ppesagem.pesoEntrada.ToString());
+                txt = txt.Replace("@dtSaida", ppesagem.dataHoraSaida.ToString());
+                txt = txt.Replace("@pesoSaida", ppesagem.pesoSaida.ToString());
+                txt = txt.Replace("@pesoTotal", ppesagem.pesoTotal.ToString());
+                txt = txt.Replace("@status", ppesagem.status);
+                wr.WriteLine(txt);
 
             }
             rd.Close();

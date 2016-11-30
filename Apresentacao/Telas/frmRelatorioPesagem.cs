@@ -22,7 +22,7 @@ namespace Apresentacao.Telas
         {
 
             this.vw_Material_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_Material_Grid);
-            this.vw_PesagemConsulta_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_PesagemConsulta_Grid);
+           // this.vw_PesagemConsulta_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_PesagemConsulta_Grid);
             this.reportViewer1.RefreshReport();
             cboMaterial.Text = "";
             dtpDataPesagem.Text = "";
@@ -45,7 +45,7 @@ namespace Apresentacao.Telas
             }
             else if (!dtpDataPesagem.Text.Equals("  /  /"))
             {
-                vw_PesagemConsulta_GridTableAdapter.FillByDataPesagem(controlePesagemDataSet.vw_PesagemConsulta_Grid, Convert.ToDateTime(dtpDataPesagem.Text));
+                vw_PesagemConsulta_GridTableAdapter.FillByDataPesagem(controlePesagemDataSet.vw_PesagemConsulta_Grid, dtpDataPesagem.Text);
             }
 
             else if (txtCliente.Text != "")
@@ -68,6 +68,10 @@ namespace Apresentacao.Telas
 
         private void btnBuscarTodos_Click(object sender, EventArgs e)
         {
+            txtCliente.Text = "";
+            txtCodigoBusca.Text = "";
+            txtMotorista.Text = "";
+            dtpDataPesagem.Clear();
             this.vw_PesagemConsulta_GridTableAdapter.Fill(this.controlePesagemDataSet.vw_PesagemConsulta_Grid);
             reportViewer1.RefreshReport();
         }

@@ -181,6 +181,11 @@ namespace Apresentacao.Telas
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            if (txtCodigoConsulta.Text.Equals(""))
+            {
+                MessageBox.Show("Selecione um registro para realizar a geração da Guia");
+                return;
+            }
             frmGuiaEntradaSaida guia = new frmGuiaEntradaSaida(Convert.ToInt16(txtCodigoConsulta.Text));
             this.Enabled = false;
             guia.StartPosition = FormStartPosition.CenterScreen;

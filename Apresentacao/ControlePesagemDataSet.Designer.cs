@@ -7529,9 +7529,12 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codigo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "codigo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"SELECT codigo, dataHoraEntrada, dataHoraSaida, pesoEntrada, pesoSaida, pesoTotal, Cliente, veiculo, motorista, material, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao, status, observacoes, tipoOperacao FROM vw_PesagemConsulta_Grid where dataHoraEntrada >= @dataHoraEntrada and dataHoraEntrada <=@dataHoraEntrada";
+            this._commandCollection[3].CommandText = @"SELECT        codigo, dataHoraEntrada, dataHoraSaida, pesoEntrada, pesoSaida, pesoTotal, Cliente, veiculo, motorista, material, dataInclusao, dataAlteracao, usuarioInclusao, 
+                         usuarioAlteracao, status, observacoes, tipoOperacao
+FROM            vw_PesagemConsulta_Grid
+WHERE        (CONVERT(VARCHAR(10), dataHoraEntrada,103) = @dataHoraEntrada)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dataHoraEntrada", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "dataHoraEntrada", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dataHoraEntrada", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = @"SELECT codigo, dataHoraEntrada, dataHoraSaida, pesoEntrada, pesoSaida, pesoTotal, Cliente, veiculo, motorista, material, dataInclusao, dataAlteracao, usuarioInclusao, usuarioAlteracao, status, observacoes, tipoOperacao FROM vw_PesagemConsulta_Grid where material like '%' + @material + '%'";
@@ -7634,13 +7637,13 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByDataPesagem(ControlePesagemDataSet.vw_PesagemConsulta_GridDataTable dataTable, global::System.Nullable<global::System.DateTime> dataHoraEntrada) {
+        public virtual int FillByDataPesagem(ControlePesagemDataSet.vw_PesagemConsulta_GridDataTable dataTable, string dataHoraEntrada) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
-            if ((dataHoraEntrada.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(dataHoraEntrada.Value));
+            if ((dataHoraEntrada == null)) {
+                throw new global::System.ArgumentNullException("dataHoraEntrada");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(dataHoraEntrada));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7653,13 +7656,13 @@ namespace Apresentacao.ControlePesagemDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual ControlePesagemDataSet.vw_PesagemConsulta_GridDataTable GetDataByDataPesagem(global::System.Nullable<global::System.DateTime> dataHoraEntrada) {
+        public virtual ControlePesagemDataSet.vw_PesagemConsulta_GridDataTable GetDataByDataPesagem(string dataHoraEntrada) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
-            if ((dataHoraEntrada.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(dataHoraEntrada.Value));
+            if ((dataHoraEntrada == null)) {
+                throw new global::System.ArgumentNullException("dataHoraEntrada");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(dataHoraEntrada));
             }
             ControlePesagemDataSet.vw_PesagemConsulta_GridDataTable dataTable = new ControlePesagemDataSet.vw_PesagemConsulta_GridDataTable();
             this.Adapter.Fill(dataTable);

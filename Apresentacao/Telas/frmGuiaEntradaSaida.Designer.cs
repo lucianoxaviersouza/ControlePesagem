@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGuiaEntradaSaida));
             this.wbGuia = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
@@ -36,17 +37,18 @@
             this.wbGuia.Location = new System.Drawing.Point(24, 17);
             this.wbGuia.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbGuia.Name = "wbGuia";
-            this.wbGuia.Size = new System.Drawing.Size(1137, 387);
+            this.wbGuia.Size = new System.Drawing.Size(1137, 450);
             this.wbGuia.TabIndex = 0;
             // 
             // frmGuiaEntradaSaida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1173, 431);
+            this.ClientSize = new System.Drawing.Size(1173, 490);
             this.Controls.Add(this.wbGuia);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGuiaEntradaSaida";
-            this.Text = "frmGuiaEntradaSaida";
+            this.Text = "Guia de Entrada e Saída";
             this.Load += new System.EventHandler(this.frmGuiaEntradaSaida_Load);
             this.ResumeLayout(false);
 
